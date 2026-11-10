@@ -205,3 +205,47 @@ describe('RLS: room functions are service-role only', () => {
     expect(error).toBeNull();
   });
 });
+
+describe('RLS: tracks.preview_url is hidden from clients (ruling R7g)', () => {
+  // The room snapshot hands players the round's preview URL; if clients could map it back to a
+  // track they would read the answer from the public catalog during the question.
+  const visible =
+    'id, itunes_track_id, title, title_norm, artist, artist_norm, language, genre, decade, cover_url, artist_keys';
+
+  it('anon and authenticated cannot select preview_url', async () => {
+    for (const client of [anon, authed]) {
+      const res = await client.from('tracks').select('preview_url').eq('id', trackId);
+      expect(res.data ?? []).toEqual([]);
+      expect(res.error?.code).toBe('42501');
+      const star = await client.from('tracks').select('*').eq('id', trackId);
+      expect(star.data ?? []).toEqual([]);
+      expect(star.error?.code).toBe('42501');
+    }
+  });
+
+  it('anon and authenticated cannot filter tracks by preview_url', async () => {
+    for (const client of [anon, authed]) {
+      const res = await client
+        .from('tracks')
+        .select('title, artist')
+        .eq('preview_url', 'https://example.test/preview.m4a');
+      expect(res.data ?? []).toEqual([]);
+      expect(res.error?.code).toBe('42501');
+    }
+  });
+
+  it('anon and authenticated can still select every other column', async () => {
+    for (const client of [anon, authed]) {
+      const { data, error } = await client.from('tracks').select(visible).eq('id', trackId);
+      expect(error).toBeNull();
+      expect(data).toHaveLength(1);
+      expect(data![0]).toMatchObject({ title: 'Bài Test', artist: 'Ca Sĩ Test', language: 'vi' });
+    }
+  });
+
+  it('service role still reads preview_url', async () => {
+    const { data, error } = await admin.from('tracks').select('preview_url').eq('id', trackId).single();
+    expect(error).toBeNull();
+    expect(data!.preview_url).toBe('https://example.test/preview.m4a');
+  });
+});
