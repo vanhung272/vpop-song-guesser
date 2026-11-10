@@ -6,6 +6,9 @@
  *   - `round.choices` only in question/reveal, and only for the current round.
  *   - Before reveal the viewer's own answer carries no points/correctness, and every player's
  *     score excludes points earned in the current round (a score jump would reveal correctness).
+ *     In-game scores are derived from `answers` (revealed rounds only), never from
+ *     `player.score`, so a race between the two reads cannot show a partial score change.
+ *   - `answers` must hold every answer of the current game (the service passes them all).
  *   - `history` only covers rounds that have already been revealed.
  */
 import type { QuestionType, ThemeRef } from './round-builder';
@@ -18,7 +21,10 @@ export interface SnapshotPlayer {
   id: string;
   nickname: string;
   avatarSeed: string;
-  /** In phase `question` this excludes points earned in the current round. */
+  /**
+   * Points from revealed rounds of this game (from the answers read): in presenting/question it
+   * excludes the current round. lobby/countdown: the stored score (0 at the start of a game).
+   */
   score: number;
   online: boolean;
   isHost: boolean;
@@ -188,14 +194,23 @@ export function buildSnapshot(
   const answering = state.phase === 'question' || state.phase === 'reveal';
   const nickname = (id: string) => ctx.profiles[id]?.nickname ?? '';
 
-  // Points of the current round are hidden until reveal.
-  const hiddenPoints = new Map<string, number>();
-  if (state.phase === 'question') {
-    for (const a of answersNow) hiddenPoints.set(a.playerId, (hiddenPoints.get(a.playerId) ?? 0) + a.points);
-  }
   const answeredIds = new Set(answering ? answersNow.map((a) => a.playerId) : []);
 
-  const shownScore = (p: Player) => p.score - (hiddenPoints.get(p.id) ?? 0);
+  // Displayed scores. Points only ever come from recorded answers (AddScore with RecordAnswer;
+  // reset to 0 per game), so once a game has started a score equals the sum of that player's
+  // answer points in this game. Deriving it from the `answers` read, counting revealed rounds
+  // only, keeps scores consistent with hasAnswered / livePercentages / top3 / history: they all
+  // come from that one read. `player.score` comes from an earlier read and may disagree with
+  // `answers` if an answer commits in between; using it with the current-round points subtracted
+  // made a correct answer show up as a score drop (the race leak).
+  const fromAnswers = inRound || state.phase === 'results';
+  const revealedPoints = new Map<string, number>();
+  if (fromAnswers) {
+    for (const a of answers) {
+      if (isRevealed(state, a.idx)) revealedPoints.set(a.playerId, (revealedPoints.get(a.playerId) ?? 0) + a.points);
+    }
+  }
+  const shownScore = (p: Player) => (fromAnswers ? (revealedPoints.get(p.id) ?? 0) : p.score);
   const players: SnapshotPlayer[] = state.players
     .filter((p) => p.leftAt === null)
     .sort((a, b) => shownScore(b) - shownScore(a) || a.joinedAt - b.joinedAt)

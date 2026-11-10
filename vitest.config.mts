@@ -9,6 +9,8 @@ export default defineConfig({
   },
   test: {
     environment: 'node',
+    // Resolves local Supabase URL/keys once (see the file) instead of once per DB test file.
+    globalSetup: ['./vitest.global-setup.ts'],
     include: ['**/*.test.{ts,tsx}'],
     exclude: ['node_modules/**', '.next/**', 'e2e/**'],
   },

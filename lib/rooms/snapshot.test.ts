@@ -203,4 +203,48 @@ describe('buildSnapshot', () => {
       correct: true,
     });
   });
+
+  // The service reads players (with score) and answers in two queries, so an answer can commit in
+  // between: it is then in `answers` but not in `score` (or, read the other way round, the reverse).
+  // Displayed scores must not depend on that race (Review Focus 1).
+  describe('scores are consistent with the answers read (no race leak)', () => {
+    const preRound = { u1: 500, u2: 800, u3: 0, u4: 0 }; // after round 0, before round 1
+    const scoresOf = (out: ReturnType<typeof snap>) =>
+      Object.fromEntries(out.players.map((p) => [p.id, p.score]));
+    const withScores = (s: RoomState, scores: Record<string, number>): RoomState => ({
+      ...s,
+      players: s.players.map((p) => ({ ...p, score: scores[p.id] ?? 0 })),
+    });
+    const cur = { idx: 1, answeredPlayerIds: ['u1', 'u2', 'u3'] };
+
+    it('question: an answer not yet reflected in score shows no drop and no current-round points', () => {
+      // scores read BEFORE the round-1 answers committed, answers read AFTER
+      const s = withScores(state('question', 1, { currentRound: cur }), preRound);
+      const out = snap(s, [...answersR0, ...answersR1], 'u4');
+      expect(scoresOf(out)).toEqual(preRound);
+    });
+
+    it('question: a score that already includes an answer missing from the answers read is not shown', () => {
+      // scores read AFTER u1/u2 answered round 1 (+700 each), answers read without them
+      const s = withScores(state('question', 1, { currentRound: cur }), { u1: 1200, u2: 1500 });
+      const out = snap(s, [...answersR0], 'u4');
+      expect(scoresOf(out)).toEqual(preRound);
+    });
+
+    it('reveal/results: scores agree with top3 and history from the same answers read', () => {
+      const stale = withScores(state('reveal', 1, { currentRound: cur }), preRound);
+      const out = snap(stale, [...answersR0, ...answersR1], 'u1');
+      expect(scoresOf(out)).toEqual({ u1: 1200, u2: 1500, u3: 0, u4: 0 });
+      expect(out.round?.reveal?.top3.map((t) => t.points)).toEqual([700, 700]);
+
+      const res = snap(withScores(state('results', 4), { u1: 9999 }), [...answersR0, ...answersR1], 'u1');
+      expect(scoresOf(res)).toEqual({ u1: 1200, u2: 1500, u3: 0, u4: 0 });
+      expect(res.history.reduce((n, h) => n + h.myPoints, 0)).toBe(1200);
+    });
+
+    it('presenting: only revealed rounds count', () => {
+      const s = withScores(state('presenting', 2), { u1: 1, u2: 2 });
+      expect(scoresOf(snap(s, [...answersR0, ...answersR1]))).toEqual({ u1: 1200, u2: 1500, u3: 0, u4: 0 });
+    });
+  });
 });

@@ -5,6 +5,8 @@ import { createRoomNotifier, ROOM_CHANGED_EVENT, roomChannel } from './notify';
 
 /** Integration test against the LOCAL Supabase Realtime: a subscriber receives `{ version }` only. */
 function localEnv() {
+  const { SUPABASE_URL: url, SUPABASE_ANON_KEY: anonKey, SUPABASE_SERVICE_ROLE_KEY: serviceKey } = process.env;
+  if (url && anonKey && serviceKey) return { url, anonKey, serviceKey }; // set by vitest.global-setup.ts
   const out = execSync('npx supabase status -o env', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
   const vars: Record<string, string> = {};
   for (const line of out.split(/\r?\n/)) {
