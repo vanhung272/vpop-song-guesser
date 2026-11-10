@@ -179,3 +179,29 @@ describe('RLS: room tables are service-role only', () => {
     expect(upd.error?.code).toBe('42501');
   });
 });
+
+describe('RLS: room functions are service-role only', () => {
+  const touchArgs = () => ({ p_room_id: roomId, p_player_id: userId, p_ts: new Date().toISOString() });
+  const saveArgs = () => ({
+    p_room_id: roomId,
+    p_expected_version: 0,
+    p_room: { phase: 'results', round_idx: 0, host_id: userId, game_no: 1, settings: {}, version: 99 },
+    p_now: new Date().toISOString(),
+  });
+
+  it('anon and authenticated cannot execute touch_room_player or room_save', async () => {
+    for (const client of [anon, authed]) {
+      const touch = await client.rpc('touch_room_player', touchArgs());
+      expect(touch.error?.code).toBe('42501');
+      const save = await client.rpc('room_save', saveArgs());
+      expect(save.error?.code).toBe('42501');
+    }
+    const room = await admin.from('rooms').select('phase, version').eq('id', roomId).single();
+    expect(room.data).toEqual({ phase: 'lobby', version: 0 });
+  });
+
+  it('service role can execute touch_room_player', async () => {
+    const { error } = await admin.rpc('touch_room_player', touchArgs());
+    expect(error).toBeNull();
+  });
+});

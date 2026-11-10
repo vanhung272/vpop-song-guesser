@@ -104,3 +104,12 @@ export async function listThemes(
       a.label.localeCompare(b.label, 'vi'),
   );
 }
+
+/** Display label of a theme: the curated artist name for artist themes, otherwise the key itself. */
+export function themeLabel(
+  theme: Pick<ThemeSummary, 'type' | 'key'>,
+  { artists = curatedArtists }: { artists?: Artist[] } = {},
+): string {
+  if (theme.type === 'artist') return artists.find((a) => a.key === theme.key)?.name ?? theme.key;
+  return theme.key;
+}
