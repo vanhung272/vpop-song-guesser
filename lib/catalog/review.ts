@@ -2,7 +2,15 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { normalizeVi } from '../text/normalize-vi';
-import { decadeFromDate, titleNorm, type DropReason, type FilterResult } from './filter';
+import { loadArtists } from './artists';
+import {
+  decadeFromDate,
+  matchesArtist,
+  titleNorm,
+  type Artist,
+  type DropReason,
+  type FilterResult,
+} from './filter';
 import type { ItunesSong } from './itunes';
 
 /**
@@ -97,6 +105,7 @@ interface TrackRow {
   genre: string | null;
   decade: string | null;
   cover_url: string | null;
+  artist_keys: string[];
 }
 
 function blankToNull(v: string | null | undefined): string | null {
@@ -104,7 +113,7 @@ function blankToNull(v: string | null | undefined): string | null {
   return t === '' ? null : t;
 }
 
-function toRow(t: ReviewTrack): TrackRow | null {
+function toRow(t: ReviewTrack, fileKey: string, curated: Artist[]): TrackRow | null {
   const title = blankToNull(t.title);
   const artist = blankToNull(t.artist);
   const previewUrl = blankToNull(t.previewUrl);
@@ -120,21 +129,35 @@ function toRow(t: ReviewTrack): TrackRow | null {
     genre: blankToNull(t.genre),
     decade: blankToNull(t.decade),
     cover_url: blankToNull(t.coverUrl),
+    // every curated artist credited on the track, plus the artist this review file belongs to
+    artist_keys: [
+      ...new Set([
+        fileKey,
+        ...curated.filter((a) => matchesArtist({ artistName: artist }, a)).map((a) => a.key),
+      ]),
+    ],
   };
 }
 
 const CHUNK = 500;
+const DEFAULT_ARTISTS_FILE = path.join(process.cwd(), 'catalog', 'artists.vpop.json');
 
 /**
- * Upserts the curator-approved tracks of a review file (kept with include !== false, plus
- * dropped entries the curator set include=true) keyed on itunes_track_id. Re-running is safe;
- * curator edits overwrite what an earlier import stored. Entries that cannot be imported
- * (missing preview/title/artist/id) are counted in `skipped`.
+ * Applies a curator-edited review file to `tracks`, keyed on itunes_track_id:
+ * - kept entries with include !== false, and dropped entries the curator set include=true, are
+ *   upserted. `artist_keys` = curated artists credited on the track + this file's artist key,
+ *   UNIONED with the keys already stored (so a second artist's file never removes a key).
+ * - kept entries with include === false are DELETED from `tracks` (ruling R3c). Dropped entries
+ *   (include:false by default) never delete anything.
+ * Re-running is safe; curator edits overwrite what an earlier import stored. Entries that cannot
+ * be imported (missing preview/title/artist/id) are counted in `skipped`. Deleting a track that a
+ * past game still references fails with a descriptive error (room_rounds.track_id has no cascade).
  */
 export async function importReviewed(
   file: string,
   db: Pick<SupabaseClient, 'from'>,
-): Promise<{ upserted: number; skipped: number }> {
+  artists: Artist[] = loadArtists(DEFAULT_ARTISTS_FILE),
+): Promise<{ upserted: number; skipped: number; deleted: number }> {
   const review = parseReview(file);
   const approved: ReviewTrack[] = [
     ...review.kept.filter((t) => t.include !== false),
@@ -144,17 +167,45 @@ export async function importReviewed(
   const rows = new Map<number, TrackRow>(); // one row per itunes_track_id (last edit wins)
   let skipped = 0;
   for (const t of approved) {
-    const row = toRow(t);
+    const row = toRow(t, review.artistKey, artists);
     if (row) rows.set(row.itunes_track_id, row);
     else skipped++;
   }
 
   const all = [...rows.values()];
   for (let i = 0; i < all.length; i += CHUNK) {
-    const { error } = await db
+    const chunk = all.slice(i, i + CHUNK);
+    const { data: existing, error: readError } = await db
       .from('tracks')
-      .upsert(all.slice(i, i + CHUNK), { onConflict: 'itunes_track_id' });
+      .select('itunes_track_id, artist_keys')
+      .in('itunes_track_id', chunk.map((r) => r.itunes_track_id));
+    if (readError) throw new Error(`Reading existing tracks failed: ${readError.message}`);
+    const stored = new Map<number, string[]>(
+      (existing ?? []).map((r) => [Number(r.itunes_track_id), r.artist_keys as string[]]),
+    );
+    for (const row of chunk) {
+      row.artist_keys = [...new Set([...(stored.get(row.itunes_track_id) ?? []), ...row.artist_keys])].sort();
+    }
+    const { error } = await db.from('tracks').upsert(chunk, { onConflict: 'itunes_track_id' });
     if (error) throw new Error(`Upsert into tracks failed: ${error.message}`);
   }
-  return { upserted: all.length, skipped };
+
+  const removeIds = [
+    ...new Set(
+      review.kept
+        .filter((t) => t.include === false && Number.isInteger(t.itunesTrackId))
+        .map((t) => t.itunesTrackId),
+    ),
+  ].filter((id) => !rows.has(id));
+  let deleted = 0;
+  for (let i = 0; i < removeIds.length; i += CHUNK) {
+    const { data, error } = await db
+      .from('tracks')
+      .delete()
+      .in('itunes_track_id', removeIds.slice(i, i + CHUNK))
+      .select('itunes_track_id');
+    if (error) throw new Error(`Deleting excluded tracks failed: ${error.message}`);
+    deleted += data?.length ?? 0;
+  }
+  return { upserted: all.length, skipped, deleted };
 }

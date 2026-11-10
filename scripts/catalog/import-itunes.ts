@@ -13,7 +13,8 @@
  *   local    `npx supabase status -o env`
  *   staging  CATALOG_STAGING_SUPABASE_URL + CATALOG_STAGING_SERVICE_ROLE_KEY
  *   prod     CATALOG_PROD_SUPABASE_URL + CATALOG_PROD_SERVICE_ROLE_KEY
- * staging/prod additionally require --yes.
+ * staging/prod additionally require --yes. Import also: kept songs with include:false are deleted from
+ * tracks; tracks.artist_keys is filled from --artists (default catalog/artists.vpop.json) and merged.
  */
 import { existsSync } from 'node:fs';
 import path from 'node:path';
@@ -53,8 +54,15 @@ async function main() {
     }
     const cfg = resolveTarget(target);
     console.log(`Importing ${file} into ${target} (${new URL(cfg.url).host})`);
-    const { upserted, skipped } = await importReviewed(file, createCatalogClient(cfg));
-    console.log(`Upserted ${upserted} track(s)${skipped ? `, skipped ${skipped} without preview/title/artist` : ''}.`);
+    const { upserted, skipped, deleted } = await importReviewed(
+      file,
+      createCatalogClient(cfg),
+      loadArtists(values.artists!),
+    );
+    console.log(
+      `Upserted ${upserted} track(s), deleted ${deleted} excluded track(s)` +
+        `${skipped ? `, skipped ${skipped} without preview/title/artist` : ''}.`,
+    );
     return;
   }
 

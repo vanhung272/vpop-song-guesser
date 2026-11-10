@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { filterSongs } from './filter';
+import { filterSongs, type Artist } from './filter';
 import type { ItunesSong } from './itunes';
 import { importReviewed, writeReviewFile, type ReviewFile } from './review';
 import { createCatalogClient, resolveTarget } from './target';
@@ -192,7 +192,7 @@ describe('importReviewed', () => {
     review.kept[1].previewUrl = '';
     writeFileSync(file, JSON.stringify(review));
     const res = await importReviewed(file, db);
-    expect(res).toEqual({ upserted: 1, skipped: 1 });
+    expect(res).toEqual({ upserted: 1, skipped: 1, deleted: 0 });
     expect(await rowsFor([BASE_ID + 31])).toHaveLength(0);
   });
 
@@ -200,5 +200,91 @@ describe('importReviewed', () => {
     const file = path.join(tmp, 'bad.json');
     writeFileSync(file, JSON.stringify({ nope: true }));
     await expect(importReviewed(file, db)).rejects.toThrow(/review file/i);
+  });
+});
+
+describe('importReviewed: artist_keys (R4b) and removals (R3c)', () => {
+  const curated: Artist[] = [
+    { key: 'den-vau', name: 'Đen Vâu', aliases: ['Đen', 'Den'] },
+    { key: 'min', name: 'MIN' },
+    { key: 'son-tung-m-tp', name: 'Sơn Tùng M-TP' },
+  ];
+  const den: Artist = curated[0];
+  const min: Artist = curated[1];
+
+  async function importFor(artist: Artist, songs: ItunesSong[], dir: string, edit?: (r: ReviewFile) => void) {
+    const file = writeReviewFile(artist.key, filterSongs(songs, artist), path.join(tmp, dir));
+    if (edit) {
+      const review = readReview(file);
+      edit(review);
+      writeFileSync(file, JSON.stringify(review));
+    }
+    return importReviewed(file, db, curated);
+  }
+
+  it('a collab track gets the keys of every curated artist credited; a solo track gets one', async () => {
+    await importFor(
+      den,
+      [
+        song(40, { artistName: 'Đen & MIN', trackName: 'Bài Này Chill Phết (kt)' }),
+        song(41, { artistName: 'Đen', trackName: 'Lối Nhỏ (kt)' }),
+        song(42, { artistName: 'Đen, Kimmese & Lynk Lee', trackName: 'Rapcoustic (kt)' }),
+      ],
+      'keys1',
+    );
+    const rows = await rowsFor([40, 41, 42].map((i) => BASE_ID + i));
+    expect(rows[0].artist).toBe('Đen & MIN'); // full iTunes credit is kept
+    expect(rows[0].artist_norm).toBe('den & min');
+    expect([...rows[0].artist_keys].sort()).toEqual(['den-vau', 'min']);
+    expect(rows[1].artist_keys).toEqual(['den-vau']);
+    expect(rows[2].artist_keys).toEqual(['den-vau']); // non-curated co-credits add nothing
+  });
+
+  it("always includes the review file's own artist key, even if the curator edited the credit", async () => {
+    await importFor(den, [song(43, { artistName: 'Đen' })], 'keys2', (r) => {
+      r.kept[0].artist = 'Ai Đó Khác';
+    });
+    const [row] = await rowsFor([BASE_ID + 43]);
+    expect(row.artist).toBe('Ai Đó Khác');
+    expect(row.artist_keys).toEqual(['den-vau']);
+  });
+
+  it('re-importing the same track from a second artist file merges keys (union, no loss)', async () => {
+    const s = song(44, { artistName: 'Đen', trackName: 'Bài Chung (kt)' });
+    await importFor(den, [s], 'keys3a');
+    expect((await rowsFor([BASE_ID + 44]))[0].artist_keys).toEqual(['den-vau']);
+
+    // MIN's file lists the same iTunes track as a wrong-artist drop; the curator re-includes it
+    // (credit string unchanged, so only the file key adds 'min')
+    await importFor(min, [s], 'keys3b', (r) => {
+      r.dropped[0].include = true;
+    });
+    expect([...(await rowsFor([BASE_ID + 44]))[0].artist_keys].sort()).toEqual(['den-vau', 'min']);
+
+    // and importing Đen's file again does not drop 'min'
+    await importFor(den, [s], 'keys3c');
+    expect([...(await rowsFor([BASE_ID + 44]))[0].artist_keys].sort()).toEqual(['den-vau', 'min']);
+  });
+
+  it('include:false on a kept song deletes that itunes_track_id from tracks', async () => {
+    const songs = [song(45, { artistName: 'Đen', trackName: 'Giữ Lại (kt)' }), song(46, { artistName: 'Đen', trackName: 'Sẽ Xóa (kt)' })];
+    await importFor(den, songs, 'del1');
+    expect(await rowsFor([BASE_ID + 45, BASE_ID + 46])).toHaveLength(2);
+
+    const res = await importFor(den, songs, 'del1', (r) => {
+      r.kept[1].include = false;
+    });
+    expect(res).toMatchObject({ upserted: 1, deleted: 1 });
+    const rows = await rowsFor([BASE_ID + 45, BASE_ID + 46]);
+    expect(rows.map((r) => r.itunes_track_id)).toEqual([BASE_ID + 45]);
+  });
+
+  it('untouched dropped entries (include:false by default) never delete anything', async () => {
+    const keep = song(47, { artistName: 'Đen', trackName: 'Có Sẵn (kt)' });
+    await importFor(den, [keep], 'del2a');
+    // the same track shows up as a wrong-artist drop in another artist's file
+    const res = await importFor(min, [song(48, { trackName: 'Của Min (kt)', artistName: 'MIN' }), { ...keep, artistName: 'Ai Đó' }], 'del2b');
+    expect(res.deleted).toBe(0);
+    expect(await rowsFor([BASE_ID + 47])).toHaveLength(1);
   });
 });
