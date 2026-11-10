@@ -1,0 +1,22 @@
+[
+  { "key": "son-tung-m-tp", "name": "Sơn Tùng M-TP", "aliases": ["Son Tung M-TP", "Sơn Tùng MTP", "Son Tung MTP", "M-TP"] },
+  { "key": "den-vau", "name": "Đen Vâu", "aliases": ["Đen", "Den", "Den Vau"], "searchTerms": ["Đen"] },
+  { "key": "my-tam", "name": "Mỹ Tâm", "aliases": ["My Tam"] },
+  { "key": "ha-anh-tuan", "name": "Hà Anh Tuấn", "aliases": ["Ha Anh Tuan"] },
+  { "key": "hoang-thuy-linh", "name": "Hoàng Thùy Linh", "aliases": ["Hoang Thuy Linh"] },
+  { "key": "bich-phuong", "name": "Bích Phương", "aliases": ["Bich Phuong"] },
+  { "key": "vu", "name": "Vũ.", "aliases": ["Vũ", "Vu"] },
+  { "key": "noo-phuoc-thinh", "name": "Noo Phước Thịnh", "aliases": ["Noo Phuoc Thinh"] },
+  { "key": "ho-ngoc-ha", "name": "Hồ Ngọc Hà", "aliases": ["Ho Ngoc Ha"] },
+  { "key": "dong-nhi", "name": "Đông Nhi", "aliases": ["Dong Nhi"] },
+  { "key": "min", "name": "MIN", "aliases": ["Min"] },
+  { "key": "erik", "name": "ERIK", "aliases": ["Erik"] },
+  { "key": "amee", "name": "AMEE", "aliases": ["Amee"] },
+  { "key": "hoa-minzy", "name": "Hòa Minzy", "aliases": ["Hoa Minzy", "Hòa Minh Zy", "Hoa Minh Zy"] },
+  { "key": "jack", "name": "Jack - J97", "aliases": ["Jack", "J97", "Jack 97", "Trịnh Trần Phương Tuấn"] },
+  { "key": "truc-nhan", "name": "Trúc Nhân", "aliases": ["Truc Nhan"] },
+  { "key": "toc-tien", "name": "Tóc Tiên", "aliases": ["Toc Tien"] },
+  { "key": "chi-pu", "name": "Chi Pu", "aliases": [] },
+  { "key": "orange", "name": "Orange", "aliases": [] },
+  { "key": "binz", "name": "Binz", "aliases": ["BINZ"] }
+]

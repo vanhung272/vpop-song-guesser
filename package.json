@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "test:db": "vitest run supabase/tests"
+    "test:db": "vitest run supabase/tests",
+    "catalog:fetch": "tsx scripts/catalog/import-itunes.ts",
+    "catalog:import": "tsx scripts/catalog/import-itunes.ts --import"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
@@ -26,6 +28,7 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.6",
     "supabase": "^3.1.0",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "vitest": "^5.1.0"
   }
