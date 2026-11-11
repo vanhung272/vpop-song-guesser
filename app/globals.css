@@ -278,6 +278,13 @@ p {
   color: var(--text);
 }
 
+.theme-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
 .pill--accent {
   background: color-mix(in srgb, var(--accent) 20%, transparent);
 }

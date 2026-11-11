@@ -109,7 +109,17 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
       <section className="card">
         <div className="section-head">
           <h2>Chủ đề</h2>
-          <span className="pill pill--accent">{snapshot.theme?.label ?? 'Chưa chọn'}</span>
+          {snapshot.theme ? (
+            <span className="theme-pills">
+              {snapshot.theme.parts.map((label, i) => (
+                <span key={i} className="pill pill--accent">
+                  {label}
+                </span>
+              ))}
+            </span>
+          ) : (
+            <span className="pill pill--accent">Chưa chọn</span>
+          )}
         </div>
         {isHost && (
           <ThemePicker current={snapshot.theme} onPick={(theme) => void run({ type: 'theme', theme })} />

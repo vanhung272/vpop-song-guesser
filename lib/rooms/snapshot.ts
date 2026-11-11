@@ -118,7 +118,8 @@ export interface RoomSnapshot {
   /** Viewer is in the room (joined and not left). */
   isMember: boolean;
   settings: RoomSettings;
-  theme: (ThemeRef & { label: string }) | null;
+  /** `parts`: display label of each picked theme (one entry unless the theme is a mix). */
+  theme: (ThemeRef & { label: string; parts: string[] }) | null;
   /** Active (not left) players, score desc, then joinedAt. */
   players: SnapshotPlayer[];
   /** presenting/question/reveal only. */
@@ -155,9 +156,17 @@ export interface SnapshotContext {
   profiles: Record<string, ProfileInfo>;
   /** Display label of `state.theme`; falls back to the key. */
   themeLabel?: string | null;
+  /** Display label of each part of `state.theme`; falls back to `[themeLabel]`. */
+  themePartLabels?: string[] | null;
 }
 
 // ----------------------------------------------------------------------------- build
+
+function snapshotTheme(theme: ThemeRef, ctx: SnapshotContext): RoomSnapshot['theme'] {
+  const label = ctx.themeLabel || theme.key;
+  const parts = ctx.themePartLabels?.length ? [...ctx.themePartLabels] : [label];
+  return { type: theme.type, key: theme.key, label, parts };
+}
 
 const ROUND_PHASES: Phase[] = ['presenting', 'question', 'reveal'];
 
@@ -302,9 +311,7 @@ export function buildSnapshot(
     isHost: viewerId === state.hostId,
     isMember: !!viewer,
     settings: { ...state.settings },
-    theme: state.theme
-      ? { type: state.theme.type, key: state.theme.key, label: ctx.themeLabel || state.theme.key }
-      : null,
+    theme: state.theme ? snapshotTheme(state.theme, ctx) : null,
     players,
     round,
     history,

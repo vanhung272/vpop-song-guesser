@@ -327,7 +327,10 @@ describe('room service (local Supabase)', () => {
       .eq('room_id', (await roomRow(code)).id);
     const genres = new Set((rounds ?? []).map((r) => (r.track as unknown as { genre: string }).genre));
     expect(genres).toEqual(new Set([GENRE, SMALL_GENRE]));
-    expect(ok(await svc.getSnapshot(code, users[0])).theme?.label).toBe(`${GENRE} + ${SMALL_GENRE}`);
+    expect(ok(await svc.getSnapshot(code, users[0])).theme).toMatchObject({
+      label: `${GENRE} + ${SMALL_GENRE}`,
+      parts: [GENRE, SMALL_GENRE],
+    });
   });
 
   it('a mix must be canonical, of known themes, and not include the random theme', async () => {

@@ -45,7 +45,7 @@ function snapshot(overrides: Partial<RoomSnapshot> = {}): RoomSnapshot {
     isHost: false,
     isMember: true,
     settings: { questionCount: 10, timeLimitMs: 15000, showLiveAnswers: true, lateJoin: true },
-    theme: { type: 'artist', key: 'den-vau', label: 'Đen Vâu' },
+    theme: { type: 'artist', key: 'den-vau', label: 'Đen Vâu', parts: ['Đen Vâu'] },
     players: [player('h', { isHost: true, nickname: 'Bảo' }), player('g', { nickname: 'Khách' })],
     round: null,
     history: [],
@@ -224,12 +224,19 @@ describe('<ThemePicker /> multi-select', () => {
   });
 
   it('marks every picked part, and unpicking one leaves the other', async () => {
-    const mixed = snapshot({ viewerId: 'h', isHost: true, theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN' } });
+    const mixed = snapshot({ viewerId: 'h', isHost: true, theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN', parts: ['Đen Vâu', 'MIN'] } });
     render(<Lobby snapshot={mixed} send={send} />);
     expect((await item(/Đen Vâu/)).getAttribute('aria-pressed')).toBe('true');
     expect(screen.getByRole('button', { name: /MIN/ }).getAttribute('aria-pressed')).toBe('true');
     fireEvent.click(screen.getByRole('button', { name: /Đen Vâu/ }));
     expect(themeCalls()).toEqual([{ type: 'theme', theme: { type: 'artist', key: 'min' } }]);
+  });
+
+  it('shows each picked theme as its own pill in the section header', () => {
+    const mixed = snapshot({ theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN', parts: ['Đen Vâu', 'MIN'] } });
+    const { container } = render(<Lobby snapshot={mixed} send={send} />);
+    const pills = [...container.querySelectorAll('.section-head .pill--accent')].map((el) => el.textContent);
+    expect(pills).toEqual(['Đen Vâu', 'MIN']);
   });
 
   it('the last picked theme cannot be unpicked', async () => {

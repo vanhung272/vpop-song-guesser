@@ -179,7 +179,7 @@ describe('buildSnapshot', () => {
     expect(u1).toMatchObject({ nickname: 'Một', avatarSeed: 's1', isHost: true, online: false });
     expect(out.players.find((p) => p.id === 'u2')!.online).toBe(true);
     expect(out.round?.canAnswer).toBe(false);
-    expect(out.theme).toEqual({ type: 'genre', key: 'Pop', label: 'Pop' });
+    expect(out.theme).toEqual({ type: 'genre', key: 'Pop', label: 'Pop', parts: ['Pop'] });
 
     const stranger = snap(s, [], 'zz');
     expect(stranger.isMember).toBe(false);

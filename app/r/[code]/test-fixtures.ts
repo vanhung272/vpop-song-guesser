@@ -55,7 +55,7 @@ export function snapshot(overrides: Partial<RoomSnapshot> = {}): RoomSnapshot {
     isHost: false,
     isMember: true,
     settings: { questionCount: 5, timeLimitMs: 15000, showLiveAnswers: true, lateJoin: true },
-    theme: { type: 'genre', key: 'Pop', label: 'Pop' },
+    theme: { type: 'genre', key: 'Pop', label: 'Pop', parts: ['Pop'] },
     players: [player('h', { isHost: true, nickname: 'Bảo' }), player('g', { nickname: 'Khách' })],
     round: round(),
     history: [],
