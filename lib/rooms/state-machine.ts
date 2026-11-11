@@ -352,7 +352,7 @@ function join(state: RoomState, playerId: string, nowMs: number): ApplyResult | 
 
   if (existing) {
     // Returning player (R6c): restore, keep score/joinedRound, no late-join check.
-    return changed(withPlayer(state, playerId, (p) => ({ ...p, leftAt: null, lastSeenAt: nowMs })));
+    return changed(withHost(withPlayer(state, playerId, (p) => ({ ...p, leftAt: null, lastSeenAt: nowMs })), nowMs));
   }
 
   let joinedRound: number;
@@ -369,7 +369,12 @@ function join(state: RoomState, playerId: string, nowMs: number): ApplyResult | 
       if (!state.settings.lateJoin) return 'LATE_JOIN_CLOSED';
       joinedRound = state.roundIdx + 1;
   }
-  return changed({ ...state, players: [...state.players, newPlayer(playerId, nowMs, joinedRound)] });
+  return changed(withHost({ ...state, players: [...state.players, newPlayer(playerId, nowMs, joinedRound)] }, nowMs));
+}
+
+/** Re-resolves the host so a room whose host is gone does not stay hostless until the next heartbeat. */
+function withHost(state: RoomState, nowMs: number): RoomState {
+  return { ...state, hostId: resolveHost(state, nowMs) };
 }
 
 function leave(state: RoomState, playerId: string, nowMs: number): ApplyResult {
@@ -425,6 +430,7 @@ function updateSettings(
 function updateTheme(state: RoomState, playerId: string, theme: ThemeRef): ApplyResult | RoomError {
   const denied = hostOnlyIn(state, playerId, 'lobby');
   if (denied) return denied;
+  if (state.theme?.type === theme.type && state.theme.key === theme.key) return noop(state);
   return changed({ ...state, theme: { type: theme.type, key: theme.key } });
 }
 

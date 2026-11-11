@@ -14,7 +14,7 @@ import { NextResponse } from 'next/server';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { createClient } from '@/lib/supabase/server';
-import { systemClock } from './clock';
+import { systemClock, type Clock } from './clock';
 import { ROOM_CODE_LENGTH } from './config';
 import { createRoomNotifier } from './notify';
 import { createRoomService, type RoomService, type ServiceResult } from './room-service';
@@ -61,10 +61,10 @@ async function authenticate(): Promise<{ userId: string; db: SupabaseClient } | 
   return { userId: data.user.id, db };
 }
 
-function serviceFor(db: SupabaseClient): RoomService {
+function serviceFor(db: SupabaseClient, clock: Clock): RoomService {
   return createRoomService({
     db,
-    clock: systemClock,
+    clock,
     notify: createRoomNotifier(db),
     fetchFn: (url, init) => fetch(url, init),
     rng: Math.random,
@@ -77,12 +77,23 @@ type Handler = (
   request: Request,
 ) => Promise<ServiceResult<unknown> | Response>;
 
-async function handle(request: Request, fn: Handler, okStatus?: number): Promise<Response> {
+interface RouteOptions {
+  okStatus?: number;
+  /**
+   * Freeze the service clock at request arrival, so the auth + profile round trips do not count
+   * against the player (answers are scored from deadline minus receive time).
+   */
+  atReceiveTime?: boolean;
+}
+
+async function handle(request: Request, fn: Handler, opts: RouteOptions = {}): Promise<Response> {
+  const receivedAtMs = systemClock.now();
   try {
     const auth = await authenticate();
     if (auth instanceof Response) return auth;
-    const result = await fn(serviceFor(auth.db), auth.userId, request);
-    return result instanceof Response ? result : toResponse(result, okStatus);
+    const clock = opts.atReceiveTime ? { now: () => receivedAtMs } : systemClock;
+    const result = await fn(serviceFor(auth.db, clock), auth.userId, request);
+    return result instanceof Response ? result : toResponse(result, opts.okStatus);
   } catch (err) {
     console.error('room route failed:', err);
     return errorResponse(500, 'INTERNAL');
@@ -91,17 +102,21 @@ async function handle(request: Request, fn: Handler, okStatus?: number): Promise
 
 /** Handler for routes without a room code (POST /api/rooms). */
 export function roomsRoute(fn: Handler, okStatus?: number) {
-  return (request: Request) => handle(request, fn, okStatus);
+  return (request: Request) => handle(request, fn, { okStatus });
 }
 
 /** Handler for /api/rooms/[code]/...: validates the code (malformed -> 404) before calling `fn`. */
 export function roomRoute(
   fn: (svc: RoomService, code: string, userId: string, request: Request) => Promise<ServiceResult<unknown> | Response>,
+  opts: Pick<RouteOptions, 'atReceiveTime'> = {},
 ) {
   return async (request: Request, ctx: RoomRouteContext) => {
     const { code } = await ctx.params;
-    return handle(request, async (svc, userId, req) =>
-      CODE_RE.test(code) ? fn(svc, code, userId, req) : errorResponse(404, 'ROOM_NOT_FOUND'),
+    return handle(
+      request,
+      async (svc, userId, req) =>
+        CODE_RE.test(code) ? fn(svc, code, userId, req) : errorResponse(404, 'ROOM_NOT_FOUND'),
+      opts,
     );
   };
 }

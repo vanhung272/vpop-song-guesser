@@ -33,8 +33,11 @@ export interface RoomRepo {
   save(roomId: string, prev: RoomState, next: RoomState, effects: Effect[], opts: SaveOptions): Promise<SaveResult>;
   /** Monotonic last_seen_at (player) and last_activity_at (room). `playerId` null: room only. */
   touch(roomId: string, playerId: string | null, tsMs: number): Promise<void>;
-  /** Closes an open room. */
-  close(roomId: string, nowMs: number): Promise<void>;
+  /**
+   * Closes an open room iff its last_activity_at is still <= `idleSinceMs` (so activity that lands
+   * between load and close keeps it open). Resolves to whether it closed.
+   */
+  close(roomId: string, nowMs: number, idleSinceMs: number): Promise<boolean>;
   /** Inserts a new open room plus its host player row; 'code_taken' if the code is in use. */
   insertRoom(code: string, state: RoomState, nowMs: number): Promise<{ roomId: string } | 'code_taken'>;
   fetchRound(roomId: string, gameNo: number, idx: number): Promise<{ choices: SnapshotChoice[]; correctAnswerId: string } | null>;
@@ -291,13 +294,16 @@ export function createRoomRepo(db: SupabaseClient): RoomRepo {
       if (error) fail('touch', error);
     },
 
-    async close(roomId, nowMs) {
-      const { error } = await db
+    async close(roomId, nowMs, idleSinceMs) {
+      const { data, error } = await db
         .from('rooms')
         .update({ closed_at: iso(nowMs) })
         .eq('id', roomId)
-        .is('closed_at', null);
+        .is('closed_at', null)
+        .lte('last_activity_at', iso(idleSinceMs))
+        .select('id');
       if (error) fail('close', error);
+      return (data ?? []).length > 0;
     },
 
     async insertRoom(code, state, nowMs) {

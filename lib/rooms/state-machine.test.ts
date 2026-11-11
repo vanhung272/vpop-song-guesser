@@ -399,6 +399,29 @@ describe('Join', () => {
   });
 });
 
+describe('Join and host', () => {
+  it('a newcomer becomes host when the host left and nobody else is online', () => {
+    const later = 1000 + OFFLINE_AFTER_MS + 1000;
+    const s = lobby({ players: lobby().players.map((p) => (p.id === 'h' ? { ...p, leftAt: 1500 } : p)) });
+    const r = ok(apply(s, { type: 'Join', playerId: 'n' }, later));
+    expect(r.state.hostId).toBe('n');
+  });
+
+  it('a returning player becomes host in a room nobody is online in', () => {
+    const later = 1000 + OFFLINE_AFTER_MS + 1000;
+    const s = lobby({
+      players: [...lobby().players.map((p) => (p.id === 'h' ? { ...p, leftAt: 1500 } : p)), player('r', 50, { leftAt: 900 })],
+    });
+    const r = ok(apply(s, { type: 'Join', playerId: 'r' }, later));
+    expect(r.state.hostId).toBe('r');
+  });
+
+  it('joining does not take host from an online host', () => {
+    const r = ok(apply(lobby(), { type: 'Join', playerId: 'n' }, 2000));
+    expect(r.state.hostId).toBe('h');
+  });
+});
+
 describe('Leave and host transfer', () => {
   it('Leave marks the player as left', () => {
     const s = lobby({ version: 2 });
@@ -555,6 +578,14 @@ describe('UpdateSettings / UpdateTheme', () => {
     const r = ok(apply(s, { type: 'UpdateTheme', playerId: 'h', theme }, 2000));
     expect(r.state.theme).toEqual(theme);
     expect(r.state.version).toBe(3);
+  });
+});
+
+describe('UpdateTheme no-op', () => {
+  it('re-picking the current theme does not bump the version', () => {
+    const s = lobby({ version: 4 });
+    const r = ok(apply(s, { type: 'UpdateTheme', playerId: 'h', theme: { ...THEME } }, 2000));
+    expect(r.state.version).toBe(4);
   });
 });
 

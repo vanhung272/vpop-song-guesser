@@ -117,8 +117,8 @@ export function createRoomService(deps: RoomDeps): RoomService {
     const loaded = await repo.load(code);
     if (!loaded) return null;
     if (nowMs - loaded.lastActivityAt > ROOM_IDLE_CLOSE_MS) {
-      await repo.close(loaded.roomId, nowMs);
-      return null;
+      if (await repo.close(loaded.roomId, nowMs, loaded.lastActivityAt)) return null;
+      return repo.load(code); // someone was active after all: use the fresh row
     }
     return loaded;
   }
@@ -224,7 +224,9 @@ export function createRoomService(deps: RoomDeps): RoomService {
       const span = 9 * 10 ** (ROOM_CODE_LENGTH - 1);
       for (let i = 0; i < MAX_CODE_ATTEMPTS; i++) {
         const code = String(10 ** (ROOM_CODE_LENGTH - 1) + Math.floor(rng() * span));
-        const res = await repo.insertRoom(code, state, nowMs);
+        let res = await repo.insertRoom(code, state, nowMs);
+        // An abandoned room keeps its code until something loads it: closing it here frees the code.
+        if (res === 'code_taken' && !(await loadOpen(code, nowMs))) res = await repo.insertRoom(code, state, nowMs);
         if (res !== 'code_taken') return { ok: true, data: { code } };
       }
       return fail(503, 'CODE_UNAVAILABLE');

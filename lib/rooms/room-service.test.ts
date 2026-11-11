@@ -227,6 +227,41 @@ describe('room service (local Supabase)', () => {
     expect(Date.parse(row.closed_at!)).toBe(now);
   });
 
+  it('idle close does not close a room that saw activity after it was loaded', async () => {
+    const base = createRoomRepo(db);
+    let touchAfterLoad = false;
+    const repo = {
+      ...base,
+      async load(code: string) {
+        const loaded = await base.load(code);
+        if (loaded && touchAfterLoad) {
+          touchAfterLoad = false;
+          await base.touch(loaded.roomId, users[0], now); // a heartbeat lands in between
+        }
+        return loaded;
+      },
+    };
+    const svc = createRoomService({ db, clock, notify, fetchFn, rng: mulberry32(7), repo });
+    const code = await newRoom(svc);
+    now += ROOM_IDLE_CLOSE_MS + 1000;
+    touchAfterLoad = true;
+    const snap = await svc.getSnapshot(code, users[0]);
+    expect(snap.ok).toBe(true);
+    expect((await roomRow(code)).closed_at).toBeNull();
+  });
+
+  it('create room reclaims the code of an idle room nobody closed', async () => {
+    const idle = await newRoom(service());
+    now += ROOM_IDLE_CLOSE_MS + 1000;
+    const draw = (Number(idle) - 10000) / 90000 + 1e-9;
+    const svc = createRoomService({ db, clock, notify, fetchFn, rng: () => draw });
+    const { code } = ok(await svc.createRoom(users[1]));
+    roomIds.add((await roomRow(code)).id);
+    expect(code).toBe(idle);
+    const snap = ok(await svc.getSnapshot(code, users[1]));
+    expect(snap.hostId).toBe(users[1]);
+  });
+
   it('start replaces a track whose preview URL fails the HEAD check', async () => {
     const svc = createRoomService({ db, clock, notify, fetchFn, rng: mulberry32(7) });
     const code = await newRoom(svc);

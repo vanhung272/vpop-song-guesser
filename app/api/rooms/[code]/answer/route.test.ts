@@ -4,9 +4,19 @@ let user: { id: string } | null;
 let profileExists: boolean;
 let answerImpl: (code: string, playerId: string, answerId: string) => Promise<unknown>;
 let answerCalls: unknown[][];
+let nowMs: number;
+let serviceClock: { now(): number } | null;
 
+vi.mock('@/lib/rooms/clock', () => ({ systemClock: { now: () => nowMs } }));
 vi.mock('@/lib/supabase/server', () => ({
-  createClient: async () => ({ auth: { getUser: async () => ({ data: { user }, error: null }) } }),
+  createClient: async () => ({
+    auth: {
+      getUser: async () => {
+        nowMs += 400; // auth round trips take time
+        return { data: { user }, error: null };
+      },
+    },
+  }),
 }));
 vi.mock('@/lib/supabase/admin', () => ({
   createAdminClient: () => ({
@@ -21,8 +31,9 @@ vi.mock('@/lib/supabase/admin', () => ({
 }));
 vi.mock('@/lib/rooms/notify', () => ({ createRoomNotifier: () => async () => {} }));
 vi.mock('@/lib/rooms/room-service', () => ({
-  createRoomService: () => ({
+  createRoomService: (deps: { clock: { now(): number } }) => ({
     answer: (code: string, playerId: string, answerId: string) => {
+      serviceClock = deps.clock;
       answerCalls.push([code, playerId, answerId]);
       return answerImpl(code, playerId, answerId);
     },
@@ -45,6 +56,8 @@ beforeEach(() => {
   user = { id: 'user-1' };
   profileExists = true;
   answerCalls = [];
+  nowMs = 10_000;
+  serviceClock = null;
   answerImpl = async () => ({ ok: true, data: { version: 9 } });
 });
 
@@ -54,6 +67,11 @@ describe('POST /api/rooms/:code/answer', () => {
     expect(res.status).toBe(200);
     expect(await res.json()).toEqual({ version: 9 });
     expect(answerCalls).toEqual([['12345', 'user-1', 'abc']]);
+  });
+
+  it('scores the answer at request receive time, before authentication round trips', async () => {
+    await call('12345', { answerId: 'abc' });
+    expect(serviceClock?.now()).toBe(10_000);
   });
 
   it('401 without a session', async () => {
