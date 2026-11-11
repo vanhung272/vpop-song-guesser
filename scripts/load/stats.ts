@@ -36,3 +36,10 @@ export function summarize(samples: Sample[]): EndpointSummary[] {
 
 /** Phase changes in one game of `questions` rounds (see the room flow in the plan). */
 export const expectedTransitions = (questions: number) => 1 + 3 * questions;
+
+/**
+ * Calls that mean the backend failed under load: 5xx, no response, or a save that ran out of
+ * retries (CONFLICT). TOO_LATE / WRONG_PHASE are normal game outcomes and do not count.
+ */
+export const failedCalls = (samples: Sample[]) =>
+  samples.filter((s) => s.status === 0 || s.status >= 500 || s.error === 'CONFLICT').length;

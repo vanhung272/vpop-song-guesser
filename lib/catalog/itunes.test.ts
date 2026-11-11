@@ -44,9 +44,30 @@ describe('searchItunes', () => {
     const fetchFn = vi.fn(
       async () => ({ ok: false, status: 503, statusText: 'Service Unavailable' }) as unknown as Response,
     );
-    await expect(searchItunes('Đen Vâu', { limit: 50 }, fetchFn)).rejects.toThrow(
+    await expect(searchItunes('Đen Vâu', { limit: 50, retryDelayMs: 0 }, fetchFn)).rejects.toThrow(
       /iTunes search failed.*503.*Đen Vâu/,
     );
+  });
+
+  it('retries rate limits and server errors before giving up', async () => {
+    const replies = [
+      { ok: false, status: 429, statusText: 'Too Many Requests' } as unknown as Response,
+      { ok: false, status: 503, statusText: 'Service Unavailable' } as unknown as Response,
+      okResponse(sonTung),
+    ];
+    const fetchFn = vi.fn(async () => replies.shift()!);
+    const songs = await searchItunes('Sơn Tùng M-TP', { limit: 50, retryDelayMs: 0 }, fetchFn);
+    expect(fetchFn).toHaveBeenCalledTimes(3);
+    expect(songs.length).toBeGreaterThan(0);
+  });
+
+  it('gives up after the retry budget and does not retry other client errors', async () => {
+    const busy = vi.fn(async () => ({ ok: false, status: 429, statusText: '' }) as unknown as Response);
+    await expect(searchItunes('x', { limit: 5, retries: 2, retryDelayMs: 0 }, busy)).rejects.toThrow(/429/);
+    expect(busy).toHaveBeenCalledTimes(3);
+    const bad = vi.fn(async () => ({ ok: false, status: 400, statusText: '' }) as unknown as Response);
+    await expect(searchItunes('x', { limit: 5, retryDelayMs: 0 }, bad)).rejects.toThrow(/400/);
+    expect(bad).toHaveBeenCalledTimes(1);
   });
 
   it('throws when the body is not an iTunes result list', async () => {

@@ -40,6 +40,16 @@ describe('pointsFor', () => {
   });
 });
 
+describe('pointsFor with non-finite time', () => {
+  it('NaN remaining time scores the base points, never NaN', () => {
+    expect(pointsFor(1, true, Number.NaN, 15000)).toBe(500);
+  });
+  it('infinite remaining time is capped at the full bonus', () => {
+    expect(pointsFor(1, true, Number.POSITIVE_INFINITY, 15000)).toBe(800);
+    expect(pointsFor(1, true, Number.NEGATIVE_INFINITY, 15000)).toBe(500);
+  });
+});
+
 describe('pointsOnOffer', () => {
   it('returns base and maxBonus for the round', () => {
     expect(pointsOnOffer(1)).toEqual({ base: 500, maxBonus: 300 });

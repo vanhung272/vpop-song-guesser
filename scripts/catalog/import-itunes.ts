@@ -78,6 +78,7 @@ async function main() {
   if (!Number.isInteger(limit) || limit < 1 || limit > 200) throw new Error('--limit must be an integer 1..200');
 
   let first = true;
+  const failed: string[] = [];
   for (const artist of wanted) {
     const file = path.join(values.out!, `${artist.key}.json`);
     if (existsSync(file) && !values.force) {
@@ -85,10 +86,17 @@ async function main() {
       continue;
     }
     const byId = new Map<number, ItunesSong>();
-    for (const term of [artist.name, ...(artist.searchTerms ?? [])]) {
-      if (!first) await sleep(ITUNES_DELAY_MS);
-      first = false;
-      for (const s of await searchItunes(term, { limit })) if (!byId.has(s.trackId)) byId.set(s.trackId, s);
+    try {
+      for (const term of [artist.name, ...(artist.searchTerms ?? [])]) {
+        if (!first) await sleep(ITUNES_DELAY_MS);
+        first = false;
+        for (const s of await searchItunes(term, { limit })) if (!byId.has(s.trackId)) byId.set(s.trackId, s);
+      }
+    } catch (e) {
+      // One artist failing (after searchItunes' own retries) must not throw away the rest of --all.
+      console.error(`${artist.key}: ${e instanceof Error ? e.message : e} - skipped, re-run with --artist ${artist.key}`);
+      failed.push(artist.key);
+      continue;
     }
     const result = filterSongs([...byId.values()], artist);
     const written = writeReviewFile(artist.key, result, values.out!);
@@ -102,6 +110,10 @@ async function main() {
     );
   }
   console.log('Review the files, then import with: npm run catalog:import -- <file> --target local');
+  if (failed.length > 0) {
+    console.error(`Failed: ${failed.join(', ')}`);
+    process.exitCode = 1;
+  }
 }
 
 main().catch((e) => {

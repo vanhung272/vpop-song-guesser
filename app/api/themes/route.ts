@@ -16,7 +16,8 @@ export async function GET(request: Request) {
       q: params.get('q') ?? undefined,
     });
     return NextResponse.json(themes);
-  } catch {
+  } catch (err) {
+    console.error('GET /api/themes failed:', err);
     return NextResponse.json({ error: 'THEMES_UNAVAILABLE' }, { status: 500 });
   }
 }

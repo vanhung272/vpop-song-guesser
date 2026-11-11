@@ -91,6 +91,18 @@ function parseReview(file: string): ReviewFile {
   if (!r || typeof r !== 'object' || !Array.isArray(r.kept) || !Array.isArray(r.dropped)) {
     throw new Error(`Invalid review file ${file}: expected { kept: [], dropped: [] }`);
   }
+  // Hand edits: a wrong type here would silently import (include: "false" is truthy) or store a bad key.
+  if (typeof r.artistKey !== 'string' || r.artistKey.trim() === '') {
+    throw new Error(`Invalid review file ${file}: artistKey must be a non-empty string`);
+  }
+  for (const [list, entries] of [['kept', r.kept], ['dropped', r.dropped]] as const) {
+    entries.forEach((t: unknown, i) => {
+      const include = (t as { include?: unknown } | null)?.include;
+      if (typeof t !== 'object' || t === null || typeof include !== 'boolean') {
+        throw new Error(`Invalid review file ${file}: ${list}[${i}].include must be true or false`);
+      }
+    });
+  }
   return r as ReviewFile;
 }
 

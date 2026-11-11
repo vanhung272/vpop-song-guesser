@@ -49,7 +49,13 @@ describe('GET /api/themes', () => {
     impl = async () => {
       throw new Error('boom');
     };
+    const logged: unknown[][] = [];
+    const spy = vi.spyOn(console, 'error').mockImplementation((...args: unknown[]) => {
+      logged.push(args);
+    });
     const res = await call('');
     expect(res.status).toBe(500);
+    expect(logged.flat()).toContainEqual(expect.objectContaining({ message: 'boom' }));
+    spy.mockRestore();
   });
 });

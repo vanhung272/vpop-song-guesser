@@ -24,9 +24,20 @@ function isSong(r: unknown): r is ItunesSong {
   );
 }
 
+/** Retries after a 429 or 5xx (iTunes rate-limits bursts); the delay doubles each time. */
+export const DEFAULT_RETRIES = 3;
+export const DEFAULT_RETRY_DELAY_MS = 5000;
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const retryable = (status: number) => status === 429 || status >= 500;
+
 export async function searchItunes(
   term: string,
-  { limit = DEFAULT_LIMIT }: { limit?: number } = {},
+  {
+    limit = DEFAULT_LIMIT,
+    retries = DEFAULT_RETRIES,
+    retryDelayMs = DEFAULT_RETRY_DELAY_MS,
+  }: { limit?: number; retries?: number; retryDelayMs?: number } = {},
   fetchFn: typeof fetch = fetch,
 ): Promise<ItunesSong[]> {
   const url = new URL(ITUNES_SEARCH_URL);
@@ -39,7 +50,11 @@ export async function searchItunes(
     limit: String(limit),
   }).toString();
 
-  const res = await fetchFn(url.toString());
+  let res = await fetchFn(url.toString());
+  for (let attempt = 1; !res.ok && retryable(res.status) && attempt <= retries; attempt++) {
+    await sleep(retryDelayMs * 2 ** (attempt - 1));
+    res = await fetchFn(url.toString());
+  }
   if (!res.ok) {
     const status = [res.status, res.statusText].filter(Boolean).join(' ');
     throw new Error(`iTunes search failed: HTTP ${status} for term "${term}"`);

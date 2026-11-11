@@ -20,6 +20,7 @@ export function pointsFor(
   if (!correct) return 0;
   const { base, maxBonus } = pointsOnOffer(roundNumber);
   if (!(limitMs > 0)) return base;
+  if (Number.isNaN(remainingMs)) return base;
   const remaining = Math.min(Math.max(remainingMs, 0), limitMs);
   return base + Math.round((maxBonus * remaining) / limitMs);
 }

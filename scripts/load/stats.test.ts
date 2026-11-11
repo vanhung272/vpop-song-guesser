@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { expectedTransitions, percentile, summarize } from './stats';
+import { expectedTransitions, failedCalls, percentile, summarize } from './stats';
 
 describe('load stats', () => {
   it('percentile uses nearest rank', () => {
@@ -24,5 +24,18 @@ describe('load stats', () => {
   it('a game of n questions has 1 + 3n phase transitions', () => {
     // countdown->presenting, then per round presenting->question, question->reveal, reveal->next|results.
     expect(expectedTransitions(5)).toBe(16);
+  });
+
+  it('failedCalls counts server errors and conflicts, not expected game outcomes', () => {
+    expect(
+      failedCalls([
+        { endpoint: 'POST answer', ms: 50, status: 200 },
+        { endpoint: 'POST answer', ms: 50, status: 409, error: 'CONFLICT' },
+        { endpoint: 'POST answer', ms: 50, status: 409, error: 'TOO_LATE' },
+        { endpoint: 'POST answer', ms: 50, status: 409, error: 'WRONG_PHASE' },
+        { endpoint: 'POST tick', ms: 50, status: 500, error: 'INTERNAL' },
+        { endpoint: 'GET snapshot', ms: 50, status: 0, error: 'NETWORK' },
+      ]),
+    ).toBe(3);
   });
 });

@@ -11,7 +11,10 @@
  */
 import { createServerClient } from '@supabase/ssr';
 import { createClient, type RealtimeChannel, type SupabaseClient } from '@supabase/supabase-js';
-import { expectedTransitions, summarize, type Sample } from './stats';
+import { expectedTransitions, failedCalls, summarize, type Sample } from './stats';
+
+/** Same retry pace as the web client's useAutoTick. */
+const TICK_RETRY_MS = 2000;
 
 interface Args {
   base: string;
@@ -173,6 +176,8 @@ class SimPlayer {
       if (now() >= snap.phaseEndsAt) {
         const tick = await this.api<{ version: number; changed: boolean }>('POST tick', 'POST', `/api/rooms/${code}/tick`);
         if (tick.data?.changed) this.changedTicks.push(tick.data.version);
+        // Like the web client: if this tick did not advance the room, back off instead of spinning.
+        else await this.waitFor(TICK_RETRY_MS, snap.version);
       }
     }
   }
@@ -241,7 +246,11 @@ async function main() {
     const errors = Object.entries(s.errors).map(([k, v]) => `${k}×${v}`).join(', ') || '—';
     console.log(`| ${s.endpoint} | ${s.count} | ${s.p50} | ${s.p95} | ${s.max} | ${errors} |`);
   }
-  const bad = rooms.some((r) => r.duplicateTickVersions > 0 || r.transitions !== expectedTransitions(args.questions));
+  const failures = failedCalls(samples);
+  if (failures > 0) console.log(`${failures} call(s) failed (5xx, no response, or CONFLICT): see the Errors column.`);
+  const bad =
+    failures > 0 ||
+    rooms.some((r) => r.duplicateTickVersions > 0 || r.transitions !== expectedTransitions(args.questions));
   process.exitCode = bad ? 1 : 0;
 }
 

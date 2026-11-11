@@ -1,14 +1,15 @@
 import { createBrowserClient } from '@supabase/ssr';
 import type { SupabaseClient } from '@supabase/supabase-js';
+import { publicSupabaseEnv } from './env';
 
 let browserClient: SupabaseClient | undefined;
 
 /** Browser Supabase client (anon key; session kept in cookies so route handlers see it). */
 export function createClient(): SupabaseClient {
-  browserClient ??= createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-  );
+  if (!browserClient) {
+    const { url, anonKey } = publicSupabaseEnv();
+    browserClient = createBrowserClient(url, anonKey);
+  }
   return browserClient;
 }
 

@@ -201,6 +201,22 @@ describe('importReviewed', () => {
     writeFileSync(file, JSON.stringify({ nope: true }));
     await expect(importReviewed(file, db)).rejects.toThrow(/review file/i);
   });
+
+  it('rejects hand edits with the wrong types instead of importing them', async () => {
+    const good = readReview(writeReviewFile(artist.key, filterSongs([song(40)], artist), path.join(tmp, 'types')));
+    const cases: [string, (r: ReviewFile) => void][] = [
+      ['artistKey', (r) => ((r as unknown as { artistKey: unknown }).artistKey = null)],
+      ['include', (r) => ((r.kept[0] as unknown as { include: unknown }).include = 'false')],
+    ];
+    for (const [field, spoil] of cases) {
+      const review = structuredClone(good);
+      spoil(review);
+      const file = path.join(tmp, `types-${field}.json`);
+      writeFileSync(file, JSON.stringify(review));
+      await expect(importReviewed(file, db)).rejects.toThrow(new RegExp(field));
+    }
+    expect(await rowsFor([BASE_ID + 40])).toHaveLength(0);
+  });
 });
 
 describe('importReviewed: artist_keys (R4b) and removals (R3c)', () => {
