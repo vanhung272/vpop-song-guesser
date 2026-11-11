@@ -540,6 +540,7 @@ describe('UpdateSettings / UpdateTheme', () => {
       { questionCount: 7 },
       { questionCount: '10' },
       { timeLimitMs: 12000 },
+      { timeLimitMs: 20000 }, // dropped option
       { showLiveAnswers: 'yes' },
       { lateJoin: 1 },
       { somethingElse: true },
@@ -552,7 +553,7 @@ describe('UpdateSettings / UpdateTheme', () => {
 
   it('UpdateSettings applies a valid patch (host, lobby only)', () => {
     const s = lobby({ version: 2 });
-    const patch = { questionCount: 15, timeLimitMs: 20000, lateJoin: false };
+    const patch = { questionCount: 15, timeLimitMs: 5000, lateJoin: false };
     expect(err(apply(s, { type: 'UpdateSettings', playerId: 'a', patch }, 2000))).toBe('NOT_HOST');
     expect(
       err(apply(lobby({ phase: 'question' }), { type: 'UpdateSettings', playerId: 'h', patch }, 2000)),
@@ -560,7 +561,7 @@ describe('UpdateSettings / UpdateTheme', () => {
     const r = ok(apply(s, { type: 'UpdateSettings', playerId: 'h', patch }, 2000));
     expect(r.state.settings).toEqual({
       questionCount: 15,
-      timeLimitMs: 20000,
+      timeLimitMs: 5000,
       showLiveAnswers: true,
       lateJoin: false,
     });

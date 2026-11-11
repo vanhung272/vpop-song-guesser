@@ -17,7 +17,6 @@ interface Props {
 }
 
 const seconds = (ms: number) => `${ms / 1000} giây`;
-const onOff = (v: boolean) => (v ? 'Bật' : 'Tắt');
 
 export function Lobby({ snapshot, send, onLeave }: Props) {
   const [error, setError] = useState<string | null>(null);
@@ -96,14 +95,6 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
                 ))}
               </select>
             </label>
-            <label className="toggle">
-              <input
-                type="checkbox"
-                checked={settings.lateJoin}
-                onChange={(e) => patch({ lateJoin: e.target.checked })}
-              />
-              <span>Cho vào giữa ván</span>
-            </label>
           </div>
         ) : (
           <dl className="settings-view">
@@ -111,8 +102,6 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
             <dd>{settings.questionCount} câu</dd>
             <dt>Thời gian mỗi câu</dt>
             <dd>{seconds(settings.timeLimitMs)}</dd>
-            <dt>Vào giữa ván</dt>
-            <dd>{onOff(settings.lateJoin)}</dd>
           </dl>
         )}
       </section>

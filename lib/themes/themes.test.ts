@@ -149,10 +149,15 @@ describe('periodLabel / themeLabel', () => {
 
 describe('random theme', () => {
   it('is one theme over every Vietnamese track', async () => {
+    // Other DB test files add/remove tracks concurrently: bracket the count instead of pinning it.
+    const count = async () =>
+      (await db.from('tracks').select('id', { count: 'exact', head: true }).eq('language', 'vi')).count ?? 0;
+    const before = await count();
     const res = await listThemes(db, { type: 'random' });
+    const after = await count();
     expect(res).toHaveLength(1);
     expect(res[0]).toMatchObject({ type: 'random', key: 'all', label: 'Ngẫu nhiên', playable: true });
-    const { count } = await db.from('tracks').select('id', { count: 'exact', head: true }).eq('language', 'vi');
-    expect(res[0].trackCount).toBe(count);
+    expect(res[0].trackCount).toBeGreaterThanOrEqual(Math.min(before, after));
+    expect(res[0].trackCount).toBeLessThanOrEqual(Math.max(before, after));
   });
 });

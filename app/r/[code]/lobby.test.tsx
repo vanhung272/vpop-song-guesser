@@ -130,21 +130,20 @@ describe('<Lobby />', () => {
     const count = screen.getByLabelText('Số câu') as HTMLSelectElement;
     expect([...count.options].map((o) => o.value)).toEqual(['5', '8', '10', '12', '15']);
     const time = screen.getByLabelText('Thời gian mỗi câu') as HTMLSelectElement;
-    expect([...time.options].map((o) => o.value)).toEqual(['10000', '15000', '20000']);
-    // Percentages are only shown on the reveal now: no setting for it.
+    expect([...time.options].map((o) => o.value)).toEqual(['5000', '10000', '15000']);
+    // Percentages are only shown on the reveal, and late joining is always on: no setting for either.
     expect(screen.queryByLabelText('Hiện % đáp án trực tiếp')).toBeNull();
-    expect(screen.getByLabelText('Cho vào giữa ván')).toBeTruthy();
+    expect(screen.queryByLabelText('Cho vào giữa ván')).toBeNull();
+    expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
   });
 
   it('host changes are sent as settings commands', () => {
     render(<Lobby snapshot={hostSnapshot()} send={send} />);
     fireEvent.change(screen.getByLabelText('Số câu'), { target: { value: '15' } });
-    fireEvent.change(screen.getByLabelText('Thời gian mỗi câu'), { target: { value: '20000' } });
-    fireEvent.click(screen.getByLabelText('Cho vào giữa ván'));
+    fireEvent.change(screen.getByLabelText('Thời gian mỗi câu'), { target: { value: '5000' } });
     expect(send.mock.calls.map((c) => c[0])).toEqual([
       { type: 'settings', patch: { questionCount: 15 } },
-      { type: 'settings', patch: { timeLimitMs: 20000 } },
-      { type: 'settings', patch: { lateJoin: false } },
+      { type: 'settings', patch: { timeLimitMs: 5000 } },
     ]);
   });
 
