@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { creditedArtists, decadeFromDate, filterSongs, matchesArtist, type Artist } from './filter';
+import {
+  creditedArtists,
+  filterSongs,
+  isTetSong,
+  matchesArtist,
+  periodOfYear,
+  releaseYearFromDate,
+  TET_GENRE,
+  type Artist,
+} from './filter';
 import type { ItunesSong } from './itunes';
 import denVauFixture from './__fixtures__/den-vau.json';
 import sonTungFixture from './__fixtures__/son-tung-m-tp.json';
@@ -146,15 +155,70 @@ describe('filterSongs', () => {
   });
 });
 
-describe('decadeFromDate', () => {
-  it('maps release dates to decade strings', () => {
-    expect(decadeFromDate('2017-03-01T12:00:00Z')).toBe('2010s');
-    expect(decadeFromDate('1994-01-01T00:00:00Z')).toBe('1990s');
-    expect(decadeFromDate('2000-06-15T00:00:00Z')).toBe('2000s');
-    expect(decadeFromDate('2026-11-01T00:00:00Z')).toBe('2020s');
+describe('releaseYearFromDate', () => {
+  it('reads the UTC year of an iTunes release date', () => {
+    expect(releaseYearFromDate('2017-03-01T12:00:00Z')).toBe(2017);
+    expect(releaseYearFromDate('2000-01-01T00:00:00Z')).toBe(2000);
   });
   it('returns null for a missing or invalid date', () => {
-    expect(decadeFromDate(undefined)).toBeNull();
-    expect(decadeFromDate('not-a-date')).toBeNull();
+    expect(releaseYearFromDate(undefined)).toBeNull();
+    expect(releaseYearFromDate('not-a-date')).toBeNull();
+  });
+});
+
+describe('periodOfYear', () => {
+  it('buckets years into 5-year periods', () => {
+    expect(periodOfYear(2017)).toBe('2015-2019');
+    expect(periodOfYear(2015)).toBe('2015-2019');
+    expect(periodOfYear(2014)).toBe('2010-2014');
+    expect(periodOfYear(2020)).toBe('2020-2024');
+    expect(periodOfYear(2026)).toBe('2025-2029');
+    expect(periodOfYear(1998)).toBe('1995-1999');
+  });
+  it('returns null without a usable year', () => {
+    expect(periodOfYear(null)).toBeNull();
+    expect(periodOfYear(Number.NaN)).toBeNull();
+    expect(periodOfYear(2017.5)).toBeNull();
+  });
+});
+
+describe('isTetSong', () => {
+  it('recognises Tết / spring songs by title', () => {
+    for (const title of [
+      'Tết Đón Xuân Về',
+      'Ngày Tết Việt Nam',
+      'Tuổi Gì Mà Chẳng Thích Lì Xì (feat. Bình Gold)',
+      'Phút Giao Thừa Diệu Êm',
+      'Một Năm Mới Bình An',
+      'Em Đã Thấy Mùa Xuân Chưa',
+      'Đón Xuân Tuyệt Vời (feat. Chi Pu)',
+      'Xuân Đang Đến Bên Em',
+      'Đi Về Nhà',
+      'Về Nhà Là Khoẻ',
+      'Nơi Pháo Hoa Rực Rỡ (Đi Để Trở Về 8) - Single',
+      'TẾT LÀ ĐÂY CHỨ ĐÂU',
+    ]) {
+      expect(isTetSong(title), title).toBe(true);
+    }
+  });
+
+  it('does not take "xuân" meaning youth, the four seasons, or other homecomings', () => {
+    for (const title of [
+      'Xuân Thì',
+      'Dành Hết Xuân Thì Để Chờ Nhau',
+      'Thanh Xuân - Đừng Ngại Ngùng',
+      'xuân, hạ, thu, đông rồi lại xuân',
+      'Liên Khúc: Xuân Hạ Thu Đông',
+      'sao anh chưa về nhà',
+      'Người Ôm Pháo Hoa',
+      'Một Nơi Bé Nhỏ Nào Đó (Tet 2025 Movie “Bộ Tứ Báo Thủ” Original Soundtrack)',
+      'Lạc Trôi',
+    ]) {
+      expect(isTetSong(title), title).toBe(false);
+    }
+  });
+
+  it('the genre label is "Nhạc Tết"', () => {
+    expect(TET_GENRE).toBe('Nhạc Tết');
   });
 });

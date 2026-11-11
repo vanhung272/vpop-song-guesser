@@ -4,7 +4,10 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import { normalizeVi } from '../text/normalize-vi';
 import { loadArtists } from './artists';
 import {
-  decadeFromDate,
+  isTetSong,
+  periodOfYear,
+  releaseYearFromDate,
+  TET_GENRE,
   matchesArtist,
   titleNorm,
   type Artist,
@@ -17,7 +20,8 @@ import type { ItunesSong } from './itunes';
  * Review file (catalog/review/<artistKey>.json), edited by the curator before import.
  *
  * - `kept`: songs the filter accepted. Set `include: false` to leave one out; edit
- *   `title`, `artist`, `genre`, `decade` freely (title_norm/artist_norm are recomputed on import).
+ *   `title`, `artist`, `genre`, `releaseYear` freely (title_norm/artist_norm and the 5-year
+ *   release period are recomputed on import). Fix `releaseYear` when iTunes dates a re-release.
  * - `dropped`: songs the filter rejected, with the `reason`. Set `include: true` to bring one back.
  */
 export interface ReviewTrack {
@@ -26,7 +30,8 @@ export interface ReviewTrack {
   title: string;
   artist: string;
   genre: string | null;
-  decade: string | null;
+  /** Year of the original release (iTunes date by default; correct it for re-releases). */
+  releaseYear: number | null;
   /** Empty string when iTunes returned no preview; such entries cannot be imported. */
   previewUrl: string;
   coverUrl: string | null;
@@ -43,7 +48,7 @@ export interface ReviewFile {
 }
 
 const NOTE =
-  'Curator-editable. kept: set include=false to leave a song out; edit title/artist/genre/decade as needed. ' +
+  'Curator-editable. kept: set include=false to leave a song out; edit title/artist/genre/releaseYear as needed. ' +
   'dropped: set include=true to bring a wrongly dropped song back. Then run the importer on this file.';
 
 /** iTunes artwork URLs end in /100x100bb.jpg; the same path serves larger sizes. */
@@ -58,8 +63,8 @@ export function toReviewTrack(song: ItunesSong, include: boolean): ReviewTrack {
     itunesTrackId: song.trackId,
     title: song.trackName,
     artist: song.artistName,
-    genre: song.primaryGenreName ?? null,
-    decade: decadeFromDate(song.releaseDate),
+    genre: isTetSong(song.trackName) ? TET_GENRE : (song.primaryGenreName ?? null),
+    releaseYear: releaseYearFromDate(song.releaseDate),
     previewUrl: song.previewUrl ?? '',
     coverUrl: upscaleCover(song.artworkUrl100),
   };
@@ -101,6 +106,10 @@ function parseReview(file: string): ReviewFile {
       if (typeof t !== 'object' || t === null || typeof include !== 'boolean') {
         throw new Error(`Invalid review file ${file}: ${list}[${i}].include must be true or false`);
       }
+      const year = (t as { releaseYear?: unknown }).releaseYear;
+      if (year !== undefined && year !== null && !Number.isInteger(year)) {
+        throw new Error(`Invalid review file ${file}: ${list}[${i}].releaseYear must be a whole year or null`);
+      }
     });
   }
   return r as ReviewFile;
@@ -139,7 +148,7 @@ function toRow(t: ReviewTrack, fileKey: string, curated: Artist[]): TrackRow | n
     artist_norm: normalizeVi(artist),
     language: 'vi', // ruling R3: the catalog is a curated V-pop artist list
     genre: blankToNull(t.genre),
-    decade: blankToNull(t.decade),
+    decade: periodOfYear(t.releaseYear),
     cover_url: blankToNull(t.coverUrl),
     // every curated artist credited on the track, plus the artist this review file belongs to
     artist_keys: [

@@ -1,14 +1,15 @@
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { createCatalogClient, resolveTarget } from '@/lib/catalog/target';
-import { listThemes } from './themes';
+import { listThemes, periodLabel, themeLabel } from './themes';
 
 // Synthetic ids far outside real iTunes ids so the test never touches real catalog rows.
 const BASE_ID = 9_100_000_000_000 + Math.floor(Math.random() * 1_000_000) * 1000;
 const RUN = Math.random().toString(36).slice(2, 8);
 const GENRE = `ZZ Test Genre ${RUN}`;
 const SMALL_GENRE = `ZZ Small Genre ${RUN}`;
-const DECADE = '1890s'; // no real catalog track is this old
+const DECADE = '1890-1894'; // no real catalog track is this old
+const OLDER = '1885-1889';
 
 const artists = [
   { key: `zz-big-${RUN}`, name: 'Nghệ Sĩ Lớn', aliases: ['Nghe Si Lon'] },
@@ -119,5 +120,25 @@ describe('listThemes', () => {
       if (a.playable !== b.playable) expect(a.playable).toBe(true);
       else if (a.trackCount !== b.trackCount) expect(a.trackCount).toBeGreaterThan(b.trackCount);
     }
+  });
+
+  it('release-period themes list the newest period first', async () => {
+    await seed(16, { artist_keys: [artists[0].key], genre: GENRE, decade: OLDER });
+    const res = (await listThemes(db, { type: 'decade' })).filter((t) => t.key === DECADE || t.key === OLDER);
+    expect(res.map((t) => t.key)).toEqual([DECADE, OLDER]);
+    expect(res[0].label).toBe('1890 – 1894');
+  });
+});
+
+describe('periodLabel / themeLabel', () => {
+  it('shows a 5-year period as a range, and the running one as "nay"', () => {
+    expect(periodLabel('2015-2019', 2026)).toBe('2015 – 2019');
+    expect(periodLabel('2025-2029', 2026)).toBe('2025 – nay');
+    expect(periodLabel('2010s', 2026)).toBe('2010s'); // anything else passes through
+  });
+
+  it('themeLabel uses the period label for release-period themes', () => {
+    expect(themeLabel({ type: 'decade', key: '2015-2019' })).toBe('2015 – 2019');
+    expect(themeLabel({ type: 'genre', key: 'Pop' })).toBe('Pop');
   });
 });

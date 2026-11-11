@@ -10,7 +10,7 @@ export type ThemeType = (typeof THEME_TYPES)[number];
 
 export interface ThemeSummary {
   type: ThemeType;
-  /** artist: curated artist key; genre: genre value; decade: decade value (e.g. "2010s"). */
+  /** artist: curated artist key; genre: genre value; decade: 5-year release period (e.g. "2015-2019"). */
   key: string;
   label: string;
   trackCount: number;
@@ -94,15 +94,29 @@ export async function listThemes(
     if (type && type !== t) continue;
     const counts = new Map<string, number>();
     for (const r of rows) bump(counts, r[t]);
-    for (const [value, n] of counts) if (matches(value)) push(t, value, value, n);
+    for (const [value, n] of counts) {
+      const label = t === 'decade' ? periodLabel(value) : value;
+      if (matches(value, label)) push(t, value, label, n);
+    }
   }
 
   return out.sort(
     (a, b) =>
       Number(b.playable) - Number(a.playable) ||
+      // Release periods read best newest-first; everything else by size.
+      (type === 'decade' ? b.key.localeCompare(a.key) : 0) ||
       b.trackCount - a.trackCount ||
       a.label.localeCompare(b.label, 'vi'),
   );
+}
+
+const PERIOD_RE = /^(\d{4})-(\d{4})$/;
+
+/** "2015-2019" -> "2015 – 2019"; the period containing `currentYear` ends in "nay" (now). */
+export function periodLabel(key: string, currentYear = new Date().getFullYear()): string {
+  const m = PERIOD_RE.exec(key);
+  if (!m) return key;
+  return Number(m[2]) >= currentYear ? `${m[1]} – nay` : `${m[1]} – ${m[2]}`;
 }
 
 /** Display label of a theme: the curated artist name for artist themes, otherwise the key itself. */
@@ -111,5 +125,6 @@ export function themeLabel(
   { artists = curatedArtists }: { artists?: Artist[] } = {},
 ): string {
   if (theme.type === 'artist') return artists.find((a) => a.key === theme.key)?.name ?? theme.key;
+  if (theme.type === 'decade') return periodLabel(theme.key);
   return theme.key;
 }

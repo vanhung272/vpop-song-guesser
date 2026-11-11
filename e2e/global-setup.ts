@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { createClient } from '@supabase/supabase-js';
+import { periodOfYear } from '../lib/catalog/filter';
 import { normalizeVi } from '../lib/text/normalize-vi';
 import { localSupabase } from './supabase-env';
 
@@ -40,7 +41,7 @@ export default async function globalSetup() {
       artist_norm: normalizeVi(t.artistName),
       language: 'vi',
       genre: t.primaryGenreName ?? null,
-      decade: Number.isFinite(year) && year > 0 ? `${Math.floor(year / 10) * 10}s` : null,
+      decade: Number.isFinite(year) && year > 0 ? periodOfYear(year) : null,
       cover_url: t.artworkUrl100 ?? null,
       artist_keys: [E2E_ARTIST_KEY],
     });

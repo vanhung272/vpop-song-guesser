@@ -73,6 +73,31 @@ afterEach(() => {
 });
 
 describe('<Lobby />', () => {
+  it('the host theme picker has tabs Ca sĩ / Thể loại / Thời gian ra mắt', () => {
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    expect(screen.getAllByRole('tab').map((t) => t.textContent)).toEqual(['Ca sĩ', 'Thể loại', 'Thời gian ra mắt']);
+  });
+
+  it('the theme list hides themes without enough songs', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(
+        async () =>
+          new Response(
+            JSON.stringify([
+              { type: 'genre', key: 'Pop', label: 'Pop', trackCount: 1406, playable: true },
+              { type: 'genre', key: 'Dance', label: 'Dance', trackCount: 7, playable: false },
+            ]),
+            { status: 200 },
+          ),
+      ),
+    );
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    await vi.waitFor(() => expect(screen.getByRole('button', { name: /Pop/ })).toBeTruthy());
+    expect(screen.queryByRole('button', { name: /Dance/ })).toBeNull();
+    expect(screen.queryByText('chưa đủ bài')).toBeNull();
+  });
+
   it('lists players with a count out of 10 and a host badge', () => {
     render(<Lobby snapshot={snapshot()} send={send} />);
     expect(screen.getByText('2/10')).toBeTruthy();

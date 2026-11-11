@@ -97,10 +97,34 @@ export function filterSongs(songs: ItunesSong[], artist: Artist): FilterResult {
   return { kept, dropped };
 }
 
-/** "2017-03-01T12:00:00Z" -> "2010s"; null when missing/invalid. */
-export function decadeFromDate(releaseDate: string | undefined): string | null {
+/** "2017-03-01T12:00:00Z" -> 2017; null when missing/invalid. */
+export function releaseYearFromDate(releaseDate: string | undefined): number | null {
   if (!releaseDate) return null;
   const year = new Date(releaseDate).getUTCFullYear();
-  if (!Number.isFinite(year)) return null;
-  return `${Math.floor(year / 10) * 10}s`;
+  return Number.isFinite(year) ? year : null;
+}
+
+/**
+ * 5-year release period of a year: 2017 -> "2015-2019". Stored in tracks.decade (the column and
+ * the 'decade' theme type keep their name; the value is the period). null without a whole year.
+ */
+export function periodOfYear(year: number | null | undefined): string | null {
+  if (year == null || !Number.isInteger(year)) return null;
+  const start = Math.floor(year / 5) * 5;
+  return `${start}-${start + 4}`;
+}
+
+/** Genre given to Tết / spring songs, so they form their own "Thể loại" theme. */
+export const TET_GENRE = 'Nhạc Tết';
+
+// Matched on normalizeVi(title): lowercase, no diacritics.
+const TET_RE = /\btet\b|giao thua|\bli xi\b|\bnam moi\b|new year|\bxuan\b|^di ve nha\b|ve nha la khoe|phao hoa ruc ro/;
+// "xuân" also means youth (xuân thì, thanh xuân) or is one of the four seasons; a "Tet movie"
+// soundtrack is film music released for Tết, not a Tết song.
+const NOT_TET_RE = /xuan thi|thanh xuan|xuan,? ha,? thu,? dong|\bmovie\b|original soundtrack/;
+
+/** Is this a Tết (Lunar New Year) song, judging by its title? */
+export function isTetSong(title: string): boolean {
+  const t = normalizeVi(title);
+  return TET_RE.test(t) && !NOT_TET_RE.test(t);
 }

@@ -5,7 +5,7 @@ import { apiFetch } from '@/lib/client/api';
 import type { ThemeRef } from '@/lib/rooms/round-builder';
 import type { ThemeSummary, ThemeType } from '@/lib/themes/themes';
 
-const TYPE_LABELS: Record<ThemeType, string> = { artist: 'Ca sĩ', genre: 'Thể loại', decade: 'Thập niên' };
+const TYPE_LABELS: Record<ThemeType, string> = { artist: 'Ca sĩ', genre: 'Thể loại', decade: 'Thời gian ra mắt' };
 
 interface Props {
   current: ThemeRef | null;
@@ -27,7 +27,8 @@ export function ThemePicker({ current, onPick }: Props) {
       const res = await apiFetch<ThemeSummary[]>(`/api/themes?${params}`);
       if (cancelled) return;
       setFailed(!res.ok);
-      setThemes(res.ok && Array.isArray(res.data) ? res.data : []);
+      // Only themes with enough songs for any question count; the rest cannot be picked anyway.
+      setThemes(res.ok && Array.isArray(res.data) ? res.data.filter((t) => t.playable) : []);
     }, 250);
     return () => {
       cancelled = true;
@@ -68,12 +69,11 @@ export function ThemePicker({ current, onPick }: Props) {
               <button
                 type="button"
                 className={`theme-item${selected ? ' theme-item--selected' : ''}`}
-                disabled={!t.playable}
                 aria-pressed={selected}
                 onClick={() => onPick({ type: t.type, key: t.key })}
               >
                 <span>{t.label}</span>
-                <span className="muted small">{t.playable ? `${t.trackCount} bài` : 'chưa đủ bài'}</span>
+                <span className="muted small">{t.trackCount} bài</span>
               </button>
             </li>
           );

@@ -78,7 +78,7 @@ describe('writeReviewFile', () => {
       title: 'Bài Kiểm Thử 90',
       artist: 'Sơn Tùng M-TP',
       genre: 'Pop',
-      decade: '2010s',
+      releaseYear: 2016,
       previewUrl: `https://audio.example/${BASE_ID + 90}.m4a`,
       coverUrl: 'https://img.example/90/600x600bb.jpg',
     });
@@ -92,6 +92,11 @@ describe('writeReviewFile', () => {
   it('keeps Vietnamese text readable (not \\u-escaped) in the file', () => {
     const file = writeReviewFile(artist.key, filterSongs([song(93, { trackName: 'Đừng Làm Trái Tim Anh Đau' })], artist), tmp);
     expect(readFileSync(file, 'utf8')).toContain('Đừng Làm Trái Tim Anh Đau');
+  });
+
+  it('files a Tết song under the "Nhạc Tết" genre instead of its iTunes genre', () => {
+    const file = writeReviewFile(artist.key, filterSongs([song(94, { trackName: 'Chúc Tết Mọi Nhà' })], artist), path.join(tmp, 'tet'));
+    expect(readReview(file).kept[0].genre).toBe('Nhạc Tết');
   });
 
   it('writes a review for the real fixture that round-trips through JSON', () => {
@@ -124,7 +129,7 @@ describe('importReviewed', () => {
     expect((await rowsFor(ids)).map((r) => r.id)).toEqual(ids1); // same rows, ids untouched
   });
 
-  it('maps fields: language vi, normalized columns, decade from releaseDate, 600px cover', async () => {
+  it('maps fields: language vi, normalized columns, 5-year period from releaseYear, 600px cover', async () => {
     const file = writeReviewFile(
       artist.key,
       filterSongs([song(10, { trackName: 'Đừng Làm Trái Tim Anh Đau', releaseDate: '1998-02-02T00:00:00Z' })], artist),
@@ -139,7 +144,7 @@ describe('importReviewed', () => {
       artist_norm: 'son tung m-tp',
       language: 'vi',
       genre: 'Pop',
-      decade: '1990s',
+      decade: '1995-1999',
       preview_url: `https://audio.example/${BASE_ID + 10}.m4a`,
       cover_url: 'https://img.example/10/600x600bb.jpg',
     });
@@ -156,7 +161,7 @@ describe('importReviewed', () => {
     const review = readReview(file);
 
     review.kept[0].title = 'Tên Đã Sửa'; // edited title
-    review.kept[0].decade = '1990s'; // edited decade
+    review.kept[0].releaseYear = 1994; // corrected release year
     review.kept[0].genre = 'Rock'; // edited genre
     review.kept[1].include = false; // curator removed this one
     review.dropped.find((d) => d.itunesTrackId === BASE_ID + 22)!.include = true; // re-included
@@ -170,7 +175,7 @@ describe('importReviewed', () => {
     expect(rows[0]).toMatchObject({
       title: 'Tên Đã Sửa',
       title_norm: 'ten da sua',
-      decade: '1990s',
+      decade: '1990-1994',
       genre: 'Rock',
       language: 'vi',
     });
