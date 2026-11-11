@@ -5,12 +5,15 @@ import type { Artist } from '@/lib/catalog/filter';
 import { QUESTION_COUNT_OPTIONS } from '@/lib/rooms/config';
 import { normalizeVi } from '@/lib/text/normalize-vi';
 
-export const THEME_TYPES = ['artist', 'genre', 'decade'] as const;
+export const THEME_TYPES = ['artist', 'genre', 'decade', 'random'] as const;
 export type ThemeType = (typeof THEME_TYPES)[number];
 
 export interface ThemeSummary {
   type: ThemeType;
-  /** artist: curated artist key; genre: genre value; decade: 5-year release period (e.g. "2015-2019"). */
+  /**
+   * artist: curated artist key; genre: genre value; decade: 5-year release period (e.g. "2015-2019");
+   * random: always RANDOM_THEME_KEY (every track).
+   */
   key: string;
   label: string;
   trackCount: number;
@@ -27,6 +30,10 @@ export interface ListThemesOptions {
 export const PLAYABLE_MIN_TRACKS = Math.max(...QUESTION_COUNT_OPTIONS);
 
 const PAGE_SIZE = 1000; // PostgREST default max-rows
+
+/** The one key of the 'random' theme, which plays songs from the whole catalog. */
+export const RANDOM_THEME_KEY = 'all';
+const RANDOM_LABEL = 'Ngẫu nhiên';
 
 const curatedArtists: Artist[] = parseArtists(artistsJson);
 
@@ -90,6 +97,9 @@ export async function listThemes(
       }
     }
   }
+  if ((!type || type === 'random') && matches(RANDOM_LABEL, 'tat ca')) {
+    push('random', RANDOM_THEME_KEY, RANDOM_LABEL, rows.length);
+  }
   for (const t of ['genre', 'decade'] as const) {
     if (type && type !== t) continue;
     const counts = new Map<string, number>();
@@ -126,5 +136,6 @@ export function themeLabel(
 ): string {
   if (theme.type === 'artist') return artists.find((a) => a.key === theme.key)?.name ?? theme.key;
   if (theme.type === 'decade') return periodLabel(theme.key);
+  if (theme.type === 'random') return RANDOM_LABEL;
   return theme.key;
 }

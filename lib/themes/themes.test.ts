@@ -141,4 +141,18 @@ describe('periodLabel / themeLabel', () => {
     expect(themeLabel({ type: 'decade', key: '2015-2019' })).toBe('2015 – 2019');
     expect(themeLabel({ type: 'genre', key: 'Pop' })).toBe('Pop');
   });
+
+  it('themeLabel names the random theme', () => {
+    expect(themeLabel({ type: 'random', key: 'all' })).toBe('Ngẫu nhiên');
+  });
+});
+
+describe('random theme', () => {
+  it('is one theme over every Vietnamese track', async () => {
+    const res = await listThemes(db, { type: 'random' });
+    expect(res).toHaveLength(1);
+    expect(res[0]).toMatchObject({ type: 'random', key: 'all', label: 'Ngẫu nhiên', playable: true });
+    const { count } = await db.from('tracks').select('id', { count: 'exact', head: true }).eq('language', 'vi');
+    expect(res[0].trackCount).toBe(count);
+  });
 });

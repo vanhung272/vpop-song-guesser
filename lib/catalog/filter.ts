@@ -114,8 +114,8 @@ export function periodOfYear(year: number | null | undefined): string | null {
   return `${start}-${start + 4}`;
 }
 
-/** Genre given to Tết / spring songs, so they form their own "Thể loại" theme. */
-export const TET_GENRE = 'Nhạc Tết';
+/** Genre given to Tết and spring (xuân) songs, so they form one "Thể loại" theme together. */
+export const TET_GENRE = 'Nhạc Xuân & Tết';
 
 // Matched on normalizeVi(title): lowercase, no diacritics.
 const TET_RE = /\btet\b|giao thua|\bli xi\b|\bnam moi\b|new year|\bxuan\b|^di ve nha\b|ve nha la khoe|phao hoa ruc ro/;

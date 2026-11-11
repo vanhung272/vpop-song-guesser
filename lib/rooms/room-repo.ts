@@ -151,6 +151,8 @@ function themeFilter<Q extends { eq(c: string, v: unknown): Q; contains(c: strin
       return q.eq('genre', theme.key);
     case 'decade':
       return q.eq('decade', theme.key);
+    case 'random':
+      return q; // the whole catalog
   }
 }
 

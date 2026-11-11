@@ -73,9 +73,14 @@ afterEach(() => {
 });
 
 describe('<Lobby />', () => {
-  it('the host theme picker has tabs Ca sĩ / Thể loại / Thời gian ra mắt', () => {
+  it('the host theme picker has tabs Ca sĩ / Thể loại / Thời gian ra mắt / Ngẫu nhiên', () => {
     render(<Lobby snapshot={hostSnapshot()} send={send} />);
-    expect(screen.getAllByRole('tab').map((t) => t.textContent)).toEqual(['Ca sĩ', 'Thể loại', 'Thời gian ra mắt']);
+    expect(screen.getAllByRole('tab').map((t) => t.textContent)).toEqual([
+      'Ca sĩ',
+      'Thể loại',
+      'Thời gian ra mắt',
+      'Ngẫu nhiên',
+    ]);
   });
 
   it('the theme list hides themes without enough songs', async () => {

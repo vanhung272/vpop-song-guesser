@@ -297,6 +297,21 @@ describe('room service (local Supabase)', () => {
     expect((await roomRow(code)).phase).toBe('lobby');
   });
 
+  it('the random theme draws from the whole catalog and starts a game', async () => {
+    const svc = service();
+    const code = await newRoom(svc);
+    ok(await svc.updateTheme(code, users[0], { type: 'random', key: 'all' }));
+    ok(await svc.start(code, users[0]));
+    expect((await roomRow(code)).phase).toBe('countdown');
+    expect(ok(await svc.getSnapshot(code, users[0])).theme).toMatchObject({ type: 'random', key: 'all', label: 'Ngẫu nhiên' });
+    // only the "all" key exists for the random theme
+    const other = await newRoom(svc, users[1]);
+    expect(await svc.updateTheme(other, users[1], { type: 'random', key: 'pop' })).toMatchObject({
+      ok: false,
+      error: 'THEME_NOT_PLAYABLE',
+    });
+  });
+
   it('theme with too few tracks is rejected with THEME_NOT_PLAYABLE', async () => {
     const svc = service();
     const code = await newRoom(svc);

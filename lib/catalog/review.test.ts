@@ -94,9 +94,9 @@ describe('writeReviewFile', () => {
     expect(readFileSync(file, 'utf8')).toContain('Đừng Làm Trái Tim Anh Đau');
   });
 
-  it('files a Tết song under the "Nhạc Tết" genre instead of its iTunes genre', () => {
+  it('files a Tết song under the "Nhạc Xuân & Tết" genre instead of its iTunes genre', () => {
     const file = writeReviewFile(artist.key, filterSongs([song(94, { trackName: 'Chúc Tết Mọi Nhà' })], artist), path.join(tmp, 'tet'));
-    expect(readReview(file).kept[0].genre).toBe('Nhạc Tết');
+    expect(readReview(file).kept[0].genre).toBe('Nhạc Xuân & Tết');
   });
 
   it('writes a review for the real fixture that round-trips through JSON', () => {

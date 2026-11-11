@@ -5,7 +5,12 @@ import { apiFetch } from '@/lib/client/api';
 import type { ThemeRef } from '@/lib/rooms/round-builder';
 import type { ThemeSummary, ThemeType } from '@/lib/themes/themes';
 
-const TYPE_LABELS: Record<ThemeType, string> = { artist: 'Ca sĩ', genre: 'Thể loại', decade: 'Thời gian ra mắt' };
+const TYPE_LABELS: Record<ThemeType, string> = {
+  artist: 'Ca sĩ',
+  genre: 'Thể loại',
+  decade: 'Thời gian ra mắt',
+  random: 'Ngẫu nhiên',
+};
 
 interface Props {
   current: ThemeRef | null;

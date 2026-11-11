@@ -218,7 +218,7 @@ describe('isTetSong', () => {
     }
   });
 
-  it('the genre label is "Nhạc Tết"', () => {
-    expect(TET_GENRE).toBe('Nhạc Tết');
+  it('Tết and spring songs share one genre, "Nhạc Xuân & Tết"', () => {
+    expect(TET_GENRE).toBe('Nhạc Xuân & Tết');
   });
 });
