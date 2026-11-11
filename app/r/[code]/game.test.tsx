@@ -6,10 +6,16 @@ import type { RoundAudio } from './useRoundAudio';
 import type { RoomCommand, SendResult } from './useRoom';
 import { T0, player, round, snapshot } from './test-fixtures';
 
-let audio: RoundAudio;
-vi.mock('./useRoundAudio', () => ({ useRoundAudio: () => audio }));
-
 import { Game } from './Game';
+import { useServerClock } from './useServerClock';
+
+let audio: RoundAudio;
+
+/** Game as RoomClient renders it: with a server clock from the snapshot and the room's audio. */
+function G(props: { snapshot: RoomSnapshot; send: (cmd: RoomCommand) => Promise<SendResult> }) {
+  const { nowMs } = useServerClock(props.snapshot.serverNowMs);
+  return <Game {...props} audio={audio} nowMs={nowMs} />;
+}
 
 let send: ReturnType<typeof vi.fn<(cmd: RoomCommand) => Promise<SendResult>>>;
 
@@ -39,17 +45,17 @@ const ticks = () => send.mock.calls.filter(([c]) => c.type === 'tick').length;
 const choiceButtons = () =>
   ['Bài Một', 'Bài Hai', 'Bài Ba', 'Bài Bốn'].map((l) => screen.getByRole('button', { name: new RegExp(l) }));
 
-describe('<Game />', () => {
+describe('<G />', () => {
   it('audio needs one user click before the first question', () => {
     audio.unlocked = false;
     const s = snapshot();
-    const { rerender } = render(<Game snapshot={s} send={send} />);
+    const { rerender } = render(<G snapshot={s} send={send} />);
     expect(audio.playAt).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', { name: 'Bật âm thanh' }));
     expect(audio.unlock).toHaveBeenCalledTimes(1);
 
     audio = { ...audio, unlocked: true };
-    rerender(<Game snapshot={{ ...s }} send={send} />);
+    rerender(<G snapshot={{ ...s }} send={send} />);
     expect(screen.queryByRole('button', { name: 'Bật âm thanh' })).toBeNull();
     // Question started at phaseEndsAt - timeLimitMs (server time).
     expect(audio.playAt).toHaveBeenCalledWith(T0 + 10_000 - 15_000);
@@ -57,7 +63,7 @@ describe('<Game />', () => {
 
   it('timer uses server offset: with client clock 5 minutes ahead it still shows the correct remaining time', () => {
     vi.setSystemTime(T0 + 5 * 60_000);
-    render(<Game snapshot={snapshot({ serverNowMs: T0, phaseEndsAt: T0 + 10_000 })} send={send} />);
+    render(<G snapshot={snapshot({ serverNowMs: T0, phaseEndsAt: T0 + 10_000 })} send={send} />);
     expect(screen.getByLabelText('Thời gian còn lại').textContent).toBe('10');
     act(() => {
       vi.advanceTimersByTime(3000);
@@ -66,7 +72,7 @@ describe('<Game />', () => {
   });
 
   it('choices lock after one answer and show "Bạn đã chọn"', async () => {
-    render(<Game snapshot={snapshot()} send={send} />);
+    render(<G snapshot={snapshot()} send={send} />);
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: /Bài Hai/ }));
     });
@@ -79,7 +85,7 @@ describe('<Game />', () => {
 
   it('an answer already in the snapshot keeps the choices locked', () => {
     render(
-      <Game snapshot={snapshot({ round: round({ myAnswer: { answerId: 'a3', points: null, correct: null } }) })} send={send} />,
+      <G snapshot={snapshot({ round: round({ myAnswer: { answerId: 'a3', points: null, correct: null } }) })} send={send} />,
     );
     for (const b of choiceButtons()) expect((b as HTMLButtonElement).disabled).toBe(true);
     expect(screen.getByRole('button', { name: /Bài Ba/ }).textContent).toContain('Bạn đã chọn');
@@ -91,12 +97,12 @@ describe('<Game />', () => {
       players: [player('h', { isHost: true }), player('g', { joinedRound: 3 })],
       round: round({ idx: 2, roundNumber: 3, canAnswer: false }),
     });
-    const { rerender } = render(<Game snapshot={late} send={send} />);
+    const { rerender } = render(<G snapshot={late} send={send} />);
     expect(screen.getByText('Bạn vào giữa vòng này, hãy trả lời từ vòng sau nhé.')).toBeTruthy();
     for (const b of choiceButtons()) expect((b as HTMLButtonElement).disabled).toBe(true);
 
     rerender(
-      <Game
+      <G
         snapshot={{ ...late, version: 12, roundIdx: 3, round: round({ idx: 3, roundNumber: 4, canAnswer: true }) }}
         send={send}
       />,
@@ -108,14 +114,14 @@ describe('<Game />', () => {
   it('when audio fails the player sees a message and can still answer', () => {
     audio.failed = true;
     audio.ready = false;
-    render(<Game snapshot={snapshot()} send={send} />);
+    render(<G snapshot={snapshot()} send={send} />);
     expect(screen.getByText('Không tải được đoạn nhạc này. Bạn vẫn có thể đoán!')).toBeTruthy();
     for (const b of choiceButtons()) expect((b as HTMLButtonElement).disabled).toBe(false);
   });
 
   it('shows live answer percentages when the room enables them', () => {
     render(
-      <Game snapshot={snapshot({ round: round({ livePercentages: { a1: 25, a2: 75, a3: 0, a4: 0 } }) })} send={send} />,
+      <G snapshot={snapshot({ round: round({ livePercentages: { a1: 25, a2: 75, a3: 0, a4: 0 } }) })} send={send} />,
     );
     expect(screen.getByRole('button', { name: /Bài Hai/ }).textContent).toContain('75%');
   });
@@ -136,7 +142,7 @@ describe('<Game />', () => {
         },
       }),
     });
-    render(<Game snapshot={s} send={send} />);
+    render(<G snapshot={s} send={send} />);
     const reveal = screen.getByRole('region', { name: 'Đáp án' });
     expect(reveal.textContent).toContain('Bài Hai');
     expect(reveal.textContent).toContain('Ca Sĩ X');
@@ -155,13 +161,13 @@ describe('<Game />', () => {
         reveal: { correctAnswerId: 'a2', track: { title: 'Bài Hai', artist: 'Ca Sĩ X', coverUrl: null }, top3: [] },
       }),
     });
-    render(<Game snapshot={s} send={send} />);
+    render(<G snapshot={s} send={send} />);
     expect(screen.getByRole('region', { name: 'Đáp án' }).textContent).toContain('0 điểm');
   });
 
   it('round card shows base and max bonus for that round', () => {
     render(
-      <Game
+      <G
         snapshot={snapshot({
           phase: 'presenting',
           phaseEndsAt: T0 + 3000,
@@ -179,12 +185,12 @@ describe('<Game />', () => {
   });
 
   it('countdown shows the seconds left', () => {
-    render(<Game snapshot={snapshot({ phase: 'countdown', phaseEndsAt: T0 + 3000, round: null })} send={send} />);
+    render(<G snapshot={snapshot({ phase: 'countdown', phaseEndsAt: T0 + 3000, round: null })} send={send} />);
     expect(screen.getByLabelText('Đếm ngược').textContent).toBe('3');
   });
 
   it('client calls tick once when the phase ends', () => {
-    render(<Game snapshot={snapshot()} send={send} />);
+    render(<G snapshot={snapshot()} send={send} />);
     // Fires at phaseEndsAt + jitter (Math.random 0.5 -> 150 ms of 0-300).
     act(() => {
       vi.advanceTimersByTime(10_149);
@@ -201,7 +207,7 @@ describe('<Game />', () => {
   });
 
   it('ticks again if the phase has still not advanced 2 s later', () => {
-    render(<Game snapshot={snapshot()} send={send} />);
+    render(<G snapshot={snapshot()} send={send} />);
     act(() => {
       vi.advanceTimersByTime(10_150 + 2000);
     });
@@ -209,12 +215,12 @@ describe('<Game />', () => {
   });
 
   it('a new phase reschedules the tick for its own deadline', () => {
-    const { rerender } = render(<Game snapshot={snapshot()} send={send} />);
+    const { rerender } = render(<G snapshot={snapshot()} send={send} />);
     act(() => {
       vi.advanceTimersByTime(10_150);
     });
     expect(ticks()).toBe(1);
-    rerender(<Game snapshot={snapshot({ version: 11, phase: 'reveal', serverNowMs: T0 + 10_200, phaseEndsAt: T0 + 16_200 })} send={send} />);
+    rerender(<G snapshot={snapshot({ version: 11, phase: 'reveal', serverNowMs: T0 + 10_200, phaseEndsAt: T0 + 16_200 })} send={send} />);
     act(() => {
       vi.advanceTimersByTime(1000);
     });
@@ -242,7 +248,7 @@ describe('<Game />', () => {
         },
       ],
     });
-    render(<Game snapshot={s} send={send} />);
+    render(<G snapshot={s} send={send} />);
     fireEvent.click(screen.getByRole('tab', { name: 'Lịch sử' }));
     const panel = screen.getByRole('tabpanel');
     expect(panel.textContent).toContain('Bài Cũ');
@@ -250,7 +256,7 @@ describe('<Game />', () => {
   });
 });
 
-describe('<Game /> results', () => {
+describe('<G /> results', () => {
   const results = (overrides: Partial<RoomSnapshot> = {}) =>
     snapshot({
       phase: 'results',
@@ -267,7 +273,7 @@ describe('<Game /> results', () => {
   it('results page shows the final ranking and copies share text', async () => {
     const writeText = vi.fn(async () => {});
     Object.defineProperty(navigator, 'clipboard', { value: { writeText }, configurable: true });
-    render(<Game snapshot={results()} send={send} />);
+    render(<G snapshot={results()} send={send} />);
     const ranking = screen.getByRole('list', { name: 'Xếp hạng chung cuộc' });
     const rows = ranking.querySelectorAll('li');
     expect(rows[0].textContent).toContain('Khách');
@@ -286,16 +292,16 @@ describe('<Game /> results', () => {
   });
 
   it('only the host sees the new game button', () => {
-    const { rerender } = render(<Game snapshot={results()} send={send} />);
+    const { rerender } = render(<G snapshot={results()} send={send} />);
     expect(screen.queryByRole('button', { name: 'Ván mới' })).toBeNull();
     expect(screen.getByText('Chờ chủ phòng mở ván mới…')).toBeTruthy();
-    rerender(<Game snapshot={results({ viewerId: 'h', isHost: true })} send={send} />);
+    rerender(<G snapshot={results({ viewerId: 'h', isHost: true })} send={send} />);
     fireEvent.click(screen.getByRole('button', { name: 'Ván mới' }));
     expect(send).toHaveBeenCalledWith({ type: 'rematch' });
   });
 
   it('results do not schedule ticks and stop the audio', () => {
-    render(<Game snapshot={results()} send={send} />);
+    render(<G snapshot={results()} send={send} />);
     act(() => {
       vi.advanceTimersByTime(60_000);
     });

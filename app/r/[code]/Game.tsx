@@ -7,13 +7,16 @@ import { Results } from './Results';
 import { Scoreboard } from './Scoreboard';
 import { useAutoTick } from './useAutoTick';
 import type { RoomCommand, SendResult } from './useRoom';
-import { useRoundAudio, type RoundAudio } from './useRoundAudio';
-import { useServerClock } from './useServerClock';
+import type { RoundAudio } from './useRoundAudio';
 
 interface Props {
   snapshot: RoomSnapshot;
   send: (cmd: RoomCommand) => Promise<SendResult>;
   onLeave?: () => void;
+  /** Room-scoped audio (owned by RoomClient so the unlock survives rematches). */
+  audio: RoundAudio;
+  /** Server time, see useServerClock. */
+  nowMs: () => number;
 }
 
 const QUESTION_LABEL = { title: 'Bài gì?', artist: 'Ca sĩ nào?' } as const;
@@ -31,12 +34,10 @@ const secondsLeft = (endsAt: number | null, now: number) =>
   endsAt == null ? 0 : Math.max(0, Math.ceil((endsAt - now) / 1000));
 
 /** Countdown, round card, question, reveal and results screens. */
-export function Game({ snapshot, send, onLeave }: Props) {
-  const { nowMs } = useServerClock(snapshot.serverNowMs);
+export function Game({ snapshot, send, onLeave, audio, nowMs }: Props) {
   useTicker();
   const now = nowMs();
   const { phase, round, phaseEndsAt } = snapshot;
-  const audio = useRoundAudio(round?.audioUrl ?? null, round?.nextAudioUrl ?? null, { nowMs });
   useAutoTick(snapshot, nowMs, send);
 
   // The clip starts with the question (server time) and keeps playing through the reveal.

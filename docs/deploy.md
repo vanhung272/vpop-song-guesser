@@ -39,6 +39,7 @@ Tài liệu cho người vận hành bản phát hành: tạo hạ tầng một 
 
    **Không** đặt `E2E` hay `ROOM_TIMING_SCALE` trên Vercel. Code đã bỏ qua hai biến này khi `NODE_ENV=production`, nhưng đừng đặt chúng ngay từ đầu.
 3. Production branch là `main`. Mỗi PR có một Preview URL dùng database staging.
+4. **Region của function phải nằm cạnh Supabase.** `vercel.json` ghim function vào `sin1` (Singapore). Nếu tạo project Supabase ở region khác, hãy đổi `regions` cho khớp. Mỗi request phòng chơi gọi Supabase nhiều lần nối tiếp nhau; nếu function chạy ở region mặc định (Mỹ) thì mỗi pha tới tay người chơi trễ 1–2 s, và đáp án bị chấm muộn chừng đó nên mất điểm thưởng tốc độ. Sau khi deploy, kiểm tra ở **Project → Settings → Functions** rằng region là `sin1`.
 
 ## 2. Nhập catalog
 
@@ -90,10 +91,10 @@ NEXT_PUBLIC_SUPABASE_URL=<url staging> NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon stagi
 
 ### Kết quả đo
 
-| Ngày | Môi trường | Phòng × người | Realtime subscribed | Chuyển pha (cần) | Trùng | p95 answer | p95 tick | Lỗi | Giới hạn gói free (tra ngày đo) |
-|---|---|---|---|---|---|---|---|---|---|
-| 2026-11-11 | **local** (`next dev`, Supabase local, `ROOM_TIMING_SCALE=0.5`) | 1 × 4 | 4/4 | 16 (16) | 0 | 254 ms | 861 ms¹ | không có | không áp dụng |
-| _chưa đo_ | staging | 3 × 10 | | | | | | | |
+| Ngày | Môi trường | Region function / Supabase | Phòng × người | Realtime subscribed | Chuyển pha (cần) | Trùng | p95 answer | p95 tick | Lỗi | Giới hạn gói free (tra ngày đo) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-11 | **local** (`next dev`, Supabase local, `ROOM_TIMING_SCALE=0.5`) | máy local | 1 × 4 | 4/4 | 16 (16) | 0 | 254 ms | 861 ms¹ | không có | không áp dụng |
+| _chưa đo_ | staging | | 3 × 10 | | | | | | | |
 
 ¹ Số của local chỉ để kiểm tra script chạy đúng. Dev server compile route ở lần gọi đầu nên latency không đại diện cho staging.
 
