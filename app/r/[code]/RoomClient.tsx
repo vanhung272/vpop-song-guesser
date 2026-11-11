@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { errorMessageVi } from '@/lib/client/errors-vi';
 import { useProfile } from '@/lib/profile/useProfile';
 import { ProfileSetup } from '../../components/ProfileSetup';
+import { Game } from './Game';
 import { Lobby } from './Lobby';
 import { useRoom } from './useRoom';
 
@@ -77,6 +78,5 @@ export function RoomClient({ code }: { code: string }) {
 
   if (snapshot.phase === 'lobby') return <Lobby snapshot={snapshot} send={send} onLeave={leave} />;
 
-  // Game phases are rendered in Task 10.
-  return <Loading text="Ván đang diễn ra…" />;
+  return <Game snapshot={snapshot} send={send} onLeave={leave} />;
 }
