@@ -10,7 +10,7 @@ export const PATCH = roomRoute(async (svc, code, userId, request) => {
     !(THEME_TYPES as readonly string[]).includes(body.type) ||
     typeof body.key !== 'string' ||
     body.key === '' ||
-    body.key.length > 200
+    body.key.length > 2000 // a mix lists up to MIX_MAX_PARTS themes
   ) {
     return badBody();
   }

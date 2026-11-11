@@ -196,6 +196,56 @@ describe('<Lobby />', () => {
   });
 });
 
+describe('<ThemePicker /> multi-select', () => {
+  const lists: Record<string, unknown[]> = {
+    artist: [
+      { type: 'artist', key: 'den-vau', label: 'Đen Vâu', trackCount: 52, playable: true },
+      { type: 'artist', key: 'min', label: 'MIN', trackCount: 50, playable: true },
+    ],
+    random: [{ type: 'random', key: 'all', label: 'Ngẫu nhiên', trackCount: 1500, playable: true }],
+  };
+  beforeEach(() => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (url: string) => {
+        const type = new URL(url, 'http://x').searchParams.get('type') ?? '';
+        return new Response(JSON.stringify(lists[type] ?? []), { status: 200 });
+      }),
+    );
+  });
+  const themeCalls = () => send.mock.calls.map((c) => c[0]).filter((c) => c.type === 'theme');
+  const item = async (name: RegExp) => vi.waitFor(() => screen.getByRole('button', { name }));
+
+  it('picking a second theme sends the mix of both', async () => {
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    expect(screen.getByText('Chọn một hoặc nhiều chủ đề.')).toBeTruthy();
+    fireEvent.click(await item(/MIN/));
+    expect(themeCalls()).toEqual([{ type: 'theme', theme: { type: 'mix', key: 'artist:den-vau|artist:min' } }]);
+  });
+
+  it('marks every picked part, and unpicking one leaves the other', async () => {
+    const mixed = snapshot({ viewerId: 'h', isHost: true, theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN' } });
+    render(<Lobby snapshot={mixed} send={send} />);
+    expect((await item(/Đen Vâu/)).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /MIN/ }).getAttribute('aria-pressed')).toBe('true');
+    fireEvent.click(screen.getByRole('button', { name: /Đen Vâu/ }));
+    expect(themeCalls()).toEqual([{ type: 'theme', theme: { type: 'artist', key: 'min' } }]);
+  });
+
+  it('the last picked theme cannot be unpicked', async () => {
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    fireEvent.click(await item(/Đen Vâu/));
+    expect(themeCalls()).toEqual([]);
+  });
+
+  it('Ngẫu nhiên replaces every other pick', async () => {
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    fireEvent.click(screen.getByRole('tab', { name: 'Ngẫu nhiên' }));
+    fireEvent.click(await item(/Ngẫu nhiên/));
+    expect(themeCalls()).toEqual([{ type: 'theme', theme: { type: 'random', key: 'all' } }]);
+  });
+});
+
 describe('<RoomClient /> joining', () => {
   const readyProfile: ProfileState = {
     status: 'ready',

@@ -4,7 +4,7 @@
  * room only `where version = expected` and writes every effect in the same transaction.
  */
 import type { SupabaseClient } from '@supabase/supabase-js';
-import type { ThemeType } from '@/lib/themes/themes';
+import { themeParts, type ThemeType } from '@/lib/themes/themes';
 import type { BuiltRound, QuestionType, ThemeRef, Track } from './round-builder';
 import type { AnswerRecord, ProfileInfo, RoundRecord, SnapshotChoice } from './snapshot';
 import { DEFAULT_SETTINGS, type Effect, type Phase, type Player, type RoomSettings, type RoomState } from './state-machine';
@@ -139,11 +139,27 @@ function changedPlayers(prev: RoomState, next: RoomState): Player[] {
   });
 }
 
+/** PostgREST filter value, double-quoted so commas, dots and parentheses in keys stay literal. */
+const quoted = (v: string) => `"${v.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+
+/** One theme part as a PostgREST condition, for or(): a mix plays songs of any of its parts. */
+function partCondition(part: ThemeRef): string {
+  switch (part.type) {
+    case 'artist':
+      return `artist_keys.cs.{${quoted(part.key)}}`;
+    case 'genre':
+      return `genre.eq.${quoted(part.key)}`;
+    case 'decade':
+      return `decade.eq.${quoted(part.key)}`;
+    default:
+      throw new Error(`theme type ${part.type} cannot be part of a mix`);
+  }
+}
+
 // Method syntax (bivariant params) so any PostgREST filter builder fits.
-function themeFilter<Q extends { eq(c: string, v: unknown): Q; contains(c: string, v: unknown): Q }>(
-  q: Q,
-  theme: ThemeRef,
-): Q {
+function themeFilter<
+  Q extends { eq(c: string, v: unknown): Q; contains(c: string, v: unknown): Q; or(filters: string): Q },
+>(q: Q, theme: ThemeRef): Q {
   switch (theme.type) {
     case 'artist':
       return q.contains('artist_keys', [theme.key]);
@@ -153,6 +169,8 @@ function themeFilter<Q extends { eq(c: string, v: unknown): Q; contains(c: strin
       return q.eq('decade', theme.key);
     case 'random':
       return q; // the whole catalog
+    case 'mix':
+      return q.or(themeParts(theme).map(partCondition).join(','));
   }
 }
 

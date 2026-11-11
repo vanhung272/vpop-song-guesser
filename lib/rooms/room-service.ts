@@ -9,7 +9,7 @@
  * attempt, so an answer is scored from deadline minus receive time (Review Focus 5).
  */
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { THEME_TYPES, PLAYABLE_MIN_TRACKS, RANDOM_THEME_KEY, themeLabel } from '@/lib/themes/themes';
+import { THEME_TYPES, PLAYABLE_MIN_TRACKS, RANDOM_THEME_KEY, isValidMix, themeLabel } from '@/lib/themes/themes';
 import type { Clock } from './clock';
 import { ROOM_CODE_LENGTH, ROOM_IDLE_CLOSE_MS } from './config';
 import type { NotifyRoomChanged } from './notify';
@@ -318,7 +318,8 @@ export function createRoomService(deps: RoomDeps): RoomService {
           if (
             !(THEME_TYPES as readonly string[]).includes(theme.type) ||
             !theme.key ||
-            (theme.type === 'random' && theme.key !== RANDOM_THEME_KEY)
+            (theme.type === 'random' && theme.key !== RANDOM_THEME_KEY) ||
+            (theme.type === 'mix' && !isValidMix(theme))
           ) {
             return fail(409, 'THEME_NOT_PLAYABLE');
           }

@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { createCatalogClient, resolveTarget } from '@/lib/catalog/target';
-import { listThemes, periodLabel, themeLabel } from './themes';
+import { listThemes, mixTheme, periodLabel, themeLabel, themeParts } from './themes';
 
 // Synthetic ids far outside real iTunes ids so the test never touches real catalog rows.
 const BASE_ID = 9_100_000_000_000 + Math.floor(Math.random() * 1_000_000) * 1000;
@@ -161,3 +161,31 @@ describe('random theme', () => {
     expect(res[0].trackCount).toBeLessThanOrEqual(Math.max(before, after));
   });
 });
+
+describe('mixed themes', () => {
+  it('mixTheme: one part stays itself, several become one canonical mix', () => {
+    const den = { type: 'artist', key: 'den-vau' } as const;
+    const pop = { type: 'genre', key: 'Pop' } as const;
+    expect(mixTheme([])).toBeNull();
+    expect(mixTheme([den])).toEqual(den);
+    const a = mixTheme([pop, den]);
+    const b = mixTheme([den, pop, den]);
+    expect(a).toEqual({ type: 'mix', key: 'artist:den-vau|genre:Pop' });
+    expect(b).toEqual(a);
+  });
+
+  it('themeParts splits a mix back into its parts', () => {
+    expect(themeParts(null)).toEqual([]);
+    expect(themeParts({ type: 'genre', key: 'Pop' })).toEqual([{ type: 'genre', key: 'Pop' }]);
+    expect(themeParts({ type: 'mix', key: 'artist:den-vau|decade:2015-2019|genre:Nhạc Xuân & Tết' })).toEqual([
+      { type: 'artist', key: 'den-vau' },
+      { type: 'decade', key: '2015-2019' },
+      { type: 'genre', key: 'Nhạc Xuân & Tết' },
+    ]);
+  });
+
+  it('a mix is labelled by its parts', () => {
+    expect(themeLabel({ type: 'mix', key: 'decade:2015-2019|genre:Pop' })).toBe('2015 – 2019 + Pop');
+  });
+});
+

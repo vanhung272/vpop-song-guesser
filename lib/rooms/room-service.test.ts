@@ -312,6 +312,32 @@ describe('room service (local Supabase)', () => {
     });
   });
 
+  it('a mix of themes plays songs from all of them, even if one alone is too small', async () => {
+    const svc = service();
+    const code = await newRoom(svc);
+    const mix = { type: 'mix', key: `genre:${GENRE}|genre:${SMALL_GENRE}` } as const;
+    expect(await svc.updateTheme(code, users[0], { type: 'genre', key: SMALL_GENRE })).toMatchObject({ ok: false });
+    ok(await svc.updateTheme(code, users[0], mix));
+    ok(await svc.updateSettings(code, users[0], { questionCount: 15 }));
+    ok(await svc.start(code, users[0]));
+    // 16 + 5 songs in the pool: with 15 questions both genres must be drawn from.
+    const { data: rounds } = await db
+      .from('room_rounds')
+      .select('track:tracks(genre)')
+      .eq('room_id', (await roomRow(code)).id);
+    const genres = new Set((rounds ?? []).map((r) => (r.track as unknown as { genre: string }).genre));
+    expect(genres).toEqual(new Set([GENRE, SMALL_GENRE]));
+    expect(ok(await svc.getSnapshot(code, users[0])).theme?.label).toBe(`${GENRE} + ${SMALL_GENRE}`);
+  });
+
+  it('a mix must be canonical, of known themes, and not include the random theme', async () => {
+    const svc = service();
+    const code = await newRoom(svc);
+    for (const key of [`genre:${SMALL_GENRE}|genre:${GENRE}`, `genre:${GENRE}|random:all`, `genre:${GENRE}|nope:x`, `genre:${GENRE}`]) {
+      expect(await svc.updateTheme(code, users[0], { type: 'mix', key })).toMatchObject({ ok: false, error: 'THEME_NOT_PLAYABLE' });
+    }
+  });
+
   it('theme with too few tracks is rejected with THEME_NOT_PLAYABLE', async () => {
     const svc = service();
     const code = await newRoom(svc);
