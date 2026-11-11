@@ -19,7 +19,7 @@ interface Props {
   nowMs: () => number;
 }
 
-const QUESTION_LABEL = { title: 'Bài gì?', artist: 'Ca sĩ nào?' } as const;
+const QUESTION_LABEL = { title: 'Bài gì?', artist: 'Ai hát?' } as const;
 
 /** Re-renders every `intervalMs` so time-based UI (timer, countdown) stays current. */
 function useTicker(intervalMs = 200): void {

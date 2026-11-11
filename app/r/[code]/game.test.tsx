@@ -133,6 +133,14 @@ describe('<G />', () => {
     expect(screen.getByRole('button', { name: /Bài Hai/ }).textContent).toContain('75%');
   });
 
+  it('asks "Bài gì?" for title questions and "Ai hát?" for artist questions', () => {
+    const { rerender } = render(<G snapshot={snapshot()} send={send} />);
+    expect(screen.getByText('Bài gì?')).toBeTruthy();
+    rerender(<G snapshot={snapshot({ round: round({ questionType: 'artist' }) })} send={send} />);
+    expect(screen.getByText('Ai hát?')).toBeTruthy();
+    expect(screen.queryByText('Ca sĩ nào?')).toBeNull();
+  });
+
   it('shows no percentages while the question is open', () => {
     render(<G snapshot={snapshot()} send={send} />);
     for (const b of choiceButtons()) expect(b.textContent).not.toMatch(/%/);
@@ -194,7 +202,7 @@ describe('<G />', () => {
     expect(card.textContent).toContain('600 điểm khi đúng');
     expect(card.textContent).toContain('+400 thưởng tốc độ');
     expect(card.textContent).not.toContain('Bài gì?');
-    expect(card.textContent).not.toContain('Ca sĩ nào?');
+    expect(card.textContent).not.toContain('Ai hát?');
   });
 
   it('countdown shows the seconds left', () => {
