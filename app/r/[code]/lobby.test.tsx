@@ -73,13 +73,13 @@ afterEach(() => {
 });
 
 describe('<Lobby />', () => {
-  it('the host theme picker has tabs Ca sĩ / Thể loại / Thời gian ra mắt / Ngẫu nhiên', () => {
+  it('the host theme picker has tabs Ngẫu nhiên / Ca sĩ / Thể loại / Thời gian ra mắt', () => {
     render(<Lobby snapshot={hostSnapshot()} send={send} />);
     expect(screen.getAllByRole('tab').map((t) => t.textContent)).toEqual([
+      'Ngẫu nhiên',
       'Ca sĩ',
       'Thể loại',
       'Thời gian ra mắt',
-      'Ngẫu nhiên',
     ]);
   });
 

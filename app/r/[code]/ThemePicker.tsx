@@ -5,11 +5,12 @@ import { apiFetch } from '@/lib/client/api';
 import type { ThemeRef } from '@/lib/rooms/round-builder';
 import type { ThemeSummary, ThemeType } from '@/lib/themes/themes';
 
+// Insertion order is the tab order (left to right).
 const TYPE_LABELS: Record<ThemeType, string> = {
+  random: 'Ngẫu nhiên',
   artist: 'Ca sĩ',
   genre: 'Thể loại',
   decade: 'Thời gian ra mắt',
-  random: 'Ngẫu nhiên',
 };
 
 interface Props {
