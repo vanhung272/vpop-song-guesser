@@ -28,8 +28,9 @@ Các lệnh dưới đây viết cho PowerShell (Windows). Trên macOS/Linux, th
    ```powershell
    npx supabase login
    npx supabase link --project-ref <ref-prod>
-   npx supabase db push
+   npx supabase db push --remote
    ```
+   Bản CLI mới chạy `db push` vào DB **local** nếu thiếu `--remote` (nó báo "Local database is up to date"). Dòng `Target:` ở đầu output cho biết lệnh đang nhắm vào đâu; khi áp lên prod phải thấy `Target: project vpop-song-guesser-prod`.
 5. Lấy các key trong **Project Settings → API**:
    - URL và anon key: đưa lên Vercel (công khai).
    - service_role key: chỉ đưa vào biến môi trường server của Vercel, cùng biến `CATALOG_PROD_SERVICE_ROLE_KEY` trên máy của người nhập catalog. Không commit, không dán vào chat hay issue.
@@ -75,7 +76,7 @@ Sau khi nhập, `GET https://<domain>/api/themes` phải liệt kê được cá
 
 ## 3. Trình tự release (ví dụ v1.0.0)
 
-1. Migration: `npx supabase link --project-ref <ref-prod>` rồi `npx supabase db push` (đã làm ở mục 1 cho lần đầu).
+1. Migration: `npx supabase link --project-ref <ref-prod>` rồi `npx supabase db push --remote` (đã làm ở mục 1 cho lần đầu).
 2. Nhập catalog vào prod (mục 2).
 3. Smoke test trên link production: tạo phòng, 2 máy vào (ví dụ máy tính và điện thoại), chơi trọn 5 câu, rồi chơi lại (**Ván mới**).
 4. Đo tải trên production (mục 4), ghi kết quả vào bảng ở cuối mục 4, rồi dọn dữ liệu thử.
@@ -85,7 +86,7 @@ Sau khi nhập, `GET https://<domain>/api/themes` phải liệt kê được cá
 
 Bản sửa lỗi sau khi đã có người chơi (ví dụ `v1.0.1`):
 - Chạy test và e2e trên local trước.
-- Nếu có migration mới, chạy thử trên Supabase local trước (`npx supabase db reset` áp lại toàn bộ migration), rồi mới `db push` lên prod.
+- Nếu có migration mới, chạy thử trên Supabase local trước (`npx supabase db reset` áp lại toàn bộ migration), rồi mới `db push --remote` lên prod.
 - Push vào `main` (Vercel tự deploy), smoke test, gắn tag.
 - Khi bắt đầu đổi cấu trúc DB nhiều (v2), thêm staging theo mục 6.
 
@@ -142,4 +143,4 @@ Thêm staging khi đã có người chơi thật **và** bắt đầu có migrat
 1. Tạo `vpop-song-guesser-staging` (Singapore), làm lại các bước 2–5 của mục 1 với `<ref-staging>`.
 2. Trên Vercel, đặt 3 biến môi trường cho **Preview** bằng URL/key của staging.
 3. Nhập catalog vào staging bằng `CATALOG_STAGING_SUPABASE_URL`, `CATALOG_STAGING_SERVICE_ROLE_KEY` và `--target staging --yes`.
-4. Trình tự release khi đó: `db push` và nhập catalog vào staging → mở PR, smoke test và QA trên Preview URL → đo tải trên staging → `db push` và nhập catalog vào prod → merge vào `main` → smoke test production → gắn tag.
+4. Trình tự release khi đó: `db push --remote` và nhập catalog vào staging → mở PR, smoke test và QA trên Preview URL → đo tải trên staging → `db push --remote` và nhập catalog vào prod → merge vào `main` → smoke test production → gắn tag.
