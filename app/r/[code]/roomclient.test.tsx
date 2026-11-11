@@ -130,9 +130,18 @@ describe('<RoomClient /> join and leave', () => {
 });
 
 describe('<RoomClient /> audio', () => {
+  it('sound is on by default: no "Bật âm thanh" button unless the browser blocks playback', async () => {
+    setRoom(snapshot({ isMember: true }));
+    render(<RoomClient code="12345" />);
+    await flush();
+    expect(screen.queryByRole('button', { name: 'Bật âm thanh' })).toBeNull();
+  });
+
   it('audio unlock survives a rematch (no second "Bật âm thanh" click)', async () => {
+    vi.mocked(HTMLMediaElement.prototype.play).mockRejectedValueOnce(new DOMException('blocked', 'NotAllowedError'));
     setRoom(snapshot({ isMember: true }));
     const { rerender } = render(<RoomClient code="12345" />);
+    await flush();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: 'Bật âm thanh' }));
     });

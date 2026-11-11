@@ -3,13 +3,16 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export interface RoundAudio {
-  /** The user clicked once, so the browser lets this page play audio. */
+  /**
+   * Sound is on unless the browser refused to play (autoplay policy before any click on the page).
+   * While false, a "Bật âm thanh" click (or any click/keypress on the page) calls `unlock`.
+   */
   unlocked: boolean;
   /** The current clip can play through. */
   ready: boolean;
   /** The current clip is missing or failed to load. */
   failed: boolean;
-  /** Call from a click handler: plays/pauses the playback element inside the gesture. */
+  /** Call from a click handler: unlocks the playback element inside the gesture. */
   unlock: () => Promise<void>;
   /** Plays the current clip as if it started at `startMs` (server time); seeks in when late. */
   playAt: (startMs: number) => void;
@@ -24,9 +27,14 @@ interface Options {
 
 const defaultCreateAudio = () => new Audio();
 
+/** Events that count as a user gesture for the browser's autoplay policy. */
+const GESTURE_EVENTS = ['click', 'keydown', 'touchend'] as const;
+
 /**
  * One long-lived playback element (iOS only lets the element that was unlocked by a gesture play
  * later) plus a preloader element that warms the HTTP cache for the next round's clip.
+ * Sound is on by default: clips play when the browser allows it, and the first gesture anywhere on
+ * the page (joining, "Bắt đầu", an answer…) unlocks the element for browsers that need one.
  */
 export function useRoundAudio(
   currentUrl: string | null,
@@ -36,9 +44,11 @@ export function useRoundAudio(
   const playerRef = useRef<HTMLAudioElement | null>(null);
   const preloaderRef = useRef<HTMLAudioElement | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const unlockedRef = useRef(false);
+  /** A gesture already unlocked the playback element. */
+  const gestured = useRef(false);
+  const blockedRef = useRef(false);
   const createRef = useRef(createAudio);
-  const [unlocked, setUnlocked] = useState(false);
+  const [blocked, setBlocked] = useState(false);
   const [loaded, setLoaded] = useState<{ url: string | null; ready: boolean; failed: boolean }>({
     url: null,
     ready: false,
@@ -91,25 +101,44 @@ export function useRoundAudio(
   );
 
   const unlock = useCallback(async () => {
+    gestured.current = true;
+    blockedRef.current = false;
     const player = getPlayer();
-    try {
-      await player.play();
-      player.pause();
-    } catch {
-      // Some browsers reject play() on an element without a loaded source; the gesture still counts.
+    // A clip already playing is unlocked; a play/pause here would cut it off.
+    if (player.paused) {
+      try {
+        await player.play();
+        player.pause();
+      } catch {
+        // Some browsers reject play() on an element without a loaded source; the gesture still counts.
+      }
     }
-    unlockedRef.current = true;
-    setUnlocked(true);
+    setBlocked(false);
   }, [getPlayer]);
+
+  // The first gesture anywhere on the page unlocks audio, and so does the next one after a block.
+  useEffect(() => {
+    const onGesture = () => {
+      if (!gestured.current || blockedRef.current) void unlock();
+    };
+    for (const e of GESTURE_EVENTS) window.addEventListener(e, onGesture, true);
+    return () => {
+      for (const e of GESTURE_EVENTS) window.removeEventListener(e, onGesture, true);
+    };
+  }, [unlock]);
 
   const playAt = useCallback(
     (startMs: number) => {
-      if (!unlockedRef.current) return;
       clearTimer();
       const player = getPlayer();
       const start = () => {
         player.currentTime = Math.max(0, nowMs() - startMs) / 1000;
-        void Promise.resolve(player.play()).catch(() => {});
+        void Promise.resolve(player.play()).catch((e: unknown) => {
+          // Only the autoplay policy locks sound; e.g. an AbortError from a source swap does not.
+          if ((e as { name?: string } | null)?.name !== 'NotAllowedError') return;
+          blockedRef.current = true;
+          setBlocked(true);
+        });
       };
       const wait = startMs - nowMs();
       if (wait > 0) timer.current = setTimeout(start, wait);
@@ -125,7 +154,7 @@ export function useRoundAudio(
 
   const current = loaded.url === currentUrl;
   return {
-    unlocked,
+    unlocked: !blocked,
     ready: current && loaded.ready,
     failed: !currentUrl || (current && loaded.failed),
     unlock,

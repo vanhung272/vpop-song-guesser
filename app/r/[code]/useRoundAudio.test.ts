@@ -77,12 +77,50 @@ describe('useRoundAudio', () => {
     expect(result.current.failed).toBe(true);
   });
 
-  it('does not play before the user unlocked audio with a click', () => {
+  it('plays without any click when the browser allows it (sound is on by default)', () => {
+    const { result } = mount('https://a/1.m4a', null);
+    expect(result.current.unlocked).toBe(true);
+    act(() => result.current.playAt(now));
+    expect(player().play).toHaveBeenCalledTimes(1);
+  });
+
+  it('when the browser blocks playback, it reports locked until the user clicks', async () => {
+    const { result } = mount('https://a/1.m4a', null);
+    player().play.mockRejectedValueOnce(new DOMException('blocked', 'NotAllowedError'));
+    await act(async () => result.current.playAt(now));
+    expect(result.current.unlocked).toBe(false);
+    await act(async () => {
+      await result.current.unlock();
+    });
+    expect(result.current.unlocked).toBe(true);
+  });
+
+  it('other playback errors (e.g. a source swap aborting play) do not lock audio', async () => {
+    const { result } = mount('https://a/1.m4a', null);
+    player().play.mockRejectedValueOnce(new DOMException('aborted', 'AbortError'));
+    await act(async () => result.current.playAt(now));
+    expect(result.current.unlocked).toBe(true);
+  });
+
+  it('the first click anywhere on the page unlocks the playback element', async () => {
+    mount('https://a/1.m4a', null);
+    await act(async () => {
+      document.body.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+    expect(player().play).toHaveBeenCalledTimes(1);
+    expect(player().pause).toHaveBeenCalled();
+  });
+
+  it('a click while the clip plays does not interrupt it', async () => {
     const { result } = mount('https://a/1.m4a', null);
     act(() => result.current.playAt(now));
-    vi.advanceTimersByTime(100);
-    expect(player().play).not.toHaveBeenCalled();
-    expect(result.current.unlocked).toBe(false);
+    await act(async () => {});
+    player().pause.mockClear();
+    await act(async () => {
+      document.body.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+    expect(player().pause).not.toHaveBeenCalled();
+    expect(player().paused).toBe(false);
   });
 
   it('unlock plays inside the click gesture, then playAt starts on time', async () => {
