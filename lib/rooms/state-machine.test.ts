@@ -51,7 +51,7 @@ function err(result: ApplyResult | RoomError): RoomError {
   return result;
 }
 
-/** A room in question phase of round `roundIdx`, deadline at t=20000 (limit 15000). */
+/** A room in question phase of round `roundIdx`, deadline at t=20000. */
 function inQuestion(roundIdx = 0, answeredPlayerIds: string[] = []): RoomState {
   return lobby({
     phase: 'question',
@@ -75,7 +75,7 @@ describe('initialRoomState', () => {
       theme: null,
       settings: {
         questionCount: 10,
-        timeLimitMs: DEFAULT_TIME_LIMIT_MS,
+        timeLimitMs: 10000, // product default: 10 s
         showLiveAnswers: true,
         lateJoin: true,
       },
