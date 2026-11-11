@@ -81,6 +81,8 @@ describe('<Lobby />', () => {
       'Thể loại',
       'Thời gian ra mắt',
     ]);
+    // The lists are short: no search box.
+    expect(screen.queryByRole('searchbox')).toBeNull();
   });
 
   it('the theme list hides themes without enough songs', async () => {

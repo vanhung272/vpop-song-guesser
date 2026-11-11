@@ -30,7 +30,7 @@ async function setUpGame(browser: Browser, names: string[]): Promise<{ code: str
   await expect(host.getByLabel('Số câu')).toHaveValue(String(QUESTIONS));
   await host.getByLabel('Thời gian mỗi câu').selectOption('10000');
   await expect(host.getByLabel('Thời gian mỗi câu')).toHaveValue('10000');
-  await host.getByRole('searchbox', { name: 'Tìm chủ đề' }).fill('Đen');
+  await host.getByRole('tab', { name: 'Ca sĩ' }).click();
   await host.getByRole('button', { name: /Đen Vâu/ }).click();
   for (const guest of guests) await expect(guest.getByText(`${QUESTIONS} câu`)).toBeVisible();
 
