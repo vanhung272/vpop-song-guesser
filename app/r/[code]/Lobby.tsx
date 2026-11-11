@@ -99,14 +99,6 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
             <label className="toggle">
               <input
                 type="checkbox"
-                checked={settings.showLiveAnswers}
-                onChange={(e) => patch({ showLiveAnswers: e.target.checked })}
-              />
-              <span>Hiện % đáp án trực tiếp</span>
-            </label>
-            <label className="toggle">
-              <input
-                type="checkbox"
                 checked={settings.lateJoin}
                 onChange={(e) => patch({ lateJoin: e.target.checked })}
               />
@@ -119,8 +111,6 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
             <dd>{settings.questionCount} câu</dd>
             <dt>Thời gian mỗi câu</dt>
             <dd>{seconds(settings.timeLimitMs)}</dd>
-            <dt>% đáp án trực tiếp</dt>
-            <dd>{onOff(settings.showLiveAnswers)}</dd>
             <dt>Vào giữa ván</dt>
             <dd>{onOff(settings.lateJoin)}</dd>
           </dl>

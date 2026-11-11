@@ -83,7 +83,7 @@ export interface SnapshotRound {
   choices: SnapshotChoice[] | null;
   myAnswer: SnapshotMyAnswer | null;
   answeredCount: number;
-  /** answerId -> integer percent of answers so far; only when settings.showLiveAnswers (question/reveal). */
+  /** answerId -> integer percent of this round's answers; reveal only (settings.showLiveAnswers is ignored). */
   livePercentages: Record<string, number> | null;
   /** Phase `reveal` only. */
   reveal: SnapshotReveal | null;
@@ -231,7 +231,8 @@ export function buildSnapshot(
     const revealed = state.phase === 'reveal';
     const mine = viewer ? answersNow.find((a) => a.playerId === viewer.id) : undefined;
     let livePercentages: Record<string, number> | null = null;
-    if (answering && state.settings.showLiveAnswers) {
+    // Shown on the reveal only: percentages while answering would steer late answerers.
+    if (revealed) {
       livePercentages = {};
       for (const c of current.choices) {
         const n = answersNow.filter((a) => a.answerId === c.answerId).length;

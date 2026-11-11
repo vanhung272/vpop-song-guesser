@@ -89,7 +89,6 @@ function RoundCard({ snapshot, round }: { snapshot: RoomSnapshot; round: Snapsho
   return (
     <section className="card stage stage--round" aria-label={title}>
       <p className="round-card__title">{title}</p>
-      <p className="round-card__question">{QUESTION_LABEL[round.questionType]}</p>
       <p className="round-card__max">Tối đa {base + maxBonus} điểm</p>
       <p className="muted small">
         {base} điểm khi đúng · +{maxBonus} thưởng tốc độ

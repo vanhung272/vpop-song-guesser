@@ -139,21 +139,20 @@ describe('buildSnapshot', () => {
     ]);
   });
 
-  it('live answer percentages appear only when showLiveAnswers is true', () => {
+  it('answer percentages appear at reveal only, never while players are still answering', () => {
     const cur = { idx: 1, answeredPlayerIds: ['u1', 'u2', 'u3'] };
-    const on = snap(state('question', 1, { currentRound: cur }), answersR1);
-    expect(on.round?.livePercentages).toEqual({ 'r1-a': 33, 'r1-b': 0, 'r1-c': 67, 'r1-d': 0 });
-    expect(on.round?.answeredCount).toBe(3);
+    const asking = snap(state('question', 1, { currentRound: cur }), answersR1);
+    expect(asking.round?.livePercentages).toBeNull();
+    expect(asking.round?.answeredCount).toBe(3);
 
-    const off = snap(
-      state('question', 1, {
-        currentRound: cur,
-        settings: { ...DEFAULT_SETTINGS, questionCount: 5, showLiveAnswers: false },
-      }),
-      answersR1,
-    );
-    expect(off.round?.livePercentages).toBeNull();
-    expect(off.round?.answeredCount).toBe(3);
+    // Shown at reveal whatever the (legacy) showLiveAnswers setting says.
+    for (const showLiveAnswers of [true, false]) {
+      const revealed = snap(
+        state('reveal', 1, { currentRound: cur, settings: { ...DEFAULT_SETTINGS, questionCount: 5, showLiveAnswers } }),
+        answersR1,
+      );
+      expect(revealed.round?.livePercentages).toEqual({ 'r1-a': 33, 'r1-b': 0, 'r1-c': 67, 'r1-d': 0 });
+    }
 
     const presenting = snap(state('presenting', 1), []);
     expect(presenting.round?.livePercentages).toBeNull();

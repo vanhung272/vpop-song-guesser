@@ -474,7 +474,7 @@ describe('room service (local Supabase)', () => {
     expect((await roomRow(code)).version).toBe(before.version + MAX_PLAYERS);
     const live = ok(await svc.getSnapshot(code, users[0]));
     expect(live.round!.answeredCount).toBe(MAX_PLAYERS);
-    expect(live.round!.livePercentages![choice]).toBe(100);
+    expect(live.round!.livePercentages).toBeNull(); // percentages wait for the reveal
   }, 30_000);
 
   it('snapshot from the service in question phase has no correct answer; reveal has it', async () => {

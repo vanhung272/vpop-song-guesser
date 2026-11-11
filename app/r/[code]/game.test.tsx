@@ -120,11 +120,22 @@ describe('<G />', () => {
     for (const b of choiceButtons()) expect((b as HTMLButtonElement).disabled).toBe(false);
   });
 
-  it('shows live answer percentages when the room enables them', () => {
-    render(
-      <G snapshot={snapshot({ round: round({ livePercentages: { a1: 25, a2: 75, a3: 0, a4: 0 } }) })} send={send} />,
-    );
+  it('shows the answer percentages on the reveal', () => {
+    const s = snapshot({
+      phase: 'reveal',
+      phaseEndsAt: T0 + 5000,
+      round: round({
+        livePercentages: { a1: 25, a2: 75, a3: 0, a4: 0 },
+        reveal: { correctAnswerId: 'a2', track: { title: 'Bài Hai', artist: 'Ca Sĩ', coverUrl: null }, top3: [] },
+      }),
+    });
+    render(<G snapshot={s} send={send} />);
     expect(screen.getByRole('button', { name: /Bài Hai/ }).textContent).toContain('75%');
+  });
+
+  it('shows no percentages while the question is open', () => {
+    render(<G snapshot={snapshot()} send={send} />);
+    for (const b of choiceButtons()) expect(b.textContent).not.toMatch(/%/);
   });
 
   it('reveal shows title, artist, cover, top 3 and own points', () => {
@@ -166,7 +177,7 @@ describe('<G />', () => {
     expect(screen.getByRole('region', { name: 'Đáp án' }).textContent).toContain('0 điểm');
   });
 
-  it('round card shows base and max bonus for that round', () => {
+  it('round card shows base and max bonus for that round, but not the upcoming question', () => {
     render(
       <G
         snapshot={snapshot({
@@ -182,7 +193,8 @@ describe('<G />', () => {
     expect(card.textContent).toContain('Tối đa 1000 điểm');
     expect(card.textContent).toContain('600 điểm khi đúng');
     expect(card.textContent).toContain('+400 thưởng tốc độ');
-    expect(card.textContent).toContain('Bài gì?');
+    expect(card.textContent).not.toContain('Bài gì?');
+    expect(card.textContent).not.toContain('Ca sĩ nào?');
   });
 
   it('countdown shows the seconds left', () => {

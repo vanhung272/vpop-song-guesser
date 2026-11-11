@@ -88,6 +88,7 @@ describe('<Lobby />', () => {
     expect(screen.queryByRole('searchbox')).toBeNull();
     expect(screen.getByText('10 câu')).toBeTruthy();
     expect(screen.getByText('15 giây')).toBeTruthy();
+    expect(screen.queryByText('% đáp án trực tiếp')).toBeNull();
     expect(screen.getByText('Đen Vâu')).toBeTruthy();
     expect(screen.getByText('Chờ chủ phòng bắt đầu…')).toBeTruthy();
   });
@@ -98,7 +99,8 @@ describe('<Lobby />', () => {
     expect([...count.options].map((o) => o.value)).toEqual(['5', '8', '10', '12', '15']);
     const time = screen.getByLabelText('Thời gian mỗi câu') as HTMLSelectElement;
     expect([...time.options].map((o) => o.value)).toEqual(['10000', '15000', '20000']);
-    expect(screen.getByLabelText('Hiện % đáp án trực tiếp')).toBeTruthy();
+    // Percentages are only shown on the reveal now: no setting for it.
+    expect(screen.queryByLabelText('Hiện % đáp án trực tiếp')).toBeNull();
     expect(screen.getByLabelText('Cho vào giữa ván')).toBeTruthy();
   });
 
