@@ -1,0 +1,668 @@
+{
+  "version": 1,
+  "collection": "tet-classics",
+  "note": "Hand-picked Tết/Xuân classics by any singer (not tied to a curated artist; tagged only with curated artists they credit, so they play as title questions). Set include=false to leave a song out, then run the importer on this file.",
+  "kept": [
+    {
+      "include": true,
+      "itunesTrackId": 6810577656,
+      "title": "Ngày Tết Quê Em",
+      "artist": "Nhóm Mây Trắng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8a/39/95/8a3995a7-c3e9-6e28-78de-b83257e0f751/mzaf_4053052878001574946.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/33/81/2e/33812e09-93ff-72a2-6f52-e965bbf1b6b1/4070335168269.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761240203,
+      "title": "Xuân Này Con Không Về",
+      "artist": "Quang Lê",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2007,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5f/86/01/5f86012a-8037-afea-fce4-92af942ba1d6/mzaf_16201834732450312013.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/e9/9a/efe99a6b-9ba9-9534-b48c-96a570ebf9c4/194491363222_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555564941,
+      "title": "Đón xuân này nhớ xuân xưa",
+      "artist": "Thanh Tuyền",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2000,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/6f/01/43/6f01433d-41e5-9df9-0eea-c6c8bbaee02d/mzaf_4311200814290552619.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/cd/48/ac/cd48acde-0d26-14f7-0688-688c591608a5/5760.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555453719,
+      "title": "Ngày xuân thăm nhau",
+      "artist": "Đan Nguyên & Hoàng Thục Linh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2014,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/5c/30/81/5c3081e8-8298-2742-c2c2-ba36def4e179/mzaf_1485577097724922077.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/fe/7e/3a/fe7e3ae1-fd10-53db-aa44-8cd3d117e8ab/2884.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888401,
+      "title": "Nếu Xuân Này Vắng Anh",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/91/4b/24914b3e-0717-4830-bab7-482ebcced0de/mzaf_1154736241642974751.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1691975569,
+      "title": "Mừng Nắng Xuân Về",
+      "artist": "Kiều Nga",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1985,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/6f/98/d8/6f98d842-b636-2b67-578a-c7b36ddcd8cd/mzaf_11086761570566554720.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e5/67/9c/e5679c4e-f31e-1650-25fa-eb704798d6bf/766973807465.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759041914,
+      "title": "Bài Ca Tết Cho Em",
+      "artist": "Quang Lê",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2007,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/16/68/b81668c6-77c6-06a5-1cd1-acbf4a82fee6/mzaf_18076519057469450336.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/2a/de/8e2ade9c-2c34-49d9-3e60-f27d38eeb39f/194491362195_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1681776482,
+      "title": "Mùa Xuân Đó Có Em",
+      "artist": "Chế Linh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1997,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/d2/cd/e1d2cd65-2a5a-06d5-4585-eb4e29ea6e54/mzaf_17064051142260577839.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0b/b8/71/0bb8716a-19bf-e264-a89a-4f292891b725/886296043774.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760269972,
+      "title": "Ly Rượu Mừng",
+      "artist": "Hợp Ca Thúy Nga",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/d3/73/a4d37327-4ed9-308a-b936-20a792ed12c3/mzaf_6501637157591384610.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/74/6f/54/746f5470-3a04-3e39-4aa9-6b7e4fe30cd8/194491362775_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1690057314,
+      "title": "Xuân Đã Về",
+      "artist": "Minh Hằng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/82/92/30/829230f1-0846-60c3-3da7-c8825574cc3b/mzaf_4863808052990414515.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/28/c5/af/28c5afd7-516f-2be8-f93e-3114df429271/197187458523.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1690057091,
+      "title": "Điệp Khúc Mùa Xuân",
+      "artist": "Bảo Anh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/8e/40/86/8e4086eb-e144-bcdb-49b1-4b798795125d/mzaf_3075510805002971163.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/28/c5/af/28c5afd7-516f-2be8-f93e-3114df429271/197187458523.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1546779956,
+      "title": "Cánh Thiệp Đầu Xuân",
+      "artist": "Cẩm Ly",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2009,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2c/18/33/2c1833bc-6d11-b855-50da-2f0d0782cd98/mzaf_9113397804341727702.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/79/ed/13/79ed13f4-fd7a-4c55-c4f5-b92e61bbbec2/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760269874,
+      "title": "Câu Chuyện Đầu Năm",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/e5/b5/0be5b561-ce7c-469e-8b04-2c98475cadb5/mzaf_5386562360056645247.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/23/d8/6d23d82a-9ae0-4686-805f-929a19d89ea3/194491362768_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1560316508,
+      "title": "Ngày xuân vui cưới",
+      "artist": "Mỹ Linh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2000,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/5f/bc/ef/5fbcef97-3176-3ed6-160c-dcddd76fd03f/mzaf_7102677433368588766.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/2c/06/d5/2c06d543-be0c-1e64-1fcf-58d12c8f6ad6/109.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761240216,
+      "title": "Đám Cưới Đầu Xuân",
+      "artist": "Tam Doan & Thế Sơn",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2007,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f5/a0/70/f5a0708b-9d1c-fcab-d872-3b7ad77cfdfe/mzaf_12494706896575014272.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/e9/9a/efe99a6b-9ba9-9534-b48c-96a570ebf9c4/194491363222_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1657325021,
+      "title": "Hoa Cỏ Mùa Xuân",
+      "artist": "Mỹ Linh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1998,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/80/02/83/800283a3-6d22-3294-d71d-71130b00855a/mzaf_10302347411905846951.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/26/b0/9d/26b09d67-64a8-90c6-bb70-f12d20285aae/196922288258_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1562789809,
+      "title": "Thì Thầm Mùa Xuân",
+      "artist": "Mỹ Linh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/ad/7f/65/ad7f65c5-7c75-9bae-b5f8-8ee4b9675a58/mzaf_9157183879071792691.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/78/60/42/78604225-2c6f-40e2-c076-10d8c358190f/5410.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1561753914,
+      "title": "Mùa xuân làng lúa làng hoa",
+      "artist": "Thanh Hoa",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2001,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/e1/c6/ca/e1c6caca-786a-b97c-994b-a8e38835ecc9/mzaf_3546610682241055787.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/d5/95/c0/d595c048-6056-d3cf-b499-b386ac1160f9/4261.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760269969,
+      "title": "Xuân Và Tuổi Trẻ",
+      "artist": "Minh Tuyết",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ad/bb/26/adbb26a9-4929-b24e-af5e-b9b1f6aa120a/mzaf_16965407339313156170.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/74/6f/54/746f5470-3a04-3e39-4aa9-6b7e4fe30cd8/194491362775_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1596090973,
+      "title": "Mừng Tuổi Mẹ",
+      "artist": "Phương Mỹ Chi",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/3e/2a/8b/3e2a8ba2-5726-15a5-6632-ea57ee38605e/mzaf_4611532350226995442.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/66/66/69/666669b4-6087-8a9f-d2b5-8df8f932179c/190296346484.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1753858668,
+      "title": "Ước Nguyện Đầu Xuân",
+      "artist": "Hương Thuỷ",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/fd/d4/89fdd4f0-7232-2f03-7f18-488b963c55c5/mzaf_4899665457017474985.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/25/df/15/25df1530-2b1e-2103-8e26-b30d208bb2b9/194491354008_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1657325023,
+      "title": "Phút Giao Thừa Lặng Lẽ",
+      "artist": "Mỹ Linh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1998,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/75/2d/68/752d687f-5c69-57cd-4405-533823bb73bd/mzaf_3422616741881508672.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/26/b0/9d/26b09d67-64a8-90c6-bb70-f12d20285aae/196922288258_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1512710311,
+      "title": "Xuân yêu thương",
+      "artist": "Ngọc Lan",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2000,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/bf/c3/e2/bfc3e2b5-2b91-7a0b-b045-658f70dfc7c1/mzaf_6085110438933257718.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e6/96/27/e696279f-3bb4-c229-991b-c3b699747896/197.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1827394474,
+      "title": "Con Bướm Xuân",
+      "artist": "Hồ Quang Hiếu",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/a7/09/ffa709a3-ad1e-fecf-c0d6-d3ac3d854319/mzaf_15197330842746142679.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/b5/45/d1b545c0-ade8-7cfe-01f9-57c42cc3db91/0.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1797048088,
+      "title": "Xuân Đẹp Làm Sao",
+      "artist": "Phương Anh Bolero",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/51/54/37/51543734-c551-67ef-b7fc-18411543b747/mzaf_13422965779873282922.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/29/20/4b/29204b10-d486-1fda-ea85-c0fcae1a3511/3616551462197.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1561634873,
+      "title": "Mùa xuân trên thành phố Hồ Chí Minh",
+      "artist": "Tam ca áo trắng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/4f/9b/de/4f9bdedd-e5ed-270d-98a6-86a0065a5c86/mzaf_5596734040901879240.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2b/60/03/2b60039d-52ee-5a5b-6788-5a4b3ec49e34/7220.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1557957368,
+      "title": "Bến Xuân",
+      "artist": "Khánh Ly",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1990,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/eb/61/b7/eb61b73c-32dd-7832-92c2-a0a5857421da/mzaf_6591005177730277522.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/58/10/30/5810304c-6047-ce13-5756-f0879f7f21a2/12926.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760269873,
+      "title": "Xuân Họp Mặt",
+      "artist": "Như Quỳnh, Loan Châu, Thủy Tiên & Bao Han",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/6d/fc/4e6dfc47-a334-0e97-b829-897fa2b1a70d/mzaf_3435786392425534929.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/23/d8/6d23d82a-9ae0-4686-805f-929a19d89ea3/194491362768_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758812398,
+      "title": "Mùa Xuân Của Mẹ",
+      "artist": "Quang Lê",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2010,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2c/a1/0e/2ca10eaa-f158-185a-73d7-b4ab9b075071/mzaf_13175816813834492990.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/cd/f7/9ccdf7b6-3c31-17c1-e941-3d941bb46869/194491361945_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760265558,
+      "title": "Xuân Này Con Về Mẹ Ở Đâu?",
+      "artist": "Quang Lê",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1f/77/f4/1f77f496-cc91-25be-af38-4a666ded58ad/mzaf_15576905478063389929.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/c1/0e/06c10e63-8eda-f802-2b7a-cba176f2b5d4/194491362973_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1562797525,
+      "title": "Mùa xuân bên cửa sổ",
+      "artist": "Cẩm Vân",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2010,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/7f/27/83/7f2783e2-0c22-b3bd-ae36-487974e607b8/mzaf_5084500192853765956.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b8/7d/8c/b87d8c4c-ea70-9bc6-439c-4de07c712522/5456.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1587778790,
+      "title": "Bước Chân Mùa Xuân",
+      "artist": "Đàm Vĩnh Hưng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2008,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/21/6f/32/216f32b9-9186-e2f5-141c-33e5768ffb5f/mzaf_5214265539176529313.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9e/35/96/9e3596a0-30eb-a48f-5124-97a157c25eff/190296452826.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1807715469,
+      "title": "Mùa Xuân Từ Những Giếng Dầu",
+      "artist": "Hồ Quỳnh Hương",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/d8/a0/aad8a07b-2b41-325d-15be-efa6c9cd8bef/mzaf_8959448835604038028.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ba/b7/ec/bab7eccc-1e2a-dbbb-1016-3823446c40f7/196873063331.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1573884502,
+      "title": "Mộng Chiều Xuân",
+      "artist": "Ha Thanh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1971,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/60/ee/5b/60ee5bad-002f-7035-4bc9-953f0f89cd0d/mzaf_17893892244475523636.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ff/72/1f/ff721fa0-35ae-e4b3-cee4-1915121ba27f/dj.rlotzvek.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1681776436,
+      "title": "Mùa Xuân Lá Khô",
+      "artist": "Chế Linh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1997,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9e/1f/4b/9e1f4b21-717d-c132-2e9f-e21fbc57370e/mzaf_1043605961801894978.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0b/b8/71/0bb8716a-19bf-e264-a89a-4f292891b725/886296043774.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1559714267,
+      "title": "Chuyện buồn ngày xuân",
+      "artist": "Hương Lan",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1991,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/d1/ee/43/d1ee4363-d1c7-0dad-ff4d-1f91eae43657/mzaf_13303860505122683340.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/9f/05/c9/9f05c925-8b08-5853-0927-39d6dc9fedfe/180.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761249374,
+      "title": "Rước Xuân Vê Nhà",
+      "artist": "Ngọc Liên",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/a4/76/a7a47690-49f0-0645-7c9d-7e2272272acb/mzaf_3920523929930506705.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b5/4b/6f/b54b6f4b-95fc-813d-0c4c-73e639a82549/194491363024_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760269750,
+      "title": "Khúc Nhạc Ngày Xuân",
+      "artist": "Thủy Tiên",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/d3/b6/53d3b6a4-6c6f-da10-9847-64c27dab08fe/mzaf_978612817235911436.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/74/6f/54/746f5470-3a04-3e39-4aa9-6b7e4fe30cd8/194491362775_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1765481099,
+      "title": "Lạc Mất Mùa Xuân",
+      "artist": "Lân Nhã",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b2/31/03/b2310318-ce57-cb7b-f38f-d2cc3f8ec328/mzaf_12015978716892566512.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/48/8c/df/488cdfe1-376a-c753-70a3-80af12363ed0/30279.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 321758883,
+      "title": "Ru Em Từng Ngón Xuân Nồng",
+      "artist": "Hồng Nhung",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2008,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/34/76/57/34765752-450d-49fe-4f88-dd50d8fb9dd8/mzaf_6051358833312322301.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/a4/2e/7f/mzi.wtwcxklw.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1380077828,
+      "title": "Đoản Ca Xuân",
+      "artist": "Vy Oanh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2011,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/b6/06/7cb606bd-f102-490a-e9f1-408e09736b95/mzaf_6079812383538999109.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/5a/0b/8d/5a0b8d98-82c1-b72d-8273-e8f726d4f1f1/192562472286.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1561454787,
+      "title": "Đan Áo Mùa Xuân",
+      "artist": "Bảo Yến",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/ee/f0/d3/eef0d395-644c-1bc2-633e-dd73db06c1c0/mzaf_2712706091981934989.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/57/b9/e0/57b9e071-2875-cc8a-f02b-108aca9bea97/9485.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1691962161,
+      "title": "Tết Quê Hương",
+      "artist": "Cẩm Ly",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2008,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/58/7e/a0/587ea0c6-b1f0-58ce-47a8-fde12ebf6354/mzaf_11868837524614792938.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/3e/92/be3e9277-5de6-3a70-b3cb-dca23221758f/886296997596.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761791084,
+      "title": "Mùa Xuân Gọi",
+      "artist": "Hà Trần & Trần Tiến",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/af/aa/4fafaa23-c453-e660-8c74-3b864e0b6a0f/mzaf_7667316090622327918.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/34/e5/3b/34e53b89-567c-e215-450b-e9827f1ba7f6/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1789782034,
+      "title": "Nàng Xuân",
+      "artist": "Only C, Ngô Kiến Huy & Lou Hoàng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/e9/c3/79e9c322-cba1-e807-7e81-f3421c154e83/mzaf_14312774144227450588.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9e/80/f9/9e80f995-740c-e4fc-d5ad-1cdac6c76c2d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760080437,
+      "title": "Tết Đong Đầy",
+      "artist": "Khoa",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2022,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/a4/e9/37a4e9a0-5266-a95f-e7e8-df0485088c31/mzaf_11401193798109968115.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/32/34/3a32344b-6912-2148-6736-172e4095e998/3617054096360.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1661601575,
+      "title": "Về Nhà Ăn Tết",
+      "artist": "BigDaddy & JustaTee",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/52/76/1b/52761b82-0a4f-2b1c-4eee-1da744fac237/mzaf_13732711026811683411.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e2/9c/0d/e29c0df8-4f96-c998-4bb4-5caba1464414/197338935859.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1794672946,
+      "title": "Tết Bình An",
+      "artist": "Hana Cẩm Tiên",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/fc/cf/f7fccf51-6e58-561d-3be0-4dfa87e9c7dc/mzaf_3451779075713193814.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/75/a7/5e/75a75e1b-400f-62de-fdfa-064ea60f22b1/197338515082.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1561519424,
+      "title": "Tết Đến Thật Rồi",
+      "artist": "Uni5",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/58/c5/d5/58c5d529-2f3c-f65a-7c8f-1ed486ff4555/mzaf_12967739963270235350.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1b/52/00/1b5200a9-23ca-1f3e-d76e-65c19e9406c8/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1637704240,
+      "title": "Tết Về Sớm Nhé",
+      "artist": "Phan Mạnh Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/2d/86/542d862b-9c4e-487b-b0d2-c7984aa1ad0d/mzaf_6619838433927758929.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c7/42/c7/c742c729-e9cf-628f-1fd6-32ae2b2246ce/5021732012951.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1856841931,
+      "title": "Tết Đến Rồi (Gặp Lại Chị Bầu OST)",
+      "artist": "Le Giang, Anh Tú Atus, Diệu Nhi, Ngọc Phước, Quốc Khánh & Đỗ Hoàng Long",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/02/b7/0c02b798-4250-0fa4-efd6-918233a03f9e/mzaf_8529874199823766111.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2e/c3/aa/2ec3aa49-3c05-a715-944b-7446c9153a97/050811067815_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1725475846,
+      "title": "Tết Đến",
+      "artist": "RHYDER",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d3/e0/4b/d3e04bb0-948f-a458-608a-d0793b7e5288/mzaf_2046147662047484878.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ee/57/58/ee575821-e7cb-52f0-90ee-d8ad760dafd9/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1789786102,
+      "title": "Vui Như Tết",
+      "artist": "Văn Mai Hương & Ricky Star",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/31/77/643177dc-4d8c-c546-12db-115803dfc843/mzaf_3291899520468801433.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/94/19/b4/9419b48a-0d90-89c5-20e9-89b7d058ebc5/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1789744428,
+      "title": "Tết Đoàn Viên",
+      "artist": "Lam Trường & Cẩm Ly",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/51/a5/7d51a5b4-a545-8b37-8071-c7cb34321e26/mzaf_8735801241341467123.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9e/6e/ac/9e6eac9e-eb77-9a2d-4319-f006881436bf/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6771665240,
+      "title": "Về Quê Ăn Tết",
+      "artist": "Jun Phạm",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/03/86/e7038658-8396-c3ad-84ce-8d1b91b60463/mzaf_17707692235249163135.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/49/4e/d6/494ed6cc-4e70-78f3-f110-1e4afd001ed3/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1794651556,
+      "title": "Ô Kìa Mùa Xuân Vui",
+      "artist": "Văn Mai Hương & Quân A.P",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/6b/ac/856bacce-1d89-d066-866d-b127b1ffec94/mzaf_3368046429145510430.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/f1/cd/7df1cd64-c477-1f65-50e5-5fe8698d2f89/190296301094.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1789778048,
+      "title": "Xuân Về Khắp Nơi",
+      "artist": "Han Sara & Gin Tuấn Kiệt",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/87/1e/d6871e73-082d-2218-68b2-0e1f249ad9f9/mzaf_4432304519616627073.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d7/46/e1/d746e172-ca4a-b547-902a-5a7016a4a131/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1709424295,
+      "title": "Nắng Có Còn Xuân",
+      "artist": "Lệ Quyên",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/68/96/d6/6896d6b3-e5ac-084a-5a24-a11a68f16187/mzaf_9838710278943808859.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b9/f3/ee/b9f3eee5-da8b-228e-9ad1-a547880d3df8/23828.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1463743523,
+      "title": "Chúc Tết",
+      "artist": "Khởi My",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/08/fb/b2/08fbb222-2629-90bc-61ab-aead17a180c6/mzaf_16303726220259233748.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/04/40/2d/04402d99-202b-ed51-7c69-81c3d7af035f/artwork.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1791070530,
+      "title": "Tết Này Con Vắng Nhà",
+      "artist": "Cao Thái Sơn",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ea/95/f1/ea95f15e-de62-b601-c005-1416d6c9481d/mzaf_3963359452283006263.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/27/4e/00/274e005e-b667-921e-d620-4c6c1146047d/199066548967.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1761240214,
+      "title": "Ngày Xuân Tái Ngộ",
+      "artist": "Mạnh Quỳnh & Ha Phuong",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2007,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/4a/69/4e4a69a7-2f6d-8017-ab65-b01817cccc5a/mzaf_16146747093967294183.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/e9/9a/efe99a6b-9ba9-9534-b48c-96a570ebf9c4/194491363222_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1560956058,
+      "title": "Sau Ba Ngày Tết",
+      "artist": "Hoàng Oanh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1967,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/f1/8d/4b/f18d4bbe-0ac2-eb04-504b-eb5ab9b9c0f7/mzaf_6483735723122416938.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a5/ad/da/a5adda80-4469-d522-35b3-5c96ab9be72c/9664.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1761249149,
+      "title": "Xuân Về Trên Môi Em",
+      "artist": "Bao Han, Nhu Loan & Tú Quyên",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/32/30/753230d0-a24b-3c12-8bed-ca7b9f03fb5e/mzaf_6922309363392765610.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/41/f8/5d/41f85d8c-e6c2-1da5-1151-be2d6ddffa88/194491363017_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1546780133,
+      "title": "Gác Nhỏ Đêm Xuân",
+      "artist": "Lưu Ánh Loan",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c9/5a/11/c95a119b-66dc-9c95-a46c-66ee482d9441/mzaf_7851546432388296790.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/79/ed/13/79ed13f4-fd7a-4c55-c4f5-b92e61bbbec2/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1691956840,
+      "title": "Tết Này Có Em",
+      "artist": "Quang Binh & Trang Thanh Lan",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1996,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/57/99/e7/5799e759-a495-8229-11f2-e9e3be3a9664/mzaf_12524267123421018115.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/6a/54/49/6a54496d-cd21-9e02-dc72-d4a0dbfd027a/766973806970.jpg/600x600bb.jpg"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1562463294,
+      "title": "Tình ca mùa xuân",
+      "artist": "Thanh Hoa & Trọng Tấn",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1990,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/e1/87/be/e187be50-86fd-bb77-f69d-12c769778350/mzaf_16272441049421062282.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b9/4a/82/b94a822f-fd10-645e-6068-07fd77d05b17/7718.jpg/600x600bb.jpg"
+    }
+  ],
+  "dropped": []
+}
