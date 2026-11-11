@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { ensureAnonymousSession } from './client';
+import { ensureAnonymousSession, resetAnonymousSession } from './client';
 
 function fakeAuth(session: { user: { id: string } } | null, signInResult?: unknown) {
   return {
@@ -24,5 +24,23 @@ describe('ensureAnonymousSession', () => {
   it('throws when anonymous sign-in fails', async () => {
     const auth = fakeAuth(null, { data: { user: null }, error: { message: 'disabled' } });
     await expect(ensureAnonymousSession({ auth } as never)).rejects.toThrow('disabled');
+  });
+});
+
+describe('resetAnonymousSession', () => {
+  it('drops the local session and signs in anonymously again', async () => {
+    const calls: string[] = [];
+    const auth = {
+      signOut: vi.fn(async (opts: unknown) => {
+        calls.push(`signOut:${JSON.stringify(opts)}`);
+        return { error: null };
+      }),
+      signInAnonymously: vi.fn(async () => {
+        calls.push('signIn');
+        return { data: { user: { id: 'u-3' } }, error: null };
+      }),
+    };
+    expect(await resetAnonymousSession({ auth } as never)).toBe('u-3');
+    expect(calls).toEqual(['signOut:{"scope":"local"}', 'signIn']);
   });
 });

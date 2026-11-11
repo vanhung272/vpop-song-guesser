@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { apiFetch } from '@/lib/client/api';
 import { errorMessageVi } from '@/lib/client/errors-vi';
-import { ensureAnonymousSession } from '@/lib/supabase/client';
+import { ensureAnonymousSession, resetAnonymousSession } from '@/lib/supabase/client';
 
 export interface Profile {
   id: string;
@@ -30,17 +30,29 @@ export function useProfile(): ProfileState {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      try {
-        await ensureAnonymousSession();
-      } catch {
+      const fail = () => {
         if (!cancelled) {
           setError(CONNECT_ERROR);
           setStatus('error');
         }
-        return;
+      };
+      try {
+        await ensureAnonymousSession();
+      } catch {
+        return fail();
       }
-      const res = await apiFetch<Profile>('/api/profile');
+      let res = await apiFetch<Profile>('/api/profile');
       if (cancelled) return;
+      // A stored session the server rejects would otherwise block the user until it expires.
+      if (!res.ok && res.status === 401) {
+        try {
+          await resetAnonymousSession();
+        } catch {
+          return fail();
+        }
+        res = await apiFetch<Profile>('/api/profile');
+        if (cancelled) return;
+      }
       if (res.ok) {
         setProfile(res.data);
         setStatus('ready');

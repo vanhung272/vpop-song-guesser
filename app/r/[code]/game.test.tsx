@@ -4,6 +4,7 @@ import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import type { RoomSnapshot } from '@/lib/rooms/snapshot';
 import type { RoundAudio } from './useRoundAudio';
 import type { RoomCommand, SendResult } from './useRoom';
+import { errorMessageVi } from '@/lib/client/errors-vi';
 import { T0, player, round, snapshot } from './test-fixtures';
 
 import { Game } from './Game';
@@ -298,6 +299,40 @@ describe('<G /> results', () => {
     rerender(<G snapshot={results({ viewerId: 'h', isHost: true })} send={send} />);
     fireEvent.click(screen.getByRole('button', { name: 'Ván mới' }));
     expect(send).toHaveBeenCalledWith({ type: 'rematch' });
+  });
+
+  it('a failed rematch shows the error to the host', async () => {
+    send = vi.fn(async () => ({ ok: false as const, error: 'NETWORK' }));
+    render(<G snapshot={results({ viewerId: 'h', isHost: true })} send={send} />);
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Ván mới' }));
+    });
+    expect(screen.getByRole('alert').textContent).toBe(errorMessageVi('NETWORK'));
+  });
+
+  it('the headline names every player tied for first, and nobody when all scored 0', () => {
+    const { rerender } = render(
+      <G
+        snapshot={results({
+          players: [
+            player('g', { nickname: 'Khách', score: 3100 }),
+            player('h', { nickname: 'Bảo', score: 3100, isHost: true }),
+            player('x', { nickname: 'Ba', score: 0 }),
+          ],
+        })}
+        send={send}
+      />,
+    );
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Đồng hạng nhất: Khách, Bảo');
+    rerender(
+      <G
+        snapshot={results({ players: [player('g', { nickname: 'Khách' }), player('h', { nickname: 'Bảo', isHost: true })] })}
+        send={send}
+      />,
+    );
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Kết quả');
+    rerender(<G snapshot={results()} send={send} />);
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Khách thắng!');
   });
 
   it('results do not schedule ticks and stop the audio', () => {

@@ -21,12 +21,22 @@ const onOff = (v: boolean) => (v ? 'Bật' : 'Tắt');
 
 export function Lobby({ snapshot, send, onLeave }: Props) {
   const [error, setError] = useState<string | null>(null);
+  /** Start checks every preview server-side and can take seconds: block repeat clicks meanwhile. */
+  const [starting, setStarting] = useState(false);
   const { settings, isHost, players } = snapshot;
 
   async function run(cmd: RoomCommand) {
     setError(null);
     const res = await send(cmd);
     if (!res.ok) setError(errorMessageVi(res.error));
+  }
+  async function start() {
+    setStarting(true);
+    try {
+      await run({ type: 'start' });
+    } finally {
+      setStarting(false);
+    }
   }
   const patch = (p: Partial<RoomSettings>) => void run({ type: 'settings', patch: p });
 
@@ -143,10 +153,11 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
           <button
             type="button"
             className="btn btn--primary btn--big"
-            disabled={!snapshot.theme}
-            onClick={() => void run({ type: 'start' })}
+            disabled={!snapshot.theme || starting}
+            aria-busy={starting}
+            onClick={() => void start()}
           >
-            Bắt đầu
+            {starting ? 'Đang bắt đầu…' : 'Bắt đầu'}
           </button>
         ) : (
           <p className="muted">Chờ chủ phòng bắt đầu…</p>

@@ -3,11 +3,13 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { act, cleanup, renderHook } from '@testing-library/react';
 
 let sessionError: Error | null;
+const resetSession = vi.fn(async () => 'u2');
 vi.mock('@/lib/supabase/client', () => ({
   ensureAnonymousSession: async () => {
     if (sessionError) throw sessionError;
     return 'u1';
   },
+  resetAnonymousSession: () => resetSession(),
 }));
 
 import { useProfile } from './useProfile';
@@ -17,6 +19,7 @@ let fetchMock: ReturnType<typeof vi.fn>;
 
 beforeEach(() => {
   sessionError = null;
+  resetSession.mockClear();
   profileResponse = new Response(JSON.stringify({ error: 'PROFILE_NOT_FOUND' }), { status: 404 });
   fetchMock = vi.fn(async (url: string, init?: RequestInit) => {
     if (init?.method === 'POST') {
@@ -67,5 +70,25 @@ describe('useProfile', () => {
     const { result } = renderHook(() => useProfile());
     await vi.waitFor(() => expect(result.current.status).toBe('error'));
     expect(result.current.error).toBe('Không kết nối được máy chủ. Hãy tải lại trang.');
+  });
+
+  it('a 401 (stale session) signs in afresh once, then loads the profile', async () => {
+    const responses = [
+      new Response(JSON.stringify({ error: 'UNAUTHENTICATED' }), { status: 401 }),
+      new Response(JSON.stringify({ error: 'PROFILE_NOT_FOUND' }), { status: 404 }),
+    ];
+    fetchMock.mockImplementation(async () => responses.shift()!);
+    const { result } = renderHook(() => useProfile());
+    await vi.waitFor(() => expect(result.current.status).toBe('needs-profile'));
+    expect(resetSession).toHaveBeenCalledTimes(1);
+  });
+
+  it('a second 401 after the fresh sign-in is an error, not a loop', async () => {
+    fetchMock.mockImplementation(
+      async () => new Response(JSON.stringify({ error: 'UNAUTHENTICATED' }), { status: 401 }),
+    );
+    const { result } = renderHook(() => useProfile());
+    await vi.waitFor(() => expect(result.current.status).toBe('error'));
+    expect(resetSession).toHaveBeenCalledTimes(1);
   });
 });

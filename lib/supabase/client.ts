@@ -23,3 +23,14 @@ export async function ensureAnonymousSession(client: SupabaseClient = createClie
   if (error || !signedIn.user) throw new Error(`anonymous sign-in failed: ${error?.message ?? 'no user'}`);
   return signedIn.user.id;
 }
+
+/**
+ * Replaces a session the server rejects (e.g. the user no longer exists after a project reset)
+ * with a fresh anonymous one. Local sign-out only: the rejected token has nothing to revoke.
+ */
+export async function resetAnonymousSession(client: SupabaseClient = createClient()): Promise<string> {
+  await client.auth.signOut({ scope: 'local' });
+  const { data: signedIn, error } = await client.auth.signInAnonymously();
+  if (error || !signedIn.user) throw new Error(`anonymous sign-in failed: ${error?.message ?? 'no user'}`);
+  return signedIn.user.id;
+}

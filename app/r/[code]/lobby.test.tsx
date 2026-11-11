@@ -149,6 +149,18 @@ describe('<Lobby />', () => {
       expect(screen.getByRole('alert').textContent).toBe('Hãy chọn chủ đề trước khi bắt đầu.'),
     );
   });
+  it('start shows a pending state and ignores repeat clicks while the server checks previews', async () => {
+    let finish!: (r: { ok: true }) => void;
+    send = vi.fn(() => new Promise((resolve) => (finish = resolve)));
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu' }));
+    const pending = screen.getByRole('button', { name: 'Đang bắt đầu…' }) as HTMLButtonElement;
+    expect(pending.disabled).toBe(true);
+    fireEvent.click(pending);
+    expect(send).toHaveBeenCalledTimes(1);
+    finish({ ok: true });
+    await vi.waitFor(() => expect(screen.getByRole('button', { name: 'Bắt đầu' })).toBeTruthy());
+  });
 });
 
 describe('<RoomClient /> joining', () => {
