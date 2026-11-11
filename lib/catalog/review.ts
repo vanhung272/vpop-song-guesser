@@ -18,6 +18,8 @@ import type { ItunesSong } from './itunes';
 
 /**
  * Review file (catalog/review/<artistKey>.json), edited by the curator before import.
+ * A collection file (e.g. catalog/review/tet-classics.json) has `collection` instead of
+ * `artistKey`: hand-picked songs by any singer, tagged only with the curated artists they credit.
  *
  * - `kept`: songs the filter accepted. Set `include: false` to leave one out; edit
  *   `title`, `artist`, `genre`, `releaseYear` freely (title_norm/artist_norm and the 5-year
@@ -41,7 +43,10 @@ export interface ReviewDropped extends ReviewTrack {
 }
 export interface ReviewFile {
   version: 1;
-  artistKey: string;
+  /** The curated artist this file was fetched for; absent in a collection file. */
+  artistKey?: string;
+  /** Name of a hand-picked collection (no single artist); set instead of `artistKey`. */
+  collection?: string;
   note: string;
   kept: ReviewTrack[];
   dropped: ReviewDropped[];
@@ -97,8 +102,12 @@ function parseReview(file: string): ReviewFile {
     throw new Error(`Invalid review file ${file}: expected { kept: [], dropped: [] }`);
   }
   // Hand edits: a wrong type here would silently import (include: "false" is truthy) or store a bad key.
-  if (typeof r.artistKey !== 'string' || r.artistKey.trim() === '') {
-    throw new Error(`Invalid review file ${file}: artistKey must be a non-empty string`);
+  const nonEmpty = (v: unknown) => typeof v === 'string' && v.trim() !== '';
+  const isCollection = r.artistKey === undefined && nonEmpty(r.collection);
+  if (!isCollection && !nonEmpty(r.artistKey)) {
+    throw new Error(
+      `Invalid review file ${file}: artistKey must be a non-empty string (or, for a collection file, set collection instead)`,
+    );
   }
   for (const [list, entries] of [['kept', r.kept], ['dropped', r.dropped]] as const) {
     entries.forEach((t: unknown, i) => {
@@ -134,7 +143,7 @@ function blankToNull(v: string | null | undefined): string | null {
   return t === '' ? null : t;
 }
 
-function toRow(t: ReviewTrack, fileKey: string, curated: Artist[]): TrackRow | null {
+function toRow(t: ReviewTrack, fileKey: string | null, curated: Artist[]): TrackRow | null {
   const title = blankToNull(t.title);
   const artist = blankToNull(t.artist);
   const previewUrl = blankToNull(t.previewUrl);
@@ -153,7 +162,7 @@ function toRow(t: ReviewTrack, fileKey: string, curated: Artist[]): TrackRow | n
     // every curated artist credited on the track, plus the artist this review file belongs to
     artist_keys: [
       ...new Set([
-        fileKey,
+        ...(fileKey ? [fileKey] : []),
         ...curated.filter((a) => matchesArtist({ artistName: artist }, a)).map((a) => a.key),
       ]),
     ],
@@ -188,7 +197,7 @@ export async function importReviewed(
   const rows = new Map<number, TrackRow>(); // one row per itunes_track_id (last edit wins)
   let skipped = 0;
   for (const t of approved) {
-    const row = toRow(t, review.artistKey, artists);
+    const row = toRow(t, review.artistKey ?? null, artists);
     if (row) rows.set(row.itunes_track_id, row);
     else skipped++;
   }

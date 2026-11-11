@@ -270,6 +270,40 @@ describe('importReviewed: artist_keys (R4b) and removals (R3c)', () => {
     expect(row.artist_keys).toEqual(['den-vau']);
   });
 
+  it('a collection file (no artistKey) only tags curated artists actually credited', async () => {
+    const entry = (i: number, title: string, artistName: string) => ({
+      include: true,
+      itunesTrackId: BASE_ID + i,
+      title,
+      artist: artistName,
+      genre: 'Nhạc Xuân & Tết',
+      releaseYear: 2007,
+      previewUrl: `https://audio.example/${BASE_ID + i}.m4a`,
+      coverUrl: null,
+    });
+    const file = path.join(tmp, 'collection.json');
+    writeFileSync(
+      file,
+      JSON.stringify({
+        version: 1,
+        collection: 'tet-classics',
+        note: 'test',
+        kept: [entry(60, 'Xuân Này Con Không Về (kt)', 'Quang Lê'), entry(61, 'Tết Chung (kt)', 'Đen & Ai Đó')],
+        dropped: [],
+      }),
+    );
+    expect(await importReviewed(file, db, curated)).toEqual({ upserted: 2, skipped: 0, deleted: 0 });
+    const rows = await rowsFor([BASE_ID + 60, BASE_ID + 61]);
+    expect(rows[0]).toMatchObject({ artist: 'Quang Lê', artist_keys: [], genre: 'Nhạc Xuân & Tết', decade: '2005-2009' });
+    expect(rows[1].artist_keys).toEqual(['den-vau']);
+  });
+
+  it('a review file needs either an artistKey or a collection name', async () => {
+    const file = path.join(tmp, 'neither.json');
+    writeFileSync(file, JSON.stringify({ version: 1, note: '', kept: [], dropped: [] }));
+    await expect(importReviewed(file, db, curated)).rejects.toThrow(/artistKey/);
+  });
+
   it('re-importing the same track from a second artist file merges keys (union, no loss)', async () => {
     const s = song(44, { artistName: 'Đen', trackName: 'Bài Chung (kt)' });
     await importFor(den, [s], 'keys3a');

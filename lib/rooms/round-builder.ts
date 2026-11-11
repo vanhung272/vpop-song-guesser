@@ -105,7 +105,9 @@ function assemble(
 /**
  * Build `count` rounds from a theme's tracks. Distractors come from the same
  * tracks. Artist themes only get `title` questions; other themes pick
- * randomly, using `artist` only when 4 distinct artists are available.
+ * randomly, using `artist` ("Ai hát?") only for a track by a curated artist
+ * (a classic covered by many singers has no single answer) and only when 4
+ * distinct artists are available.
  */
 export function buildRounds(
   tracks: Track[],
@@ -123,7 +125,7 @@ export function buildRounds(
   return picked.map((track) => {
     const others = pool.filter((t) => t.id !== track.id);
     let artistDistractors: string[] | null = null;
-    if (theme.type !== 'artist' && rng() < 0.5) {
+    if (theme.type !== 'artist' && track.artistKeys.length > 0 && rng() < 0.5) {
       artistDistractors = pickDistinct(
         others,
         (t) => t.artistNorm,

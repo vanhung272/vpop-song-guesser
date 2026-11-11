@@ -86,6 +86,20 @@ describe('buildRounds', () => {
     expect(rounds.every((r) => r.questionType === 'title')).toBe(true);
   });
 
+  it('asks "Ai hát?" only about tracks by a curated artist (not covers of classics by anyone)', () => {
+    // Half the pool has no curated artist (e.g. Tết classics sung by many); those are title-only.
+    const ts = tracks(24, 24).map((t, i) => (i % 2 ? { ...t, artistKeys: [] } : t));
+    let artistRounds = 0;
+    for (let seed = 0; seed < 30; seed++) {
+      for (const r of buildRounds(ts, genre, 12, mulberry32(seed))) {
+        if (r.questionType !== 'artist') continue;
+        artistRounds++;
+        expect(ts.find((t) => t.id === r.trackId)!.artistKeys.length).toBeGreaterThan(0);
+      }
+    }
+    expect(artistRounds).toBeGreaterThan(0);
+  });
+
   it('artist themes only produce title questions', () => {
     const ts = tracks(24, 8);
     for (let seed = 0; seed < 10; seed++) {
