@@ -8,3 +8,4 @@ supabase/.branches
 .superpowers/
 *.tsbuildinfo
 next-env.d.ts
+.playwright-mcp/

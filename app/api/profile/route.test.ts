@@ -3,6 +3,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 let user: { id: string } | null;
 let upserts: { table: string; row: unknown; options: unknown }[];
 let upsertError: { message: string } | null;
+let stored: { id: string; nickname: string; avatar_seed: string } | null;
+let selectError: { message: string } | null;
 
 vi.mock('@/lib/supabase/server', () => ({
   createClient: async () => ({ auth: { getUser: async () => ({ data: { user }, error: null }) } }),
@@ -14,11 +16,19 @@ vi.mock('@/lib/supabase/admin', () => ({
         upserts.push({ table, row, options });
         return Promise.resolve({ error: upsertError });
       },
+      select: () => ({
+        eq: (_col: string, id: string) => ({
+          maybeSingle: async () => ({
+            data: selectError ? null : stored && stored.id === id ? stored : null,
+            error: selectError,
+          }),
+        }),
+      }),
     }),
   }),
 }));
 
-import { POST } from './route';
+import { GET, POST } from './route';
 
 const call = (body: unknown) =>
   POST(
@@ -33,6 +43,8 @@ beforeEach(() => {
   user = { id: 'user-1' };
   upserts = [];
   upsertError = null;
+  stored = null;
+  selectError = null;
   vi.spyOn(console, 'error').mockImplementation(() => {});
 });
 
@@ -91,5 +103,30 @@ describe('POST /api/profile', () => {
     const res = await call({ nickname: 'A', avatarSeed: 's' });
     expect(res.status).toBe(500);
     expect(await res.json()).toEqual({ error: 'INTERNAL' });
+  });
+});
+
+describe('GET /api/profile', () => {
+  it('returns the session user profile', async () => {
+    stored = { id: 'user-1', nickname: 'Hùng', avatar_seed: 'seed-1' };
+    const res = await GET();
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ id: 'user-1', nickname: 'Hùng', avatarSeed: 'seed-1' });
+  });
+
+  it('404 PROFILE_NOT_FOUND when the user has no profile yet', async () => {
+    const res = await GET();
+    expect(res.status).toBe(404);
+    expect(await res.json()).toEqual({ error: 'PROFILE_NOT_FOUND' });
+  });
+
+  it('401 without a session', async () => {
+    user = null;
+    expect((await GET()).status).toBe(401);
+  });
+
+  it('500 when the lookup fails', async () => {
+    selectError = { message: 'boom' };
+    expect((await GET()).status).toBe(500);
   });
 });

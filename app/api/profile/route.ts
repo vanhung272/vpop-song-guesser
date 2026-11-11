@@ -16,6 +16,33 @@ function parseNickname(v: unknown): string | null {
   return nickname;
 }
 
+const NO_STORE = { 'Cache-Control': 'no-store' };
+
+async function sessionUserId(): Promise<string | null> {
+  const session = await createClient();
+  const { data, error } = await session.auth.getUser();
+  return error || !data.user ? null : data.user.id;
+}
+
+/** GET /api/profile -> {id, nickname, avatarSeed} | 404 PROFILE_NOT_FOUND | 401 UNAUTHENTICATED */
+export async function GET() {
+  try {
+    const id = await sessionUserId();
+    if (!id) return errorResponse(401, 'UNAUTHENTICATED');
+    const { data, error } = await createAdminClient()
+      .from('profiles')
+      .select('id, nickname, avatar_seed')
+      .eq('id', id)
+      .maybeSingle();
+    if (error) throw new Error(`profile lookup: ${error.message}`);
+    if (!data) return errorResponse(404, 'PROFILE_NOT_FOUND');
+    return NextResponse.json({ id, nickname: data.nickname, avatarSeed: data.avatar_seed }, { headers: NO_STORE });
+  } catch (err) {
+    console.error('profile route failed:', err);
+    return errorResponse(500, 'INTERNAL');
+  }
+}
+
 /**
  * POST /api/profile {nickname, avatarSeed} -> {id, nickname, avatarSeed}
  * Creates or updates the guest profile of the current (anonymous) Supabase session.
@@ -23,9 +50,8 @@ function parseNickname(v: unknown): string | null {
  */
 export async function POST(request: Request) {
   try {
-    const session = await createClient();
-    const { data, error } = await session.auth.getUser();
-    if (error || !data.user) return errorResponse(401, 'UNAUTHENTICATED');
+    const id = await sessionUserId();
+    if (!id) return errorResponse(401, 'UNAUTHENTICATED');
 
     const body = await readJson(request);
     if (!isPlainObject(body)) return errorResponse(400, 'INVALID_BODY');
@@ -36,13 +62,12 @@ export async function POST(request: Request) {
       return errorResponse(400, 'INVALID_AVATAR_SEED');
     }
 
-    const id = data.user.id;
     const { error: upsertError } = await createAdminClient()
       .from('profiles')
       .upsert({ id, nickname, avatar_seed: avatarSeed }, { onConflict: 'id' });
     if (upsertError) throw new Error(`profile upsert: ${upsertError.message}`);
 
-    return NextResponse.json({ id, nickname, avatarSeed }, { headers: { 'Cache-Control': 'no-store' } });
+    return NextResponse.json({ id, nickname, avatarSeed }, { headers: NO_STORE });
   } catch (err) {
     console.error('profile route failed:', err);
     return errorResponse(500, 'INTERNAL');
