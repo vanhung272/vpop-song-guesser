@@ -3,13 +3,8 @@
 import { useEffect, useState } from 'react';
 import { apiFetch } from '@/lib/client/api';
 import type { ThemeRef } from '@/lib/rooms/round-builder';
-import {
-  MIX_MAX_PARTS,
-  mixTheme,
-  themeParts,
-  type PickableThemeType,
-  type ThemeSummary,
-} from '@/lib/themes/themes';
+import { MIX_MAX_PARTS, mixTheme, themeParts, type PickableThemeType } from '@/lib/themes/mix';
+import type { ThemeSummary } from '@/lib/themes/themes';
 
 // Insertion order is the tab order (left to right).
 const TYPE_LABELS: Record<PickableThemeType, string> = {
