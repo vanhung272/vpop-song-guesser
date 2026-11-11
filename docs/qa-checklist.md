@@ -18,7 +18,7 @@ Chuẩn bị: một máy tính dùng Chrome, một điện thoại (iOS Safari h
 
 - Ván có 3 người. Host đóng tab ở giữa một câu hỏi.
   - **Mong đợi:** ván vẫn chạy tiếp (các máy còn lại tự gọi `tick`).
-  - **Mong đợi:** trong khoảng 45 s, huy hiệu "Chủ phòng" chuyển sang người còn online vào phòng sớm nhất, và người đó thấy nút **Ván mới** ở màn kết quả.
+  - **Mong đợi:** trong vòng 60 s (45 s mất kết nối, cộng tối đa 15 s chờ nhịp heartbeat kế tiếp của người còn lại), huy hiệu "Chủ phòng" chuyển sang người còn online vào phòng sớm nhất, và người đó thấy nút **Ván mới** ở màn kết quả.
 
 ## 3. Mất mạng rồi vào lại
 

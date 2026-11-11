@@ -82,6 +82,7 @@ NEXT_PUBLIC_SUPABASE_URL=<url staging> NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon stagi
 
 - 3 × 10 = 30 lần đăng nhập ẩn danh từ một IP. Hãy kiểm tra **Authentication → Rate Limits** (mục anonymous sign-ins mỗi giờ) và nâng tạm thời nếu cần, xong thì trả về mức cũ.
 - Script trả về exit code 1 nếu có phòng nào chuyển pha khác số lần cần thiết (`1 + 3 × số câu`, tức 16 lần cho 5 câu), vì như vậy nghĩa là có tick bị lặp hoặc bị nhảy vòng.
+- Script cũng trả về exit code 1 nếu có lệnh gọi nào lỗi 5xx, không có phản hồi, hoặc hết lượt retry (`CONFLICT`). `TOO_LATE` và `WRONG_PHASE` là kết quả bình thường của trò chơi nên không tính.
 - Các cột cần xem:
   - Realtime subscribed phải là 10/10 mỗi phòng.
   - Duplicate changes phải là 0.
