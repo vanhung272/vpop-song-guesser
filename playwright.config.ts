@@ -3,7 +3,9 @@ import { localSupabase } from './e2e/supabase-env';
 
 /**
  * Multiplayer e2e against `next dev` + the LOCAL Supabase stack (run `npx supabase start` first).
- * Fixed phases run at half speed (ROOM_TIMING_SCALE, honoured only because E2E=1; see config.ts).
+ * Fixed phases run at real speed: they are short already (reveal 2 s), and a faster reveal leaves the
+ * three browsers too little time to read it. ROOM_TIMING_SCALE (honoured only because E2E=1, see
+ * config.ts) can still speed them up.
  * Start checks HEAD on real iTunes preview URLs, so the machine needs internet access.
  */
 const PORT = 3100;
@@ -29,7 +31,7 @@ export default defineConfig({
     timeout: 120_000,
     env: {
       E2E: '1',
-      ROOM_TIMING_SCALE: '0.5',
+      ROOM_TIMING_SCALE: '1',
       NEXT_PUBLIC_SUPABASE_URL: supabase.url,
       NEXT_PUBLIC_SUPABASE_ANON_KEY: supabase.anonKey,
       SUPABASE_SERVICE_ROLE_KEY: supabase.serviceRoleKey,
