@@ -165,6 +165,21 @@ describe('useRoundAudio', () => {
     expect(player().volume).toBe(1);
   });
 
+  it('fadeOut can wait first: plays on at full volume, then fades out over the last part', () => {
+    const { result } = mount('https://a/1.m4a', null);
+    act(() => result.current.playAt(now));
+    act(() => result.current.fadeOut(1000, 2000));
+    vi.advanceTimersByTime(1900);
+    expect(player().volume).toBe(1);
+    expect(player().paused).toBe(false);
+    vi.advanceTimersByTime(600); // 2.5 s: half way through the fade
+    expect(player().volume).toBeGreaterThan(0.3);
+    expect(player().volume).toBeLessThan(0.7);
+    vi.advanceTimersByTime(600); // 3.1 s: done
+    expect(player().paused).toBe(true);
+    expect(player().volume).toBe(1);
+  });
+
   it('a new clip after a fade plays at full volume, and stop cancels a fade', () => {
     const { result } = mount('https://a/1.m4a', null);
     act(() => result.current.playAt(now));

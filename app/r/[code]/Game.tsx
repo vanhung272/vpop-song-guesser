@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { errorMessageVi } from '@/lib/client/errors-vi';
 import type { RoomSnapshot, SnapshotRound } from '@/lib/rooms/snapshot';
 import { Results } from './Results';
@@ -20,7 +20,10 @@ interface Props {
 }
 
 const QUESTION_LABEL = { title: 'Bài gì?', artist: 'Ai hát?' } as const;
-/** On the reveal the clip fades out over this long instead of playing on. */
+/**
+ * On the reveal the clip fades out over the reveal's last REVEAL_FADE_MS (with REVEAL_MS = 2 s, the
+ * whole reveal), so it falls silent just as the next round card shows.
+ */
 const REVEAL_FADE_MS = 2000;
 
 /** Re-renders every `intervalMs` so time-based UI (timer, countdown) stays current. */
@@ -42,16 +45,24 @@ export function Game({ snapshot, send, onLeave, audio, nowMs }: Props) {
   const { phase, round, phaseEndsAt } = snapshot;
   useAutoTick(snapshot, nowMs, send);
 
-  // The clip starts with the question (server time) and fades out when the answer is revealed.
+  // The clip starts with the question (server time) and fades out through the reveal, so it ends just
+  // as the next round card shows.
   const questionStart = phase === 'question' && phaseEndsAt != null ? phaseEndsAt - snapshot.settings.timeLimitMs : null;
   const { unlocked, ready, playAt, stop, fadeOut } = audio;
   useEffect(() => {
     if (questionStart != null && unlocked) playAt(questionStart);
   }, [questionStart, round?.idx, unlocked, ready, playAt]);
+  // Read through a ref: the clock is re-estimated on every snapshot, which must not restart a fade.
+  const clock = useRef(nowMs);
   useEffect(() => {
-    if (phase === 'reveal') fadeOut(REVEAL_FADE_MS);
-    else if (phase === 'results' || phase === 'countdown') stop();
-  }, [phase, round?.idx, stop, fadeOut]);
+    clock.current = nowMs;
+  }, [nowMs]);
+  useEffect(() => {
+    if (phase === 'reveal') {
+      const left = phaseEndsAt == null ? REVEAL_FADE_MS : Math.max(0, phaseEndsAt - clock.current());
+      fadeOut(Math.min(REVEAL_FADE_MS, left), Math.max(0, left - REVEAL_FADE_MS));
+    } else if (phase === 'results' || phase === 'countdown') stop();
+  }, [phase, round?.idx, phaseEndsAt, stop, fadeOut]);
 
   if (phase === 'results') return <Results snapshot={snapshot} send={send} onLeave={onLeave} />;
 

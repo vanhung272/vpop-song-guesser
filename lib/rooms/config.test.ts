@@ -25,7 +25,7 @@ describe('timingScale (R11a)', () => {
 });
 
 describe('phase durations (unscaled in unit tests)', () => {
-  it('countdown 3 s, round card 1.5 s, reveal 6 s', () => {
-    expect([COUNTDOWN_MS, PRESENT_MS, REVEAL_MS]).toEqual([3000, 1500, 6000]);
+  it('countdown 3 s, round card 1.5 s, reveal 2 s', () => {
+    expect([COUNTDOWN_MS, PRESENT_MS, REVEAL_MS]).toEqual([3000, 1500, 2000]);
   });
 });

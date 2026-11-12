@@ -24,7 +24,7 @@ export const CHOICE_COUNT = 4;
 
 // [Đề xuất]
 export const PRESENT_MS = Math.round(1500 * SCALE);
-export const REVEAL_MS = Math.round(6000 * SCALE);
+export const REVEAL_MS = Math.round(2000 * SCALE);
 export const HEARTBEAT_MS = 15000;
 export const OFFLINE_AFTER_MS = 45000;
 export const ROOM_IDLE_CLOSE_MS = 30 * 60 * 1000;

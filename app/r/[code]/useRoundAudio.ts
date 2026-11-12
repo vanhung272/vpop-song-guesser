@@ -18,10 +18,10 @@ export interface RoundAudio {
   playAt: (startMs: number) => void;
   stop: () => void;
   /**
-   * Lowers the volume to silence over `ms`, then pauses (the reveal). Browsers that do not let a
-   * page set the volume (iOS Safari) keep playing at full volume and pause after `ms`.
+   * After `delayMs` at full volume, lowers the volume to silence over `ms`, then pauses (the
+   * reveal). Browsers that do not let a page set the volume (iOS Safari) just pause at the end.
    */
-  fadeOut: (ms: number) => void;
+  fadeOut: (ms: number, delayMs?: number) => void;
 }
 
 const FADE_STEP_MS = 50;
@@ -52,6 +52,7 @@ export function useRoundAudio(
   const preloaderRef = useRef<HTMLAudioElement | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const fadeTimer = useRef<ReturnType<typeof setInterval> | null>(null);
+  const fadeDelay = useRef<ReturnType<typeof setTimeout> | null>(null);
   /** A gesture already unlocked the playback element. */
   const gestured = useRef(false);
   const blockedRef = useRef(false);
@@ -72,7 +73,9 @@ export function useRoundAudio(
   /** Cancels a running fade and puts the volume back to full for whatever plays next. */
   const clearFade = useCallback(() => {
     if (fadeTimer.current) clearInterval(fadeTimer.current);
+    if (fadeDelay.current) clearTimeout(fadeDelay.current);
     fadeTimer.current = null;
+    fadeDelay.current = null;
     if (playerRef.current) playerRef.current.volume = 1;
   }, []);
 
@@ -171,22 +174,27 @@ export function useRoundAudio(
   }, [clearTimer, clearFade]);
 
   const fadeOut = useCallback(
-    (ms: number) => {
+    (ms: number, delayMs = 0) => {
       clearTimer(); // a clip that has not started yet will not start
       clearFade();
       const player = playerRef.current;
       if (!player || player.paused) return;
       const steps = Math.max(1, Math.round(ms / FADE_STEP_MS));
-      let step = 0;
-      fadeTimer.current = setInterval(() => {
-        step++;
-        if (step < steps) {
-          player.volume = Math.max(0, 1 - step / steps);
-          return;
-        }
-        player.pause();
-        clearFade();
-      }, FADE_STEP_MS);
+      const fade = () => {
+        fadeDelay.current = null;
+        let step = 0;
+        fadeTimer.current = setInterval(() => {
+          step++;
+          if (step < steps) {
+            player.volume = Math.max(0, 1 - step / steps);
+            return;
+          }
+          player.pause();
+          clearFade();
+        }, FADE_STEP_MS);
+      };
+      if (delayMs > 0) fadeDelay.current = setTimeout(fade, delayMs);
+      else fade();
     },
     [clearTimer, clearFade],
   );

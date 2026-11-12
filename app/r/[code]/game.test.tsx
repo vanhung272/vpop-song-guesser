@@ -154,20 +154,23 @@ describe('<G />', () => {
     expect(onLeave).toHaveBeenCalledTimes(1);
   });
 
-  it('the music fades out when the answer is revealed', () => {
+  it('the music fades out over the whole reveal, ending as the next round card shows', () => {
     const { rerender } = render(<G snapshot={snapshot()} send={send} />);
     expect(audio.fadeOut).not.toHaveBeenCalled();
     const revealed = snapshot({
       phase: 'reveal',
       version: 11,
-      phaseEndsAt: T0 + 5000,
+      phaseEndsAt: T0 + 2000,
       round: round({
         reveal: { correctAnswerId: 'a2', track: { title: 'Bài Hai', artist: 'Ca Sĩ', coverUrl: null }, top3: [] },
       }),
     });
     rerender(<G snapshot={revealed} send={send} />);
     expect(audio.fadeOut).toHaveBeenCalledTimes(1);
-    expect(audio.fadeOut).toHaveBeenCalledWith(2000); // fades over 2 s
+    const [fadeMs, delayMs] = vi.mocked(audio.fadeOut).mock.calls[0];
+    expect(fadeMs).toBeGreaterThan(1900); // fades over the reveal's 2 s...
+    expect(fadeMs).toBeLessThanOrEqual(2000);
+    expect(delayMs).toBe(0); // ...starting at once: no silence before the round card
   });
 
   it('shows no percentages while the question is open', () => {
