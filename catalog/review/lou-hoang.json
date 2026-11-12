@@ -1,0 +1,751 @@
+{
+  "version": 1,
+  "artistKey": "lou-hoang",
+  "note": "Curator-editable. kept: set include=false to leave a song out; edit title/artist/genre/releaseYear as needed. dropped: set include=true to bring a wrongly dropped song back. Then run the importer on this file.",
+  "kept": [
+    {
+      "include": true,
+      "itunesTrackId": 1535753324,
+      "title": "Cảm Giác Lúc Ấy Sẽ Ra Sao",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/9f/70/3f9f703f-9544-14e3-5561-85607ffc3c17/mzaf_7828541170669647153.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/77/21/cc/7721cce3-2edf-5d68-ef0d-c433b3823cb9/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1527963306,
+      "title": "Mình Là Gì Của Nhau",
+      "artist": "Lou Hoàng",
+      "genre": "Pop/Rock",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d8/d1/69/d8d16930-c7ce-90ed-7932-8ff1de021f3c/mzaf_6066158744850174197.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/6a/23/6f6a23aa-fd45-e8a7-efb5-30a26b60626c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1535753298,
+      "title": "Là Bạn Không Thể Yêu",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/e7/18/a7e7187d-a36a-f7f3-bc86-1e4dec3706cc/mzaf_10148238411759494328.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/60/f0/59/60f05906-7301-def9-08d0-721e70437fd2/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1751214136,
+      "title": "Ngày Đẹp Trời Để Nói Chia Tay",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/10/bf/1710bf27-a252-5110-f227-755e89c7a232/mzaf_14116649062698539718.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/df/e9/21/dfe92153-85a3-8d01-899d-c96a4ae041e4/5021732378927.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1528624103,
+      "title": "Đếm Ngày Xa Em",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/b6/12/fbb61275-91e2-79bb-d398-16129736336f/mzaf_7150730159942813193.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4a/57/9b/4a579ba8-0245-ee75-4c45-48731dfb6dc4/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1522615928,
+      "title": "Yêu Một Người Có Lẽ (feat. Miu Lê)",
+      "artist": "Lou Hoàng",
+      "genre": "R&B/Soul",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/14/7d/5e147d72-1030-192f-2c18-e561e12c761d/mzaf_11270887094389900931.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/8f/a7/51/8fa751ca-5bf0-653d-ee16-aad5453853f6/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1453123983,
+      "title": "Yeu Em Dai Kho",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fa/e3/a5/fae3a558-592b-0a8d-6d90-022408894097/mzaf_10616358619185760346.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ec/37/f2/ec37f248-87ac-2f73-ecdd-02cf7640f51f/759006849501_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1520064834,
+      "title": "Não Cá Vàng",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/e8/a4/68e8a427-dbc0-e5f5-4029-2d6178d406a3/mzaf_10036531212610842085.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f7/ab/03/f7ab03b6-2ec3-e7b5-00cd-93a50d5d9f27/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1631977965,
+      "title": "Bắt Cóc Con Tim",
+      "artist": "Lou Hoàng",
+      "genre": "R&B/Soul",
+      "releaseYear": 2022,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5d/df/b7/5ddfb7b1-4a60-444c-93fa-f1f73c479366/mzaf_528121385683105882.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/41/3f/1e/413f1e38-b29e-2bb9-6b89-510270e79ff1/5054197228162.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6764456029,
+      "title": "Pin Dự Phòng",
+      "artist": "Dương Domic & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/12/9d/92/129d927c-4213-eecc-8ecf-bf64b5d92ef0/mzaf_9991571747377781232.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2b/63/33/2b6333f8-1bf1-a7db-dc34-8415a2a50d46/7316479200012.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1522912227,
+      "title": "Giá Như Anh Lặng Im",
+      "artist": "Only C, Lou Hoàng & Quang Hùng MasterD",
+      "genre": "Pop",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/08/58/61/085861ac-bbbb-ec89-bd85-01217bff11e1/mzaf_6257237677245342320.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/08/58/22/0858220d-0b29-83f1-ef08-aadb5e53ab64/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1753636377,
+      "title": "HÚT",
+      "artist": "Lou Hoàng, Pháp Kiều, WEAN, Quân A.P, Hải Đăng Doo, Ali Hoàng Dương & NICKY",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/27/f0/7e27f05c-3afb-a278-8375-b2708a129781/mzaf_10198500674021683444.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0e/b5/a1/0eb5a17a-1b4e-dbb2-911a-30d25c379515/085365300491.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760723356,
+      "title": "CỨ ĐỂ ANH TA RỜI ĐI",
+      "artist": "Dương Domic, Quang Hùng MasterD, Lou Hoàng, Song Luân & Bảo Anh",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/6c/2e/1c6c2ea8-f50c-0858-33fe-6e701ce31ad3/mzaf_3590267015680767019.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/30/1f/32/301f32eb-0dee-6be5-cedf-e22987629806/198830994351.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1527542737,
+      "title": "Tối Nay Một Mình",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e1/15/68/e115686e-e990-eb31-3608-eb356c5a83a4/mzaf_5297603722574955981.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/41/b1/bc/41b1bcd0-7ba5-9d09-789a-fac0edf8941b/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1752104871,
+      "title": "I.C.O.N",
+      "artist": "Negav, Hải Đăng Doo, Gin Tuấn Kiệt, Ali Hoàng Dương, NICKY, Vũ Thịnh, Công Dương, isaac, HIEUTHUHAI, Đức Phúc, Erik, Quân A.P, Quang Hùng MasterD, Lou Hoàng, Pháp Kiều & WEAN",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b6/a8/d2/b6a8d21d-46ef-b7ca-e1f9-c150f3bd62a3/mzaf_9887717379781286261.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/63/78/43/63784317-dbb3-366b-b4cc-3ef76bd000ce/085365322868.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1852793377,
+      "title": "Lần Cuối Anh Suy",
+      "artist": "Quang Hùng MasterD, Lou Hoàng & Hino",
+      "genre": "Pop",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a6/e8/71/a6e8712b-05ea-d545-4155-c5cc9db4aa04/mzaf_11857471036993015299.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8c/fe/76/8cfe76ea-ae62-efb4-8e67-e0f457dda6e5/198704849893_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1816894093,
+      "title": "Học Cách Yêu Em",
+      "artist": "Phạm Đình Thái Ngân & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/42/ec/f2/42ecf22a-674c-67f9-254d-fc76767f197e/mzaf_12778323332657935953.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/52/ba/f2/52baf2b9-997a-b415-e636-5624761551be/196873234939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756973328,
+      "title": "YOU HAD ME AT HELLO",
+      "artist": "Phạm Đình Thái Ngân, Lou Hoàng, Hải Đăng Doo & Gin Tuấn Kiệt",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/f4/00/eff4004b-7389-9298-ff66-79ed0bcd9653/mzaf_15429156403986773355.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/52/3f/c9/523fc9b8-3dfe-7e9f-031c-28215aa86131/085365068834.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1527721948,
+      "title": "Đắng Lòng Thanh Niên",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2014,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a5/aa/e3/a5aae34f-9e23-1e4b-8a3e-0cd43279d54c/mzaf_182368280210105618.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/14/8c/cb/148ccbda-6eae-df69-cbfb-ae68a5f53f74/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1522616477,
+      "title": "Tạm Biệt Em",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "House",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/21/7b/5f/217b5fa3-0e8e-9290-1912-a684dc6cf684/mzaf_7273566904614699753.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c3/50/b0/c350b056-4312-4905-1d44-1e4a00bafc83/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1521426214,
+      "title": "Vì Em Quá Cô Đơn",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0f/b4/4d/0fb44dfd-f301-9480-66b8-d8ad06c68c12/mzaf_15031669550126982530.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/80/77/05/8077059d-abb2-9c22-c9c0-ebbc92615584/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1530047244,
+      "title": "Bạn Cấp 3",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/de/81/ff/de81ffa4-a216-9717-fef1-0ad6161baabe/mzaf_14249344413180037185.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/32/c5/84/32c58400-c8a5-3646-0fd2-500aeb14dffe/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1670551733,
+      "title": "Thích Hay Là Yêu",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/c5/72/c6c572d7-80d2-20de-3b07-28b1657ec98b/mzaf_17416891057539762782.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/22/10/96/22109655-2902-08f6-6731-1ad26baacbba/5054197559921.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1527785334,
+      "title": "L.O.V.E",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/8d/9f/2e8d9f55-896a-f95f-3177-d69267ac0cd0/mzaf_10112173091662162438.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/11/c9/46/11c94634-1e5d-2a38-b5b0-5ef756e3bb17/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1528624195,
+      "title": "Không Có Em",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/89/0c/cd/890ccd66-ddac-9cf0-94c1-1dad09766410/mzaf_11961216344219739719.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/44/26/cc/4426cc7e-cbc7-fb97-bb00-2fb5cd96d4c3/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1655972376,
+      "title": "Ngày Em Đi",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/ea/c1/45/eac14515-1d53-c2f7-2f50-ddbe1acffe60/mzaf_1331421175831674411.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/11/79/6e/11796e7e-bd01-5833-21b7-5e22255c2100/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6767692459,
+      "title": "Em Chưa 18 (Original Soundtrack)",
+      "artist": "Will, Kaity Nguyen & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/eb/b0/91ebb0fa-1265-56bf-7e4b-e1e52823bad6/mzaf_5346377632783770407.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0f/88/bd/0f88bda1-3596-0302-4fc2-f2e9af50bb20/7316472766324.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1716486917,
+      "title": "EMOI EMOI",
+      "artist": "Lou Hoàng & Only C",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/62/2d/45/622d45b9-690f-fae9-6fa1-58bb2ff8bb2b/mzaf_15337269190310838143.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/58/4d/df584d7f-7bf2-cd57-f8da-76f0cc7ffeb4/5054197772528.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1736634446,
+      "title": "Em Chưa 18 (Em Chưa 18 Original Soundtrack)",
+      "artist": "Will, Lou Hoàng & Kaity Nguyen",
+      "genre": "Pop",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/10/3b/f4/103bf4b7-7fd3-ee8b-532f-9b3425453e07/mzaf_14538643326801885661.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/33/aa/ba/33aaba3f-4e68-2917-8ff7-408ae3685dd2/198391349010.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1522615644,
+      "title": "Em Có Yêu Anh Không",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/49/d0/bd/49d0bdbe-0095-54be-ff64-1d3b187d8f7d/mzaf_4167018653061340849.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c4/e6/66/c4e66601-64dc-2c1d-6525-9ca3a710a52a/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1789782034,
+      "title": "Nàng Xuân",
+      "artist": "Only C, Ngô Kiến Huy & Lou Hoàng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/e9/c3/79e9c322-cba1-e807-7e81-f3421c154e83/mzaf_14312774144227450588.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9e/80/f9/9e80f995-740c-e4fc-d5ad-1cdac6c76c2d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1523137262,
+      "title": "Chất Riêng Của Anh",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ef/14/12/ef141201-f713-cb96-3f1a-c6063997000a/mzaf_9948507093168416465.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f1/30/b9/f130b982-4b2c-d1fa-634c-e2a9c49488d9/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1784220699,
+      "title": "Cho phép tôi mời anh một ly",
+      "artist": "VƯƠNG BÌNH & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9e/a7/0e/9ea70ec0-b138-e496-f239-fc7a96acbf70/mzaf_437147046759117949.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/49/b4/15/49b41530-ec0a-ea38-f7b0-3f440c8aeb34/24UM1IM36557.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1655972391,
+      "title": "Hãy Đợi Đấy (Nupakachi)",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Dance",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/d1/e9/40/d1e9405d-8610-cd31-5fd7-99d999b27635/mzaf_15317184962296673052.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/5d/ed/46/5ded46ee-59b2-118a-79b3-a30a165b5fd3/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1603189333,
+      "title": "Tết Nhà Có Hoa",
+      "artist": "Lou Hoàng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2022,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/41/42/d3/4142d3a7-579e-3239-af71-47ef6e42d52d/mzaf_10932195328379223715.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b5/7e/fa/b57efa91-7b07-698e-c0ab-cb2c6cc3ff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1655972373,
+      "title": "Phở",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/96/0c/6e/960c6e47-3839-7e9b-394d-51e69b07e2ce/mzaf_12045192493921419552.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/11/79/6e/11796e7e-bd01-5833-21b7-5e22255c2100/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1789781286,
+      "title": "Liên Khúc: Yêu Là Tha Thu - Đếm Ngày Xa Em",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/63/0e/cb/630ecb74-7698-2a53-a9ff-f9bc9fc679e6/mzaf_17421514077660031628.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/78/9b/63/789b63fe-7a09-7f11-ec45-69d1f346bdb3/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1528624357,
+      "title": "Không Có Em Beat",
+      "artist": "Lou Hoàng",
+      "genre": "Karaoke",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/59/46/ce/5946cee5-757e-4b1a-d506-8a42cdafdc5a/mzaf_1944776643432458315.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/44/26/cc/4426cc7e-cbc7-fb97-bb00-2fb5cd96d4c3/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1736246378,
+      "title": "Phở (Kungfu Phở Original Soundtrack)",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/cc/f4/e6/ccf4e603-c597-81d4-e9fc-9bebb7e4704d/mzaf_15258845586627182670.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/ba/64/86ba64e7-fad9-dd34-b321-d920423610c2/198391324949.jpg/600x600bb.jpg"
+    }
+  ],
+  "dropped": [
+    {
+      "include": false,
+      "itunesTrackId": 6771505940,
+      "title": "Không Sao Mà, Em Đây Rồi (feat. Lou Hoàng)",
+      "artist": "SUNi",
+      "genre": "Pop",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/c6/13/4ac61386-f939-8ef1-8a07-5ca6b45f6c94/mzaf_401408835001291568.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0b/45/2d/0b452d04-8246-2d3c-2b0f-246d9545035d/3616407077520_cover.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1651035206,
+      "title": "Một Mình Có Buồn Không (feat. Lou Hoàng)",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/fa/49/c1/fa49c114-0242-948c-5955-812fb1cc96ac/mzaf_7501182965717014636.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e5/f4/0e/e5f40e0f-9675-376b-0e1a-0cadd2e9a2d0/190296173158.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1535753212,
+      "title": "Yêu Em Dại Khờ",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/13/cc/1513ccda-e088-45f4-ed69-0f91d07e4dfa/mzaf_18243482288620289800.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/de/54/e7de5460-a7e4-91d2-adce-16d32950211c/cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1588955970,
+      "title": "Một Mình Có Buồn Không (feat. Lou Hoàng)",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/7c/c4/0b/7cc40be6-1989-3ebe-b42e-9840b5249083/mzaf_157424977886219706.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e6/67/2d/e6672d99-3e5b-4ac4-f559-1392c2d37dcc/190296443022.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1633556203,
+      "title": "Một Mình Có Buồn Không (feat. Lou Hoàng)",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/b6/62/22/b662224e-6611-eae7-58db-958fa6bcac5e/mzaf_5776338837334758532.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/7c/f3/a6/7cf3a6cd-2f91-173d-ba21-2ffbb3c5c410/190296170416.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1639637228,
+      "title": "Một Mình Có Buồn Không (feat. Lou Hoàng) [Acoustic Version]",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/de/94/ea/de94ea07-29ba-6492-ff38-411f23b34da5/mzaf_9475763684803866211.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/22/eb/86/22eb864d-56d5-f963-12a6-376bd91ffe46/190296177453.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1633556477,
+      "title": "Một Mình Có Buồn Không (feat. Lou Hoàng) [Acoustic Version]",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/85/c0/38/85c03865-0834-3e68-5599-0cd5f8736003/mzaf_1976947390603968490.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/7c/f3/a6/7cf3a6cd-2f91-173d-ba21-2ffbb3c5c410/190296170416.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1639632658,
+      "title": "Một Mình Có Buồn Không (feat. Lou Hoàng)",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/ab/c3/4f/abc34fbe-fb7e-dffd-281c-a53bc31fadd6/mzaf_3731430392613674004.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/8f/c1/3a/8fc13ae2-05a2-1db0-e730-b319346d766e/190296174742.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1765244106,
+      "title": "CỨ ĐỂ ANH TA RỜI ĐI",
+      "artist": "Dương Domic, Quang Hùng MasterD, Lou Hoàng, Song Luân & Bảo Anh",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/58/88/b7/5888b7e8-755a-6265-d31f-bd30ba2e405c/mzaf_13808417535415529343.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4b/72/d5/4b72d5e9-1d03-37e6-f091-fb656b97e7ab/5034644016900.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1690047645,
+      "title": "Tối Nay Một Mình",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/ef/94/b5/ef94b57a-5ce1-c4b4-f39d-bd8d95cac0c4/mzaf_15875452293993230665.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/77/56/d5/7756d5d3-1016-9da0-3f55-98f24775be96/197187449262.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1453186832,
+      "title": "Vị Quê Nhà (feat. Lou Hoàng)",
+      "artist": "Noo Phước Thịnh",
+      "genre": "Pop",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/bf/e5/d2/bfe5d29b-c7d6-1909-f9c0-9fc468caa3e8/mzaf_16433552706051924228.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4f/25/f4/4f25f427-7290-7f4a-90e8-866bb24f72db/886447564455.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1761967633,
+      "title": "Ngày Đẹp Trời Để Nói Chia Tay (Slow Version)",
+      "artist": "Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/38/e6/b538e6eb-4941-f9fa-b0d8-2c35261cecd3/mzaf_10075429026945432166.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f0/a8/99/f0a89992-4984-1728-35b4-7b69b512b96d/5021732464569.jpg/600x600bb.jpg",
+      "reason": "variant"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1765104894,
+      "title": "Mưa Dầm Thấm Lâu (feat. Lou Hoàng)",
+      "artist": "Hoàng Duyên",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c5/0f/49/c50f4998-5fa3-44e7-2b88-f0496870472b/mzaf_17132830708169681044.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4c/33/90/4c3390b3-4a73-5c1c-7a0a-5bd9b3d34527/24UMGIM92404.rgb.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1588955971,
+      "title": "Một Mình Có Buồn Không (feat. Lou Hoàng) [Acoustic Version]",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/03/c2/4d/03c24d0b-03f2-0db1-e14c-c3df69241910/mzaf_2031852190725374834.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e6/67/2d/e6672d99-3e5b-4ac4-f559-1392c2d37dcc/190296443022.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1719585667,
+      "title": "Yêu Một Người Có Lẽ (Remix) [feat. Nguyen Phuc Thien]",
+      "artist": "Only C, Lou Hoàng & Miu Lê",
+      "genre": "Pop",
+      "releaseYear": 2016,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/06/c0/25/06c02580-81d8-a028-751c-3a356c6e4efe/mzaf_14363525085468583394.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/85/4c/d4/854cd4a2-be4e-9ec4-a47b-3f4bfa0cbec7/197190573756.jpg/600x600bb.jpg",
+      "reason": "variant"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1703200046,
+      "title": "Ngàn lần - 1000x (feat. AMEE & Lou Hoàng)",
+      "artist": "Garena Free Fire",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/cf/c3/36/cfc33640-b219-22e1-f653-ecea6a6f8fdf/mzaf_17130823790541072683.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ad/7d/44/ad7d44da-876b-c788-1594-1bdb5dd91aa1/195915549130.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1651035215,
+      "title": "Một Mình Có Buồn Không (Beat) [feat. Lou Hoàng]",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/7e/2f/46/7e2f46cd-9f08-e8e4-e501-712c7a46c7fe/mzaf_2831050242602516738.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e5/f4/0e/e5f40e0f-9675-376b-0e1a-0cadd2e9a2d0/190296173158.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1893005679,
+      "title": "Lần Cuối Anh Suy (Live at GENfest Presents MBILLION)",
+      "artist": "Quang Hùng MasterD & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/95/a6/40/95a64083-7c71-9d7d-67b4-9d36dd2b26bd/mzaf_9162128972138812108.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/94/b8/dd/94b8dd36-fb27-96f8-e04d-ed06135045da/823375117377_Cover.jpg/600x600bb.jpg",
+      "reason": "variant"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1520064838,
+      "title": "Não Cá Vàng (Beat)",
+      "artist": "Only C & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/2f/4d/682f4d39-a7c3-4274-cbe5-c613cb0f3ecc/mzaf_10456126332470593050.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f7/ab/03/f7ab03b6-2ec3-e7b5-00cd-93a50d5d9f27/cover.jpg/600x600bb.jpg",
+      "reason": "variant"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1695209646,
+      "title": "Tết Nhà Có Hoa",
+      "artist": "Lou Hoàng",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2022,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/cf/00/fa/cf00faf9-c5dd-7820-982e-bf7cbfe8a4d9/mzaf_9490883441526230265.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2c/b2/c8/2cb2c833-65f1-8625-d87c-3a482ab3a41e/cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1878388964,
+      "title": "Lần Cuối Anh Suy (Zeaplee Lofi)",
+      "artist": "Quang Hùng MasterD & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/57/b1/9157b1e9-33c1-e092-044c-7fe6522bf96f/mzaf_16606865438444985250.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b7/13/d1/b713d12a-0cb0-4663-7589-edb688b2701b/823375017073_Cover.jpg/600x600bb.jpg",
+      "reason": "variant"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1521426215,
+      "title": "Vì Em Quá Cô Đơn (Beat)",
+      "artist": "Lou Hoàng",
+      "genre": "Karaoke",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/52/c4/c6/52c4c648-029e-13fa-15ee-1aeb8d8309ce/mzaf_10251952031455871317.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/80/77/05/8077059d-abb2-9c22-c9c0-ebbc92615584/cover.jpg/600x600bb.jpg",
+      "reason": "variant"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1878388973,
+      "title": "Lần Cuối Anh Suy (Minn Lofi)",
+      "artist": "Quang Hùng MasterD & Lou Hoàng",
+      "genre": "Pop",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/02/8b/17028b31-ff44-2999-fe35-37cbb31f0a7e/mzaf_11436481893390977370.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b7/13/d1/b713d12a-0cb0-4663-7589-edb688b2701b/823375017073_Cover.jpg/600x600bb.jpg",
+      "reason": "variant"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1639632666,
+      "title": "Một Mình Có Buồn Không (Instrumental)",
+      "artist": "Thiều Bảo Trâm",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/a0/fe/88/a0fe88b1-ec4e-d970-36ad-70037798f111/mzaf_11482873385713910575.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/8f/c1/3a/8fc13ae2-05a2-1db0-e730-b319346d766e/190296174742.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1686856020,
+      "title": "Bắt Cóc Con Tim - (Lou Hoàng) [Sped Up]",
+      "artist": "sped up +84",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/cd/c3/09/cdc30950-965e-44c5-35e3-e962f683b11e/mzaf_8162779457235353811.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8e/fb/e8/8efbe808-a812-2566-1b88-7ceba78a44f7/5054197672316.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1826519747,
+      "title": "Túy Âm (醉音) + 麓海为王 (Live)",
+      "artist": "可楼 & Phương Mỹ Chi",
+      "genre": "Pop",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/1c/b8/241cb8f5-248f-04c7-a5f2-4c758ceb4321/mzaf_8727261270689086193.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/46/10/19/46101953-1480-9814-4f52-de9540c10a57/4896004115880.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1610529160,
+      "title": "Tia Nắng Trong Em",
+      "artist": "Minh Lou & May",
+      "genre": "Pop",
+      "releaseYear": 2022,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/76/94/99/769499e7-0856-c4f6-5d5a-6c7f0b5ba99e/mzaf_17286658987984496687.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c7/a0/53/c7a05303-d8bb-9394-9402-7e799506f7c1/190296238444.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1784776355,
+      "title": "Từ Bao Lâu",
+      "artist": "Minh Lou",
+      "genre": "Pop",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5d/71/ea/5d71ea59-4ab6-3b8e-fa07-91327e80c099/mzaf_6809249715602919729.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a9/1b/71/a91b7140-0bc5-539f-ef3a-dd8b56a856ee/3616551837049.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1894859474,
+      "title": "Hướng Về Hà Nội",
+      "artist": "Đinh Hoài Xuân, Austin Chanu Alexander, Trần Khánh Quang, John Creek Symphony Orchestra & Maxin Lando",
+      "genre": "Chamber Music",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/71/28/b4/7128b44e-b8f3-165f-3d74-72cea9c92db2/mzaf_10523230687359959042.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/12/8d/30/128d3010-ad1c-cd2f-c3f3-fe40122238a9/cover.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1535811217,
+      "title": "Full Bass (Jason Little vs. Dragon Hoang)",
+      "artist": "Jason Little & Dragon Hoang",
+      "genre": "Techno",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/01/5c/4f/015c4f7d-8f7e-bdec-924e-f86a15f9aa86/mzaf_6498546697848287897.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/dc/81/cc/dc81cc23-5558-555d-f3f8-19651ccfdd2d/cover_10164020.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1837798903,
+      "title": "BỐN MÙA (VIETNAMESE VERSION)",
+      "artist": "Lou Matt & Shikies",
+      "genre": "Pop",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/aa/fa/0faafa6d-00fc-33db-3beb-9cb2e7316397/mzaf_11904655653934282009.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/65/d7/83/65d783df-df4d-bee2-2aea-74232abefad9/artwork.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1885966778,
+      "title": "Long Gone",
+      "artist": "Lou Gramm",
+      "genre": "Rock",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/20/aa/df20aa22-f1c3-36ed-82bc-3140b642246e/mzaf_3266801905764858743.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/91/37/a7/9137a760-3948-15cb-0c56-49ba3c287639/603497804061.jpg/600x600bb.jpg",
+      "reason": "wrong-artist"
+    }
+  ]
+}

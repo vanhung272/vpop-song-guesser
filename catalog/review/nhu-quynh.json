@@ -1,0 +1,2039 @@
+{
+  "version": 1,
+  "artistKey": "nhu-quynh",
+  "note": "Curator-editable. kept: set include=false to leave a song out; edit title/artist/genre/releaseYear as needed. dropped: set include=true to bring a wrongly dropped song back. Then run the importer on this file.",
+  "kept": [
+    {
+      "include": true,
+      "itunesTrackId": 1455184424,
+      "title": "Chuyện Hoa Sim",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/71/89/24/718924d1-8543-69bd-3583-e413d9d88e90/mzaf_10218240521517388051.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024209,
+      "title": "Vùng Lá Me Bay",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2c/86/e1/2c86e184-9863-371d-e888-24cd7792415e/mzaf_15888187857259704799.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888399,
+      "title": "Hoa Trinh Nữ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/63/2d/c8632ddb-f1ea-5154-4518-1b71216c624d/mzaf_225575902984847265.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184429,
+      "title": "Người Tình Mùa Đông",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/08/41/8a/08418a45-c4a0-ab2e-cea2-8f2647f65c59/mzaf_9391388984979778594.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888400,
+      "title": "Phố Đêm",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5b/c5/03/5bc5031c-9873-ad83-2526-499ed50b5a6e/mzaf_17171051426893657650.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888236,
+      "title": "LK Con Đường Xưa Em Đi & Xin Anh Giữ Trọn Tình Quê",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f5/c8/43/f5c843e0-cea7-6080-c7eb-59501de1f33b/mzaf_8853685142348605073.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1754475154,
+      "title": "Mưa Đêm Ngoại Ô",
+      "artist": "Hoàng Oanh & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/01/5c/75/015c75e5-7921-c7cb-8172-ba0825c10779/mzaf_1377831680835490040.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ce/30/57/ce305792-7bb2-e163-db83-ebe13b57b202/194491354268_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888230,
+      "title": "Còn Thương Rau Đắng Mọc Sau Hè",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/03/ee/9a03eee1-02a5-2031-c46e-56c70733e7ed/mzaf_3556098715322236056.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759530462,
+      "title": "Mùa Xuân Đầu Tiên",
+      "artist": "Như Quỳnh & Thế Sơn",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2002,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/02/60/7e0260cf-5ea3-e4ef-49b5-cabc6cef2543/mzaf_7012028094884493901.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/97/5f/ca/975fca3c-9e12-7d67-b823-2631d6b9ddd1/194491364052_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024751,
+      "title": "Bài Ca Kỷ Niệm",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/63/11/b6/6311b6d7-2dea-14ee-98a5-4e8a41989e94/mzaf_5121845410559279624.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e7/26/de/e726defd-c41b-ba21-f381-c48c3772e9b2/195081122014_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759517588,
+      "title": "LK Nhẫn Cưới",
+      "artist": "Như Quỳnh, Phi Nhung & Mạnh Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2002,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/78/24/b5782468-ad8d-97f9-8211-2a65a6c5c85a/mzaf_2163326625676977948.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/67/49/11674993-cafe-7028-f442-efb74a0f7d4a/194491363925_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759224689,
+      "title": "Không Giờ Rồi",
+      "artist": "Trường Vũ & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2001,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/51/2d/b8/512db8d1-44aa-3f6a-437e-9e6a69c09626/mzaf_17316460088319759966.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/35/34/28/3534287e-1102-cdcf-0e5e-16344a6d51d9/194491362126_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756585054,
+      "title": "Trời Huế Vào Thu Chưa Em & Huế Và Em",
+      "artist": "Như Quỳnh & Quang Lê",
+      "genre": "Asia",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/35/3b/34353b56-bc3a-ec85-9355-e0cb1e9a3518/mzaf_190356418095893124.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1f/dc/e2/1fdce26c-c88a-cfd9-891e-ee257aa7fc5a/194491353650_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1763927897,
+      "title": "LK Sao Không Thấy Anh Về - Nén Hương Yêu",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/a5/c3/2fa5c3eb-8cf8-5124-30d0-8993d0b0d370/mzaf_16318476145381464005.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/15/26/d6/1526d6f2-3a1e-80e7-85ed-77dcf385554c/198622545266_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772053,
+      "title": "Nhớ Nhau Hoài",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/3b/b7/473bb7d9-ee11-0bf1-f180-40d02879dda7/mzaf_1630018300055763150.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760823473,
+      "title": "Duyên Phận",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2008,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/6b/a8/6e6ba8c9-2618-7f87-0316-da29cc2c814d/mzaf_5064296722226153647.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3d/fc/b5/3dfcb50b-ae23-2a66-3851-5efe93d15531/194491362072_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759527980,
+      "title": "Anh Tiền Tuyến, Em Hậu Phương",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/45/6c/08456c98-3b9a-b56c-887d-deec2fc42dd6/mzaf_357445003542906297.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/4c/b7/1d4cb74a-74ab-082a-4372-3c9d8da9fa65/194491364229_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888233,
+      "title": "Nối Lại Tình Xưa",
+      "artist": "Như Quỳnh & Mạnh Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/0b/98/fd0b98c7-0f59-d572-223f-962b1e0b532c/mzaf_7363618474430454827.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184469,
+      "title": "Mưa Qua Phố Vắng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b9/54/dd/b954ddd5-25d9-c4c6-aeb7-ba99b58a229b/mzaf_8821782305687783366.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184164,
+      "title": "Con Đường Xưa Em Đi",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ea/e4/68/eae46865-c710-c8c5-c0f1-720a34b41e69/mzaf_1131088253312205085.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759229422,
+      "title": "LK Lẻ Bóng & Ai Cho Tôi Tình Yêu",
+      "artist": "Hoàng Oanh, Như Quỳnh, Phi Nhung, Tam Doan & Mai Thien Van",
+      "genre": "Worldwide",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d6/3a/87/d63a878e-e9ad-5e11-f33f-2fe98e013c36/mzaf_8747174266455877587.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/36/e4/17/36e4173a-0bf6-1853-0b25-435990f51d04/194491354329_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1864089188,
+      "title": "Hương Tóc Mạ Non",
+      "artist": "Như Quỳnh & Tường Nguyên",
+      "genre": "Asia",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/74/7d/3b/747d3ba7-0f40-74c9-c9d3-03e7a4d9fc39/mzaf_13917355019256626489.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/be/0c/c9/be0cc952-67ac-71b0-35e4-9bda48aa2d08/37024.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1754475157,
+      "title": "Tình Đời",
+      "artist": "Chế Linh & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/89/25/ab89251d-bc9e-dbd9-e591-a761fb581818/mzaf_2238721080368634069.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ce/30/57/ce305792-7bb2-e163-db83-ebe13b57b202/194491354268_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184434,
+      "title": "Lá Diêu Bông",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2f/df/2c/2fdf2c99-2e9c-f710-8d52-7a895bc8a7d7/mzaf_9817572868706297484.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888232,
+      "title": "Người Ngoài Phố",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/d5/46/a4d546b9-446f-5f09-0ebf-96db610c3d5e/mzaf_301036349894036120.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1864089186,
+      "title": "Nói Với Người Tình",
+      "artist": "Như Quỳnh & Tường Nguyên",
+      "genre": "Asia",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/da/cd/8e/dacd8e31-e881-b208-cb2e-04ac9d5ab993/mzaf_1906840913017658325.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/be/0c/c9/be0cc952-67ac-71b0-35e4-9bda48aa2d08/37024.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755059025,
+      "title": "Mùa Thu Lá Bay",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/5c/c5/e35cc523-80e6-ec49-6d9e-c467a28f048e/mzaf_11489041509219553563.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a4/e4/82/a4e48235-beee-244f-f45e-9971913a33b7/194491559274_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757508219,
+      "title": "Thành Phố Sương Mù",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 1999,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/fc/cf/fefccf5c-83a6-4f1c-3cc3-285b6f5c1cca/mzaf_4860258479058827825.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/b4/98/e7b49877-bdf7-39e5-a1a6-c36924e57f80/194491399122_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184467,
+      "title": "Liên Khúc Mưa",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0b/b4/e9/0bb4e96d-e877-1269-51a4-4ec61a480d4e/mzaf_1731001130520883546.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184232,
+      "title": "Sao Chưa Thấy Hồi Âm",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/32/9e/38/329e38b8-c5f7-6c45-24ee-323524d212cc/mzaf_17461424245620238687.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755058638,
+      "title": "Chờ Người",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1997,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/b1/52/54b1528c-b21b-ef3a-a759-099fea506ad5/mzaf_2763470207272258735.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/77/59/3a/77593a07-08fc-9c67-fe06-b24d08591ee4/194491559250_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772017,
+      "title": "Tâm Sự Với Anh",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6c/24/bf/6c24bfc7-a0f4-9a2c-6e90-97277a4c7bb6/mzaf_12111802113017850011.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1864089182,
+      "title": "Tiễn Biệt",
+      "artist": "Như Quỳnh & Tường Nguyên",
+      "genre": "Asia",
+      "releaseYear": 2008,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/f6/d4/e1f6d49e-69b4-75f9-9218-2ab704dc4e0c/mzaf_18070829591920037142.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/be/0c/c9/be0cc952-67ac-71b0-35e4-9bda48aa2d08/37024.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184161,
+      "title": "Rừng Lá Thay Chưa",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/01/67/70/0167704d-202c-8207-bd0f-37bc56d301ac/mzaf_8759013258315807017.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024216,
+      "title": "Người Tình Không Đến",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2010,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/7e/75/237e7514-db37-8f9e-4dc2-1cbbfb712e71/mzaf_17852745249431019011.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555601859,
+      "title": "Liên khúc Phố mưa",
+      "artist": "Như Quỳnh, Lâm Thúy Vân & Mạnh Đình",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/85/c8/35/85c83552-3500-aedc-5496-8880cda8c7a1/mzaf_17719954904088938350.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/49/97/70499789-12dd-2f2f-ab33-6679c7a4b385/3107.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184531,
+      "title": "Chuyện Tình Hoa Trắng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fc/47/7c/fc477c56-38ef-a092-cc45-e8f57c716392/mzaf_17554133125402289576.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/f5/69/f3f569cd-3f30-c5c4-512f-c5d899221a55/190394097011.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761418484,
+      "title": "Để Trả Lời Một Câu Hỏi",
+      "artist": "Quang Lê & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/4c/7a/1a4c7aff-52a1-c552-4c23-46ad52f78c6b/mzaf_15199787976831304752.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/2e/2d/7d2e2d1e-4245-7c51-66d2-1c38b670a931/194491362744_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772056,
+      "title": "LK Tình Chàng Ý Thiếp & Xa Vắng",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/e6/08/06e60858-bb27-c924-2df9-ab2426166bac/mzaf_12906840024290956418.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772050,
+      "title": "Nỗi Buồn Gác Trọ",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/a1/74/0ea17438-67a7-c498-fba2-a9b900918b1b/mzaf_3520332945922315021.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757508221,
+      "title": "Chuyến Đi Về Sáng",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 1999,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/d1/ba/69d1bae7-bf5a-3acd-27ff-a0a8bfc97f14/mzaf_7928961283433625160.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/b4/98/e7b49877-bdf7-39e5-a1a6-c36924e57f80/194491399122_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184435,
+      "title": "Chuyện Hoa Tigôn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/67/ce/5f/67ce5ff3-4f70-7613-c24b-f638b6d03278/mzaf_17533604223886773871.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888403,
+      "title": "Áo Hoa",
+      "artist": "Như Quỳnh & Quang Lê",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/e5/39/f7e539f8-2696-f174-87f0-140b1a8cec7c/mzaf_16056842038929871992.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888231,
+      "title": "Đêm Chôn Dầu Vượt Biển",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/6c/f9/266cf928-7e39-c247-6275-d88c8269398b/mzaf_11074143071493507747.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772055,
+      "title": "Trăng Về Thôn Dã",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/be/63/03be6377-7971-12f9-e5be-e8247f6d6a00/mzaf_7922611651498514077.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555601856,
+      "title": "Liên khúc Tình buồn đêm mưa",
+      "artist": "Như Quỳnh, Lâm Thúy Vân & Mạnh Đình",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/96/37/28/96372828-40cf-ccd4-c667-4581507810e0/mzaf_6239722666915990597.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/49/97/70499789-12dd-2f2f-ab33-6679c7a4b385/3107.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555601861,
+      "title": "Liên khúc Ngày sau sẽ ra sao",
+      "artist": "Như Quỳnh, Lâm Thúy Vân & Mạnh Đình",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/43/e6/71/43e67192-37eb-56a4-e359-b499aacf71dc/mzaf_3060299039603342155.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/49/97/70499789-12dd-2f2f-ab33-6679c7a4b385/3107.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888394,
+      "title": "Hành Trang Giã Từ",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/67/78/156778c5-7b4e-7e54-ad69-1ee1947e8628/mzaf_14168129897538094431.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759224680,
+      "title": "Con Đường Mang Tên Em",
+      "artist": "Trường Vũ & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2010,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/d9/84/b0d98425-2ed9-924a-90ac-3d3df1496ff7/mzaf_5335717951482866361.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/35/34/28/3534287e-1102-cdcf-0e5e-16344a6d51d9/194491362126_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184430,
+      "title": "Mưa",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c3/8c/41/c38c41c3-dc14-b798-1bc3-c731ce86efe3/mzaf_15508057388482893954.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772054,
+      "title": "Em Về Với Người",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/b0/99/bbb09973-2de4-0514-1693-eba341abbb39/mzaf_6292087405055505803.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772051,
+      "title": "Chờ Đông",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/59/23/d9/5923d9d1-f767-8981-a918-3a04aeaead24/mzaf_13940037940321190490.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772016,
+      "title": "Mùa Chia Tay",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/94/f2/67/94f267f8-8399-81be-af4c-9e89cc47f717/mzaf_1665312326800645010.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757488638,
+      "title": "Thương Lắm Mình Ơi",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/8a/bd/018abddb-8925-80be-376c-2ca632e80318/mzaf_376333424179257019.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/80/a1/b8/80a1b839-46d2-2d6a-ca3d-3fdcdc9c9c06/194491353568_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772057,
+      "title": "Buồn Làm Chi Em Ơi",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0b/40/4c/0b404c69-8655-01bf-87b5-76d6de9d5b93/mzaf_6620580529076815939.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184433,
+      "title": "Biển Dâu",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/16/56/6d/16566d1e-dadd-4f71-02a7-1c61df51a2e7/mzaf_2990684468273804750.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888391,
+      "title": "Nửa Vầng Trăng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ea/f5/1e/eaf51e3e-0ef3-61fc-066e-470ad5aafb37/mzaf_12334076995649765420.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755053054,
+      "title": "Hoa Tím Người Xưa",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1996,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/71/d6/96/71d696a1-1fff-ad56-6c20-1c2eee192558/mzaf_8980178641577417746.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7a/35/44/7a35445d-7875-3280-976b-0c7fe2d18436/194491559267_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184163,
+      "title": "Mưa Trên Biển Vắng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a5/d2/4e/a5d24eb3-6336-ebd0-2d85-567abb41dad4/mzaf_11168270318441384878.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772052,
+      "title": "Người Phụ Tình Tôi",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c1/f5/8d/c1f58d42-801f-8dbd-e424-34a49060b0f8/mzaf_11463135959449232069.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/49/65/ca4965a1-fe8b-3b67-02ec-68e3ece1cc79/198622696753_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555601869,
+      "title": "Liên khúc Tình đau",
+      "artist": "Như Quỳnh, Lâm Thúy Vân & Mạnh Đình",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/fa/7b/88/fa7b88ce-d5f0-5da0-5c70-452534f1dd30/mzaf_16842765406303216570.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/49/97/70499789-12dd-2f2f-ab33-6679c7a4b385/3107.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757484706,
+      "title": "Nhịp Cầu Tri Âm",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/93/14/25/931425ef-3335-3c66-ab6b-7f3f8c631d19/mzaf_4628796475440887669.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b6/9c/63/b69c63af-af46-9d45-1116-fe82e530f2c8/194491341862_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1754979989,
+      "title": "Lênh Đênh Phận Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/c3/ca/3fc3cae0-98a1-4209-7b9f-2bd9c3068da3/mzaf_16689714812025682510.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/86/ca/57/86ca57df-4ec7-7dd6-1f4c-e91d5f2ce345/194491354299_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1762542524,
+      "title": "Kể Chuyện Trong Đêm",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/ff/94/1bff9423-f65e-b716-5f13-c8acd9f91ed4/mzaf_8750642336778191561.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/43/eb/a343eb7b-8ba9-e3b1-22a9-f87527c3931a/198622514118_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184431,
+      "title": "Mộng Du",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/15/5d/e3/155de314-2009-7ede-72d4-fcdcb68f206b/mzaf_18393570170730128486.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888401,
+      "title": "Nếu Xuân Này Vắng Anh",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/91/4b/24914b3e-0717-4830-bab7-482ebcced0de/mzaf_1154736241642974751.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555644414,
+      "title": "Đón xuân",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1996,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/36/0e/50/360e501e-1d20-320d-7acc-e0421c458da6/mzaf_15567070906430158137.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b6/ec/74/b6ec746e-e62e-c6e5-7d53-33a79850c5cf/3425.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761236664,
+      "title": "LK Nỗi Buồn Hoa Phượng & Lưu Bút Ngày Xanh",
+      "artist": "Hoàng Lan, Như Quỳnh & Hoàng Oanh",
+      "genre": "Worldwide",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/66/29/22/66292217-5f2b-ecf2-49d2-97bce0c2209f/mzaf_12417719010908882240.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ac/9b/b3/ac9bb37d-e33a-2f52-f7b8-4b273755940a/194491363147_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1763927883,
+      "title": "Nhớ Người yêu",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b8/a8/62/b8a8620a-0942-9fce-c28a-abb448f1521c/mzaf_17200799200805934970.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/15/26/d6/1526d6f2-3a1e-80e7-85ed-77dcf385554c/198622545266_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184543,
+      "title": "Mưa Rừng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/66/36/ef/6636ef97-20da-8c6b-e355-842374de95d1/mzaf_11202903132735865133.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/f5/69/f3f569cd-3f30-c5c4-512f-c5d899221a55/190394097011.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024208,
+      "title": "Cõi Nhớ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/40/c3/b2/40c3b27f-541e-293a-3aa9-969d3afce977/mzaf_17966623088845999949.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755013009,
+      "title": "LK Vùng Lá Me Bay",
+      "artist": "Thanh Tuyền, Như Quỳnh, Ha Vy, Phi Nhung, Hương Thuỷ & Mai Thien Van",
+      "genre": "Worldwide",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/41/7a/36/417a367c-ae4a-ce6d-7445-74741f6528d0/mzaf_7074788214137019545.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8c/3c/f0/8c3cf005-0d5a-6b38-98f2-0f56dc631b65/195081122007_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184162,
+      "title": "Như Vạt Nắng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/92/b0/1d/92b01d28-c13f-29d6-5f04-2ba2b0693ff4/mzaf_10926612605390268480.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1864089185,
+      "title": "Sao Anh Nỡ Đành Quên",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/1c/30/1f1c3097-8db7-9ce5-0438-711f0d01d117/mzaf_10600651994278396076.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/be/0c/c9/be0cc952-67ac-71b0-35e4-9bda48aa2d08/37024.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555643931,
+      "title": "Hai mùa Noel",
+      "artist": "Như Quỳnh & Mạnh Đình",
+      "genre": "Pop",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/6d/27/24/6d2724ba-1c1f-c956-f265-fa7ed02cd045/mzaf_2191293820755541883.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b6/ec/74/b6ec746e-e62e-c6e5-7d53-33a79850c5cf/3425.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184228,
+      "title": "Chuyện Hợp Tan",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a5/34/39/a534399b-6d59-f383-be4e-b9804a552162/mzaf_15701879530830020902.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757486734,
+      "title": "Gọi Tên Ngày Mới",
+      "artist": "Như Quỳnh, Minh Tuyết, Tóc Tiên & Kỳ Phương Uyên",
+      "genre": "Asia",
+      "releaseYear": 2011,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fc/00/6d/fc006d76-92f4-c7f1-aef9-504408be2e22/mzaf_2302009213830111959.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4d/07/69/4d0769b8-cf45-418e-cea9-4f8164160f59/194491353506_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759234917,
+      "title": "Giấc Mơ Cánh Cò",
+      "artist": "Như Quỳnh & Phi Nhung",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/6f/14/c86f149b-b7e7-f8a9-3dc5-0088b37c3ecb/mzaf_3791695987158143531.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/36/24/14/362414a2-d7c7-0e19-dbb3-a337fcab8ef6/194491362409_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184532,
+      "title": "Anh Cứ Hẹn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1d/3f/7e/1d3f7e1e-972f-f5ee-b4b9-c827a027b74c/mzaf_13651081629560638392.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/f5/69/f3f569cd-3f30-c5c4-512f-c5d899221a55/190394097011.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1762542526,
+      "title": "Người Tình Và Quê Hương",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4b/ec/88/4bec887a-2a16-17ee-69c9-0905bdfb63f8/mzaf_9531712147442498076.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/43/eb/a343eb7b-8ba9-e3b1-22a9-f87527c3931a/198622514118_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760269874,
+      "title": "Câu Chuyện Đầu Năm",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/e5/b5/0be5b561-ce7c-469e-8b04-2c98475cadb5/mzaf_5386562360056645247.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/23/d8/6d23d82a-9ae0-4686-805f-929a19d89ea3/194491362768_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772773216,
+      "title": "Thuyền Hoa",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2022,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/73/21/5c732155-0212-3d93-87f5-3ead0415a6d4/mzaf_4652741913922181234.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/d1/4d/57d14d9b-4493-6a2b-a735-3db12951f11c/198622697125_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555569526,
+      "title": "Ra giêng anh cưới em",
+      "artist": "Mạnh Đình & Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2000,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/86/96/c5/8696c554-b40a-cf37-bb97-b71b2dd925d7/mzaf_3867310626219720358.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/37/46/7a/37467a30-fe93-457e-8a15-a31cbd728d38/8173.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755059018,
+      "title": "Mười Ngón Tay Tình Yêu",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/86/88/fb/8688fb5b-192c-4627-53f8-bd8541884827/mzaf_5215656747059317987.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a4/e4/82/a4e48235-beee-244f-f45e-9971913a33b7/194491559274_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755058837,
+      "title": "Hoa Nở Về Đêm",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/50/86/4c50864f-77b0-fce6-fa6c-be1751745ff9/mzaf_6753586643980707979.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/67/9c/7d679c07-5c3c-57ff-76d5-cb6eea741fc8/194491559281_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759224702,
+      "title": "Trả Lại Thời Gian",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2011,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3a/43/ea/3a43ea58-e142-4ccd-64f4-31bd6fac615d/mzaf_11657237134457191339.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ad/a9/e3/ada9e3e8-614b-7437-97c2-ece212735d19/194491362324_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184468,
+      "title": "Xin Người Về",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/cb/9b/de/cb9bde45-c66f-0357-12e9-f87bb58f92b5/mzaf_15833154856598207936.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/69/2e/11/692e11d9-cbb7-148f-6ec6-41c7eb55792a/190394096915.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1679522508,
+      "title": "Về Lại Đồi Sim",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2008,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/60/0b/f0/600bf082-a697-790f-20f1-30406c668856/mzaf_5166491731572679328.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/31/38/be/3138be75-12b0-7e69-a148-d5237aa1d73e/766973838933.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755058838,
+      "title": "Hai Vì Sao Lạc",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1998,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/fd/44/fefd44bf-6eef-48a7-6ada-d8a24258ef0c/mzaf_8170274828795672698.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/67/9c/7d679c07-5c3c-57ff-76d5-cb6eea741fc8/194491559281_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761245892,
+      "title": "Biết Đến Bao Giờ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/05/a5/4c/05a54cb7-4bd4-7668-ff10-d8790f6bb423/mzaf_523741749900837570.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6f/9d/d4/6f9dd4a5-da64-0ccc-5bec-bdded7b0428d/194491362911_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184538,
+      "title": "Lòng Mẹ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b2/dd/a7/b2dda7d1-947d-16c5-cceb-8ff2459fa1c0/mzaf_13880636525386234743.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/f5/69/f3f569cd-3f30-c5c4-512f-c5d899221a55/190394097011.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1763927888,
+      "title": "Trang Nhật Ký",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/f3/3e/70f33e54-b87d-1610-73da-47186f2a530a/mzaf_553324877364849591.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/15/26/d6/1526d6f2-3a1e-80e7-85ed-77dcf385554c/198622545266_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1762542770,
+      "title": "Duyên Kiếp",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8f/3c/bf/8f3cbfa1-fc40-8f08-bd62-baeb19cf9908/mzaf_16333998977066152216.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/43/eb/a343eb7b-8ba9-e3b1-22a9-f87527c3931a/198622514118_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888235,
+      "title": "Chờ Anh Bên Đời",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6c/20/3a/6c203a08-8962-9d5f-9973-e13d696c3a46/mzaf_15824132880856637594.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888406,
+      "title": "Vọng Gác Đêm Sương",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/75/79/b1/7579b1d8-5a20-c4e2-f7dc-2f065c113477/mzaf_7520565827851202183.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757485536,
+      "title": "Hạ Thương",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fe/89/d5/fe89d5d7-e917-1cb9-a687-3c1d055d2b28/mzaf_12476876866464804322.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/31/ac/58/31ac583a-6fa7-940c-b714-aa09ff4cce35/194491341893_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1762539164,
+      "title": "Trộm Nhìn Nhau",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/50/bf/8d50bf02-ee76-b79e-f82a-a10fd4aa3c55/mzaf_16013701274523588365.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/27/97/37/279737c2-b5b1-b11f-de17-621d27e98863/198622514040_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757508224,
+      "title": "Chiều Cuối Tuần",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 1999,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/de/54/46/de54468c-3069-3867-29e6-a5c748b297cf/mzaf_16183816981086035365.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/b4/98/e7b49877-bdf7-39e5-a1a6-c36924e57f80/194491399122_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759066241,
+      "title": "Huế Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/75/f6/8575f686-4d18-3a3e-296d-87a47ec84036/mzaf_13950944606805801058.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f7/c0/4d/f7c04d6e-df29-d37a-4446-0918b2b50c44/194491362546_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1762542769,
+      "title": "Sao Trời Lấp Lánh",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/19/17/ff1917ae-dc0e-586b-303e-486257ca6442/mzaf_4424871812944156099.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/43/eb/a343eb7b-8ba9-e3b1-22a9-f87527c3931a/198622514118_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280167,
+      "title": "Dấu Chân Kỷ Niệm",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/58/ad/99/58ad999a-31ef-dc78-dfee-0784823dbcfb/mzaf_10785082382008075742.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759028078,
+      "title": "Mơ Một Tình Yêu",
+      "artist": "Như Quỳnh & Minh Tuyết",
+      "genre": "Worldwide",
+      "releaseYear": 2010,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/09/c4/75/09c475cb-23cd-19e7-95e7-adb9df38f588/mzaf_8494638805552745569.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/eb/62/89eb624c-b53e-7855-b10a-103d622d01f6/194491362119_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759238549,
+      "title": "Hát Hội Trăng Rằm (feat. Chí Tài)",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2000,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/bc/91/eebc91f6-d872-8951-17c0-8ddcf519787b/mzaf_14230480102967956059.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/de/fe/a2/defea24d-fbe8-c9f4-09de-066991029caf/194491363598_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888389,
+      "title": "LK Chuyện Tình Trương Chi Mỵ Nương & Chuyện Tình Bên Nhánh Sông Gầy",
+      "artist": "Như Quỳnh & Lâm Nhật Tiến",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/e1/a2/f2e1a2c7-152b-7f17-558f-8bdd2253ed38/mzaf_5209507878969985358.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280354,
+      "title": "Đưa Em Vào Hạ",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cc/4c/48/cc4c4877-7f21-5d81-8ac6-77e7df2874d6/mzaf_1247471026810720173.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1763927894,
+      "title": "Một Mình Thôi",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8a/61/6f/8a616fc3-2ffb-22da-1e47-bbf2a544a19c/mzaf_12943388078657221253.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/15/26/d6/1526d6f2-3a1e-80e7-85ed-77dcf385554c/198622545266_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759229419,
+      "title": "Chuyện Tình Lan và Điệp 4",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2017,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8a/ff/a6/8affa608-5414-9f2f-9d62-11e224f53c3b/mzaf_15883927061768189941.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/36/e4/17/36e4173a-0bf6-1853-0b25-435990f51d04/194491354329_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184231,
+      "title": "Gởi Về Anh",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4e/d3/7b/4ed37bda-e78d-1ccf-8abc-4be8e78d56fe/mzaf_487655649089881255.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184226,
+      "title": "Một Ngày Không Gọi Nhau",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/08/10/9a/08109aa3-1e0b-101d-f87e-1dc7e5af681f/mzaf_16762487700189845231.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761420385,
+      "title": "Đính Ước",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/5b/5b/7f5b5b48-02c3-b471-0ca3-87a1fa7d71d2/mzaf_17028087777517307210.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b3/1a/38/b31a3844-b4a7-54db-7ea3-869823ee0982/194491362805_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755011514,
+      "title": "Nụ Hồng Mong Manh",
+      "artist": "Như Quỳnh & Don Hồ",
+      "genre": "Worldwide",
+      "releaseYear": 1998,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ed/4c/38/ed4c38a2-fb1b-b1a4-4c30-b70a533f4a7a/mzaf_12049366577707272538.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b7/bf/43/b7bf43d5-f286-035a-9c2b-55a2df7ec92f/194491399061_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184534,
+      "title": "Nhà Anh Nhà Em",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/bf/11/bb/bf11bbd5-fe70-cc3f-8220-e29cb1349f00/mzaf_17818437699207232882.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/f5/69/f3f569cd-3f30-c5c4-512f-c5d899221a55/190394097011.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024527,
+      "title": "Chút Kỷ Niệm Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2013,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/1d/db/991ddbc5-1278-572e-c489-16752707befe/mzaf_6368495678268405947.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/cd/fd/b8cdfd11-f1c3-3533-cd04-3b176b6b31a2/194491442385_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755058845,
+      "title": "Nếu Đời Không Có Anh",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1998,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/c5/d5/5fc5d5b2-aad6-c41d-e35e-4a636d245de2/mzaf_15438730367744795192.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/67/9c/7d679c07-5c3c-57ff-76d5-cb6eea741fc8/194491559281_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888404,
+      "title": "Vọng Cổ Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/04/4c/26044c31-07b3-4fea-c49a-1706022394aa/mzaf_18073911610414560216.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024210,
+      "title": "Tôn Nữ Còn Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2011,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a6/f2/e4/a6f2e4c5-29c3-39f5-44df-c0f964d20cdd/mzaf_2218409304888113620.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184227,
+      "title": "Qua Ngõ Nhà Anh",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ab/27/99/ab2799be-e4aa-e5c5-5a92-f08a27bfffa9/mzaf_13659094839877904858.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280365,
+      "title": "Lk Cánh Hoa Yêu / Màu Tím Pense",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/bd/e2/ebbde2b2-d57a-c46a-2352-df67a20a49a4/mzaf_1103501912318512921.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755059101,
+      "title": "Đừng Là Một Thoáng Mê Say",
+      "artist": "Hương Thuỷ & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/d9/a4/39d9a4b0-aaad-c82f-fb48-6fb4af52973a/mzaf_4790954438900508158.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1b/75/77/1b7577a4-f339-dc9d-a01f-3a29b37a8102/195081122045_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755053180,
+      "title": "Tình Yêu Trả Lại Trâng Sao",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1996,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/dd/0a/05dd0ac7-2728-6f68-ef08-29ae36bf8355/mzaf_12906692019509234737.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7a/35/44/7a35445d-7875-3280-976b-0c7fe2d18436/194491559267_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1865042093,
+      "title": "Căn Nhà Dĩ Vãng",
+      "artist": "Như Quỳnh & Tường Nguyên",
+      "genre": "Asia",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/df/ee/2adfeec7-30a4-e484-e937-bfa2a62cdbde/mzaf_7283444151306319830.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/02/00/96/020096f4-29e1-a0b6-23f6-049ea1c73e3d/37094.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755023711,
+      "title": "Người Thương Kẻ Nhớ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/1c/34/c01c34f3-4fa0-453d-bb14-4eb5dc500a19/mzaf_169637248907701900.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4f/a4/75/4fa4754d-1df0-abe3-0b13-c15d31d0cc7f/194491559298_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1753859625,
+      "title": "Ừ Thì Thôi",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2015,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/01/da/c001da7e-177c-edfd-4f2b-1988b360a283/mzaf_8681827950632005597.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a7/8c/57/a78c5789-e4ac-a252-1ed1-743f9598b797/194491354015_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1794575259,
+      "title": "Chuyện Tình Không Dĩ Vãng",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2011,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/37/d9/0237d92c-e602-1d46-c8a4-9f1c54f1ff99/mzaf_15454145887133882443.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/43/26/b2/4326b2fe-eeb6-ff6f-8da8-88f7b77afb9d/198937819151_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280530,
+      "title": "Những Ngày Xưa Thân Ái",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/57/1d/32/571d324b-8fe4-9936-1f1f-91c5e6b5cd2b/mzaf_13822311829073340356.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759527984,
+      "title": "Thề Non Hẹn Biển",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/50/68/6c506826-bc58-16f2-ad42-8721da33025f/mzaf_17362781187126889159.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/4c/b7/1d4cb74a-74ab-082a-4372-3c9d8da9fa65/194491364229_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757508223,
+      "title": "Cho Vừa Lòng Em",
+      "artist": "Như Quỳnh & Thế Sơn",
+      "genre": "Asia",
+      "releaseYear": 1999,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/ca/f4/c6caf473-c2eb-77f6-d1d8-ac1f5b72cdb2/mzaf_11143998614646492647.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/b4/98/e7b49877-bdf7-39e5-a1a6-c36924e57f80/194491399122_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759514458,
+      "title": "Xin Đừng Trách Chim Đa Đa",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2001,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d6/7a/31/d67a3149-a824-2042-4516-bb72e5bda077/mzaf_11507713105997589232.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5e/c5/65/5ec56573-3e0e-25c1-fae9-9f4590775abe/194491363741_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280158,
+      "title": "Cô Bé Ngày Xưa",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/6a/e2/0a6ae2f7-1edc-e31f-a60c-814042d9cec9/mzaf_16451174367771990807.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772772514,
+      "title": "Tiếng Hát Chim Đa Đa",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 1999,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/22/79/8c/22798c4f-ee15-5cf0-3f68-e3bd9bd76b68/mzaf_17586876723766039890.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/09/7b/e7/097be7b4-1cd0-83a8-d544-b096b6716bab/198622717748_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760265552,
+      "title": "Đêm Bơ Vơ",
+      "artist": "Quang Lê & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/af/4a/03/af4a03ad-dad3-2c6f-2f43-fa42e2a3be00/mzaf_6609177482766137906.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/c1/0e/06c10e63-8eda-f802-2b7a-cba176f2b5d4/194491362973_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184536,
+      "title": "Đến Bên Nhau",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e8/68/79/e868795f-1e51-ba3d-5271-b51941338096/mzaf_13528522881765846744.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/f5/69/f3f569cd-3f30-c5c4-512f-c5d899221a55/190394097011.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759066243,
+      "title": "LK Tàu Đêm Năm Cũ & Hai Chuyến Tàu Đêm",
+      "artist": "Như Quỳnh & Thế Sơn",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/14/88/1f1488fb-a5ff-0d8c-1252-3d9bcf1f426e/mzaf_5884565168427245890.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f7/c0/4d/f7c04d6e-df29-d37a-4446-0918b2b50c44/194491362546_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757514759,
+      "title": "Tôi Vẫn Nhớ",
+      "artist": "Như Quỳnh & Thế Sơn",
+      "genre": "Worldwide",
+      "releaseYear": 1997,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a2/71/7b/a2717bf1-31c7-bb7e-843c-9aff897eb9a8/mzaf_11902042031211686866.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/16/9e/e2169ed3-da74-591a-a81d-21dc4fd61b5c/194491398620_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184535,
+      "title": "Đà Lạt Xa Nhau",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1992,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ac/73/9b/ac739bec-6606-a888-977a-062a57718b57/mzaf_17879479417502704995.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/f5/69/f3f569cd-3f30-c5c4-512f-c5d899221a55/190394097011.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888393,
+      "title": "Đố Ai",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/1a/6e/cd1a6ef1-732e-4f4c-30ff-535c102e75c1/mzaf_10545095551028988049.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888238,
+      "title": "Xuân Mong Chờ",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/92/e0/f492e015-86b5-6467-d0c8-2b4c5203285f/mzaf_7187361656116280797.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1679522711,
+      "title": "Liên khúc: Một Người Đi / Khuya Nay Anh Đi Rồi / Chuyến Tàu Hoàng Hôn",
+      "artist": "Như Quỳnh, Tường Nguyên & Tường Khuê",
+      "genre": "Worldwide",
+      "releaseYear": 2008,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/9c/66/82/9c6682cb-c725-95ba-adf2-6a56ed41df03/mzaf_16019922485329650231.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/31/38/be/3138be75-12b0-7e69-a148-d5237aa1d73e/766973838933.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759517587,
+      "title": "Chồng Xa",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2002,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1d/dc/63/1ddc6313-e2cb-27fa-ebd6-f4a7544b1f66/mzaf_1526932888651131449.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/67/49/11674993-cafe-7028-f442-efb74a0f7d4a/194491363925_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755058836,
+      "title": "Chuyện Tình La Lan",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1998,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4d/7e/4a/4d7e4ac2-ec44-8753-310c-eb98b684627a/mzaf_15673550916536437120.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/67/9c/7d679c07-5c3c-57ff-76d5-cb6eea741fc8/194491559281_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024214,
+      "title": "Huế Vễn Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c2/8e/af/c28eaffd-64bb-fb8a-c9a4-b84b39ca40da/mzaf_16728062601097201999.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772771656,
+      "title": "Xuân Mộng",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/44/1b/2d441b05-55ce-2be1-b1b3-c0aac19438e9/mzaf_8406236438294776604.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/b3/f0/4ab3f027-f01a-e13e-d653-918c83e100fe/198622696906_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759514466,
+      "title": "Kiếp Nghèo",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2001,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c5/31/93/c531933e-6bab-b564-2ec4-8fec2be549c2/mzaf_11535454678305381377.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5e/c5/65/5ec56573-3e0e-25c1-fae9-9f4590775abe/194491363741_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761245310,
+      "title": "Ngại Ngùng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/d7/c7/54d7c787-7372-eff8-582d-ccef981ca3a5/mzaf_15101810856494463614.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/40/bb/62/40bb62f6-8a5d-410a-cb5e-c81faa6b41a9/194491362928_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1555520474,
+      "title": "Huế xưa",
+      "artist": "Như Quỳnh & Thanh An",
+      "genre": "Pop",
+      "releaseYear": 2009,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/61/87/21/61872118-8906-8428-db6a-b4454168fb65/mzaf_4523546116310857232.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/dd/d5/bc/ddd5bcf2-8f27-e25a-d8fe-8591b1b746e3/7189.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757508217,
+      "title": "Tình Yêu Vỗ Cánh",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 1999,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/80/ad/3780adc7-3dd9-e42b-b9f2-58d444f37627/mzaf_13403277460549948736.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/b4/98/e7b49877-bdf7-39e5-a1a6-c36924e57f80/194491399122_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888397,
+      "title": "Màu Hoa Kỷ Niệm",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/21/a6/47/21a64717-9d78-3095-6a0b-166b52dbc6cc/mzaf_17859742917055505264.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280529,
+      "title": "Ngoại Ô Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dc/59/ef/dc59efd4-f671-163f-d439-b2b8b8bafda6/mzaf_392359411132521875.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759224889,
+      "title": "Lk Nó Và Tôi & Những Ngày Xưa Thân Ái",
+      "artist": "Như Quỳnh, Duy Trường & Thanh An",
+      "genre": "Worldwide",
+      "releaseYear": 2011,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/00/f5/7f/00f57fba-5fd5-fc8f-7823-cc9e7ec0e1d7/mzaf_498400134340384052.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ad/a9/e3/ada9e3e8-614b-7437-97c2-ece212735d19/194491362324_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757488142,
+      "title": "Phượng Buồn & Kỷ Niệm Nào Buồn",
+      "artist": "Mạnh Quỳnh & Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/52/e1/2a52e1dd-b83c-f2f4-cca3-46f3914fc684/mzaf_17469162052492881798.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b2/eb/8b/b2eb8b22-8c21-039e-c597-c6a49a13d155/194491353537_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1865041836,
+      "title": "Mưa Chiều Miền Trung",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c7/9b/6d/c79b6d5c-b456-ee47-aaa0-cf3b3c651151/mzaf_17064752707727920843.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/02/00/96/020096f4-29e1-a0b6-23f6-049ea1c73e3d/37094.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759514464,
+      "title": "Hẩm Hiu Một Mình",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2001,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/59/31/f4593100-70cb-72ce-e51c-a90ce29b7b95/mzaf_4646860811949087875.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5e/c5/65/5ec56573-3e0e-25c1-fae9-9f4590775abe/194491363741_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761237439,
+      "title": "Khúc Hát Ân Tình",
+      "artist": "Như Quỳnh, Minh Tuyết, Ha Phuong & Ha Vy",
+      "genre": "Worldwide",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c5/ca/52/c5ca5262-16ef-59ac-d471-ff45642b9ece/mzaf_880703352856564281.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c5/0d/ef/c50def64-7052-0715-924b-27ea205888ab/194491363161_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280358,
+      "title": "Hỏi Anh Hỏi Em",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1d/5b/db/1d5bdbfe-44f9-6f44-5af6-a51069aef386/mzaf_13170102435835642413.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759066236,
+      "title": "Bao Giờ Em Quên",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/77/ee/7677eee3-a6d2-777f-3cc3-858beeea2222/mzaf_7116896769424712750.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f7/c0/4d/f7c04d6e-df29-d37a-4446-0918b2b50c44/194491362546_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760269873,
+      "title": "Xuân Họp Mặt",
+      "artist": "Như Quỳnh, Loan Châu, Thủy Tiên & Bao Han",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2005,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/6d/fc/4e6dfc47-a334-0e97-b829-897fa2b1a70d/mzaf_3435786392425534929.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/23/d8/6d23d82a-9ae0-4686-805f-929a19d89ea3/194491362768_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024212,
+      "title": "Lạ Giường",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/53/88/ea/5388ea09-d844-c635-7873-75186791f9fd/mzaf_9453737206710731004.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888392,
+      "title": "Hoa Bướm Ngày Xưa",
+      "artist": "Như Quỳnh & Trần Thái Hòa",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/6b/84/d86b84f4-55ec-211a-454a-d0db65348db6/mzaf_3433052693304894031.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6769792638,
+      "title": "Trăng Tàn Trên Hè Phố",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/ef/26/e4ef26ef-032c-7f2a-39cb-3032bb81fa65/mzaf_5865891520690174852.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/60/55/38/60553830-6864-691f-4c67-362c7749e978/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1455184230,
+      "title": "Mưa Xa",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ee/54/7f/ee547f51-fd0b-6e16-dcd2-c12f01fb20d0/mzaf_2575026619026362797.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6e/b7/82/6eb78273-8a22-6575-4086-da37984b8d14/190394096939.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757888402,
+      "title": "Giấc Ngủ Cô Đơn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/33/f1/2d33f1e3-3dd3-10fd-b099-76d1de727a48/mzaf_11991181081443343166.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024211,
+      "title": "Hoa Tím Đợi Chờ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/35/ee/94/35ee94d3-bfb6-b7c2-c1e7-34af1f7da960/mzaf_6597312094198120920.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759238548,
+      "title": "Màu Hoa Bí",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2000,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/aa/fd/68/aafd6865-23ea-b534-43b9-417b4299e159/mzaf_16524198112212569646.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/de/fe/a2/defea24d-fbe8-c9f4-09de-066991029caf/194491363598_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024217,
+      "title": "Cay Đắng Bờ Môi",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/9a/97/239a97c5-5743-3031-62dd-1b2ce379b8e5/mzaf_14227288632246721125.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1759523117,
+      "title": "Hương Tình Muộn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2002,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/14/6f/b2146fdd-294a-4453-50f9-eb02b6321dac/mzaf_2575419313317698532.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/04/1d/d1/041dd1be-1bd7-7fb4-4eab-c1b358d2e6c1/194491364151_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755024213,
+      "title": "Mấy Nhị Cầu Tre/Cầu Tre Ngày Ấy",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2012,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/10/46/541046ec-f359-2c24-53c3-b64d0b0983f9/mzaf_10899220329780613370.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/0e/de/700edeee-5a1e-a3dd-229b-2e613d901480/194491559243_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1757514755,
+      "title": "Bọt Biển",
+      "artist": "Như Quỳnh & Thế Sơn",
+      "genre": "Worldwide",
+      "releaseYear": 1997,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/f3/94/2df39438-aa6b-db04-0975-fc00fada0670/mzaf_14478247608973385221.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/16/9e/e2169ed3-da74-591a-a81d-21dc4fd61b5c/194491398620_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1755012708,
+      "title": "Cung Sầu Gia Thọ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2019,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/1a/c1/9a1ac127-3df6-cd44-5cf6-65dbffa03633/mzaf_17922377613351225206.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8c/3c/f0/8c3cf005-0d5a-6b38-98f2-0f56dc631b65/195081122007_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758176493,
+      "title": "Hạnh Phúc Đầu Xuân",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 2018,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/78/ad/e978ad83-0778-2215-abf6-6106d1fc6428/mzaf_10716855376926729515.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ed/07/77/ed0777d8-841b-53ee-ac24-b60b25b1215f/194491354374_cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6821280355,
+      "title": "Giã Từ Cố Đô",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 2023,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/86/8f/17868f20-a131-eca6-7d55-8755c471d904/mzaf_6491174195346931504.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/fe/44/23fe440d-a35a-808a-58f6-292ef5881913/cover.jpg/600x600bb.jpg"
+    }
+  ],
+  "dropped": [
+    {
+      "include": false,
+      "itunesTrackId": 1761234540,
+      "title": "Nối Lại Tình Xưa",
+      "artist": "Như Quỳnh & Mạnh Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/ce/12/dece12e2-176e-5e0f-5472-8c105e2325b2/mzaf_15217451858403003683.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/12/79/14/127914fa-02b2-26a9-efb0-bb2ac4f2ec94/194491363055_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1762542527,
+      "title": "Vùng Lá Me Bay",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e1/57/6a/e1576a91-824d-b6da-8d39-dde2bcde477c/mzaf_9674517059304358312.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/43/eb/a343eb7b-8ba9-e3b1-22a9-f87527c3931a/198622514118_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1521982473,
+      "title": "Hoa Trinh Nữ",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1e/8d/f3/1e8df368-6e04-3ebe-629e-19074d1a5e76/mzaf_399364855211815639.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/dc/ed/e6/dcede68e-a8c8-9e8a-7894-2922ed2fd6b1/8134131076275.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1763927892,
+      "title": "Không Giờ Rồi",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 2020,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/88/c6/ca88c6c2-3caa-6163-376b-e8edb0c81779/mzaf_6107731436866150670.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/15/26/d6/1526d6f2-3a1e-80e7-85ed-77dcf385554c/198622545266_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555463575,
+      "title": "Con đường xưa em đi",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/a3/d9/66/a3d96626-0231-915d-3c5e-16095dabccc7/mzaf_705112121873506622.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/a9/1a/e2a91ab8-557e-264d-3f42-67a94b2bfdea/2911.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1755023716,
+      "title": "Còn Thương Rau Đắng Mọc Sau Hè",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2006,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/76/99/c676990b-085d-3a3a-5140-c10ea1e73685/mzaf_5805567790775008280.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4f/a4/75/4fa4754d-1df0-abe3-0b13-c15d31d0cc7f/194491559298_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1762542525,
+      "title": "Người Phụ Tình Tôi",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Asia",
+      "releaseYear": 2021,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/06/a9/6e06a93d-22ea-7715-2bc6-b0ab5b9fa0ec/mzaf_1334981361747871961.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/43/eb/a343eb7b-8ba9-e3b1-22a9-f87527c3931a/198622514118_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1757888398,
+      "title": "Mưa Đêm Ngoại Ô",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cd/ae/56/cdae5698-0d0f-1039-8646-77f780d85516/mzaf_8062882153961065157.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1760213914,
+      "title": "Không Giờ Rồi",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2001,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/fa/c5/fefac537-1436-f72f-5b4a-284ddc5104a0/mzaf_13676444100878170799.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/18/4c/99/184c998f-633e-e9e1-61ef-6dd62dd9a445/194491363888_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1757888395,
+      "title": "Mưa Rừng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/b5/6c/e9b56c5c-f2f7-83c2-98b8-a85788d48154/mzaf_7190707597999560017.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555463569,
+      "title": "Rừng lá thay chưa",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/c6/7d/1e/c67d1ee9-7b3d-c471-f484-dcd25fc0b4fa/mzaf_2648806486275660390.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/a9/1a/e2a91ab8-557e-264d-3f42-67a94b2bfdea/2911.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555475962,
+      "title": "Chuyện tình hoa trắng",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/58/5c/de/585cdebe-abcf-987e-6cc7-372fd8fd632c/mzaf_6123206467665593193.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e0/6a/27/e06a2764-6f50-6edc-1996-60c533114dd0/2953.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555475964,
+      "title": "Anh cứ hẹn",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b7/50/61/b75061d4-28f4-8842-f667-5bed4e00419e/mzaf_13202842291802602515.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e0/6a/27/e06a2764-6f50-6edc-1996-60c533114dd0/2953.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555676741,
+      "title": "Đón Xuân",
+      "artist": "Như Quỳnh",
+      "genre": "Nhạc Xuân & Tết",
+      "releaseYear": 1996,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/0f/ce/2c/0fce2c3d-121b-37c0-3c69-eba78a9f5934/mzaf_2988180993483939334.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/c0/5c/95/c05c9520-d07c-1256-d7c2-afee5acdd259/3663.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1757888405,
+      "title": "Kể Chuyện Trong Đêm",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/11/80/81118023-4aa5-ef44-7948-af6f38196ff0/mzaf_9454915886390663867.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/1b/59/6d1b59f8-28ce-f67d-7f26-db0d25b9a04b/194491361402_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1761246088,
+      "title": "Giấc Mơ Cánh Cò",
+      "artist": "Như Quỳnh & Phi Nhung",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/5f/5c/7a5f5cca-4eda-8db4-a595-4fb35c68b6f2/mzaf_2700422188885419433.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6f/9d/d4/6f9dd4a5-da64-0ccc-5bec-bdded7b0428d/194491362911_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1759064237,
+      "title": "Huế Buồn",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/74/2d/68742dbc-2858-eaa8-1a41-17d34d51cfc3/mzaf_8967153886639167843.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a6/a0/cd/a6a0cdbc-874d-821e-b6c9-b90c0e7cfa93/194491362461_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555463779,
+      "title": "Sao chưa thấy hồi âm",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/a5/9a/63/a59a63c1-c49e-6ffd-be1d-b3fd9c44e10c/mzaf_14824393472442338742.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/a9/1a/e2a91ab8-557e-264d-3f42-67a94b2bfdea/2911.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555476281,
+      "title": "Mưa rừng",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/7b/72/b4/7b72b498-4241-dc1f-276d-c37c95906f39/mzaf_15873588068823895018.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e0/6a/27/e06a2764-6f50-6edc-1996-60c533114dd0/2953.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1759234915,
+      "title": "LK Sao Không Thấy Anh Về - Nén Hương Yêu",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/96/51/2796519f-c945-8c2a-9c1f-5ea5166a5cea/mzaf_6175803830216294940.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/36/24/14/362414a2-d7c7-0e19-dbb3-a337fcab8ef6/194491362409_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555463574,
+      "title": "Mưa trên biển vắng",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8e/38/29/8e3829ed-d536-6e3b-0e97-783a6da0cc86/mzaf_177358191137806536.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/a9/1a/e2a91ab8-557e-264d-3f42-67a94b2bfdea/2911.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1772772517,
+      "title": "Người Tình Và Quê Hương",
+      "artist": "Như Quỳnh",
+      "genre": "Asia",
+      "releaseYear": 1999,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/f0/d7/91f0d718-0929-5428-96c6-9c7a9dd00187/mzaf_12495281748953279554.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/09/7b/e7/097be7b4-1cd0-83a8-d544-b096b6716bab/198622717748_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555646539,
+      "title": "Như vạt nắng",
+      "artist": "Gia Huy & Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1991,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/39/8c/5d/398c5d21-8054-c090-b2c1-31f1aa88d849/mzaf_885579556664306496.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7b/45/1a/7b451af9-0031-47c7-5a99-0d413b6c120d/7185.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1758190516,
+      "title": "Áo Hoa",
+      "artist": "Quang Lê & Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/58/38/9b/58389bb0-4d53-1de5-0269-b86a082aa631/mzaf_7815887811809231859.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0d/fe/78/0dfe78bc-8069-06a0-ccd0-033442d8eb32/194491361563_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555463570,
+      "title": "Như vạt nắng",
+      "artist": "Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/e2/56/52/e2565296-84b2-5b6a-f116-7554a26897cc/mzaf_9746451352875934136.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/a9/1a/e2a91ab8-557e-264d-3f42-67a94b2bfdea/2911.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555475973,
+      "title": "Đến bên nhau",
+      "artist": "Như Quỳnh & Gia Huy",
+      "genre": "Pop",
+      "releaseYear": 1995,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/88/0d/6c/880d6cb5-885b-7739-2876-5372f63c0bf2/mzaf_17370338825628848070.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e0/6a/27/e06a2764-6f50-6edc-1996-60c533114dd0/2953.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1555569996,
+      "title": "Mưa qua phố vắng",
+      "artist": "Mạnh Đình & Như Quỳnh",
+      "genre": "Pop",
+      "releaseYear": 1994,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b5/21/e9/b521e924-cedb-9a66-df74-b46be8d77d33/mzaf_3253339409461411683.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/37/46/7a/37467a30-fe93-457e-8a15-a31cbd728d38/8173.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1759224703,
+      "title": "Con Đường Mang Tên Em",
+      "artist": "Như Quỳnh & Trường Vũ",
+      "genre": "Worldwide",
+      "releaseYear": 2010,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/da/01/47da0108-18e8-0c60-1ec5-7db515a51c33/mzaf_1183974308339021130.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ad/a9/e3/ada9e3e8-614b-7437-97c2-ece212735d19/194491362324_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1759066234,
+      "title": "Trang Nhật Ký",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2004,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/40/81/d74081d5-0cc5-6c58-e387-a51cd1cb3783/mzaf_17762574506658627833.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f7/c0/4d/f7c04d6e-df29-d37a-4446-0918b2b50c44/194491362546_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    },
+    {
+      "include": false,
+      "itunesTrackId": 1759066240,
+      "title": "Nửa Vầng Trăng",
+      "artist": "Như Quỳnh",
+      "genre": "Worldwide",
+      "releaseYear": 2003,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/3c/33/d43c33f8-8095-09ec-b04a-2607befe6d32/mzaf_2712170654134007444.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f7/c0/4d/f7c04d6e-df29-d37a-4446-0918b2b50c44/194491362546_cover.jpg/600x600bb.jpg",
+      "reason": "duplicate"
+    }
+  ]
+}
