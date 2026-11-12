@@ -42,7 +42,7 @@ async function seed(n: number, over: Record<string, unknown>) {
 
 beforeAll(async () => {
   db = createCatalogClient(resolveTarget('local'));
-  await seed(16, { artist_keys: [artists[0].key], genre: GENRE, decade: DECADE });
+  await seed(20, { artist_keys: [artists[0].key], genre: GENRE, decade: DECADE });
   await seed(3, { artist_keys: [artists[1].key, artists[0].key], genre: SMALL_GENRE });
   // not Vietnamese: must not be counted anywhere
   await seed(4, { artist_keys: [artists[1].key], genre: GENRE, decade: DECADE, language: 'en' });
@@ -90,16 +90,16 @@ describe('listThemes', () => {
   it('trackCount equals number of vi tracks in the theme (a track counts for each credited artist)', async () => {
     const res = await listThemes(db, {}, { artists });
     const get = (type: string, key: string) => res.find((t) => t.type === type && t.key === key);
-    expect(get('artist', artists[0].key)?.trackCount).toBe(16 + 3);
+    expect(get('artist', artists[0].key)?.trackCount).toBe(20 + 3);
     expect(get('artist', artists[1].key)?.trackCount).toBe(3);
-    expect(get('genre', GENRE)?.trackCount).toBe(16);
+    expect(get('genre', GENRE)?.trackCount).toBe(20);
     expect(get('genre', SMALL_GENRE)?.trackCount).toBe(3);
-    expect(get('decade', DECADE)?.trackCount).toBe(16);
+    expect(get('decade', DECADE)?.trackCount).toBe(20);
     expect(get('genre', GENRE)?.label).toBe(GENRE);
     expect(get('artist', artists[0].key)?.label).toBe('Nghệ Sĩ Lớn');
   });
 
-  it('theme with fewer than 15 tracks reports playable=false', async () => {
+  it('theme with fewer than 20 tracks (the most questions a game can have) reports playable=false', async () => {
     const res = await listThemes(db, {}, { artists });
     const get = (type: string, key: string) => res.find((t) => t.type === type && t.key === key);
     expect(get('genre', SMALL_GENRE)?.playable).toBe(false);
@@ -123,7 +123,7 @@ describe('listThemes', () => {
   });
 
   it('release-period themes list the newest period first', async () => {
-    await seed(16, { artist_keys: [artists[0].key], genre: GENRE, decade: OLDER });
+    await seed(20, { artist_keys: [artists[0].key], genre: GENRE, decade: OLDER });
     const res = (await listThemes(db, { type: 'decade' })).filter((t) => t.key === DECADE || t.key === OLDER);
     expect(res.map((t) => t.key)).toEqual([DECADE, OLDER]);
     expect(res[0].label).toBe('1890 – 1894');

@@ -2,9 +2,9 @@
 
 export const MAX_PLAYERS = 10;
 export const ROOM_CODE_LENGTH = 5;
-export const QUESTION_COUNT_OPTIONS = [5, 8, 10, 12, 15] as const;
-export const TIME_LIMIT_OPTIONS_MS = [5000, 10000, 15000] as const;
-export const DEFAULT_TIME_LIMIT_MS = 10000;
+export const QUESTION_COUNT_OPTIONS = [5, 10, 15, 20] as const;
+export const TIME_LIMIT_OPTIONS_MS = [10000, 15000, 20000] as const;
+export const DEFAULT_TIME_LIMIT_MS = 15000;
 
 /**
  * Speed-up factor for the fixed phase durations (countdown, round card, reveal), used by e2e

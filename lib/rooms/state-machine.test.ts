@@ -75,7 +75,7 @@ describe('initialRoomState', () => {
       theme: null,
       settings: {
         questionCount: 10,
-        timeLimitMs: 10000, // product default: 10 s
+        timeLimitMs: 15000, // product default: 15 s
         showLiveAnswers: true,
         lateJoin: true,
       },
@@ -540,7 +540,9 @@ describe('UpdateSettings / UpdateTheme', () => {
       { questionCount: 7 },
       { questionCount: '10' },
       { timeLimitMs: 12000 },
-      { timeLimitMs: 20000 }, // dropped option
+      { timeLimitMs: 5000 }, // dropped option
+      { questionCount: 8 }, // dropped option
+      { timeLimitMs: 25000 },
       { showLiveAnswers: 'yes' },
       { lateJoin: 1 },
       { somethingElse: true },
@@ -553,15 +555,15 @@ describe('UpdateSettings / UpdateTheme', () => {
 
   it('UpdateSettings applies a valid patch (host, lobby only)', () => {
     const s = lobby({ version: 2 });
-    const patch = { questionCount: 15, timeLimitMs: 5000, lateJoin: false };
+    const patch = { questionCount: 20, timeLimitMs: 20000, lateJoin: false };
     expect(err(apply(s, { type: 'UpdateSettings', playerId: 'a', patch }, 2000))).toBe('NOT_HOST');
     expect(
       err(apply(lobby({ phase: 'question' }), { type: 'UpdateSettings', playerId: 'h', patch }, 2000)),
     ).toBe('WRONG_PHASE');
     const r = ok(apply(s, { type: 'UpdateSettings', playerId: 'h', patch }, 2000));
     expect(r.state.settings).toEqual({
-      questionCount: 15,
-      timeLimitMs: 5000,
+      questionCount: 20,
+      timeLimitMs: 20000,
       showLiveAnswers: true,
       lateJoin: false,
     });

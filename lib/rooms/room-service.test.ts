@@ -115,7 +115,7 @@ beforeAll(async () => {
   for (let i = 0; i < MAX_PLAYERS + 2; i++) users.push(await createUser(i));
 
   const artists = ['Ca Sĩ Một', 'Ca Sĩ Hai', 'Ca Sĩ Ba', 'Ca Sĩ Bốn', 'Ca Sĩ Năm'];
-  const rows = Array.from({ length: 16 }, (_, i) => ({
+  const rows = Array.from({ length: 21 }, (_, i) => ({
     itunes_track_id: BASE_ITUNES + i,
     preview_url: `https://audio.test/${RUN}/${i}.m4a`,
     title: `Bài Phòng ${i}`,
@@ -265,13 +265,13 @@ describe('room service (local Supabase)', () => {
   it('start replaces a track whose preview URL fails the HEAD check', async () => {
     const svc = createRoomService({ db, clock, notify, fetchFn, rng: mulberry32(7) });
     const code = await newRoom(svc);
-    ok(await svc.updateSettings(code, users[0], { questionCount: 15 }));
+    ok(await svc.updateSettings(code, users[0], { questionCount: 20 }));
     ok(await svc.updateTheme(code, users[0], { type: 'genre', key: GENRE }));
     const broken = trackUrls[BROKEN_INDEX];
     brokenUrls = new Set([broken]);
     ok(await svc.start(code, users[0]));
 
-    // with 15 of 16 tracks needed the broken one is drawn and checked...
+    // with 20 of 21 tracks needed the broken one is drawn and checked...
     expect(headCalls).toContain(broken);
     // ...but the stored rounds do not use it
     const { id } = await roomRow(code);
@@ -281,8 +281,8 @@ describe('room service (local Supabase)', () => {
       .eq('room_id', id)
       .eq('game_no', 1);
     const urls = (data ?? []).map((r) => (r.tracks as unknown as { preview_url: string }).preview_url);
-    expect(urls).toHaveLength(15);
-    expect(new Set(urls).size).toBe(15);
+    expect(urls).toHaveLength(20);
+    expect(new Set(urls).size).toBe(20);
     expect(urls).not.toContain(broken);
     expect((await roomRow(code)).phase).toBe('countdown');
   });
@@ -290,7 +290,7 @@ describe('room service (local Supabase)', () => {
   it('start fails with THEME_NOT_PLAYABLE when too many previews are broken', async () => {
     const svc = service();
     const code = await newRoom(svc);
-    ok(await svc.updateSettings(code, users[0], { questionCount: 15 }));
+    ok(await svc.updateSettings(code, users[0], { questionCount: 20 }));
     ok(await svc.updateTheme(code, users[0], { type: 'genre', key: GENRE }));
     brokenUrls = new Set(trackUrls.slice(0, 2));
     expect(await svc.start(code, users[0])).toEqual({ ok: false, status: 409, error: 'THEME_NOT_PLAYABLE' });
@@ -318,9 +318,9 @@ describe('room service (local Supabase)', () => {
     const mix = { type: 'mix', key: `genre:${GENRE}|genre:${SMALL_GENRE}` } as const;
     expect(await svc.updateTheme(code, users[0], { type: 'genre', key: SMALL_GENRE })).toMatchObject({ ok: false });
     ok(await svc.updateTheme(code, users[0], mix));
-    ok(await svc.updateSettings(code, users[0], { questionCount: 15 }));
+    ok(await svc.updateSettings(code, users[0], { questionCount: 20 }));
     ok(await svc.start(code, users[0]));
-    // 16 + 5 songs in the pool: with 15 questions both genres must be drawn from.
+    // 21 + 5 songs in the pool: with 20 questions both genres must be drawn from.
     const { data: rounds } = await db
       .from('room_rounds')
       .select('track:tracks(genre)')

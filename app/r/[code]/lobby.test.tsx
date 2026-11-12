@@ -128,9 +128,9 @@ describe('<Lobby />', () => {
   it('host sees settings controls with only the allowed options', () => {
     render(<Lobby snapshot={hostSnapshot()} send={send} />);
     const count = screen.getByLabelText('Số câu') as HTMLSelectElement;
-    expect([...count.options].map((o) => o.value)).toEqual(['5', '8', '10', '12', '15']);
+    expect([...count.options].map((o) => o.value)).toEqual(['5', '10', '15', '20']);
     const time = screen.getByLabelText('Thời gian mỗi câu') as HTMLSelectElement;
-    expect([...time.options].map((o) => o.value)).toEqual(['5000', '10000', '15000']);
+    expect([...time.options].map((o) => o.value)).toEqual(['10000', '15000', '20000']);
     // Percentages are only shown on the reveal, and late joining is always on: no setting for either.
     expect(screen.queryByLabelText('Hiện % đáp án trực tiếp')).toBeNull();
     expect(screen.queryByLabelText('Cho vào giữa ván')).toBeNull();
@@ -140,10 +140,10 @@ describe('<Lobby />', () => {
   it('host changes are sent as settings commands', () => {
     render(<Lobby snapshot={hostSnapshot()} send={send} />);
     fireEvent.change(screen.getByLabelText('Số câu'), { target: { value: '15' } });
-    fireEvent.change(screen.getByLabelText('Thời gian mỗi câu'), { target: { value: '5000' } });
+    fireEvent.change(screen.getByLabelText('Thời gian mỗi câu'), { target: { value: '20000' } });
     expect(send.mock.calls.map((c) => c[0])).toEqual([
       { type: 'settings', patch: { questionCount: 15 } },
-      { type: 'settings', patch: { timeLimitMs: 5000 } },
+      { type: 'settings', patch: { timeLimitMs: 20000 } },
     ]);
   });
 
