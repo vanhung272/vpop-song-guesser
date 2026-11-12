@@ -49,6 +49,18 @@ describe('genre in review files', () => {
     expect(reclassifyReview(once, artists)).toEqual(once);
   });
 
+  it('a song also listed in a collection (e.g. a TV show) takes the collection genre', () => {
+    const review: ReviewFile = {
+      version: 1,
+      artistKey: 'den-vau',
+      note: '',
+      kept: [track('Đan Bàn Tay', 'Châu Bùi & Đen', 'Pop', { itunesTrackId: 7 }), track('Lối Nhỏ', 'Đen', 'Pop', { itunesTrackId: 8 })],
+      dropped: [],
+    };
+    const out = reclassifyReview(review, artists, new Map([[7, 'Em Xinh']]));
+    expect(out.kept.map((t) => t.genre)).toEqual(['Em Xinh', GENRE_LABELS.rap]);
+  });
+
   it('leaves collection files (hand-picked, no artist) as they are', () => {
     const review: ReviewFile = {
       version: 1,

@@ -108,14 +108,22 @@ export function writeReviewFile(
 /**
  * Re-files every entry of an artist review file with classifyGenre (after the genre rules or an
  * artist's main genre change). The iTunes label is remembered in `itunesGenre` the first time, so
- * running it again gives the same result. Collection files are hand-curated and left alone.
+ * running it again gives the same result. Collection files are hand-curated and left alone, and a
+ * song they list keeps the collection's genre in every artist file too (one genre per track).
  */
-export function reclassifyReview(review: ReviewFile, artists: Artist[]): ReviewFile {
+export function reclassifyReview(
+  review: ReviewFile,
+  artists: Artist[],
+  /** itunesTrackId -> genre of the collection files (TV shows, Tết classics); these win. */
+  collectionGenres: ReadonlyMap<number, string> = new Map(),
+): ReviewFile {
   if (!review.artistKey) return review;
   const refile = <T extends ReviewTrack>(t: T): T => {
     // Files written before itunesGenre existed hold the iTunes label in `genre`, except Tết (ours).
     const itunesGenre = t.itunesGenre !== undefined ? t.itunesGenre : t.genre === TET_GENRE ? null : t.genre;
-    const genre = classifyGenre({ title: t.title, artist: t.artist, itunesGenre }, artists, review.artistKey);
+    const genre =
+      collectionGenres.get(t.itunesTrackId) ??
+      classifyGenre({ title: t.title, artist: t.artist, itunesGenre }, artists, review.artistKey);
     return { ...t, genre, itunesGenre };
   };
   return { ...review, kept: review.kept.map(refile), dropped: review.dropped.map(refile) };

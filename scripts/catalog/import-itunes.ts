@@ -51,16 +51,24 @@ async function main() {
 
   if (values.reclassify) {
     const artists = loadArtists(values.artists!);
-    let files = 0;
-    for (const name of readdirSync(values.out!).filter((f) => f.endsWith('.json'))) {
-      const file = path.join(values.out!, name);
-      const review = JSON.parse(readFileSync(file, 'utf8')) as ReviewFile;
-      const next = reclassifyReview(review, artists);
+    const reviews = readdirSync(values.out!)
+      .filter((name) => name.endsWith('.json'))
+      .map((name) => path.join(values.out!, name))
+      .map((file) => ({ file, review: JSON.parse(readFileSync(file, 'utf8')) as ReviewFile }));
+    // Songs of a collection (TV show, Tết classics) keep its genre wherever else they appear.
+    const collectionGenres = new Map<number, string>();
+    for (const { review } of reviews) {
+      if (review.artistKey) continue;
+      for (const t of review.kept) if (t.include && t.genre) collectionGenres.set(t.itunesTrackId, t.genre);
+    }
+    let changed = 0;
+    for (const { file, review } of reviews) {
+      const next = reclassifyReview(review, artists, collectionGenres);
       if (next === review) continue; // collection file
       writeFileSync(file, `${JSON.stringify(next, null, 2)}\n`, 'utf8');
-      files++;
+      changed++;
     }
-    console.log(`Re-filed the genre of ${files} review file(s) in ${values.out}.`);
+    console.log(`Re-filed the genre of ${changed} review file(s) in ${values.out}.`);
     return;
   }
 
