@@ -76,11 +76,15 @@ export interface RoomService {
   updateTheme(code: string, playerId: string, theme: ThemeRef): Promise<ServiceResult<CommandResult>>;
 }
 
-/** Save attempts for user commands on version conflict (ruling R7i); tick never retries. */
-export const MAX_ATTEMPTS = 10;
+/**
+ * Save attempts for user commands on version conflict (ruling R7i); tick never retries. Sized for a
+ * full room (MAX_PLAYERS = 30) answering in the same instant: each attempt that loses the race waits
+ * and tries again until every answer is in.
+ */
+export const MAX_ATTEMPTS = 30;
 /** Backoff before retry k (1-based) is uniform in [0, min(RETRY_MAX_WAIT_MS, RETRY_BASE_MS * 2^k)). */
 export const RETRY_BASE_MS = 60;
-export const RETRY_MAX_WAIT_MS = 250;
+export const RETRY_MAX_WAIT_MS = 400;
 export const MAX_CODE_ATTEMPTS = 20;
 export const HEAD_TIMEOUT_MS = 3000;
 export const MAX_ROUND_BUILD_ATTEMPTS = 3;

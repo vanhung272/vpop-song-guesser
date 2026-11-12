@@ -1,6 +1,6 @@
 /** Room constants. Values marked [Đề xuất] in the plan are tunable. */
 
-export const MAX_PLAYERS = 10;
+export const MAX_PLAYERS = 30;
 export const ROOM_CODE_LENGTH = 5;
 export const QUESTION_COUNT_OPTIONS = [5, 10, 15, 20] as const;
 export const TIME_LIMIT_OPTIONS_MS = [10000, 15000, 20000] as const;

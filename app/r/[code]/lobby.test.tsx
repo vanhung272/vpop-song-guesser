@@ -107,9 +107,9 @@ describe('<Lobby />', () => {
     expect(screen.queryByText('chưa đủ bài')).toBeNull();
   });
 
-  it('lists players with a count out of 10 and a host badge', () => {
+  it('lists players with a count out of 30 and a host badge', () => {
     render(<Lobby snapshot={snapshot()} send={send} />);
-    expect(screen.getByText('2/10')).toBeTruthy();
+    expect(screen.getByText('2/30')).toBeTruthy();
     const host = screen.getByText('Bảo').closest('li')!;
     expect(within(host).getByText('Chủ phòng', { selector: '.badge' })).toBeTruthy();
   });
@@ -335,7 +335,7 @@ describe('<RoomClient /> joining', () => {
   });
 
   for (const [code, message] of [
-    ['ROOM_FULL', 'Phòng đã đủ 10 người.'],
+    ['ROOM_FULL', 'Phòng đã đủ 30 người.'],
     ['LATE_JOIN_CLOSED', 'Ván đang diễn ra và chủ phòng không cho vào giữa ván. Hãy chờ ván sau.'],
   ] as const) {
     it(`${code} shows a Vietnamese error message`, async () => {

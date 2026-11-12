@@ -4,6 +4,7 @@ import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import type { RoomSnapshot } from '@/lib/rooms/snapshot';
 import type { ProfileState } from '@/lib/profile/useProfile';
 import type { RoomCommand, SendResult, UseRoomResult } from './useRoom';
+import { MAX_PLAYERS } from '@/lib/rooms/config';
 import { T0, player, round, snapshot } from './test-fixtures';
 
 const push = vi.fn();
@@ -103,14 +104,14 @@ describe('<RoomClient /> join and leave', () => {
   });
 
   it('ROOM_FULL retries when a slot frees up', async () => {
-    const ten = Array.from({ length: 10 }, (_, i) => player(`p${i}`));
+    const full = Array.from({ length: MAX_PLAYERS }, (_, i) => player(`p${i}`));
     joinResults = [{ ok: false, error: 'ROOM_FULL' }];
-    setRoom(lobby({ isMember: false, players: ten }));
+    setRoom(lobby({ isMember: false, players: full }));
     const { rerender } = render(<RoomClient code="12345" />);
     await flush();
-    expect(screen.getByRole('alert').textContent).toBe('Phòng đã đủ 10 người.');
+    expect(screen.getByRole('alert').textContent).toBe('Phòng đã đủ 30 người.');
 
-    setRoom(lobby({ version: 2, isMember: false, players: ten.slice(1) }));
+    setRoom(lobby({ version: 2, isMember: false, players: full.slice(1) }));
     rerender(<RoomClient code="12345" />);
     await flush();
     expect(joins()).toBe(2);

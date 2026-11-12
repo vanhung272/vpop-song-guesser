@@ -117,7 +117,7 @@ Cách đọc kết quả:
   - Realtime subscribed phải là 10/10 mỗi phòng.
   - Duplicate changes phải là 0.
   - p95 của `POST answer` và `POST tick`.
-  - Lỗi `CONFLICT` (xem ghi chú của Task 7 về số lần retry khi 10 người trả lời cùng lúc).
+  - Lỗi `CONFLICT` (xem MAX_ATTEMPTS trong lib/rooms/room-service.ts về số lần retry khi 30 người trả lời cùng lúc).
 - So các con số đo được với giới hạn hiện tại của gói free: số kết nối Realtime đồng thời, số tin nhắn Realtime mỗi tháng, số lần gọi function và thời gian chạy function của Vercel Hobby. Giới hạn thay đổi theo thời gian, nên hãy tra trang pricing ở thời điểm release và ghi lại bên dưới.
 
 ### Kết quả đo

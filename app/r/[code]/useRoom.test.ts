@@ -102,6 +102,18 @@ describe('useRoom', () => {
     expect(snapshotGets()).toBe(before + 1);
   });
 
+  it('a burst of broadcasts (e.g. 30 players answering) costs one refetch, not one each', async () => {
+    const { result } = await mountRoom();
+    const before = snapshotGets();
+    serverVersion = 40;
+    act(() => {
+      for (let v = 4; v <= 40; v++) broadcast!({ payload: { version: v } });
+    });
+    await vi.waitFor(() => expect(result.current.snapshot?.version).toBe(40));
+    await new Promise((r) => setTimeout(r, 400));
+    expect(snapshotGets()).toBe(before + 1);
+  });
+
   it('never replaces a snapshot with an older one that arrives late', async () => {
     const { result } = await mountRoom();
     serverVersion = 7;

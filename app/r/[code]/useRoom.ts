@@ -22,6 +22,14 @@ export type RoomCommand =
 
 export type SendResult = { ok: true } | { ok: false; error: string };
 
+/**
+ * A broadcast refetch waits a moment (plus jitter) so a burst of changes, e.g. a full room answering
+ * at once, costs one request per player rather than one per change, and players do not all hit the
+ * server in the same instant. The player's own commands do not wait: they carry their snapshot.
+ */
+const BROADCAST_DELAY_MS = 120;
+const BROADCAST_JITTER_MS = 150;
+
 export interface UseRoomResult {
   snapshot: RoomSnapshot | null;
   /** Error code of the last failed snapshot fetch (e.g. ROOM_NOT_FOUND); null once one succeeds. */
@@ -106,17 +114,26 @@ export function useRoom(code: string, { enabled = true }: { enabled?: boolean } 
   useEffect(() => {
     if (!enabled) return;
     const supabase = createClient();
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    let latest = -1; // newest version announced so far
     const channel = supabase
       .channel(roomChannel(code))
       .on('broadcast', { event: ROOM_CHANGED_EVENT }, (msg: { payload: unknown }) => {
         const version = (msg.payload as { version?: unknown } | null)?.version;
-        if (typeof version === 'number' && version > versionRef.current) void refetch();
+        if (typeof version !== 'number' || version <= versionRef.current) return;
+        latest = Math.max(latest, version);
+        if (timer) return;
+        timer = setTimeout(() => {
+          timer = null;
+          if (latest > versionRef.current) void refetch();
+        }, BROADCAST_DELAY_MS + Math.random() * BROADCAST_JITTER_MS);
       })
       .subscribe((status: string) => {
         if (status === 'SUBSCRIBED') void refetch();
       });
     void refetch();
     return () => {
+      if (timer) clearTimeout(timer);
       void supabase.removeChannel(channel);
     };
   }, [code, enabled, refetch]);
