@@ -8,6 +8,7 @@ class FakeAudio extends EventTarget {
   src = '';
   preload = '';
   currentTime = 0;
+  volume = 1;
   paused = true;
   play = vi.fn(async () => {
     this.paused = false;
@@ -149,6 +150,34 @@ describe('useRoundAudio', () => {
     act(() => result.current.playAt(now - 2500));
     expect(player().currentTime).toBe(2.5);
     expect(player().play).toHaveBeenCalledTimes(1);
+  });
+
+  it('fadeOut lowers the volume step by step, then pauses and restores it for the next clip', () => {
+    const { result } = mount('https://a/1.m4a', null);
+    act(() => result.current.playAt(now));
+    act(() => result.current.fadeOut(1000));
+    vi.advanceTimersByTime(500);
+    expect(player().volume).toBeGreaterThan(0.3);
+    expect(player().volume).toBeLessThan(0.7);
+    expect(player().paused).toBe(false);
+    vi.advanceTimersByTime(600);
+    expect(player().paused).toBe(true);
+    expect(player().volume).toBe(1);
+  });
+
+  it('a new clip after a fade plays at full volume, and stop cancels a fade', () => {
+    const { result } = mount('https://a/1.m4a', null);
+    act(() => result.current.playAt(now));
+    act(() => result.current.fadeOut(1000));
+    vi.advanceTimersByTime(400);
+    act(() => result.current.playAt(now));
+    expect(player().volume).toBe(1);
+    vi.advanceTimersByTime(2000);
+    expect(player().paused).toBe(false); // the cancelled fade does not pause the new clip
+    act(() => result.current.fadeOut(1000));
+    act(() => result.current.stop());
+    expect(player().paused).toBe(true);
+    expect(player().volume).toBe(1);
   });
 
   it('switching to the next clip reuses the playback element', () => {

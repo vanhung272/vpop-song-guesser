@@ -33,6 +33,7 @@ beforeEach(() => {
     unlock: vi.fn(async () => {}),
     playAt: vi.fn(),
     stop: vi.fn(),
+    fadeOut: vi.fn(),
   };
 });
 
@@ -151,6 +152,21 @@ describe('<G />', () => {
     fireEvent.click(leave);
     expect(confirm).toHaveBeenCalledTimes(2);
     expect(onLeave).toHaveBeenCalledTimes(1);
+  });
+
+  it('the music fades out when the answer is revealed', () => {
+    const { rerender } = render(<G snapshot={snapshot()} send={send} />);
+    expect(audio.fadeOut).not.toHaveBeenCalled();
+    const revealed = snapshot({
+      phase: 'reveal',
+      version: 11,
+      phaseEndsAt: T0 + 5000,
+      round: round({
+        reveal: { correctAnswerId: 'a2', track: { title: 'Bài Hai', artist: 'Ca Sĩ', coverUrl: null }, top3: [] },
+      }),
+    });
+    rerender(<G snapshot={revealed} send={send} />);
+    expect(audio.fadeOut).toHaveBeenCalledTimes(1);
   });
 
   it('shows no percentages while the question is open', () => {

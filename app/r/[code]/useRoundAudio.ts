@@ -17,7 +17,14 @@ export interface RoundAudio {
   /** Plays the current clip as if it started at `startMs` (server time); seeks in when late. */
   playAt: (startMs: number) => void;
   stop: () => void;
+  /**
+   * Lowers the volume to silence over `ms`, then pauses (the reveal). Browsers that do not let a
+   * page set the volume (iOS Safari) keep playing at full volume and pause after `ms`.
+   */
+  fadeOut: (ms: number) => void;
 }
+
+const FADE_STEP_MS = 50;
 
 interface Options {
   /** Server time (see useServerClock). */
@@ -44,6 +51,7 @@ export function useRoundAudio(
   const playerRef = useRef<HTMLAudioElement | null>(null);
   const preloaderRef = useRef<HTMLAudioElement | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const fadeTimer = useRef<ReturnType<typeof setInterval> | null>(null);
   /** A gesture already unlocked the playback element. */
   const gestured = useRef(false);
   const blockedRef = useRef(false);
@@ -61,11 +69,18 @@ export function useRoundAudio(
     if (timer.current) clearTimeout(timer.current);
     timer.current = null;
   }, []);
+  /** Cancels a running fade and puts the volume back to full for whatever plays next. */
+  const clearFade = useCallback(() => {
+    if (fadeTimer.current) clearInterval(fadeTimer.current);
+    fadeTimer.current = null;
+    if (playerRef.current) playerRef.current.volume = 1;
+  }, []);
 
   // Current clip: swap the playback element's source.
   useEffect(() => {
     const player = getPlayer();
     clearTimer();
+    clearFade();
     player.pause();
     if (!currentUrl) return;
     const onReady = () => setLoaded({ url: currentUrl, ready: true, failed: false });
@@ -79,7 +94,7 @@ export function useRoundAudio(
       player.removeEventListener('canplaythrough', onReady);
       player.removeEventListener('error', onError);
     };
-  }, [currentUrl, getPlayer, clearTimer]);
+  }, [currentUrl, getPlayer, clearTimer, clearFade]);
 
   // Next clip: preload only, never played.
   useEffect(() => {
@@ -93,11 +108,12 @@ export function useRoundAudio(
   useEffect(
     () => () => {
       clearTimer();
+      clearFade();
       playerRef.current?.pause();
       playerRef.current?.removeAttribute('src');
       preloaderRef.current?.removeAttribute('src');
     },
-    [clearTimer],
+    [clearTimer, clearFade],
   );
 
   const unlock = useCallback(async () => {
@@ -130,6 +146,7 @@ export function useRoundAudio(
   const playAt = useCallback(
     (startMs: number) => {
       clearTimer();
+      clearFade();
       const player = getPlayer();
       const start = () => {
         player.currentTime = Math.max(0, nowMs() - startMs) / 1000;
@@ -144,13 +161,35 @@ export function useRoundAudio(
       if (wait > 0) timer.current = setTimeout(start, wait);
       else start();
     },
-    [nowMs, getPlayer, clearTimer],
+    [nowMs, getPlayer, clearTimer, clearFade],
   );
 
   const stop = useCallback(() => {
     clearTimer();
+    clearFade();
     playerRef.current?.pause();
-  }, [clearTimer]);
+  }, [clearTimer, clearFade]);
+
+  const fadeOut = useCallback(
+    (ms: number) => {
+      clearTimer(); // a clip that has not started yet will not start
+      clearFade();
+      const player = playerRef.current;
+      if (!player || player.paused) return;
+      const steps = Math.max(1, Math.round(ms / FADE_STEP_MS));
+      let step = 0;
+      fadeTimer.current = setInterval(() => {
+        step++;
+        if (step < steps) {
+          player.volume = Math.max(0, 1 - step / steps);
+          return;
+        }
+        player.pause();
+        clearFade();
+      }, FADE_STEP_MS);
+    },
+    [clearTimer, clearFade],
+  );
 
   const current = loaded.url === currentUrl;
   return {
@@ -160,5 +199,6 @@ export function useRoundAudio(
     unlock,
     playAt,
     stop,
+    fadeOut,
   };
 }

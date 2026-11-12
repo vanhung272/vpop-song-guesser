@@ -20,6 +20,8 @@ interface Props {
 }
 
 const QUESTION_LABEL = { title: 'Bài gì?', artist: 'Ai hát?' } as const;
+/** On the reveal the clip fades out over this long instead of playing on. */
+const REVEAL_FADE_MS = 1500;
 
 /** Re-renders every `intervalMs` so time-based UI (timer, countdown) stays current. */
 function useTicker(intervalMs = 200): void {
@@ -40,15 +42,16 @@ export function Game({ snapshot, send, onLeave, audio, nowMs }: Props) {
   const { phase, round, phaseEndsAt } = snapshot;
   useAutoTick(snapshot, nowMs, send);
 
-  // The clip starts with the question (server time) and keeps playing through the reveal.
+  // The clip starts with the question (server time) and fades out when the answer is revealed.
   const questionStart = phase === 'question' && phaseEndsAt != null ? phaseEndsAt - snapshot.settings.timeLimitMs : null;
-  const { unlocked, ready, playAt, stop } = audio;
+  const { unlocked, ready, playAt, stop, fadeOut } = audio;
   useEffect(() => {
     if (questionStart != null && unlocked) playAt(questionStart);
   }, [questionStart, round?.idx, unlocked, ready, playAt]);
   useEffect(() => {
-    if (phase === 'results' || phase === 'countdown') stop();
-  }, [phase, stop]);
+    if (phase === 'reveal') fadeOut(REVEAL_FADE_MS);
+    else if (phase === 'results' || phase === 'countdown') stop();
+  }, [phase, round?.idx, stop, fadeOut]);
 
   if (phase === 'results') return <Results snapshot={snapshot} send={send} onLeave={onLeave} />;
 
