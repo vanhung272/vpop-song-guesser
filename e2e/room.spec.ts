@@ -1,4 +1,5 @@
 import { expect, test, type Browser, type Page } from '@playwright/test';
+import { MAX_PLAYERS } from '../lib/rooms/config';
 
 const QUESTIONS = 5;
 
@@ -24,7 +25,7 @@ async function setUpGame(browser: Browser, names: string[]): Promise<{ code: str
     await expect(guest.getByText('Chờ chủ phòng bắt đầu…')).toBeVisible();
     guests.push(guest);
   }
-  await expect(host.getByText(`${names.length}/10`)).toBeVisible();
+  await expect(host.getByText(`${names.length}/${MAX_PLAYERS}`)).toBeVisible();
 
   await host.getByLabel('Số câu').selectOption(String(QUESTIONS));
   await expect(host.getByLabel('Số câu')).toHaveValue(String(QUESTIONS));
