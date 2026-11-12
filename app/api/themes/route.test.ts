@@ -5,11 +5,13 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 let impl: (db: unknown, opts: unknown) => Promise<unknown>;
 let calls: unknown[][];
 
-vi.mock('@/lib/supabase/server', () => ({ createClient: async () => ({ fake: 'db' }) }));
+const ROWS = [{ artist_keys: [], genre: 'Pop', decade: null }];
+vi.mock('@/lib/supabase/public', () => ({ createPublicClient: () => ({ fake: 'db' }) }));
 vi.mock('@/lib/themes/themes', async (orig) => ({
   ...(await orig<typeof import('@/lib/themes/themes')>()),
-  listThemes: (db: unknown, opts: unknown) => {
-    calls.push([db, opts]);
+  createTrackRowsCache: () => async () => ROWS,
+  listThemes: (db: unknown, opts: unknown, extra: unknown) => {
+    calls.push([db, opts, extra]);
     return impl(db, opts);
   },
 }));
@@ -30,13 +32,19 @@ describe('GET /api/themes', () => {
     const res = await call('?type=genre&q=po');
     expect(res.status).toBe(200);
     expect(await res.json()).toEqual(data);
-    expect(calls).toEqual([[{ fake: 'db' }, { type: 'genre', q: 'po' }]]);
+    expect(calls).toEqual([[{ fake: 'db' }, { type: 'genre', q: 'po' }, { rows: ROWS }]]);
+  });
+
+  it('is cacheable by the CDN: the list is the same for every player', async () => {
+    const res = await call('?type=artist');
+    expect(res.headers.get('Cache-Control')).toBe('public, s-maxage=300, stale-while-revalidate=3600');
+    expect(res.headers.get('Set-Cookie')).toBeNull();
   });
 
   it('works without params', async () => {
     const res = await call('');
     expect(res.status).toBe(200);
-    expect(calls).toEqual([[{ fake: 'db' }, { type: undefined, q: undefined }]]);
+    expect(calls).toEqual([[{ fake: 'db' }, { type: undefined, q: undefined }, { rows: ROWS }]]);
   });
 
   it('rejects an invalid type with 400', async () => {

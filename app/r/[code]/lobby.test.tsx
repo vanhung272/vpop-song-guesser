@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import type { RoomSnapshot, SnapshotPlayer } from '@/lib/rooms/snapshot';
 import type { ProfileState } from '@/lib/profile/useProfile';
 import type { RoomCommand, UseRoomResult } from './useRoom';
@@ -149,6 +149,16 @@ describe('<Lobby />', () => {
     ]);
   });
 
+  it('a settings change shows at once, before the server answers', async () => {
+    let answer!: (r: { ok: true }) => void;
+    send.mockImplementation(() => new Promise((r) => (answer = r)));
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    const count = screen.getByLabelText('Số câu') as HTMLSelectElement;
+    fireEvent.change(count, { target: { value: '20' } });
+    expect(count.value).toBe('20');
+    await act(async () => answer({ ok: true }));
+  });
+
   it('host start is disabled until a theme is chosen', () => {
     render(<Lobby snapshot={snapshot({ viewerId: 'h', isHost: true, theme: null })} send={send} />);
     expect((screen.getByRole('button', { name: 'Bắt đầu' }) as HTMLButtonElement).disabled).toBe(true);
@@ -243,14 +253,32 @@ describe('<ThemePicker /> multi-select', () => {
     expect(pills).toEqual(['Đen Vâu', 'MIN']);
   });
 
-  it('the search box narrows the list of the current tab', async () => {
+  it('the search box narrows the list at once, on the device (no request per keystroke)', async () => {
+    lists.artist = [
+      { type: 'artist', key: 'den-vau', label: 'Đen Vâu', trackCount: 52, playable: true, aliases: ['Đen', 'Den Vau'] },
+      { type: 'artist', key: 'min', label: 'MIN', trackCount: 50, playable: true },
+    ];
     render(<Lobby snapshot={hostSnapshot()} send={send} />);
-    await item(/MIN/);
-    fireEvent.change(screen.getByRole('searchbox', { name: 'Tìm chủ đề' }), { target: { value: 'mi' } });
-    await vi.waitFor(() => expect(screen.queryByRole('button', { name: /Đen Vâu/ })).toBeNull());
-    expect(screen.getByRole('button', { name: /MIN/ })).toBeTruthy();
-    const urls = vi.mocked(fetch).mock.calls.map((c) => String(c[0]));
-    expect(urls.some((u) => u.includes('type=artist') && u.includes('q=mi'))).toBe(true);
+    await item(/^MIN/);
+    const requests = vi.mocked(fetch).mock.calls.length;
+    const search = screen.getByRole('searchbox', { name: 'Tìm chủ đề' });
+    fireEvent.change(search, { target: { value: 'mi' } });
+    expect(screen.queryByRole('button', { name: /^Đen Vâu/ })).toBeNull();
+    expect(screen.getByRole('button', { name: /^MIN/ })).toBeTruthy();
+    fireEvent.change(search, { target: { value: 'den vau' } }); // aliases and no diacritics match too
+    expect(screen.getByRole('button', { name: /^Đen Vâu/ })).toBeTruthy();
+    expect(vi.mocked(fetch).mock.calls.length).toBe(requests);
+  });
+
+  it('each tab loads its list once; switching back is instant', async () => {
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    await item(/^MIN/);
+    fireEvent.click(screen.getByRole('tab', { name: 'Ngẫu nhiên' }));
+    await item(/^Ngẫu nhiên/);
+    fireEvent.click(screen.getByRole('tab', { name: 'Ca sĩ' }));
+    expect(screen.getByRole('button', { name: /^MIN/ })).toBeTruthy(); // no loading gap
+    const typesFetched = vi.mocked(fetch).mock.calls.map((c) => new URL(String(c[0]), 'http://x').searchParams.get('type'));
+    expect(typesFetched).toEqual(['artist', 'random']);
   });
 
   it('the host can drop a picked theme from the header pills', () => {
@@ -267,6 +295,17 @@ describe('<ThemePicker /> multi-select', () => {
     const mixed = snapshot({ theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN', parts: ['Đen Vâu', 'MIN'] } });
     render(<Lobby snapshot={mixed} send={send} />);
     expect(screen.queryByRole('button', { name: /^Bỏ chọn/ })).toBeNull();
+  });
+
+  it('a pick shows as selected at once, before the server answers, and reverts if refused', async () => {
+    let answer!: (r: { ok: false; error: string }) => void;
+    send.mockImplementation(() => new Promise((r) => (answer = r)));
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    const min = await item(/^MIN/);
+    fireEvent.click(min);
+    expect(min.getAttribute('aria-pressed')).toBe('true'); // no wait for the round trip
+    await act(async () => answer({ ok: false, error: 'THEME_NOT_PLAYABLE' }));
+    expect(min.getAttribute('aria-pressed')).toBe('false');
   });
 
   it('the last picked theme cannot be unpicked', async () => {

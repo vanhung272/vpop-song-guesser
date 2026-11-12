@@ -21,6 +21,8 @@ export interface ThemeSummary {
   trackCount: number;
   /** Enough tracks for the largest selectable question count. */
   playable: boolean;
+  /** Artist themes: other spellings of the name, so a client can search the list itself. */
+  aliases?: string[];
 }
 
 export interface ListThemesOptions {
@@ -39,7 +41,7 @@ const RANDOM_LABEL = 'Ngẫu nhiên';
 
 const curatedArtists: Artist[] = parseArtists(artistsJson);
 
-interface TrackRow {
+export interface TrackRow {
   artist_keys: string[] | null;
   genre: string | null;
   decade: string | null;
@@ -62,6 +64,26 @@ async function fetchTrackRows(db: SupabaseClient): Promise<TrackRow[]> {
   return rows;
 }
 
+/**
+ * The theme columns of the whole catalog, read at most once per `ttlMs` (concurrent callers share
+ * one read; a failed read is not kept). The catalog only changes on an import, so a theme list a
+ * few minutes old is fine, and it spares reading every track on each tab switch.
+ */
+export function createTrackRowsCache(ttlMs: number) {
+  let entry: { at: number; rows: Promise<TrackRow[]> } | null = null;
+  return (db: SupabaseClient, nowMs: number = Date.now()): Promise<TrackRow[]> => {
+    if (!entry || nowMs - entry.at >= ttlMs) {
+      const rows = fetchTrackRows(db);
+      const mine = { at: nowMs, rows };
+      entry = mine;
+      rows.catch(() => {
+        if (entry === mine) entry = null;
+      });
+    }
+    return entry.rows;
+  };
+}
+
 function bump(map: Map<string, number>, key: string | null | undefined) {
   if (key) map.set(key, (map.get(key) ?? 0) + 1);
 }
@@ -76,17 +98,19 @@ function bump(map: Map<string, number>, key: string | null | undefined) {
 export async function listThemes(
   db: SupabaseClient,
   { type, q }: ListThemesOptions = {},
-  { artists = curatedArtists }: { artists?: Artist[] } = {},
+  { artists = curatedArtists, rows: given }: { artists?: Artist[]; rows?: TrackRow[] } = {},
 ): Promise<ThemeSummary[]> {
-  const rows = await fetchTrackRows(db);
+  const rows = given ?? (await fetchTrackRows(db));
   const needle = q ? normalizeVi(q) : '';
   const matches = (...texts: string[]) =>
     needle === '' || texts.some((t) => normalizeVi(t).includes(needle));
 
   const out: ThemeSummary[] = [];
-  const push = (t: ThemeType, key: string, label: string, trackCount: number) => {
+  const push = (t: ThemeType, key: string, label: string, trackCount: number, aliases?: string[]) => {
     if (trackCount > 0) {
-      out.push({ type: t, key, label, trackCount, playable: trackCount >= PLAYABLE_MIN_TRACKS });
+      const theme: ThemeSummary = { type: t, key, label, trackCount, playable: trackCount >= PLAYABLE_MIN_TRACKS };
+      if (aliases?.length) theme.aliases = aliases;
+      out.push(theme);
     }
   };
 
@@ -95,7 +119,7 @@ export async function listThemes(
     for (const r of rows) for (const k of new Set(r.artist_keys ?? [])) bump(counts, k);
     for (const a of artists) {
       if (matches(a.name, a.key, ...(a.aliases ?? []))) {
-        push('artist', a.key, a.name, counts.get(a.key) ?? 0);
+        push('artist', a.key, a.name, counts.get(a.key) ?? 0, a.aliases);
       }
     }
   }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Avatar } from '@/lib/avatar/Avatar';
 import { errorMessageVi } from '@/lib/client/errors-vi';
 import { MAX_PLAYERS, QUESTION_COUNT_OPTIONS, TIME_LIMIT_OPTIONS_MS } from '@/lib/rooms/config';
@@ -23,12 +23,17 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
   const [error, setError] = useState<string | null>(null);
   /** Start checks every preview server-side and can take seconds: block repeat clicks meanwhile. */
   const [starting, setStarting] = useState(false);
-  const { settings, isHost, players } = snapshot;
+  const { isHost, players } = snapshot;
+  // A settings change shows at once; the server's value replaces it when every change has settled.
+  const [pendingSettings, setPendingSettings] = useState<Partial<RoomSettings>>({});
+  const settingsInFlight = useRef(0);
+  const settings = { ...snapshot.settings, ...pendingSettings };
 
-  async function run(cmd: RoomCommand) {
+  async function run(cmd: RoomCommand): Promise<boolean> {
     setError(null);
     const res = await send(cmd);
     if (!res.ok) setError(errorMessageVi(res.error));
+    return res.ok;
   }
   async function start() {
     setStarting(true);
@@ -38,7 +43,15 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
       setStarting(false);
     }
   }
-  const patch = (p: Partial<RoomSettings>) => void run({ type: 'settings', patch: p });
+  async function patch(p: Partial<RoomSettings>) {
+    setPendingSettings((prev) => ({ ...prev, ...p }));
+    settingsInFlight.current++;
+    try {
+      await run({ type: 'settings', patch: p });
+    } finally {
+      if (--settingsInFlight.current === 0) setPendingSettings({});
+    }
+  }
   /** Drops picked theme `i` (a mix part); the host can only do so while another stays picked. */
   function dropTheme(i: number) {
     const rest = themeParts(snapshot.theme).filter((_, j) => j !== i);
@@ -80,7 +93,7 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
               <select
                 className="input"
                 value={settings.questionCount}
-                onChange={(e) => patch({ questionCount: Number(e.target.value) })}
+                onChange={(e) => void patch({ questionCount: Number(e.target.value) })}
               >
                 {QUESTION_COUNT_OPTIONS.map((n) => (
                   <option key={n} value={n}>
@@ -94,7 +107,7 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
               <select
                 className="input"
                 value={settings.timeLimitMs}
-                onChange={(e) => patch({ timeLimitMs: Number(e.target.value) })}
+                onChange={(e) => void patch({ timeLimitMs: Number(e.target.value) })}
               >
                 {TIME_LIMIT_OPTIONS_MS.map((ms) => (
                   <option key={ms} value={ms}>
@@ -140,7 +153,7 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
           )}
         </div>
         {isHost && (
-          <ThemePicker current={snapshot.theme} onPick={(theme) => void run({ type: 'theme', theme })} />
+          <ThemePicker current={snapshot.theme} onPick={(theme) => run({ type: 'theme', theme })} />
         )}
       </section>
 

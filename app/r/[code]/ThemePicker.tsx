@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { apiFetch } from '@/lib/client/api';
+import { normalizeVi } from '@/lib/text/normalize-vi';
 import type { ThemeRef } from '@/lib/rooms/round-builder';
 import { MIX_MAX_PARTS, mixTheme, themeParts, type PickableThemeType } from '@/lib/themes/mix';
 import type { ThemeSummary } from '@/lib/themes/themes';
@@ -16,7 +17,14 @@ const TYPE_LABELS: Record<PickableThemeType, string> = {
 
 interface Props {
   current: ThemeRef | null;
-  onPick: (theme: ThemeRef) => void;
+  /** Sends the new theme; resolves once the server has answered (true when it accepted it). */
+  onPick: (theme: ThemeRef) => Promise<boolean> | void;
+}
+
+/** Search on the device: label, key and (artists) other spellings, without case or diacritics. */
+function matchesSearch(theme: ThemeSummary, needle: string): boolean {
+  if (!needle) return true;
+  return [theme.label, theme.key, ...(theme.aliases ?? [])].some((t) => normalizeVi(t).includes(needle));
 }
 
 const sameTheme = (a: ThemeRef, b: ThemeRef) => a.type === b.type && a.key === b.key;
@@ -41,35 +49,51 @@ function togglePick(picked: ThemeRef[], item: ThemeRef): ThemeRef[] | null {
  * themes can be picked.
  */
 export function ThemePicker({ current, onPick }: Props) {
-  const picked = themeParts(current);
+  // Picks show as selected at once; the server's answer replaces them when every pick has settled.
+  const [pending, setPending] = useState<ThemeRef[] | null>(null);
+  const inFlight = useRef(0);
+  const picked = pending ?? themeParts(current);
   const [type, setType] = useState<PickableThemeType>(
     (picked[0]?.type as PickableThemeType | undefined) ?? 'artist',
   );
   const [q, setQ] = useState('');
-  const [themes, setThemes] = useState<ThemeSummary[] | null>(null);
+  // One request per tab, kept for the life of the picker; search filters it on the device.
+  const [lists, setLists] = useState<Partial<Record<PickableThemeType, ThemeSummary[]>>>({});
   const [failed, setFailed] = useState(false);
+  const loaded = lists[type];
 
   useEffect(() => {
+    if (loaded) return;
     let cancelled = false;
     const timer = setTimeout(async () => {
-      const params = new URLSearchParams({ type });
-      if (q.trim()) params.set('q', q.trim());
-      const res = await apiFetch<ThemeSummary[]>(`/api/themes?${params}`);
+      const res = await apiFetch<ThemeSummary[]>(`/api/themes?${new URLSearchParams({ type })}`);
       if (cancelled) return;
       setFailed(!res.ok);
+      if (!res.ok || !Array.isArray(res.data)) return;
       // Only themes with enough songs for any question count; the rest cannot be picked anyway.
-      setThemes(res.ok && Array.isArray(res.data) ? res.data.filter((t) => t.playable) : []);
-    }, q ? 250 : 0); // debounce typing; a tab switch loads at once
+      const playable = res.data.filter((t) => t.playable);
+      setLists((prev) => ({ ...prev, [type]: playable }));
+    }, 0);
     return () => {
       cancelled = true;
       clearTimeout(timer);
     };
-  }, [type, q]);
+  }, [type, loaded]);
 
-  function pick(item: ThemeRef) {
+  const needle = normalizeVi(q);
+  const themes = loaded?.filter((t) => matchesSearch(t, needle));
+
+  async function pick(item: ThemeRef) {
     const next = togglePick(picked, item);
     const theme = next && mixTheme(next);
-    if (theme) onPick(theme);
+    if (!theme || !next) return;
+    setPending(next);
+    inFlight.current++;
+    try {
+      await onPick(theme);
+    } finally {
+      if (--inFlight.current === 0) setPending(null);
+    }
   }
 
   return (
@@ -112,7 +136,7 @@ export function ThemePicker({ current, onPick }: Props) {
                 type="button"
                 className={`theme-item${selected ? ' theme-item--selected' : ''}`}
                 aria-pressed={selected}
-                onClick={() => pick({ type: t.type, key: t.key })}
+                onClick={() => void pick({ type: t.type, key: t.key })}
               >
                 <span>{t.label}</span>
                 <span className="muted small">{t.trackCount} bài</span>
