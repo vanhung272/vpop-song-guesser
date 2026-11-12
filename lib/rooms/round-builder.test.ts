@@ -100,6 +100,22 @@ describe('buildRounds', () => {
     expect(artistRounds).toBeGreaterThan(0);
   });
 
+  it('never offers two choices that differ only in spacing, punctuation or case', () => {
+    // Real catalog credits: "Jack - J97" (most tracks) and "Jack- J97" (one track).
+    const spelled = ['Jack - J97', 'Jack- J97', 'jack - j97', 'JACK -J97'];
+    const ts = tracks(24, 24).map((t, i) => {
+      const artist = i < 8 ? spelled[i % spelled.length] : t.artist;
+      const title = i >= 16 ? (i % 2 ? 'Bạc Phận' : 'Bạc  phận!') : t.title;
+      return { ...t, artist, artistNorm: normalizeVi(artist), title, titleNorm: normalizeVi(title) };
+    });
+    const loose = (s: string) => normalizeVi(s).replace(/[^\p{L}\p{N}]/gu, '');
+    for (let seed = 0; seed < 40; seed++) {
+      for (const r of buildRounds(ts, genre, 12, mulberry32(seed))) {
+        expect(new Set(r.choices.map((c) => loose(c.label))).size).toBe(4);
+      }
+    }
+  });
+
   it('artist themes only produce title questions', () => {
     const ts = tracks(24, 8);
     for (let seed = 0; seed < 10; seed++) {

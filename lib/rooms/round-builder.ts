@@ -1,4 +1,5 @@
 import type { ThemeSummary } from '@/lib/themes/themes';
+import { normalizeVi } from '@/lib/text/normalize-vi';
 import { CHOICE_COUNT } from './config';
 
 export interface Track {
@@ -55,6 +56,15 @@ function shuffle<T>(items: readonly T[], rng: Rng): T[] {
     [out[i], out[j]] = [out[j], out[i]];
   }
   return out;
+}
+
+/**
+ * What a player reads as "the same answer": letters and digits only, after normalizeVi (case,
+ * diacritics, whitespace). "Jack - J97", "Jack- J97" and "jack -j97" all give "jackj97", so two
+ * spellings of one credit or title never show up as two different choices.
+ */
+export function answerKey(label: string): string {
+  return normalizeVi(label).replace(/[^\p{L}\p{N}]/gu, '');
 }
 
 /** Pick `need` labels from shuffled candidates with distinct, unused keys. */
@@ -128,9 +138,9 @@ export function buildRounds(
     if (theme.type !== 'artist' && track.artistKeys.length > 0 && rng() < 0.5) {
       artistDistractors = pickDistinct(
         others,
-        (t) => t.artistNorm,
+        (t) => answerKey(t.artist),
         (t) => t.artist,
-        track.artistNorm,
+        answerKey(track.artist),
         need,
         rng,
       );
@@ -140,9 +150,9 @@ export function buildRounds(
     }
     const titleDistractors = pickDistinct(
       others,
-      (t) => t.titleNorm,
+      (t) => answerKey(t.title),
       (t) => t.title,
-      track.titleNorm,
+      answerKey(track.title),
       need,
       rng,
     );
