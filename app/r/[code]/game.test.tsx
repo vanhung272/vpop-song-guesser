@@ -13,7 +13,7 @@ import { useServerClock } from './useServerClock';
 let audio: RoundAudio;
 
 /** Game as RoomClient renders it: with a server clock from the snapshot and the room's audio. */
-function G(props: { snapshot: RoomSnapshot; send: (cmd: RoomCommand) => Promise<SendResult> }) {
+function G(props: { snapshot: RoomSnapshot; send: (cmd: RoomCommand) => Promise<SendResult>; onLeave?: () => void }) {
   const { nowMs } = useServerClock(props.snapshot.serverNowMs);
   return <Game {...props} audio={audio} nowMs={nowMs} />;
 }
@@ -139,6 +139,18 @@ describe('<G />', () => {
     rerender(<G snapshot={snapshot({ round: round({ questionType: 'artist' }) })} send={send} />);
     expect(screen.getByText('Ai hát?')).toBeTruthy();
     expect(screen.queryByText('Ca sĩ nào?')).toBeNull();
+  });
+
+  it('a player can leave mid-game after confirming', () => {
+    const onLeave = vi.fn();
+    const confirm = vi.spyOn(window, 'confirm').mockReturnValueOnce(false).mockReturnValueOnce(true);
+    render(<G snapshot={snapshot()} send={send} onLeave={onLeave} />);
+    const leave = screen.getByRole('button', { name: 'Rời phòng' });
+    fireEvent.click(leave); // cancelled
+    expect(onLeave).not.toHaveBeenCalled();
+    fireEvent.click(leave);
+    expect(confirm).toHaveBeenCalledTimes(2);
+    expect(onLeave).toHaveBeenCalledTimes(1);
   });
 
   it('shows no percentages while the question is open', () => {

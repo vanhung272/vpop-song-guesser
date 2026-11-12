@@ -5,6 +5,7 @@ import { Avatar } from '@/lib/avatar/Avatar';
 import { errorMessageVi } from '@/lib/client/errors-vi';
 import { MAX_PLAYERS, QUESTION_COUNT_OPTIONS, TIME_LIMIT_OPTIONS_MS } from '@/lib/rooms/config';
 import type { RoomSnapshot } from '@/lib/rooms/snapshot';
+import { mixTheme, themeParts } from '@/lib/themes/mix';
 import type { RoomSettings } from '@/lib/rooms/state-machine';
 import { InvitePanel } from './InvitePanel';
 import { ThemePicker } from './ThemePicker';
@@ -38,6 +39,13 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
     }
   }
   const patch = (p: Partial<RoomSettings>) => void run({ type: 'settings', patch: p });
+  /** Drops picked theme `i` (a mix part); the host can only do so while another stays picked. */
+  function dropTheme(i: number) {
+    const rest = themeParts(snapshot.theme).filter((_, j) => j !== i);
+    const theme = mixTheme(rest);
+    if (theme) void run({ type: 'theme', theme });
+  }
+  const canDrop = isHost && (snapshot.theme?.parts.length ?? 0) > 1;
 
   return (
     <main className="page page--lobby">
@@ -114,6 +122,16 @@ export function Lobby({ snapshot, send, onLeave }: Props) {
               {snapshot.theme.parts.map((label, i) => (
                 <span key={i} className="pill pill--accent">
                   {label}
+                  {canDrop && (
+                    <button
+                      type="button"
+                      className="pill__remove"
+                      aria-label={`Bỏ chọn ${label}`}
+                      onClick={() => dropTheme(i)}
+                    >
+                      ×
+                    </button>
+                  )}
                 </span>
               ))}
             </span>

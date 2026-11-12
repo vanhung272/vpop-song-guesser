@@ -36,12 +36,16 @@ function togglePick(picked: ThemeRef[], item: ThemeRef): ThemeRef[] | null {
   return others.length < MIX_MAX_PARTS ? [...others, item] : null;
 }
 
-/** Host-only theme browser: type tabs over GET /api/themes; one or several themes can be picked. */
+/**
+ * Host-only theme browser: type tabs plus a search box over GET /api/themes; one or several
+ * themes can be picked.
+ */
 export function ThemePicker({ current, onPick }: Props) {
   const picked = themeParts(current);
   const [type, setType] = useState<PickableThemeType>(
     (picked[0]?.type as PickableThemeType | undefined) ?? 'artist',
   );
+  const [q, setQ] = useState('');
   const [themes, setThemes] = useState<ThemeSummary[] | null>(null);
   const [failed, setFailed] = useState(false);
 
@@ -49,17 +53,18 @@ export function ThemePicker({ current, onPick }: Props) {
     let cancelled = false;
     const timer = setTimeout(async () => {
       const params = new URLSearchParams({ type });
+      if (q.trim()) params.set('q', q.trim());
       const res = await apiFetch<ThemeSummary[]>(`/api/themes?${params}`);
       if (cancelled) return;
       setFailed(!res.ok);
       // Only themes with enough songs for any question count; the rest cannot be picked anyway.
       setThemes(res.ok && Array.isArray(res.data) ? res.data.filter((t) => t.playable) : []);
-    }, 0);
+    }, q ? 250 : 0); // debounce typing; a tab switch loads at once
     return () => {
       cancelled = true;
       clearTimeout(timer);
     };
-  }, [type]);
+  }, [type, q]);
 
   function pick(item: ThemeRef) {
     const next = togglePick(picked, item);
@@ -77,12 +82,25 @@ export function ThemePicker({ current, onPick }: Props) {
             role="tab"
             aria-selected={t === type}
             className={`tab${t === type ? ' tab--active' : ''}`}
-            onClick={() => setType(t)}
+            onClick={() => {
+              setType(t);
+              setQ('');
+            }}
           >
             {TYPE_LABELS[t]}
           </button>
         ))}
       </div>
+      {type !== 'random' && (
+        <input
+          type="search"
+          className="input"
+          aria-label="Tìm chủ đề"
+          placeholder="Tìm chủ đề…"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+        />
+      )}
       <p className="muted small">Chọn một hoặc nhiều chủ đề.</p>
       {failed && <p className="muted small">Không tải được danh sách chủ đề.</p>}
       <ul className="theme-list">

@@ -285,6 +285,23 @@ p {
   gap: 6px;
 }
 
+.pill__remove {
+  margin-left: 4px;
+  padding: 0 2px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.pill__remove:hover,
+.pill__remove:focus-visible {
+  opacity: 1;
+}
+
 .pill--accent {
   background: color-mix(in srgb, var(--accent) 20%, transparent);
 }
@@ -531,6 +548,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
+}
+
+.game-head__actions {
+  display: flex;
   gap: 8px;
 }
 

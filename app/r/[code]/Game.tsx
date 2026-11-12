@@ -56,11 +56,23 @@ export function Game({ snapshot, send, onLeave, audio, nowMs }: Props) {
     <main className="page page--game">
       <header className="game-head">
         <span className="pill pill--accent">{snapshot.theme?.label}</span>
-        {!audio.unlocked && (
-          <button type="button" className="btn btn--accent btn--small" onClick={() => void audio.unlock()}>
-            Bật âm thanh
-          </button>
-        )}
+        <span className="game-head__actions">
+          {!audio.unlocked && (
+            <button type="button" className="btn btn--accent btn--small" onClick={() => void audio.unlock()}>
+              Bật âm thanh
+            </button>
+          )}
+          {onLeave && (
+            <button
+              type="button"
+              className="btn btn--ghost btn--small"
+              // Leaving mid-game forfeits the rest of it: ask first so a stray tap does not.
+              onClick={() => window.confirm('Rời phòng khi ván đang diễn ra?') && onLeave()}
+            >
+              Rời phòng
+            </button>
+          )}
+        </span>
       </header>
 
       {phase === 'countdown' && (

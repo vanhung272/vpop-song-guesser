@@ -81,7 +81,9 @@ describe('<Lobby />', () => {
       'Thể loại',
       'Thời gian ra mắt',
     ]);
-    // The lists are short: no search box.
+    // A search box filters the current tab; the Ngẫu nhiên tab has a single entry, so none there.
+    expect(screen.getByRole('searchbox', { name: 'Tìm chủ đề' })).toBeTruthy();
+    fireEvent.click(screen.getByRole('tab', { name: 'Ngẫu nhiên' }));
     expect(screen.queryByRole('searchbox')).toBeNull();
   });
 
@@ -208,8 +210,10 @@ describe('<ThemePicker /> multi-select', () => {
     vi.stubGlobal(
       'fetch',
       vi.fn(async (url: string) => {
-        const type = new URL(url, 'http://x').searchParams.get('type') ?? '';
-        return new Response(JSON.stringify(lists[type] ?? []), { status: 200 });
+        const params = new URL(url, 'http://x').searchParams;
+        const q = (params.get('q') ?? '').toLowerCase();
+        const list = (lists[params.get('type') ?? ''] ?? []) as { label: string }[];
+        return new Response(JSON.stringify(list.filter((t) => t.label.toLowerCase().includes(q))), { status: 200 });
       }),
     );
   });
@@ -226,9 +230,9 @@ describe('<ThemePicker /> multi-select', () => {
   it('marks every picked part, and unpicking one leaves the other', async () => {
     const mixed = snapshot({ viewerId: 'h', isHost: true, theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN', parts: ['Đen Vâu', 'MIN'] } });
     render(<Lobby snapshot={mixed} send={send} />);
-    expect((await item(/Đen Vâu/)).getAttribute('aria-pressed')).toBe('true');
-    expect(screen.getByRole('button', { name: /MIN/ }).getAttribute('aria-pressed')).toBe('true');
-    fireEvent.click(screen.getByRole('button', { name: /Đen Vâu/ }));
+    expect((await item(/^Đen Vâu/)).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /^MIN/ }).getAttribute('aria-pressed')).toBe('true');
+    fireEvent.click(screen.getByRole('button', { name: /^Đen Vâu/ }));
     expect(themeCalls()).toEqual([{ type: 'theme', theme: { type: 'artist', key: 'min' } }]);
   });
 
@@ -237,6 +241,32 @@ describe('<ThemePicker /> multi-select', () => {
     const { container } = render(<Lobby snapshot={mixed} send={send} />);
     const pills = [...container.querySelectorAll('.section-head .pill--accent')].map((el) => el.textContent);
     expect(pills).toEqual(['Đen Vâu', 'MIN']);
+  });
+
+  it('the search box narrows the list of the current tab', async () => {
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    await item(/MIN/);
+    fireEvent.change(screen.getByRole('searchbox', { name: 'Tìm chủ đề' }), { target: { value: 'mi' } });
+    await vi.waitFor(() => expect(screen.queryByRole('button', { name: /Đen Vâu/ })).toBeNull());
+    expect(screen.getByRole('button', { name: /MIN/ })).toBeTruthy();
+    const urls = vi.mocked(fetch).mock.calls.map((c) => String(c[0]));
+    expect(urls.some((u) => u.includes('type=artist') && u.includes('q=mi'))).toBe(true);
+  });
+
+  it('the host can drop a picked theme from the header pills', () => {
+    const mixed = snapshot({ viewerId: 'h', isHost: true, theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN', parts: ['Đen Vâu', 'MIN'] } });
+    render(<Lobby snapshot={mixed} send={send} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Bỏ chọn Đen Vâu' }));
+    expect(themeCalls()).toEqual([{ type: 'theme', theme: { type: 'artist', key: 'min' } }]);
+  });
+
+  it('a lone theme pill and guest pills have no remove button', () => {
+    render(<Lobby snapshot={hostSnapshot()} send={send} />);
+    expect(screen.queryByRole('button', { name: /^Bỏ chọn/ })).toBeNull();
+    cleanup();
+    const mixed = snapshot({ theme: { type: 'mix', key: 'artist:den-vau|artist:min', label: 'Đen Vâu + MIN', parts: ['Đen Vâu', 'MIN'] } });
+    render(<Lobby snapshot={mixed} send={send} />);
+    expect(screen.queryByRole('button', { name: /^Bỏ chọn/ })).toBeNull();
   });
 
   it('the last picked theme cannot be unpicked', async () => {
