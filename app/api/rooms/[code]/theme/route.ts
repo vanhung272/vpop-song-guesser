@@ -15,4 +15,4 @@ export const PATCH = roomRoute(async (svc, code, userId, request) => {
     return badBody();
   }
   return svc.updateTheme(code, userId, { type: body.type as ThemeType, key: body.key });
-});
+}, { withSnapshot: true });

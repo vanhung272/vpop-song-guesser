@@ -20,8 +20,9 @@ const NO_STORE = { 'Cache-Control': 'no-store' };
 
 async function sessionUserId(): Promise<string | null> {
   const session = await createClient();
-  const { data, error } = await session.auth.getUser();
-  return error || !data.user ? null : data.user.id;
+  // Server-side JWT verification (see route-helpers authenticate).
+  const { data, error } = await session.auth.getClaims();
+  return error || !data?.claims?.sub ? null : data.claims.sub;
 }
 
 /** GET /api/profile -> {id, nickname, avatarSeed} | 404 PROFILE_NOT_FOUND | 401 UNAUTHENTICATED */

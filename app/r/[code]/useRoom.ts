@@ -55,6 +55,14 @@ export function useRoom(code: string, { enabled = true }: { enabled?: boolean } 
   const again = useRef(false);
   const base = `/api/rooms/${code}`;
 
+  /** Keeps the newest snapshot; responses can arrive out of order, so never go back a version. */
+  const accept = useCallback((next: RoomSnapshot) => {
+    if (next.version < versionRef.current) return;
+    versionRef.current = next.version;
+    snapshotRef.current = next;
+    setSnapshot(next);
+  }, []);
+
   const refetch = useCallback(async () => {
     // Coalesce: while a fetch is running, remember to fetch once more when it ends.
     if (inFlight.current) {
@@ -67,12 +75,7 @@ export function useRoom(code: string, { enabled = true }: { enabled?: boolean } 
         again.current = false;
         const res = await apiFetch<RoomSnapshot>(base);
         if (res.ok) {
-          // Responses can arrive out of order: never go back to an older version.
-          if (res.data.version >= versionRef.current) {
-            versionRef.current = res.data.version;
-            snapshotRef.current = res.data;
-            setSnapshot(res.data);
-          }
+          accept(res.data);
           setError(null);
         } else if (res.error !== 'NETWORK') {
           setError(res.error);
@@ -81,17 +84,22 @@ export function useRoom(code: string, { enabled = true }: { enabled?: boolean } 
     } finally {
       inFlight.current = false;
     }
-  }, [base]);
+  }, [base, accept]);
 
   const send = useCallback(
     async (cmd: RoomCommand): Promise<SendResult> => {
       const { path, method, body } = request(cmd);
-      const res = await apiFetch<{ version?: number }>(`${base}/${path}`, { method, body });
+      const res = await apiFetch<{ version?: number; snapshot?: RoomSnapshot }>(`${base}/${path}`, {
+        method,
+        body,
+      });
       if (!res.ok) return { ok: false, error: res.error };
-      if (typeof res.data?.version === 'number' && res.data.version > versionRef.current) void refetch();
+      // Most commands answer with the caller's new snapshot: show it now, no second round trip.
+      if (res.data?.snapshot) accept(res.data.snapshot);
+      else if (typeof res.data?.version === 'number' && res.data.version > versionRef.current) void refetch();
       return { ok: true };
     },
-    [base, refetch],
+    [base, refetch, accept],
   );
 
   // Realtime subscription + initial load (SUBSCRIBED fires again after a reconnect).

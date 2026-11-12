@@ -9,4 +9,4 @@ export const PATCH = roomRoute(async (svc, code, userId, request) => {
   const body = await readJson(request);
   if (!isPlainObject(body)) return badBody();
   return svc.updateSettings(code, userId, body as Partial<RoomSettings>);
-});
+}, { withSnapshot: true });

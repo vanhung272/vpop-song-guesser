@@ -7,7 +7,9 @@ let stored: { id: string; nickname: string; avatar_seed: string } | null;
 let selectError: { message: string } | null;
 
 vi.mock('@/lib/supabase/server', () => ({
-  createClient: async () => ({ auth: { getUser: async () => ({ data: { user }, error: null }) } }),
+  createClient: async () => ({
+    auth: { getClaims: async () => ({ data: user ? { claims: { sub: user.id } } : null, error: null }) },
+  }),
 }));
 vi.mock('@/lib/supabase/admin', () => ({
   createAdminClient: () => ({

@@ -6,14 +6,16 @@ let answerImpl: (code: string, playerId: string, answerId: string) => Promise<un
 let answerCalls: unknown[][];
 let nowMs: number;
 let serviceClock: { now(): number } | null;
+let snapshotImpl: (code: string, playerId: string) => Promise<unknown>;
 
 vi.mock('@/lib/rooms/clock', () => ({ systemClock: { now: () => nowMs } }));
 vi.mock('@/lib/supabase/server', () => ({
   createClient: async () => ({
     auth: {
-      getUser: async () => {
-        nowMs += 400; // auth round trips take time
-        return { data: { user }, error: null };
+      // The session JWT is verified on the server (no Auth round trip for asymmetric keys).
+      getClaims: async () => {
+        nowMs += 400; // auth can still take time (e.g. first JWKS fetch)
+        return { data: user ? { claims: { sub: user.id } } : null, error: null };
       },
     },
   }),
@@ -37,6 +39,7 @@ vi.mock('@/lib/rooms/room-service', () => ({
       answerCalls.push([code, playerId, answerId]);
       return answerImpl(code, playerId, answerId);
     },
+    getSnapshot: (code: string, playerId: string) => snapshotImpl(code, playerId),
   }),
 }));
 
@@ -59,14 +62,22 @@ beforeEach(() => {
   nowMs = 10_000;
   serviceClock = null;
   answerImpl = async () => ({ ok: true, data: { version: 9 } });
+  snapshotImpl = async (code, playerId) => ({ ok: true, data: { code, viewerId: playerId, version: 9 } });
 });
 
 describe('POST /api/rooms/:code/answer', () => {
   it('passes code, session user and answerId to the service', async () => {
     const res = await call('12345', { answerId: 'abc' });
     expect(res.status).toBe(200);
-    expect(await res.json()).toEqual({ version: 9 });
+    expect(await res.json()).toEqual({ version: 9, snapshot: { code: '12345', viewerId: 'user-1', version: 9 } });
     expect(answerCalls).toEqual([['12345', 'user-1', 'abc']]);
+  });
+
+  it('still answers when the follow-up snapshot fails (the client then refetches)', async () => {
+    snapshotImpl = async () => ({ ok: false, status: 404, error: 'ROOM_NOT_FOUND' });
+    const res = await call('12345', { answerId: 'abc' });
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ version: 9 });
   });
 
   it('scores the answer at request receive time, before authentication round trips', async () => {

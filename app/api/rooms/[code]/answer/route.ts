@@ -7,4 +7,4 @@ export const POST = roomRoute(async (svc, code, userId, request) => {
     return badBody();
   }
   return svc.answer(code, userId, body.answerId);
-}, { atReceiveTime: true });
+}, { atReceiveTime: true, withSnapshot: true });

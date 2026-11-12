@@ -52,6 +52,13 @@ beforeEach(() => {
       serverVersion = 9;
       return new Response(JSON.stringify({ version: 9, changed: true }), { status: 200 });
     }
+    if (url === '/api/rooms/12345/theme') {
+      serverVersion = 12;
+      return new Response(
+        JSON.stringify({ version: 12, changed: true, snapshot: { code: '12345', version: 12, isMember: true, tag: 'from-command' } }),
+        { status: 200 },
+      );
+    }
     if (url === '/api/rooms/12345/join') {
       return new Response(JSON.stringify({ error: 'ROOM_FULL' }), { status: 409 });
     }
@@ -122,6 +129,19 @@ describe('useRoom', () => {
     expect(res).toEqual({ ok: true });
     expect(fetchMock).toHaveBeenCalledWith('/api/rooms/12345/start', expect.objectContaining({ method: 'POST' }));
     await vi.waitFor(() => expect(result.current.snapshot?.version).toBe(9));
+  });
+
+  it('send uses the snapshot returned with the command: one round trip, no refetch', async () => {
+    const { result } = await mountRoom();
+    const gets = snapshotGets();
+    let res: unknown;
+    await act(async () => {
+      res = await result.current.send({ type: 'theme', theme: { type: 'genre', key: 'Pop' } });
+    });
+    expect(res).toEqual({ ok: true });
+    // Applied by the time send resolves, so the caller sees the new state right away.
+    expect(result.current.snapshot).toMatchObject({ version: 12, tag: 'from-command' });
+    expect(snapshotGets()).toBe(gets);
   });
 
   it('send returns the error code of a rejected command', async () => {
