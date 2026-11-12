@@ -258,6 +258,33 @@ describe('Answer', () => {
     expect(r.state.currentRound).toEqual({ idx: 0, answeredPlayerIds: ['a'] });
   });
 
+  it('reveals at once when every online player of the round has answered', () => {
+    let s = inQuestion(); // h, a, b, all online; deadline at t=20000
+    s = ok(apply(s, answer('h'), 10000)).state;
+    s = ok(apply(s, answer('a'), 11000)).state;
+    expect(s.phase).toBe('question');
+    const r = ok(apply(s, answer('b'), 12000));
+    expect(r.state.phase).toBe('reveal');
+    expect(r.state.phaseEndsAt).toBe(12000 + REVEAL_MS);
+    expect(r.state.currentRound).toEqual({ idx: 0, answeredPlayerIds: ['h', 'a', 'b'] });
+    expect(r.effects.map((e) => e.type)).toEqual(['RecordAnswer', 'AddScore']); // b still scored
+  });
+
+  it('does not wait for offline players, spectators or players who left', () => {
+    const s = inQuestion(2);
+    const room: RoomState = {
+      ...s,
+      players: [
+        ...s.players.map((p) => (p.id === 'b' ? { ...p, lastSeenAt: 12000 - OFFLINE_AFTER_MS - 1 } : p)),
+        player('late', 900, { joinedRound: 3, lastSeenAt: 11000 }),
+        player('gone', 900, { leftAt: 950, lastSeenAt: 950 }),
+      ],
+    };
+    const afterH = ok(apply(room, answer('h'), 11000)).state;
+    expect(afterH.phase).toBe('question');
+    expect(ok(apply(afterH, answer('a'), 12000)).state.phase).toBe('reveal');
+  });
+
   it('second Answer by the same player is ALREADY_ANSWERED', () => {
     const r = ok(apply(inQuestion(), answer('a'), 10000));
     expect(err(apply(r.state, answer('a'), 11000))).toBe('ALREADY_ANSWERED');

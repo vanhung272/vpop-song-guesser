@@ -327,10 +327,17 @@ function answer(
     state.phaseEndsAt - nowMs,
     state.settings.timeLimitMs,
   );
-  const next: RoomState = {
+  const nowAnswered = [...answered, cmd.playerId];
+  let next: RoomState = {
     ...withPlayer(state, cmd.playerId, (p) => ({ ...p, score: p.score + points })),
-    currentRound: { idx: state.roundIdx, answeredPlayerIds: [...answered, cmd.playerId] },
+    currentRound: { idx: state.roundIdx, answeredPlayerIds: nowAnswered },
   };
+  // Everyone who can answer this round has: reveal now instead of waiting out the timer.
+  // Offline players (no heartbeat for OFFLINE_AFTER_MS) and late joiners do not hold the round up.
+  const waitingFor = next.players.filter(
+    (p) => isOnline(p, nowMs) && p.joinedRound <= state.roundIdx && !nowAnswered.includes(p.id),
+  );
+  if (waitingFor.length === 0) next = advancePhase(next, nowMs).state;
   return changed(next, [
     {
       type: 'RecordAnswer',

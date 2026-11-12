@@ -453,7 +453,8 @@ describe('room service (local Supabase)', () => {
 
   it('answer timing uses server clock: remaining time comes from deadline_at minus server receive time', async () => {
     const svc = service();
-    const code = await roomInQuestion(svc, 2);
+    // A third member who never answers keeps the round open (no early reveal) for the checks below.
+    const code = await roomInQuestion(svc, 3);
     const room = await roomRow(code);
     const { data: rnd } = await db
       .from('room_rounds')
@@ -489,11 +490,11 @@ describe('room service (local Supabase)', () => {
 
     // answering twice / after the deadline / with a bad id
     expect(await svc.answer(code, users[0], wrong.answerId)).toMatchObject({ status: 409, error: 'ALREADY_ANSWERED' });
-    expect(await svc.answer(code, users[2], wrong.answerId)).toMatchObject({ status: 403, error: 'NOT_IN_ROOM' });
+    expect(await svc.answer(code, users[5], wrong.answerId)).toMatchObject({ status: 403, error: 'NOT_IN_ROOM' });
     now = deadline + 1;
-    ok(await svc.join(code, users[2])); // late joiner (after the deadline but before tick)
-    expect(await svc.answer(code, users[2], 'not-a-choice')).toMatchObject({ status: 400, error: 'INVALID_ANSWER' });
-    expect(await svc.answer(code, users[2], wrong.answerId)).toMatchObject({ status: 409, error: 'TOO_LATE' });
+    ok(await svc.join(code, users[5])); // late joiner (after the deadline but before tick)
+    expect(await svc.answer(code, users[5], 'not-a-choice')).toMatchObject({ status: 400, error: 'INVALID_ANSWER' });
+    expect(await svc.answer(code, users[5], wrong.answerId)).toMatchObject({ status: 409, error: 'TOO_LATE' });
   });
 
   it('concurrent answers from different players (all 10 at once) are all recorded', async () => {
@@ -516,9 +517,11 @@ describe('room service (local Supabase)', () => {
       .eq('idx', 0);
     expect(answers).toHaveLength(MAX_PLAYERS);
     expect((await roomRow(code)).version).toBe(before.version + MAX_PLAYERS);
+    // Everyone answered, so the last answer revealed the round without waiting for the timer.
     const live = ok(await svc.getSnapshot(code, users[0]));
+    expect(live.phase).toBe('reveal');
+    expect(live.phaseEndsAt).toBeLessThan(Date.parse(before.phase_ends_at!));
     expect(live.round!.answeredCount).toBe(MAX_PLAYERS);
-    expect(live.round!.livePercentages).toBeNull(); // percentages wait for the reveal
   }, 30_000);
 
   it('snapshot from the service in question phase has no correct answer; reveal has it', async () => {
