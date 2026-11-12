@@ -21,7 +21,7 @@ interface Props {
 
 const QUESTION_LABEL = { title: 'Bài gì?', artist: 'Ai hát?' } as const;
 /** On the reveal the clip fades out over this long instead of playing on. */
-const REVEAL_FADE_MS = 1500;
+const REVEAL_FADE_MS = 2000;
 
 /** Re-renders every `intervalMs` so time-based UI (timer, countdown) stays current. */
 function useTicker(intervalMs = 200): void {

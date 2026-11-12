@@ -167,6 +167,7 @@ describe('<G />', () => {
     });
     rerender(<G snapshot={revealed} send={send} />);
     expect(audio.fadeOut).toHaveBeenCalledTimes(1);
+    expect(audio.fadeOut).toHaveBeenCalledWith(2000); // fades over 2 s
   });
 
   it('shows no percentages while the question is open', () => {
