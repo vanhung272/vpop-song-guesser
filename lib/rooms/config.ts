@@ -23,7 +23,7 @@ export const COUNTDOWN_MS = Math.round(3000 * SCALE);
 export const CHOICE_COUNT = 4;
 
 // [Đề xuất]
-export const PRESENT_MS = Math.round(3000 * SCALE);
+export const PRESENT_MS = Math.round(1500 * SCALE);
 export const REVEAL_MS = Math.round(6000 * SCALE);
 export const HEARTBEAT_MS = 15000;
 export const OFFLINE_AFTER_MS = 45000;

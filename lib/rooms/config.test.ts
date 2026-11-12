@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { timingScale } from './config';
+import { COUNTDOWN_MS, PRESENT_MS, REVEAL_MS, timingScale } from './config';
 
 describe('timingScale (R11a)', () => {
   it('is 1 by default', () => {
@@ -21,5 +21,11 @@ describe('timingScale (R11a)', () => {
     for (const v of ['0', '-1', '2', 'abc', '']) {
       expect(timingScale({ E2E: '1', ROOM_TIMING_SCALE: v })).toBe(1);
     }
+  });
+});
+
+describe('phase durations (unscaled in unit tests)', () => {
+  it('countdown 3 s, round card 1.5 s, reveal 6 s', () => {
+    expect([COUNTDOWN_MS, PRESENT_MS, REVEAL_MS]).toEqual([3000, 1500, 6000]);
   });
 });
