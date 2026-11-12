@@ -1,0 +1,1728 @@
+{
+  "version": 1,
+  "collection": "show-anh-tai",
+  "note": "Songs performed on Anh Trai Vượt Ngàn Chông Gai (2024, 2026) (episode and stage albums; live concert albums, remixes and repeated titles left out). Every song here is filed under the \"Anh Tài\" genre, also where it appears in an artist review file (re-run --reclassify after editing). Set include=false to leave a song out, then run the importer on this file.",
+  "kept": [
+    {
+      "include": true,
+      "itunesTrackId": 1756853390,
+      "title": "Hè Muộn",
+      "artist": "Bằng Kiều",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/57/6b/1c576be6-4916-c8a0-435c-a9646797fe85/mzaf_101424607461737760.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/0b/b9/440bb969-c92c-5272-4a79-cd2e19c58a20/24UMGIM76556.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853351,
+      "title": "Đường Vào Tim Em",
+      "artist": "Kay Trần",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/4d/65/714d6545-7286-e73e-7968-d0f5204fdfd4/mzaf_10023625268076407779.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/b6/83/3fb6831f-c79d-9255-c67a-4b0738eaa503/24UMGIM76557.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853225,
+      "title": "Bởi Vì Anh Yêu Em",
+      "artist": "Phan Đinh Tùng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/72/c4/a472c49a-1976-4c15-4947-636784f41438/mzaf_3407342156134921888.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/16/92/6b/16926bb9-605e-2437-5d30-1d0a8a35b11d/24UMGIM76558.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853391,
+      "title": "Quả Táo Vàng",
+      "artist": "Tuấn Hưng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/73/d5/7073d586-42b1-75a3-4452-6dede411674b/mzaf_16380832636893566300.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/0b/b9/440bb969-c92c-5272-4a79-cd2e19c58a20/24UMGIM76556.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853352,
+      "title": "Quên Lối Về",
+      "artist": "Cường Seven",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/94/0f/35940f4c-800e-522a-951b-3e2dbc3e35d8/mzaf_10916098798879326701.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/b6/83/3fb6831f-c79d-9255-c67a-4b0738eaa503/24UMGIM76557.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853226,
+      "title": "Chiếc Khăn Gió Ấm",
+      "artist": "Thanh Trung",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/aa/77/e2/aa77e291-4069-e531-a21e-c81c8c5c4396/mzaf_15867248762623463964.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/16/92/6b/16926bb9-605e-2437-5d30-1d0a8a35b11d/24UMGIM76558.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853393,
+      "title": "Tình Đất",
+      "artist": "Tự Long",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/7e/82/367e82ba-30b1-3ab5-efd6-f96ceb8d7635/mzaf_490899278134657564.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/0b/b9/440bb969-c92c-5272-4a79-cd2e19c58a20/24UMGIM76556.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853354,
+      "title": "Diamond - Lil Wuyn",
+      "artist": "Kiên Ứng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c7/59/14/c75914e3-5716-13fd-326c-1119267151b9/mzaf_15320816419202656178.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/b6/83/3fb6831f-c79d-9255-c67a-4b0738eaa503/24UMGIM76557.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853227,
+      "title": "Trống Vắng",
+      "artist": "Đỗ Hoàng Hiệp",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/bd/02/28bd0226-34f3-b243-9491-f8c38e455891/mzaf_18358334010337681170.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/16/92/6b/16926bb9-605e-2437-5d30-1d0a8a35b11d/24UMGIM76558.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853394,
+      "title": "Niềm Tin Chiến Thắng",
+      "artist": "Hong Son",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/94/e9/ae94e981-fbf4-7d45-0c97-5849cc8c375d/mzaf_11895308586338691545.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/0b/b9/440bb969-c92c-5272-4a79-cd2e19c58a20/24UMGIM76556.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853355,
+      "title": "Giá Như",
+      "artist": "SOOBIN",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/16/ec/23/16ec2330-c844-8b54-7182-73f99e528361/mzaf_16564144526401418064.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/b6/83/3fb6831f-c79d-9255-c67a-4b0738eaa503/24UMGIM76557.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853228,
+      "title": "Đón Bình Minh",
+      "artist": "Phan Đinh Tùng, Thanh Trung & Đỗ Hoàng Hiệp",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/12/d9/db12d9db-92fa-dd3b-9efb-f55f2dbece1d/mzaf_986127618128615886.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/16/92/6b/16926bb9-605e-2437-5d30-1d0a8a35b11d/24UMGIM76558.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853395,
+      "title": "Mashup Quê Hương Tuổi Thơ Tôi & Nếu Có Yêu Tôi",
+      "artist": "Tự Long, Bằng Kiều, Tuấn Hưng & Hong Son",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/b6/14/f2b614fc-e661-d03d-6263-1ca6d825b695/mzaf_12270190828692600629.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/0b/b9/440bb969-c92c-5272-4a79-cd2e19c58a20/24UMGIM76556.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853356,
+      "title": "Nước Hoa",
+      "artist": "Kay Trần, Cường Seven, Kiên Ứng & SOOBIN",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/b9/2e/8cb92e1f-d6c7-41f5-88c5-12564992f63b/mzaf_8207040489243553390.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/b6/83/3fb6831f-c79d-9255-c67a-4b0738eaa503/24UMGIM76557.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853294,
+      "title": "Think Of You",
+      "artist": "Duy Khánh 周周",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/25/09/aa/2509aa3b-1358-dc00-3370-1c5223a7f20f/mzaf_6621646819100559816.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/15/a7/fe15a7e0-004f-e423-c0db-d36b49d07059/24UMGIM76563.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866370,
+      "title": "Lặng",
+      "artist": "Rhymastic",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1f/46/7c/1f467c91-0b18-5152-39de-56b144aa30c3/mzaf_5732734304765043551.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/16/e4/a016e4d8-60a6-dab3-3372-30f1de244a4f/24UMGIM76561.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866850,
+      "title": "Thật Xa Thật Gần",
+      "artist": "S.T Sơn Thạch",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/90/d4/97/90d49781-4bb5-e2cb-bb99-3a0cba8f1762/mzaf_11955564948904859367.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/0b/5e/a70b5ec8-0cca-7af1-834c-81e78fcff30f/24UMGIM76559.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867052,
+      "title": "Cô Bé Mùa Đông X Thương Thương Thương, Yêu Yêu Yêu",
+      "artist": "Đăng Khôi",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/70/f4/75/70f47512-56bd-39be-8bed-a90b10d86cb0/mzaf_4826588717301741686.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/81/6c/35816c9f-cab3-0f8e-e382-e4e8ed5c1030/24UMGIM76560.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867164,
+      "title": "Cánh Hoa Vụt Mất",
+      "artist": "Trương Thế Vinh",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b1/54/bb/b154bb6e-e655-506a-6cba-b38d5a763fe5/mzaf_8204500361381029981.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/10/56/42/105642ce-3224-0371-f2e2-be302d741942/24UMGIM76562.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853295,
+      "title": "Đừng Chờ Anh Nữa",
+      "artist": "Tăng Phúc",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/ff/7e/a0ff7ef0-990c-9aef-3fd3-d3a3cfd5efca/mzaf_6932846246666780896.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/15/a7/fe15a7e0-004f-e423-c0db-d36b49d07059/24UMGIM76563.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866372,
+      "title": "Tặng Anh Cho Cô Ấy",
+      "artist": "Dinh Tien Dat",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/35/c5/ff35c502-ac72-9e4d-1bbb-7ef66e3b2e1c/mzaf_5763002565928698343.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/16/e4/a016e4d8-60a6-dab3-3372-30f1de244a4f/24UMGIM76561.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866851,
+      "title": "Cánh Hồng Phai",
+      "artist": "BB Trần",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/55/5e/17/555e1700-2f89-d722-5d13-f2d6d00a9457/mzaf_4748822185222570137.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/0b/5e/a70b5ec8-0cca-7af1-834c-81e78fcff30f/24UMGIM76559.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867053,
+      "title": "Biết Làm Sao Để Quên Em X Không Cần Phải Hứa Đâu Em",
+      "artist": "Pham Khanh Hung",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3a/ff/b6/3affb60b-46c5-6509-174d-a1c6617fd51f/mzaf_3041339897724472755.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/81/6c/35816c9f-cab3-0f8e-e382-e4e8ed5c1030/24UMGIM76560.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867165,
+      "title": "Từng Yêu",
+      "artist": "Lien Binh Phat",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1e/9d/f3/1e9df363-6b80-e99f-bb90-dd2f31e3ac5a/mzaf_16072772998484312599.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/10/56/42/105642ce-3224-0371-f2e2-be302d741942/24UMGIM76562.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853296,
+      "title": "Chúa Tể",
+      "artist": "Bùi Công Nam",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/57/ff/1c57ff6c-8f17-88ca-d516-b9a8fe58d7da/mzaf_4028142154472525572.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/15/a7/fe15a7e0-004f-e423-c0db-d36b49d07059/24UMGIM76563.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866373,
+      "title": "Quay Lại Giường Đi Em",
+      "artist": "Hà Lê",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/7b/78/ef7b7842-1b33-2b99-8a76-195acbbfa141/mzaf_9203982038493358056.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/16/e4/a016e4d8-60a6-dab3-3372-30f1de244a4f/24UMGIM76561.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866853,
+      "title": "Rise Up",
+      "artist": "(S)TRONG",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ce/86/0b/ce860b5c-debf-e194-ce14-d78a3937d925/mzaf_8938042435489755306.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/0b/5e/a70b5ec8-0cca-7af1-834c-81e78fcff30f/24UMGIM76559.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867054,
+      "title": "Sóng Tình",
+      "artist": "Quốc Thiên, Đăng Khôi & Pham Khanh Hung",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f5/95/aa/f595aaf5-124e-5a22-81f7-d0c6619ed133/mzaf_17110301069620122107.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/81/6c/35816c9f-cab3-0f8e-e382-e4e8ed5c1030/24UMGIM76560.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867166,
+      "title": "Vì Anh Thương Em (Vô Cùng)",
+      "artist": "Duy Nhật",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/c9/e3/9fc9e32c-7ba4-6513-2177-4e0b05be9eee/mzaf_454609748388962882.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/10/56/42/105642ce-3224-0371-f2e2-be302d741942/24UMGIM76562.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853297,
+      "title": "Cô Gái M52 X Anh Thanh Niên",
+      "artist": "HuyR",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/2d/52/9b2d5250-6eda-a7f1-2a7f-05bf170c152d/mzaf_12137129441399159508.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/15/a7/fe15a7e0-004f-e423-c0db-d36b49d07059/24UMGIM76563.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866374,
+      "title": "Men Cry",
+      "artist": "Binz",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6c/eb/29/6ceb29a8-29fc-0adf-0ad2-052e9ef867eb/mzaf_10781827840379128430.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/16/e4/a016e4d8-60a6-dab3-3372-30f1de244a4f/24UMGIM76561.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866854,
+      "title": "Tình Anh Bán Chiếu",
+      "artist": "Thanh Duy",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/87/66/1c876689-bf98-a6be-1f86-26f8021d4d63/mzaf_5825432337989648721.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/0b/5e/a70b5ec8-0cca-7af1-834c-81e78fcff30f/24UMGIM76559.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867168,
+      "title": "Tình Em Là Đại Dương",
+      "artist": "Tiến Luật",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/84/07/bb84072a-52b6-1c58-354b-516633d1b217/mzaf_16727696999604878375.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/10/56/42/105642ce-3224-0371-f2e2-be302d741942/24UMGIM76562.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853298,
+      "title": "Tân Thời",
+      "artist": "Jun Phạm",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/04/ba/db04ba47-bc3c-8ae3-2d0d-7f0a745b649a/mzaf_8677637179857998639.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/15/a7/fe15a7e0-004f-e423-c0db-d36b49d07059/24UMGIM76563.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866375,
+      "title": "Khiến Nó Ngầu",
+      "artist": "Rhymastic, Dinh Tien Dat, Hà Lê & Binz",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/bf/b3/4fbfb336-17c9-3f19-3977-c82fe3e31f18/mzaf_9179365148543778613.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/16/e4/a016e4d8-60a6-dab3-3372-30f1de244a4f/24UMGIM76561.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866855,
+      "title": "Yêu Em Dại Khờ",
+      "artist": "Neko Lê",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/a7/af/eca7af8a-8bee-f068-74b1-9489186ec84f/mzaf_11581409894904225918.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/0b/5e/a70b5ec8-0cca-7af1-834c-81e78fcff30f/24UMGIM76559.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756867170,
+      "title": "Cho Em X Đôi Mắt",
+      "artist": "Thien Minh",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/04/f8/b004f86f-50f9-12b2-9780-ffc178c60e68/mzaf_18211895040975351568.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/10/56/42/105642ce-3224-0371-f2e2-be302d741942/24UMGIM76562.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756853539,
+      "title": "Anh Nhà Ở Đâu Thế",
+      "artist": "Duy Khánh 周周, Tăng Phúc, Bùi Công Nam, HuyR & Jun Phạm",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/ca/6d/1aca6d39-8199-d6a3-56e4-62e2864f71a8/mzaf_427063297611748282.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/15/a7/fe15a7e0-004f-e423-c0db-d36b49d07059/24UMGIM76563.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1756866856,
+      "title": "Người Lạ Ơi",
+      "artist": "S.T Sơn Thạch, BB Trần, (S)TRONG, Thanh Duy & Neko Lê",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/37/13/ef37133f-23db-e517-eace-84bb91f945df/mzaf_5557175767668676739.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/0b/5e/a70b5ec8-0cca-7af1-834c-81e78fcff30f/24UMGIM76559.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758284176,
+      "title": "Một Lần Dang Dở x Đi Qua Cầu Vồng",
+      "artist": "Thanh Trung, Quốc Thiên, Hà Lê, Kiên Ứng & Đỗ Hoàng Hiệp",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/63/78/456378c9-0d4a-5aa5-2ec9-83681c259b7f/mzaf_16542495967566651323.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1d/c2/bc/1dc2bc7a-8065-7f72-c212-b23be715f53c/24UMGIM79289.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758284178,
+      "title": "Vợ Người Ta x Chuyện Ba Người",
+      "artist": "Jun Phạm, BB Trần, Trương Thế Vinh, Pham Khanh Hung & HuyR",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/1b/cd/a11bcdae-392d-0356-ecdc-4821be9b46f7/mzaf_13124449050550718108.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1d/c2/bc/1dc2bc7a-8065-7f72-c212-b23be715f53c/24UMGIM79289.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758284330,
+      "title": "Trống Cơm",
+      "artist": "Cường Seven, SOOBIN & Tự Long",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3a/d6/5b/3ad65b5b-f7ea-dcf8-c39d-253a9c6de751/mzaf_10738684111406320117.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1d/c2/bc/1dc2bc7a-8065-7f72-c212-b23be715f53c/24UMGIM79289.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758284334,
+      "title": "Tỉnh Thức Sau Giấc Ngủ Đông",
+      "artist": "Bằng Kiều, Binz, Hong Son & S.T Sơn Thạch",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/3c/59/c63c598d-4999-b898-da52-0ddeff6d16d5/mzaf_12972725255098504428.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1d/c2/bc/1dc2bc7a-8065-7f72-c212-b23be715f53c/24UMGIM79289.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758284336,
+      "title": "Dịu Dàng Đến Từng Phút Giây x Bước Đến Bên Em",
+      "artist": "Phan Đinh Tùng, Đăng Khôi, Tăng Phúc, Neko Lê & Kay Trần",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/2f/d9/092fd921-d64a-cda5-3982-7a7b2b5aec41/mzaf_16239231476251086947.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1d/c2/bc/1dc2bc7a-8065-7f72-c212-b23be715f53c/24UMGIM79289.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1758284337,
+      "title": "Liên Khúc Áo Mùa Đông x Trở Về",
+      "artist": "Duy Khánh 周周, Thanh Duy, Bùi Công Nam & Thiên Minh",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/84/28/c0842896-3cc3-8291-b08a-08c76cc23d6c/mzaf_15190280069458489427.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1d/c2/bc/1dc2bc7a-8065-7f72-c212-b23be715f53c/24UMGIM79289.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760522536,
+      "title": "Giàu Sang",
+      "artist": "Kay Trần, Tăng Phúc, Lien Binh Phat, Phan Đinh Tùng, Duy Nhật & Strong",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/48/4b/24484bb2-c2e9-3448-f950-93e46d395791/mzaf_530401760052819748.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c2/a3/ef/c2a3ef39-ff1e-0081-b73d-9315c6f9f912/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760522538,
+      "title": "Dẫu Có Lỗi Lầm",
+      "artist": "Bằng Kiều, Binz, Bùi Công Nam, Duy Khánh 周周, Thanh Duy & Thiên Minh",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4b/b9/5e/4bb95e83-fe82-a79e-40aa-fba526ad0873/mzaf_6027115006057961562.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c2/a3/ef/c2a3ef39-ff1e-0081-b73d-9315c6f9f912/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760522719,
+      "title": "Tình Yêu Ngủ Quên",
+      "artist": "Jun Phạm, Trương Thế Vinh, Kiên Ứng, Hà Lê, BB Trần & HuyR",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/06/55/0b065539-2b20-eebf-750e-bfaf71d5b9db/mzaf_3952588237267728240.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c2/a3/ef/c2a3ef39-ff1e-0081-b73d-9315c6f9f912/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1760522720,
+      "title": "Chợt Nghe Bước Em Về",
+      "artist": "Tự Long, Cường Seven, Quốc Thiên, SOOBIN, Rhymastic & Dinh Tien Dat",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/fc/39/54fc393c-e21b-4d39-bf03-c74797c614ca/mzaf_8859474911694208044.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c2/a3/ef/c2a3ef39-ff1e-0081-b73d-9315c6f9f912/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761774595,
+      "title": "Những Kẻ Mộng Mơ",
+      "artist": "SOOBIN, Tiến Luật, Tuấn Hưng, Quốc Thiên, Rhymastic & Tự Long",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/21/27/af/2127af28-61ed-6cde-1869-24aca52e31a6/mzaf_8351786609615373157.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c7/1d/c0/c71dc00f-b56c-f832-acbe-af7e14f05708/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761774596,
+      "title": "Bao Tiền Một Mớ Bình Yên?",
+      "artist": "Đăng Khôi, Phan Đinh Tùng, Neko Lê, Tăng Phúc & Kay Trần",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/68/dc/d868dc4f-394e-2694-6e95-2c82dbe198d9/mzaf_11206195498355216261.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c7/1d/c0/c71dc00f-b56c-f832-acbe-af7e14f05708/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761774598,
+      "title": "Gót Hồng x Cao Gót",
+      "artist": "Hong Son, Duy Khánh 周周, Bùi Công Nam, S.T Sơn Thạch, Thiên Minh & Thanh Duy",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/26/41/302641d7-5d4f-389d-7a26-2107905c7f11/mzaf_107779537952447138.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c7/1d/c0/c71dc00f-b56c-f832-acbe-af7e14f05708/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1761774606,
+      "title": "Nếu Một Mai Tôi Bay Lên Trời",
+      "artist": "Jun Phạm, Pham Khanh Hung, Đỗ Hoàng Hiệp & Thanh Trung",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3a/2e/74/3a2e7498-4560-29e1-7ef3-9b24ee5da2e4/mzaf_14794425683002908723.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c7/1d/c0/c71dc00f-b56c-f832-acbe-af7e14f05708/24UMGIM84019.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764247922,
+      "title": "Thu Hoài",
+      "artist": "Quốc Thiên, Hà Lê, Tiến Luật, Rhymastic & Dinh Tien Dat",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/67/3f/23673f77-747f-c51c-e73d-60147ed81818/mzaf_13877161339833129013.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764247924,
+      "title": "Là Anh Đó",
+      "artist": "Đăng Khôi, SOOBIN, Thanh Duy, (S)TRONG & Tuấn Hưng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/fa/21/f0fa21b5-08d9-a545-06b1-28de04bcc9aa/mzaf_1361983401190749237.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764247925,
+      "title": "Anh Sẽ Nhớ Mãi",
+      "artist": "Bùi Công Nam, Tăng Phúc, Neko Lê, BB Trần & Thiên Minh",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/66/1b/70661bb9-628b-e26b-2662-ca9a92d7f0be/mzaf_15760892847698398402.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764247930,
+      "title": "Buông",
+      "artist": "Bằng Kiều, Trương Thế Vinh, Pham Khanh Hung, Đỗ Hoàng Hiệp & Phan Đinh Tùng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3c/3d/69/3c3d6970-6f3a-99f6-8d20-8d99c9a43521/mzaf_11407570523077982168.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764247935,
+      "title": "Triệu Lý Do",
+      "artist": "Trương Thế Vinh, Đỗ Hoàng Hiệp, Duy Nhật, Hong Son & Pham Khanh Hung",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/10/6b/cf106beb-9029-5482-2117-41a19e2ed29c/mzaf_13386138972353575654.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764247938,
+      "title": "Đường Xa Ướt Mưa x Đừng Qua Lối Đó",
+      "artist": "Jun Phạm, Cường Seven, Thanh Duy, Tự Long & SOOBIN",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1d/8b/7c/1d8b7c8d-297c-2d45-343d-a934e6877952/mzaf_2245477208292520693.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764248239,
+      "title": "Trái Đất Ôm Mặt Trời",
+      "artist": "Quốc Thiên, Hà Lê, Binz, Dinh Tien Dat & Duy Khánh 周周",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/c3/5b/afc35be6-9c4d-3416-cbb4-7ff8c3939326/mzaf_6416873161342854081.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1764248240,
+      "title": "Let Me Feel Your Love Tonight",
+      "artist": "Kay Trần, Lien Binh Phat, Thiên Minh, BB Trần & S.T Sơn Thạch",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/28/6e/62286ef0-775f-386d-60f5-57552823d7ba/mzaf_10244618092406343162.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/ab/9d/fbab9da2-d1e3-4bd2-f30a-6caae35c390d/24UMGIM91048.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879952,
+      "title": "Sao Cũng Được",
+      "artist": "Tiến Luật",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/b8/ca/bdb8ca34-55cf-0c0f-f3ac-886de5633e5a/mzaf_11587784484195475857.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879954,
+      "title": "Thuận Nước Đẩy Thuyền",
+      "artist": "S.T Sơn Thạch",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/a9/fb/48a9fb16-bf14-7284-0ed9-4ef421e19f2d/mzaf_6626566891693146898.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879955,
+      "title": "Vượt Lên Mọi Thử Thách",
+      "artist": "Tuấn Hưng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/50/a5/10/50a51092-3f4c-dfb4-9a57-2c13ba7746c3/mzaf_9311726491857348567.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879938,
+      "title": "Đêm Cô Đơn",
+      "artist": "Rhymastic & Quốc Thiên",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/e3/72/15e372c6-9c2d-ffd4-111a-9b0392332c68/mzaf_12440167546731528867.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879939,
+      "title": "Gọi Anh",
+      "artist": "Pham Khanh Hung & Đỗ Hoàng Hiệp",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1e/3a/b7/1e3ab7d1-6473-0d5c-3a0e-d3dd1f3747eb/mzaf_120274385872796229.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879940,
+      "title": "Chuyện Nhà Bé Thôi, Con Đừng Về",
+      "artist": "Kay Trần & Bùi Công Nam",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bf/72/42/bf724200-6fc4-3934-4b35-bcd4f05938da/mzaf_13390065542750562808.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879942,
+      "title": "12H03",
+      "artist": "Cường Seven & (S)TRONG",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6a/c0/f8/6ac0f8f3-47b9-5a24-997b-3816699df11f/mzaf_10315542860343706262.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879945,
+      "title": "Chiếc Khăn Piêu (feat. Đinh Nhật Minh Flute)",
+      "artist": "Cường Seven, SOOBIN, Tự Long, Tuấn Hưng, Jun Phạm, Thanh Duy, (S)TRONG & Đăng Khôi",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/60/1d/e4/601de4e0-e84b-d1d7-cdbd-3a1649e8cdaf/mzaf_1506213810449802108.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879947,
+      "title": "Mưa Trên Phố Huế (feat. NSƯT Anh Tấn, Hồ Nga & Mặt Trời Đỏ)",
+      "artist": "S.T Sơn Thạch, BB Trần, Bùi Công Nam, Lien Binh Phat, Thiên Minh, Kay Trần, Tăng Phúc & Neko Lê",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/23/ab/3723ab1f-419e-d4b7-0382-bb53ec522d63/mzaf_12998200322294900555.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879949,
+      "title": "Dạ Cổ Hoài Lang (feat. NSND Hữu Quốc)",
+      "artist": "Trương Thế Vinh, Bằng Kiều, Phan Đinh Tùng, Duy Nhật, Đỗ Hoàng Hiệp & Pham Khanh Hung",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/32/f8/7e32f8c7-9485-b203-b0d1-248fbec7c5f5/mzaf_12434186595830979108.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1766879950,
+      "title": "Đào Liễu (feat. NSND Thu Huyền)",
+      "artist": "Dinh Tien Dat, Tiến Luật, Rhymastic, Quốc Thiên, Binz & Duy Khánh 周周",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/7f/2b/5c7f2b1c-4470-f2ec-1cf5-1c066a03eeae/mzaf_7403057869513230554.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/79/fd/af79fd12-a0ae-ffe9-c5d2-30c7dfb2a8e8/24UMGIM94547.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772041825,
+      "title": "RƠI",
+      "artist": "Trương Thế Vinh, BB Trần, S.T Sơn Thạch, Kay Trần, Strong & Jun Phạm",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3c/7c/c2/3c7cc2c9-e6ab-b8a5-468a-53dca4f40221/mzaf_14365634597642147628.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bd/97/0a/bd970ae1-c939-86d8-2960-0a8640a880ec/24UM1IM05905.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772041186,
+      "title": "NÉT",
+      "artist": "Cường Seven, Phan Đinh Tùng, Bằng Kiều, Jun Phạm, Tự Long, Trương Thế Vinh, Tuấn Hưng, SOOBIN, S.T Sơn Thạch, Kay Trần, BB Trần, Strong & Kiên Ứng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/e4/1d/45e41df4-d45b-cba2-5862-dc3fc535a783/mzaf_3866911814251156657.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bd/97/0a/bd970ae1-c939-86d8-2960-0a8640a880ec/24UM1IM05905.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1772041820,
+      "title": "ĐỎ QUÊN ĐI",
+      "artist": "Dinh Tien Dat, Binz, Tiến Luật, Lien Binh Phat, Bùi Công Nam, Rhymastic, Hà Lê, Thiên Minh, Tăng Phúc, Quốc Thiên, Thanh Duy, Duy Khánh 周周 & Đỗ Hoàng Hiệp",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/ba/6f/35ba6fe3-4793-c970-4213-75664f8d8142/mzaf_13225137191161258140.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bd/97/0a/bd970ae1-c939-86d8-2960-0a8640a880ec/24UM1IM05905.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1774693198,
+      "title": "GENE x CÓ KHÔNG GIỮ MẤT ĐỪNG TÌM",
+      "artist": "Cường Seven, Jun Phạm, S.T Sơn Thạch, BB Trần, Tự Long & Bằng Kiều",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f3/a4/43/f3a443f1-da44-5531-d396-6ccb5052c9cd/mzaf_16086095888796851813.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/2a/96/7d2a9605-aeea-158e-0f1d-74907a794763/24UM1IM13253.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1774693199,
+      "title": "BỐNG BỐNG BANG BANG",
+      "artist": "Duy Khánh 周周, Thanh Duy, Quốc Thiên, Tiến Luật & Dinh Tien Dat",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/48/b9/1d48b96d-83cb-aa53-7d2d-d88d650c4f93/mzaf_1037054571444240785.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/2a/96/7d2a9605-aeea-158e-0f1d-74907a794763/24UM1IM13253.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1774693200,
+      "title": "SUPERSTAR",
+      "artist": "SOOBIN, (S)TRONG, Kay Trần, Kiên Ứng, Phan Đinh Tùng & Tuấn Hưng",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9c/ab/5e/9cab5e31-e967-b081-20e9-91cda9fa71b1/mzaf_4447667088839358281.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/2a/96/7d2a9605-aeea-158e-0f1d-74907a794763/24UM1IM13253.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1774693203,
+      "title": "QUÁ LÀ TRÔI",
+      "artist": "Binz, Rhymastic, Bùi Công Nam, Đỗ Hoàng Hiệp, Thiên Minh & Hà Lê",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/27/5a/5e275ab7-d044-9946-bdf0-e1a1a4192677/mzaf_12501683776247875065.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/2a/96/7d2a9605-aeea-158e-0f1d-74907a794763/24UM1IM13253.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1774693195,
+      "title": "CHIẾC LÁ TÌNH YÊU",
+      "artist": "Lien Binh Phat, Trương Thế Vinh, Hong Son, Đăng Khôi & Pham Khanh Hung",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6a/28/af/6a28afab-888c-170f-e044-0e3754bdb5c8/mzaf_4511164171866843154.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/2a/96/7d2a9605-aeea-158e-0f1d-74907a794763/24UM1IM13253.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1774693196,
+      "title": "EM CÒN NHỚ ANH KHÔNG",
+      "artist": "Thanh Trung, Neko Lê, Duy Nhật, HuyR & Tăng Phúc",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f9/0a/d1/f90ad1ec-76b0-127c-72e4-75e60c9510fc/mzaf_15672329392471588140.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/2a/96/7d2a9605-aeea-158e-0f1d-74907a794763/24UM1IM13253.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1774693197,
+      "title": "HỎA CA x TRÁI ĐẤT TRÒN",
+      "artist": "Bằng Kiều, Tuấn Hưng, Tự Long, Hong Son, Phan Đinh Tùng, Đăng Khôi, SOOBIN, Binz, Quốc Thiên, Tăng Phúc, S.T Sơn Thạch, Rhymastic, Dinh Tien Dat, Hà Lê, Thanh Duy, Pham Khanh Hung, (S)TRONG, Trương Thế Vinh, Kay Trần, Cường Seven, Kiên Ứng, Lien Binh Phat, Duy Nhật, Tiến Luật, Thiên Minh, Jun Phạm, Bùi Công Nam, Neko Lê, HuyR, Duy Khánh 周周, BB Trần, Thanh Trung & Đỗ Hoàng Hiệp",
+      "genre": "Anh Tài",
+      "releaseYear": 2024,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/97/c6/7e/97c67e5c-c371-86ab-6913-49b0ffc184fe/mzaf_2964889891143090484.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/2a/96/7d2a9605-aeea-158e-0f1d-74907a794763/24UM1IM13253.rgb.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6781213802,
+      "title": "Hỏa Tâm (feat. Đại Nghĩa, Dũng DT, Nguyen Van Chung, Thai VG, Tùng Mint, Thanh Duy, Thỏ (Da LAB), Trịnh Thăng Bình, Hoàng Tôn, JGKiD (Da LAB), Jun Phạm, Đinh Mạnh Ninh, Vương Anh Tú, Will, Mew Amazing, Neko Lê, BB Trần, Hoàng Rob, Thuận Nguyễn, Huỳnh Lập, Đông Hùng, Toki Thành Thỏ, CHARLES., Duy Khánh 周周, Cheng, K.O, Hoàng Dũng, Lê Xuân Tiền, OSAD, 14 Casper, Hồ Đông Quan, Phùng Minh Cương, Thái Lê Minh Hiếu & Hà An Huy)",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/11/a8/2911a80e-ca58-661f-81cc-7283619e4ad8/mzaf_10899772467580411337.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9a/06/c0/9a06c0d2-03f9-3059-48b1-57302598f774/ticket.fncwvxgy.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782954265,
+      "title": "Xe Đạp",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Đinh Mạnh Ninh",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/12/c5/0612c54c-f9b3-acc8-0d07-2aa9ed09299e/mzaf_6740073582197615059.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/60/87/306087b3-2fe7-2b8c-cf5b-46c095ba207d/196874536117.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955771,
+      "title": "Rắc Rối",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Hồ Đông Quan",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/ba/a8/ffbaa807-b1e9-dcbe-d342-949ace695a58/mzaf_9480928147614188754.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/c3/47/f4c3476d-10f1-0818-7b2c-eddd752ed485/196874535912.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955497,
+      "title": "Ừ Thì",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Mew Amazing",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/b7/0b/47b70bfa-ae31-303f-49a4-11bac5bcbf9f/mzaf_4878272284031503387.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/01/bc/2b/01bc2b49-cab2-07b4-6e42-d432a9b895f4/196874535684.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955955,
+      "title": "Bản Tình Ca Không Tên",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & THỎ (Da LAB)",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/14/39/e3/1439e31b-afcc-d200-6caf-3c128b8e81f4/mzaf_14187237787613991292.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ef/bf/38/efbf38a9-e978-38a9-f66c-223316794208/196874536001.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782954266,
+      "title": "Em Tôi Đôi Mươi",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & JGKiD (Da LAB)",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/2e/93/2d2e93bc-0308-260f-a709-832d8bbb4c51/mzaf_17420241947738771486.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/60/87/306087b3-2fe7-2b8c-cf5b-46c095ba207d/196874536117.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955777,
+      "title": "Xin Hãy Rời Xa",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & K.O",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/b6/9d/42b69d45-1e88-11d9-79d4-be86be5bfa50/mzaf_11559513583779113036.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/c3/47/f4c3476d-10f1-0818-7b2c-eddd752ed485/196874535912.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955500,
+      "title": "Làm Được Nha!",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Huỳnh Lập",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/89/8e/c3898e10-3ab7-2817-4a14-e75ed3d07751/mzaf_5114220020089315838.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/01/bc/2b/01bc2b49-cab2-07b4-6e42-d432a9b895f4/196874535684.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955957,
+      "title": "‘ NHỨC TIỀM THỨC |",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/3c/31/b03c3118-61e4-2643-b71b-69d56eb64e9b/mzaf_2165452401663520856.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ef/bf/38/efbf38a9-e978-38a9-f66c-223316794208/196874536001.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782954267,
+      "title": "Cho Anh Xin Số Nhà",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Dũng DT",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/c4/b6/37c4b6ca-cef8-b229-b01e-dde3659c138d/mzaf_16282966375572269814.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/60/87/306087b3-2fe7-2b8c-cf5b-46c095ba207d/196874536117.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955779,
+      "title": "Hãy Khóc Trên Vai Anh",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Toki Thành Thỏ",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fd/f2/77/fdf27791-1cc6-ac39-ce66-f2fea3ac66ae/mzaf_5548268546454718735.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/c3/47/f4c3476d-10f1-0818-7b2c-eddd752ed485/196874535912.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955501,
+      "title": "KIM",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Đại Nghĩa",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/c3/d1/0dc3d14c-9e93-8dd3-f496-e8e36e6e11ef/mzaf_10215926751922329316.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/01/bc/2b/01bc2b49-cab2-07b4-6e42-d432a9b895f4/196874535684.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955958,
+      "title": "Người Ấy",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Trịnh Thăng Bình",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/eb/d3/b2ebd3c2-4444-377a-5035-6b8dca32272b/mzaf_2192901911589072095.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ef/bf/38/efbf38a9-e978-38a9-f66c-223316794208/196874536001.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782954269,
+      "title": "Vào Hạ",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Dũng DT, JGKiD (Da LAB) & Đinh Mạnh Ninh",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/37/08/c63708a0-6103-7869-38f7-7b3df9982536/mzaf_15015064825378770564.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/60/87/306087b3-2fe7-2b8c-cf5b-46c095ba207d/196874536117.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782956070,
+      "title": "Điều Gì x Nơi Ta Chờ Em",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Will",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/60/e0/87/60e08759-ae74-b5d2-6c49-9474f93a7a97/mzaf_17119530819188363362.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/c3/47/f4c3476d-10f1-0818-7b2c-eddd752ed485/196874535912.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955502,
+      "title": "Mắt Nai Cha Cha Cha",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đại Nghĩa, Mew Amazing & Huỳnh Lập",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/1c/a3/111ca3bf-008a-977c-39ce-7b0f45784fe3/mzaf_10177460420669855138.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/01/bc/2b/01bc2b49-cab2-07b4-6e42-d432a9b895f4/196874535684.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782955959,
+      "title": "Vỡ Tan",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, THỎ (Da LAB), Trịnh Thăng Bình & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fc/b5/3d/fcb53daf-a5ab-8676-05f2-c4f542632d87/mzaf_11717867330077695388.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ef/bf/38/efbf38a9-e978-38a9-f66c-223316794208/196874536001.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6782956076,
+      "title": "Chạm Làn Môi Em",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Will, K.O, Toki Thành Thỏ & Hồ Đông Quan",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c2/81/b1/c281b140-eb55-6db6-90fd-e212ba355e46/mzaf_8575163047190100838.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/c3/47/f4c3476d-10f1-0818-7b2c-eddd752ed485/196874535912.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785941109,
+      "title": "KEEP ME IN LOVE",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Thuận Nguyễn",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/5e/da/715eda51-6453-9138-9741-8b33819ca7ea/mzaf_15225768744325765355.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/75/67/8a/75678afb-9d12-a8d6-b040-654d6658d266/196874564462.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785943721,
+      "title": "Chờ Người Nơi Ấy",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Phùng Minh Cương",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0b/ee/7c/0bee7cea-4e10-20cd-d588-b21193a6802b/mzaf_2824153350098004467.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/e0/59/d4e05923-a0b5-0c53-62b9-2eaa51a00776/196874564479.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785944115,
+      "title": "Dear",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & CHARLES.",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/72/29/c5/7229c5cf-f73b-b09e-7f0c-5005a2c8b68c/mzaf_11413807923850513623.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/f3/45/5df34543-3e95-cc5c-1d6e-39c3268b59a8/196874564493.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785944206,
+      "title": "Đang Yêu",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & OSAD",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/40/b8/a8/40b8a80a-8a5a-ee36-bdd2-c1b636c46fb7/mzaf_2798309845761967350.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ca/2f/6c/ca2f6c82-cd1c-549a-ea0d-97d96f3fc7f9/196874564486.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785945797,
+      "title": "Do U See",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Neko Lê",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3e/25/aa/3e25aa92-3e66-f684-b518-f9a082a718e1/mzaf_7370168916846221446.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/47/55/e74755da-85d9-d8b4-9a18-9c51c670a133/196874564523.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947603,
+      "title": "'một đời' x 'Người Tốt Nhất Cho Em'",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & 14 Casper",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/19/a0/b519a04d-7d81-bfed-4b90-45aa9406b5c6/mzaf_11867946499349273790.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/81/bb/0681bbc4-98b6-1285-8200-10220330e358/196874564530.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785941110,
+      "title": "Cause I Love You",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Tùng Mint",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/fe/e6/5dfee69c-816c-b702-c5b7-1a0019885088/mzaf_4746022555021512146.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/75/67/8a/75678afb-9d12-a8d6-b040-654d6658d266/196874564462.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785943844,
+      "title": "Những Bàn Chân Lặng Lẽ",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Đông Hùng",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/5c/ed/ac5cedc2-7195-9738-72e2-11f2f2a3b08e/mzaf_11927748508286182002.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/e0/59/d4e05923-a0b5-0c53-62b9-2eaa51a00776/196874564479.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785944117,
+      "title": "My Calm",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Thai VG",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/58/50/e75850e0-b4cb-88bf-f34c-05de6e51c9c2/mzaf_8030541975710015783.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/f3/45/5df34543-3e95-cc5c-1d6e-39c3268b59a8/196874564493.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785944209,
+      "title": "Rơi Vào Tình Yêu",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/9e/b9/c29eb927-c111-ddec-ecc9-c16339856c76/mzaf_11558063552686567469.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ca/2f/6c/ca2f6c82-cd1c-549a-ea0d-97d96f3fc7f9/196874564486.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947191,
+      "title": "Không Lối Thoát",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & BB Trần",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/ea/46/2cea461a-b547-0be3-5458-45218e78485d/mzaf_8413230065503019702.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/47/55/e74755da-85d9-d8b4-9a18-9c51c670a133/196874564523.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947605,
+      "title": "Anh Say Rồi",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Nguyen Van Chung",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/2a/ca/082acac2-8b98-b4e8-37f3-1e4832a15ea8/mzaf_8381259013928627245.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/81/bb/0681bbc4-98b6-1285-8200-10220330e358/196874564530.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785941111,
+      "title": "ĐƯỜNG CONG",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Lê Xuân Tiền",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/ae/55/32ae552b-72be-3452-bcac-b90065820dd6/mzaf_11184029545752441823.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/75/67/8a/75678afb-9d12-a8d6-b040-654d6658d266/196874564462.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785943845,
+      "title": "Hoa Đào",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Hoàng Rob",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/d4/9b/bcd49bc2-108d-f2e4-1954-5f3066ac290b/mzaf_7298846796288815339.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/e0/59/d4e05923-a0b5-0c53-62b9-2eaa51a00776/196874564479.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785944118,
+      "title": "Dạt Vào Tim Em",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, CHARLES., Thai VG & Cheng",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/64/c3/1c/64c31c67-de5f-2d4a-176f-e634081cd4ca/mzaf_18222647518046315067.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/f3/45/5df34543-3e95-cc5c-1d6e-39c3268b59a8/196874564493.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785944210,
+      "title": "Em Không Quay Về",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Hoàng Tôn",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a8/ef/b9/a8efb93d-92e9-fe1e-cd0d-50e686604336/mzaf_1371670707036191269.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ca/2f/6c/ca2f6c82-cd1c-549a-ea0d-97d96f3fc7f9/196874564486.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947192,
+      "title": "Không Vừa Ý",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Duy Khánh 周周",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/65/70/c6/6570c6c6-ca55-bb27-9c8b-fe5a0e6ae74d/mzaf_3269432942910245425.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/47/55/e74755da-85d9-d8b4-9a18-9c51c670a133/196874564523.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947666,
+      "title": "Nếu Có Thế Giới Song Song",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Vương Anh Tú",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/d6/95/b2d695a8-bec9-9754-1385-cd0d0ca7ade0/mzaf_8834585933071898983.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/81/bb/0681bbc4-98b6-1285-8200-10220330e358/196874564530.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785941113,
+      "title": "Tình Nhân Ơi!",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Tùng Mint, Thuận Nguyễn & Lê Xuân Tiền",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/a7/dc/efa7dcb9-915c-c673-c8e2-87de752d0d1b/mzaf_7889459234600967597.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/75/67/8a/75678afb-9d12-a8d6-b040-654d6658d266/196874564462.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785943846,
+      "title": "Tháng Tư Là Lời Nói Dối Của Em",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Rob, Đông Hùng & Phùng Minh Cương",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2b/62/df/2b62df33-e065-6ef2-bbdf-ef87f69bcb7d/mzaf_12263977820066860437.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/e0/59/d4e05923-a0b5-0c53-62b9-2eaa51a00776/196874564479.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785944211,
+      "title": "MOVE ON",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Tôn, OSAD & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/dc/1d/ebdc1daf-b09d-98ad-b89d-4cb1ebe0adda/mzaf_1357669323871053383.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ca/2f/6c/ca2f6c82-cd1c-549a-ea0d-97d96f3fc7f9/196874564486.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947195,
+      "title": "Tinh Tú Cầu",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Thanh Duy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0a/ca/64/0aca6419-82ac-d44d-4105-3ac60efddae4/mzaf_6745918067368379544.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/47/55/e74755da-85d9-d8b4-9a18-9c51c670a133/196874564523.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947669,
+      "title": "Nửa Thập Kỷ x Ba Mươi Cái Chớp Mắt",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Hoàng Dũng",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/8b/ed/658bedc0-5109-08b2-5906-6c126e954f75/mzaf_15223019226114630791.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/81/bb/0681bbc4-98b6-1285-8200-10220330e358/196874564530.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947196,
+      "title": "1%",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Jun Phạm",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/73/36/3f7336ba-bac8-7783-258d-46927d89a227/mzaf_18088011085835214999.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/47/55/e74755da-85d9-d8b4-9a18-9c51c670a133/196874564523.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6785947670,
+      "title": "Nàng Thơ",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Nguyen Van Chung, Vương Anh Tú, Hoàng Dũng & 14 Casper",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2b/62/89/2b628973-4e24-0472-d74e-5c51ea5f1871/mzaf_18307392828943726256.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/81/bb/0681bbc4-98b6-1285-8200-10220330e358/196874564530.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6792704243,
+      "title": "BUÔNG TAY",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, BB Trần, Thuận Nguyễn, Toki Thành Thỏ, Duy Khánh 周周 & Lê Xuân Tiền",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/ab/ac/4fabac66-f1eb-2a4f-a3d6-55b0541d0fee/mzaf_7304356441053243542.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/86/6d/85866ddb-2cad-f778-4d6f-8aa951a9d915/196874623329.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6792704244,
+      "title": "XA",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đông Hùng, K.O & 14 Casper",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/08/64/a8086467-4f5e-001e-46c6-43fda0a507bd/mzaf_18107159899455925652.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/86/6d/85866ddb-2cad-f778-4d6f-8aa951a9d915/196874623329.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6792704245,
+      "title": "QUÁ KHỨ CÒN LẠI GÌ",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đại Nghĩa, Trịnh Thăng Bình, Đinh Mạnh Ninh, Will & CHARLES.",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/b8/94/dfb89475-8c31-3eed-8cc7-5077453023bc/mzaf_9119950404293943794.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/86/6d/85866ddb-2cad-f778-4d6f-8aa951a9d915/196874623329.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6792704246,
+      "title": "NHONG NHONG NHONG",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, Huỳnh Lập & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/95/c7/fb95c719-620a-cd72-921f-5fd2639406d6/mzaf_10079616497211309642.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/86/6d/85866ddb-2cad-f778-4d6f-8aa951a9d915/196874623329.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6792704247,
+      "title": "LÝ NGỰA Ô HUẾ",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thanh Duy, Jun Phạm & Mew Amazing",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/f2/90/1ff29051-7c52-88fe-9e28-4734fcaca338/mzaf_7009618039730948036.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/86/6d/85866ddb-2cad-f778-4d6f-8aa951a9d915/196874623329.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6792704249,
+      "title": "ANH SẼ ĐẾN CÙNG CƠN MƯA",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Nguyen Van Chung, Tùng Mint, Neko Lê & Phùng Minh Cương",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8b/5b/4a/8b5b4a7e-2911-bad4-6ac5-b8c5b071d903/mzaf_18136476242828711640.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/86/6d/85866ddb-2cad-f778-4d6f-8aa951a9d915/196874623329.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6792704250,
+      "title": "NỢ EM CẢ BẦU TRỜI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, THỎ (Da LAB), Hoàng Tôn, OSAD, Hồ Đông Quan & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/70/f9/d970f9c0-5694-346c-cc79-5987f5fe58b9/mzaf_7836019886312530992.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/86/6d/85866ddb-2cad-f778-4d6f-8aa951a9d915/196874623329.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547387,
+      "title": "GIÃ TỪ DĨ VÃNG",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Đinh Mạnh Ninh",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cb/9f/2b/cb9f2b62-7c23-e7f7-61e5-078975a044ec/mzaf_8852740742724162906.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547691,
+      "title": "GIỌT NẮNG BÊN THỀM",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/d4/78/69d47896-7d2e-4572-ac00-37234e1bd00d/mzaf_181872696852924784.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547692,
+      "title": "SAO PHẢI XOẮN",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, K.O, OSAD & Hồ Đông Quan",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c1/23/74/c12374ed-0f6f-e42b-c6cd-778eac9a1450/mzaf_6251398752849901651.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547693,
+      "title": "EM CHỈ IM LẶNG",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Trịnh Thăng Bình, Thuận Nguyễn, Hà An Huy & Phùng Minh Cương",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/15/80/e7158028-f5a1-0ac8-b2c2-be104ecd60c6/mzaf_15358752618780187907.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547694,
+      "title": "ÁNH SÁNG CỦA ĐỜI TÔI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, Jun Phạm, Hoàng Rob & Hoàng Dũng",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/9b/f5/f49bf52f-a138-ca14-7d54-a60842727934/mzaf_13699366666877749311.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547695,
+      "title": "TRƯỚC KHI EM TỒN TẠI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Neko Lê, Huỳnh Lập, Cheng & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e2/e8/02/e2e802a1-e988-4d1f-b31a-a34d2e4f4e05/mzaf_17603721086475671244.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547698,
+      "title": "MỜI BUỒN SANG CHƠI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Tùng Mint, Mew Amazing, CHARLES. & Đông Hùng",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/95/38/b2/9538b228-d4ae-7d9c-3474-8c1f394cab17/mzaf_1893778808651044180.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547699,
+      "title": "NGƯỜI VỀ NƠI ĐÂU",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Tôn, THỎ (Da LAB), JGKiD (Da LAB) & Lê Xuân Tiền",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/42/61/ae/4261ae22-c11b-1b69-4145-593c692aedf2/mzaf_2167358947555476904.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547700,
+      "title": "CHIM SÁO NGÀY XƯA",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đại Nghĩa, Nguyen Van Chung, Thanh Duy & BB Trần",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/40/84/264084c6-250c-2567-7868-eda7fc0ec127/mzaf_16683972476335423672.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6800547701,
+      "title": "TAN BIẾN",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đinh Mạnh Ninh, Will, Duy Khánh 周周 & Toki Thành Thỏ",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5b/37/78/5b3778af-2891-8911-1abb-c1248efcc406/mzaf_7264092270488145639.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/df/f0/07dff0fa-1ca9-8dff-2d52-8a01ed55ff51/196874692936.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6804930391,
+      "title": "WE WIN THIS GAME!",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Toki Thành Thỏ, Cheng, K.O, Duy Khánh 周周 & Phùng Minh Cương",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/8d/24/698d24db-7725-66ce-e335-90d3d7bea6c8/mzaf_845448090446899405.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/1b/04/a21b048c-0e82-22b5-2e74-72dc573208a6/196874724804.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6804930392,
+      "title": "MỘT ĐÊM DUY NHẤT",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Tôn, Mew Amazing, Neko Lê, BB Trần & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ed/bf/40/edbf401a-e76f-eee9-cbfd-1e756824a315/mzaf_12731218876273443902.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/1b/04/a21b048c-0e82-22b5-2e74-72dc573208a6/196874724804.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6804930393,
+      "title": "NHỎ XÍU NHỎ XIU",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, JGKiD (Da LAB), Jun Phạm, Huỳnh Lập, CHARLES. & Hồ Đông Quan",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ae/53/33/ae5333fe-f431-0b30-a4f6-86e318e9e8d5/mzaf_10304886155087914325.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/1b/04/a21b048c-0e82-22b5-2e74-72dc573208a6/196874724804.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6804930394,
+      "title": "NHỮNG NĂM THÁNG ẤY",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, Nguyen Van Chung, Tùng Mint, Trịnh Thăng Bình & Đinh Mạnh Ninh",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/57/42/b4/5742b4df-5e60-bf02-6f32-8a6b55554617/mzaf_15381533954111981111.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/1b/04/a21b048c-0e82-22b5-2e74-72dc573208a6/196874724804.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6804930395,
+      "title": "CHIẾN",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thanh Duy, THỎ (Da LAB), Will, Hoàng Rob & Hoàng Dũng",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/f3/ae/54f3ae7e-af1d-5bfc-cf3d-995aab870d70/mzaf_13475092799717572236.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/1b/04/a21b048c-0e82-22b5-2e74-72dc573208a6/196874724804.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6804930396,
+      "title": "KHẮP CHỐN THIÊN HÀ",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đại Nghĩa, Thuận Nguyễn, Đông Hùng, OSAD & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/22/82/fb/2282fb16-d92a-e309-56e0-cda103d15af4/mzaf_10501562391336876668.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/1b/04/a21b048c-0e82-22b5-2e74-72dc573208a6/196874724804.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6804930607,
+      "title": "BUỒN THÌ CỨ KHÓC ĐI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Will, CHARLES. & K.O",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/d8/59/20d859fa-8f4c-9614-dc0a-d37c75a3ecb1/mzaf_3588828167618432788.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/1b/04/a21b048c-0e82-22b5-2e74-72dc573208a6/196874724804.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6810051646,
+      "title": "ĐI TÌM LỜI RU NỮ THẦN MẶT TRỜI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, Thanh Duy, Trịnh Thăng Bình, Đinh Mạnh Ninh & Hoàng Rob",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/3b/87/513b872f-f249-7c00-7761-a1e9a301eaf8/mzaf_7079036840315959277.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/19/17/3a1917ee-26e6-2c81-0b79-aa104813619c/196874758601.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6810051651,
+      "title": "VÙNG XÁM",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, JGKiD (Da LAB), Hoàng Tôn, CHARLES., Hồ Đông Quan & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5a/07/80/5a078057-5728-1f8c-fa8e-d89cf9f52761/mzaf_16741996349057546517.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/19/17/3a1917ee-26e6-2c81-0b79-aa104813619c/196874758601.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6810051654,
+      "title": "GIỌT BUỒN ĐỂ LẠI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đông Hùng, Thuận Nguyễn, Toki Thành Thỏ, Cheng & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c7/8a/05/c78a05ec-feef-a473-29f3-e81ef9e375ab/mzaf_10906508113686654609.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/19/17/3a1917ee-26e6-2c81-0b79-aa104813619c/196874758601.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6810051656,
+      "title": "TÍCH TỊCH TÌNH TANG",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Dũng, Hoàng Rob, Will, THỎ (Da LAB), Tùng Mint & Tốp Then Suối Ngàn",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/f7/11/cbf71154-2c1f-3b2c-c75f-7617522f38ac/mzaf_52976975927904983.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/19/17/3a1917ee-26e6-2c81-0b79-aa104813619c/196874758601.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6810051657,
+      "title": "TIẾNG RU CỘI NGUỒN",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thuận Nguyễn, Đông Hùng, Toki Thành Thỏ, Cheng, K.O, Duy Khánh 周周, OSAD & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dc/cf/10/dccf1068-2fd5-157b-b526-1b118516e147/mzaf_784118758460855372.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/19/17/3a1917ee-26e6-2c81-0b79-aa104813619c/196874758601.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6810051658,
+      "title": "TRÊN ĐẤT MÌNH",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Tôn, JGKiD (Da LAB), Jun Phạm, BB Trần, Mew Amazing, Huỳnh Lập, CHARLES., Hồ Đông Quan & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/e5/7a/3de57a40-b595-9c59-691c-f087c838293f/mzaf_3705931409269873199.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/19/17/3a1917ee-26e6-2c81-0b79-aa104813619c/196874758601.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6810052026,
+      "title": "ĐẠI KHẢI HOÀN",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Tôn, Will & OSAD",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/74/8e/db748edd-2afe-bf83-74c1-417579926889/mzaf_16892573653854800385.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/19/17/3a1917ee-26e6-2c81-0b79-aa104813619c/196874758601.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6814403404,
+      "title": "CHUYỆN CHÀNG CÔ ĐƠN",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thanh Duy, THỎ (Da LAB), Will, K.O, Cheng & Duy Khánh 周周",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/01/b1/1d01b190-916a-0236-c7eb-ec86dd722b78/mzaf_948583250372887011.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/c5/b2/3fc5b239-5b5e-dbf1-f878-d9ea7bc957b0/196874806715.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6814403598,
+      "title": "LỖI TẠI MƯA",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Tôn, Trịnh Thăng Bình, Đinh Mạnh Ninh, BB Trần, Mew Amazing & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/83/30/64/833064a6-cba6-5214-92a2-105b3196861f/mzaf_17699638339034136452.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/c5/b2/3fc5b239-5b5e-dbf1-f878-d9ea7bc957b0/196874806715.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6814403600,
+      "title": "CẢM ƠN TÌNH YÊU TÔI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Dũng, OSAD, Hà An Huy, Đông Hùng, Hoàng Rob & Thuận Nguyễn",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a6/08/24/a608245a-55ca-e09d-54e5-c0d9b25cb0ef/mzaf_5815128524072114646.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/c5/b2/3fc5b239-5b5e-dbf1-f878-d9ea7bc957b0/196874806715.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6814403602,
+      "title": "XINH",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, Jun Phạm, JGKiD (Da LAB), Huỳnh Lập, CHARLES. & Hồ Đông Quan",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/50/ae/c4/50aec414-88eb-693f-a7fd-e633b6472f21/mzaf_11656884683233009018.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/c5/b2/3fc5b239-5b5e-dbf1-f878-d9ea7bc957b0/196874806715.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6814403603,
+      "title": "CÓ KHI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thanh Duy, THỎ (Da LAB), Will, K.O, Cheng & Duy Khánh 周周",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8f/cb/e4/8fcbe410-d963-2acd-1f2d-1a83e9970d0a/mzaf_11822050858199641676.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/c5/b2/3fc5b239-5b5e-dbf1-f878-d9ea7bc957b0/196874806715.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6814403605,
+      "title": "NHƯ NGÀY ĐẦU",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, Jun Phạm, JGKiD (Da LAB), Huỳnh Lập, CHARLES. & Hồ Đông Quan",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/a0/6d/d9a06d64-412a-8c07-abaa-ab64bdc8ed03/mzaf_17710643932339138733.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/c5/b2/3fc5b239-5b5e-dbf1-f878-d9ea7bc957b0/196874806715.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6814403608,
+      "title": "VÀ TÔI CŨNG YÊU EM",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Hoàng Rob, Thuận Nguyễn, Đông Hùng, OSAD, Hoàng Dũng & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/dc/25/73dc2511-9f65-e39a-f2b9-7340b739a821/mzaf_17531629156419577280.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/c5/b2/3fc5b239-5b5e-dbf1-f878-d9ea7bc957b0/196874806715.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729205,
+      "title": "TRỐN TÌM",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Huỳnh Lập & OSAD",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/08/1b/b5081b8b-983f-50a5-6f2f-509c3d287f36/mzaf_18407118898298101019.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729209,
+      "title": "BẦU TRỜI MỚI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thanh Duy & Mew Amazing",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/67/20/f4672089-dead-c212-bc82-b0cc1f01da07/mzaf_14925103261861607908.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729212,
+      "title": "EM TÔI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thanh Duy, THỎ (Da LAB), Hoàng Tôn, Đinh Mạnh Ninh, Cheng & 14 Casper",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/ed/2d/45ed2d08-f3ef-93f0-f1b8-264a42b20697/mzaf_7993502202502587865.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729214,
+      "title": "CƠM NHÀ",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, JGKiD (Da LAB), Đông Hùng, CHARLES. & Toki Thành Thỏ",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/17/72/d9177214-f67d-d101-6fed-ebf8b6328eee/mzaf_4862357213744249294.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729221,
+      "title": "60 NĂM CUỘC ĐỜI",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Trịnh Thăng Bình, Mew Amazing, BB Trần, Duy Khánh 周周, K.O & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/e3/50/abe350ad-b27b-d08f-cb42-22d9168f91fb/mzaf_13440215024009157583.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729439,
+      "title": "TÓC NGẮN",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Jun Phạm, Hoàng Rob, Huỳnh Lập, Hoàng Dũng, OSAD, Hồ Đông Quan & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2e/03/85/2e03855e-c623-5876-05c3-39209c908a47/mzaf_10620136949090171536.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729441,
+      "title": "NGẦU ĐÉT",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thanh Duy, THỎ (Da LAB), Trịnh Thăng Bình, Hoàng Tôn, Đinh Mạnh Ninh, Mew Amazing, BB Trần, Duy Khánh 周周, K.O, Cheng, 14 Casper & Thái Lê Minh Hiếu",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/fa/39/bbfa3941-34ed-9945-1e8b-630d44815f52/mzaf_17187889584661446339.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729444,
+      "title": "THĂNG HOA",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Thai VG, Jun Phạm, JGKiD (Da LAB), Hoàng Rob, Đông Hùng, CHARLES., Huỳnh Lập, Toki Thành Thỏ, Hoàng Dũng, OSAD, Hồ Đông Quan & Hà An Huy",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/43/11/cd4311fb-b6d7-0540-f062-e82a4e512fdb/mzaf_6447330808088573905.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 6819729448,
+      "title": "MÙA HÈ RỰC RỠ NĂM ẤY",
+      "artist": "Anh Trai Vượt Ngàn Chông Gai, Đại Nghĩa, Nguyen Van Chung, Tùng Mint, Will, Vương Anh Tú, Neko Lê, Thuận Nguyễn, Lê Xuân Tiền & Phùng Minh Cương",
+      "genre": "Anh Tài",
+      "releaseYear": 2026,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/3f/0e/f83f0ef1-7030-19ac-2e78-9be8ceec2fe0/mzaf_17444059122244690791.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/ea/42/2eea422a-a664-e582-484e-4d01864a3273/196874857847.jpg/600x600bb.jpg"
+    }
+  ],
+  "dropped": []
+}

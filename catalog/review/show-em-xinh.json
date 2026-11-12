@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "collection": "show-em-xinh",
+  "note": "Songs performed on Em Xinh \"Say Hi\" (2025) (episode and stage albums; live concert albums, remixes and repeated titles left out). Every song here is filed under the \"Em Xinh\" genre, also where it appears in an artist review file (re-run --reclassify after editing). Set include=false to leave a song out, then run the importer on this file.",
+  "kept": [
+    {
+      "include": true,
+      "itunesTrackId": 1817378628,
+      "title": "THE REAL AURA",
+      "artist": "Bích Phương, Saabirose, Ánh Sáng AZA, A1J, LYHAN, Yeolan, Chi Xê, MAIQUINN, Miu Lê, Phương Ly, EM XINH \"SAY HI\", Liu Grace, Tien Tien, Bảo Anh, Phương Mỹ Chi, Juky San, Orange, LyLy, 52Hz, Lâm Bảo Anh, Lâm Bảo Ngọc, Vũ Thảo My, Hoàng Duyên, Châu Bùi, Quỳnh Anh Shyn, Pháo, LAMOON, Ngô Lan Hương, Muộii, Mỹ Mỹ, Han Sara & DANMY",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/d8/bc/99d8bcda-0914-6938-6dbc-9b7783ffef30/mzaf_10404940087826284139.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/11/da/5d/11da5d21-735c-ffc4-e83e-24708555f722/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1817588751,
+      "title": "ĐÃ XINH LẠI CÒN THÔNG MINH",
+      "artist": "Bích Phương, Miu Lê, Phương Ly, Orange, Bảo Anh, LyLy, Hoàng Duyên, Chi Xê, Vũ Thảo My, Ngô Lan Hương, Mỹ Mỹ, LAMOON, Quỳnh Anh Shyn, Saabirose & Liu Grace",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/fc/aa/e9fcaa0b-852d-aad0-e1a2-5e6cbc2673be/mzaf_14919295244553127135.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ce/9b/45/ce9b459c-f6fb-290b-cbe7-a5469779e5b9/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1817588755,
+      "title": "AAA",
+      "artist": "Tien Tien, Phương Mỹ Chi, Juky San, Pháo, Lâm Bảo Ngọc, 52Hz, Han Sara, Danmy, Muộii, Ánh Sáng AZA, A1J, LYHAN, MAIQUINN, Châu Bùi & Yeolan",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f7/00/55/f7005553-41d2-4871-75c5-67a752a894f7/mzaf_1729711019292291180.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ce/9b/45/ce9b459c-f6fb-290b-cbe7-a5469779e5b9/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1819430731,
+      "title": "EM XINH EM BLING",
+      "artist": "Pháo, Phương Ly, Juky San, Chi Xê & Hoàng Duyên",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/95/1b/bd951ba7-eb86-b234-fd9a-bac6a048c908/mzaf_4146308129505871405.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/ec/2f/c5ec2f28-7f38-d7f7-4651-7c1d7dc5c9fa/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1819430825,
+      "title": "ĐỒNG DAO XINH GÁI",
+      "artist": "Quỳnh Anh Shyn, Miu Lê, Orange, Vũ Thảo My & Mỹ Mỹ",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c9/29/51/c9295195-d5f1-f8f9-1e27-a00a92e8cd3f/mzaf_10052202675054443653.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/ec/2f/c5ec2f28-7f38-d7f7-4651-7c1d7dc5c9fa/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1819430827,
+      "title": "EASIER",
+      "artist": "MAIQUINN, Ngô Lan Hương, Muộii, A1J & Saabirose",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/d2/b2/c2d2b2c4-0f3a-5982-52f5-836aba51d3e6/mzaf_15035893319143546963.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/ec/2f/c5ec2f28-7f38-d7f7-4651-7c1d7dc5c9fa/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1819430830,
+      "title": "TỪNG",
+      "artist": "LyLy, Lâm Bảo Ngọc, Liu Grace, Han Sara & Danmy",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/71/d6/5371d646-b97d-dcde-2ce8-605f6475917f/mzaf_15617264985886794980.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/ec/2f/c5ec2f28-7f38-d7f7-4651-7c1d7dc5c9fa/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1819430847,
+      "title": "RUN",
+      "artist": "Châu Bùi, 52Hz, LYHAN, Yeolan & Ánh Sáng AZA",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/e5/bc/65e5bc87-546a-d1ff-d43d-c563ad043f0f/mzaf_4698705288349594126.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/ec/2f/c5ec2f28-7f38-d7f7-4651-7c1d7dc5c9fa/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1819430850,
+      "title": "CẦM KỲ THI HOẠ",
+      "artist": "Bích Phương, Tien Tien, Bảo Anh, Phương Mỹ Chi & LAMOON",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/20/d8/5c/20d85c83-f8eb-ce87-f661-9dcc56618488/mzaf_14009308211792132328.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/ec/2f/c5ec2f28-7f38-d7f7-4651-7c1d7dc5c9fa/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1821826083,
+      "title": "RED FLAG",
+      "artist": "Ngô Lan Hương, JSOL, Yeolan & LAMOON",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/43/0d/c7/430dc76d-0827-17d0-8c90-06f9229b48f8/mzaf_16081497363029846773.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9c/cf/0f/9ccf0f5f-397f-3755-58f7-77c48e469454/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1821826087,
+      "title": "WE BELONG TOGETHER",
+      "artist": "Miu Lê, Juky San, Dương Domic & LyLy",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/f7/eb/bbf7ebd4-1f6d-096a-0b24-4542b06e72a4/mzaf_16477715417509349400.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9c/cf/0f/9ccf0f5f-397f-3755-58f7-77c48e469454/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1821826092,
+      "title": "HỀ",
+      "artist": "Phương Mỹ Chi, Phương Ly, Pháo, Chi Xê & WEAN",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/86/d4/3b/86d43bb3-eaa0-2430-7b9c-8a4dc6fa3400/mzaf_1178427898669494018.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9c/cf/0f/9ccf0f5f-397f-3755-58f7-77c48e469454/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1821826093,
+      "title": "KHÔNG ĐAU NỮA RỒI",
+      "artist": "52Hz, Orange, Châu Bùi, Mỹ Mỹ & Pháp Kiều",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/7c/88/a77c88b5-16f3-579d-46d1-4aa3645222c3/mzaf_1301763196021610490.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9c/cf/0f/9ccf0f5f-397f-3755-58f7-77c48e469454/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1823001501,
+      "title": "ĐIỀU EM LUÔN MONG MUỐN",
+      "artist": "Tien Tien, Juky San, 桃子 A1J, Hùng Huỳnh & Vũ Thảo My",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/79/a8/fa79a887-a8f0-1531-c39d-cba287ef348f/mzaf_7677069831241093623.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f8/27/03/f82703d2-8cd4-516a-a2d0-9612806a32bd/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1823001507,
+      "title": "GÃ SĂN CÁ",
+      "artist": "Lâm Bảo Ngọc, Quỳnh Anh Shyn, MAIQUINN, Saabirose & Quang Hùng MasterD",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/32/e3/ef32e326-f71c-0954-742a-992c367622e2/mzaf_12459429274594089968.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f8/27/03/f82703d2-8cd4-516a-a2d0-9612806a32bd/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1823001510,
+      "title": "PERFECT",
+      "artist": "Liu Grace, Bảo Anh, Ánh Sáng AZA & Negav",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/24/48/102448c7-0a58-5839-ec37-603b4f7a4557/mzaf_4757540702484746360.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f8/27/03/f82703d2-8cd4-516a-a2d0-9612806a32bd/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1823001514,
+      "title": "EM CHỈ LÀ",
+      "artist": "Bích Phương, Muộii, LYHAN, Hoàng Duyên & Tăng Duy Tân",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/31/91/753191e1-1f64-ae74-cda9-bcadc6b01d35/mzaf_7743126810393948796.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f8/27/03/f82703d2-8cd4-516a-a2d0-9612806a32bd/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1825842400,
+      "title": "SO ĐẬM",
+      "artist": "Phương Ly, Vũ Thảo My, Châu Bùi & Muộii",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/35/7d/ec357d47-1393-b156-d248-89e865c533a7/mzaf_14731775010747934229.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/8c/4f/7c8c4f54-cc05-a233-90c1-72f22215ae62/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1825842556,
+      "title": "LỜI THẬT LÒNG KHI SAY",
+      "artist": "Miu Lê, Bích Phương, Juky San & Quỳnh Anh Shyn",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/e1/d0/38e1d08b-7ea9-1884-8ca0-ba57bdff66e8/mzaf_73533341903821741.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/8c/4f/7c8c4f54-cc05-a233-90c1-72f22215ae62/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1825842560,
+      "title": "I'LL BE THERE",
+      "artist": "Orange, Phương Mỹ Chi, Han Sara & LAMOON",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e6/e0/26/e6e02660-5bad-bf6e-f401-c96e80d62c01/mzaf_4227774396643092849.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/8c/4f/7c8c4f54-cc05-a233-90c1-72f22215ae62/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1825842563,
+      "title": "EM KHÔNG CÓ ƯA",
+      "artist": "Tien Tien, Bảo Anh, Ánh Sáng AZA & Saabirose",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e6/a9/3a/e6a93a37-db4d-7921-f504-374882f98800/mzaf_16040022273764055418.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/8c/4f/7c8c4f54-cc05-a233-90c1-72f22215ae62/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1827397992,
+      "title": "QUẢ CHÍN QUÁ",
+      "artist": "52Hz, Lâm Bảo Ngọc, Pháo & A1J",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/e4/cf/76e4cfb8-285f-519c-20e0-0c35c9e8a36a/mzaf_10463166347745501590.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/3e/a3/073ea30c-5e00-43a7-30dd-4bb108a1b87c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1827398012,
+      "title": "NOT MY FAULT",
+      "artist": "Mỹ Mỹ, LYHAN, Liu Grace & MAIQUINN",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f5/0b/6f/f50b6f4c-5669-cddc-4262-6ff66f43cfae/mzaf_13074803018030846543.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/3e/a3/073ea30c-5e00-43a7-30dd-4bb108a1b87c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1830449911,
+      "title": "CHẲNG PHẢI ANH ĐÂU",
+      "artist": "Phương Ly, Vũ Thảo My, Orange, Châu Bùi & 52Hz",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/7a/92/fe7a92cf-c0bc-3bb2-d62e-12c321e8057d/mzaf_12906430308500307305.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/3e/e8/f83ee867-2fbe-13eb-c097-65c79820deeb/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1830449913,
+      "title": "BẮC THANG LÊN HỎI ÔNG TRỜI",
+      "artist": "Bích Phương, Juky San, LAMOON, Mỹ Mỹ & Quỳnh Anh Shyn",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/22/a4/c6/22a4c6fb-3bd9-3637-d437-d973489dd04a/mzaf_16828435635875316067.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/3e/e8/f83ee867-2fbe-13eb-c097-65c79820deeb/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1830449916,
+      "title": "LẮM LÚC",
+      "artist": "LYHAN, Tien Tien, Miu Lê, MAIQUINN & Bảo Anh",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/94/24/37/942437b9-0112-0904-ee4e-29dea8dc1a51/mzaf_8301944551098476307.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/3e/e8/f83ee867-2fbe-13eb-c097-65c79820deeb/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1830449921,
+      "title": "BAD LIAR",
+      "artist": "Lâm Bảo Ngọc, Phương Mỹ Chi, Pháo, Saabirose & Liu Grace",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6b/97/d3/6b97d341-fd56-9f06-4668-36878fb4994b/mzaf_13826870594499448822.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/3e/e8/f83ee867-2fbe-13eb-c097-65c79820deeb/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1830449923,
+      "title": "DUYÊN",
+      "artist": "Lâm Bảo Ngọc, Phương Mỹ Chi, Pháo, Saabirose & Liu Grace",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/ef/0a/87ef0a7c-fa31-205c-7ef0-0fee49b720d3/mzaf_13391303938778610919.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/3e/e8/f83ee867-2fbe-13eb-c097-65c79820deeb/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1830449925,
+      "title": "CÁCH (YÊU ĐÚNG) ĐIỆU",
+      "artist": "Bích Phương, Juky San, LAMOON, Mỹ Mỹ & Quỳnh Anh Shyn",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/72/09/3872091c-1b56-87e6-ea96-fb57e0085038/mzaf_18110156447405144045.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/3e/e8/f83ee867-2fbe-13eb-c097-65c79820deeb/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1831930472,
+      "title": "TÍN HIỆU YÊU",
+      "artist": "LYHAN, MAIQUINN, Tien Tien, Miu Lê & Bảo Anh",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/aa/4a/a1/aa4aa12f-03a5-f065-bc46-080bb7f1d570/mzaf_17310460008584541898.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d5/47/ad/d547ad0f-33e1-23a7-c424-8f6ec4ed915c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1831930473,
+      "title": "CỨ ĐỔ TẠI CƠN MƯA",
+      "artist": "Phương Ly, Orange, Châu Bùi, 52Hz & Vũ Thảo My",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/d6/93/85d6931d-45df-e9c0-f54d-fa67a8d60f2b/mzaf_17900547401227781254.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d5/47/ad/d547ad0f-33e1-23a7-c424-8f6ec4ed915c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435776,
+      "title": "LỜI THÚ TỘI",
+      "artist": "Saabirose",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/e5/4f/03e54f3c-cae6-ee98-3b47-6f786f73a90d/mzaf_3619799352999339848.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833436141,
+      "title": "ÁI KỶ",
+      "artist": "Lâm Bảo Ngọc",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0a/fa/7a/0afa7af5-2454-bedd-7918-b31dd1f084ef/mzaf_10563754898596973774.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833436142,
+      "title": "TRỜI SAO",
+      "artist": "52Hz",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/41/7b/5e/417b5ec6-8f6a-3748-2646-78c7606f5cd1/mzaf_16475200223634034922.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833436143,
+      "title": "ẾCH NGOÀI ĐÁY GIẾNG",
+      "artist": "Phương Mỹ Chi",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/f6/4c/89f64c54-82d9-1639-97bb-42585d12569b/mzaf_16949556397532544160.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833436144,
+      "title": "DƯƠNG GIAN",
+      "artist": "LAMOON",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/65/3d/2b/653d2b1d-3f38-0952-e91e-e6429619f1f2/mzaf_5258133154524654075.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833436147,
+      "title": "THAO TÚNG TÂM LÝ",
+      "artist": "MAIQUINN",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a9/03/c2/a903c210-256f-bfaf-00ef-c6864861de13/mzaf_13893395633956812417.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833436148,
+      "title": "NGƯỜI ĐẦU TIÊN",
+      "artist": "Juky San",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/30/99/7e309920-24eb-9612-3bb0-e2e0866080b0/mzaf_18106250088071604127.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833436160,
+      "title": "CÔ ẤY KHÔNG YÊU ANH",
+      "artist": "Bảo Anh & Phúc Du",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/57/9d/ec/579deca7-0105-4d5c-5c1d-bdf1a9758dc5/mzaf_9019411804863369572.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/9d/cd/9c9dcdd3-96eb-dea4-1e3b-c047930aff3d/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435241,
+      "title": "ĐAN BÀN TAY",
+      "artist": "Châu Bùi & Binz",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/25/d5/c5/25d5c509-ff2c-eca8-a19a-c5a024924d25/mzaf_11330143183745855541.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/38/cb/8338cb4c-b309-de54-9441-efa850223a41/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435245,
+      "title": "LỘI NGƯỢC DÒNG",
+      "artist": "Orange",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/90/e0/af90e0d5-84b5-5f1a-2d7b-6bec2c3d7b57/mzaf_9775326712926438396.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/38/cb/8338cb4c-b309-de54-9441-efa850223a41/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435252,
+      "title": "RƠI TỰ DO",
+      "artist": "LYHAN",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/ca/04/27ca04ec-dc6e-c401-713f-d684ad9b3808/mzaf_15459893645015642439.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/38/cb/8338cb4c-b309-de54-9441-efa850223a41/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435254,
+      "title": "CHU KỲ MỚI",
+      "artist": "Bích Phương",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/1c/a1/ff1ca14d-f85f-045d-9193-698a81e2dd43/mzaf_17030993896518667672.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/38/cb/8338cb4c-b309-de54-9441-efa850223a41/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435255,
+      "title": "ĐI VỀ",
+      "artist": "Pháo",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/03/54/b7/0354b7a3-1028-0498-1894-68492c06e321/mzaf_7705870279525137699.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/38/cb/8338cb4c-b309-de54-9441-efa850223a41/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435256,
+      "title": "EM THÍCH LÀ ĐƯỢC",
+      "artist": "Miu Lê & COOLKID",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/0a/c7/ec0ac7a2-8a77-6385-c89b-7fbd38102528/mzaf_832742047576602495.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/38/cb/8338cb4c-b309-de54-9441-efa850223a41/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1833435260,
+      "title": "VỖ TAY",
+      "artist": "Phương Ly",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/f2/9b/5cf29b54-7652-501c-ed4a-2b95a0279212/mzaf_6321127843127828723.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/38/cb/8338cb4c-b309-de54-9441-efa850223a41/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1834852353,
+      "title": "ĐẦU MÈO ĐUÔI CHUỘT",
+      "artist": "Phương Ly, MAIQUINN, Tien Tien & Miu Lê",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6f/1c/5f/6f1c5fd8-1824-8226-70a1-536f5c28e6f9/mzaf_2792785455524533716.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/21/fa/b8/21fab89d-d08d-bc7d-e620-b980b082a76c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1834852354,
+      "title": "MORSE CODE",
+      "artist": "Phương Mỹ Chi, Orange, Pháo & LAMOON",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/eb/ea/f4ebeaf7-663e-f33d-3f69-d1ea960cee90/mzaf_11850481532070457296.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/21/fa/b8/21fab89d-d08d-bc7d-e620-b980b082a76c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1834852355,
+      "title": "HOURGLASS",
+      "artist": "LYHAN, Juky San, Châu Bùi & Saabirose",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7b/5b/bb/7b5bbb82-ec2b-b1e7-9edb-95ae7e20be7d/mzaf_10376436935542648203.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/21/fa/b8/21fab89d-d08d-bc7d-e620-b980b082a76c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1834852836,
+      "title": "TADIDA",
+      "artist": "52Hz, Bích Phương, Lâm Bảo Ngọc & Bảo Anh",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/1a/9b/231a9be2-4c16-59ad-b85a-8107aa37085c/mzaf_12294658455873774243.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/21/fa/b8/21fab89d-d08d-bc7d-e620-b980b082a76c/cover.jpg/600x600bb.jpg"
+    },
+    {
+      "include": true,
+      "itunesTrackId": 1847550102,
+      "title": "CỨ ĐỔ TẠI TẬN THẾ",
+      "artist": "EM XINH \"SAY HI\" & Erik",
+      "genre": "Em Xinh",
+      "releaseYear": 2025,
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6b/d6/33/6bd6334f-63a3-f8b2-a39f-008184cdb083/mzaf_5193410448565401234.plus.aac.p.m4a",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e3/94/33/e39433fd-b110-7609-9da7-a6d296825bb4/cover.jpg/600x600bb.jpg"
+    }
+  ],
+  "dropped": []
+}
