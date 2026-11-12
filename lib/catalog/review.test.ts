@@ -77,7 +77,8 @@ describe('writeReviewFile', () => {
       itunesTrackId: BASE_ID + 90,
       title: 'Bài Kiểm Thử 90',
       artist: 'Sơn Tùng M-TP',
-      genre: 'Pop',
+      genre: 'V-Pop', // filed by lib/catalog/genre.ts; the iTunes label is kept alongside
+      itunesGenre: 'Pop',
       releaseYear: 2016,
       previewUrl: `https://audio.example/${BASE_ID + 90}.m4a`,
       coverUrl: 'https://img.example/90/600x600bb.jpg',
@@ -143,7 +144,7 @@ describe('importReviewed', () => {
       artist: 'Sơn Tùng M-TP',
       artist_norm: 'son tung m-tp',
       language: 'vi',
-      genre: 'Pop',
+      genre: 'V-Pop',
       decade: '1995-1999',
       preview_url: `https://audio.example/${BASE_ID + 10}.m4a`,
       cover_url: 'https://img.example/10/600x600bb.jpg',

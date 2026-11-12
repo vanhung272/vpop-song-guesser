@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import type { Artist } from './filter';
+import { GENRE_LABELS, isGenreKey } from './genre';
 
 /**
  * catalog/artists.vpop.json is a JSON array of curated V-pop artists:
@@ -26,6 +27,10 @@ export function parseArtists(raw: unknown): Artist[] {
       if (v !== undefined && (!Array.isArray(v) || v.some((x) => typeof x !== 'string'))) {
         throw new Error(`artists[${i}]: "${f}" must be an array of strings`);
       }
+    }
+    // Main genre used to file the artist's songs (lib/catalog/genre.ts).
+    if (o.genre !== undefined && !isGenreKey(o.genre)) {
+      throw new Error(`artists[${i}]: "genre" must be one of ${Object.keys(GENRE_LABELS).join(', ')}`);
     }
     if (keys.has(o.key)) throw new Error(`artists[${i}]: duplicate key "${o.key}"`);
     keys.add(o.key);

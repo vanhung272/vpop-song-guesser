@@ -3,8 +3,8 @@ import path from 'node:path';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { normalizeVi } from '../text/normalize-vi';
 import { loadArtists } from './artists';
+import { classifyGenre } from './genre';
 import {
-  isTetSong,
   periodOfYear,
   releaseYearFromDate,
   TET_GENRE,
@@ -31,7 +31,10 @@ export interface ReviewTrack {
   itunesTrackId: number;
   title: string;
   artist: string;
+  /** "Thể loại" (lib/catalog/genre.ts); curator-editable, recomputed only by reclassifyReview. */
   genre: string | null;
+  /** iTunes primaryGenreName as fetched: input to the genre classifier, never imported. */
+  itunesGenre?: string | null;
   /** Year of the original release (iTunes date by default; correct it for re-releases). */
   releaseYear: number | null;
   /** Empty string when iTunes returned no preview; such entries cannot be imported. */
@@ -62,13 +65,20 @@ export function upscaleCover(url: string | undefined): string | null {
   return url.replace(/\/\d+x\d+bb\./, '/600x600bb.');
 }
 
-export function toReviewTrack(song: ItunesSong, include: boolean): ReviewTrack {
+export function toReviewTrack(
+  song: ItunesSong,
+  include: boolean,
+  artists: Artist[] = [],
+  fileArtistKey?: string,
+): ReviewTrack {
+  const itunesGenre = song.primaryGenreName ?? null;
   return {
     include,
     itunesTrackId: song.trackId,
     title: song.trackName,
     artist: song.artistName,
-    genre: isTetSong(song.trackName) ? TET_GENRE : (song.primaryGenreName ?? null),
+    genre: classifyGenre({ title: song.trackName, artist: song.artistName, itunesGenre }, artists, fileArtistKey),
+    itunesGenre,
     releaseYear: releaseYearFromDate(song.releaseDate),
     previewUrl: song.previewUrl ?? '',
     coverUrl: upscaleCover(song.artworkUrl100),
@@ -76,18 +86,39 @@ export function toReviewTrack(song: ItunesSong, include: boolean): ReviewTrack {
 }
 
 /** Writes `<dir>/<artistKey>.json` (overwrites) and returns its path. */
-export function writeReviewFile(artistKey: string, result: FilterResult, dir: string): string {
+export function writeReviewFile(
+  artistKey: string,
+  result: FilterResult,
+  dir: string,
+  artists: Artist[] = [],
+): string {
   const review: ReviewFile = {
     version: 1,
     artistKey,
     note: NOTE,
-    kept: result.kept.map((s) => toReviewTrack(s, true)),
-    dropped: result.dropped.map((d) => ({ ...toReviewTrack(d.song, false), reason: d.reason })),
+    kept: result.kept.map((s) => toReviewTrack(s, true, artists, artistKey)),
+    dropped: result.dropped.map((d) => ({ ...toReviewTrack(d.song, false, artists, artistKey), reason: d.reason })),
   };
   mkdirSync(dir, { recursive: true });
   const file = path.join(dir, `${artistKey}.json`);
   writeFileSync(file, JSON.stringify(review, null, 2) + '\n', 'utf8');
   return file;
+}
+
+/**
+ * Re-files every entry of an artist review file with classifyGenre (after the genre rules or an
+ * artist's main genre change). The iTunes label is remembered in `itunesGenre` the first time, so
+ * running it again gives the same result. Collection files are hand-curated and left alone.
+ */
+export function reclassifyReview(review: ReviewFile, artists: Artist[]): ReviewFile {
+  if (!review.artistKey) return review;
+  const refile = <T extends ReviewTrack>(t: T): T => {
+    // Files written before itunesGenre existed hold the iTunes label in `genre`, except Tết (ours).
+    const itunesGenre = t.itunesGenre !== undefined ? t.itunesGenre : t.genre === TET_GENRE ? null : t.genre;
+    const genre = classifyGenre({ title: t.title, artist: t.artist, itunesGenre }, artists, review.artistKey);
+    return { ...t, genre, itunesGenre };
+  };
+  return { ...review, kept: review.kept.map(refile), dropped: review.dropped.map(refile) };
 }
 
 function parseReview(file: string): ReviewFile {

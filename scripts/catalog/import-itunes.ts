@@ -5,6 +5,10 @@
  *        npm run catalog:fetch -- --artist son-tung-m-tp [--artist den-vau ...] | --all
  *          [--limit 200] [--out catalog/review] [--artists catalog/artists.vpop.json] [--force]
  *
+ *   Re-file the genre of every artist review file (after changing an artist's "genre" or the rules in
+ *   lib/catalog/genre.ts; curator edits to `genre` are overwritten, collection files are skipped):
+ *        tsx scripts/catalog/import-itunes.ts --reclassify [--out catalog/review]
+ *
  *   2. After editing catalog/review/<artistKey>.json, import it into a database:
  *        npm run catalog:import -- catalog/review/son-tung-m-tp.json --target local|staging|prod [--yes]
  *      (same as: tsx scripts/catalog/import-itunes.ts --import <file> --target <t>)
@@ -16,13 +20,13 @@
  * staging/prod additionally require --yes. Import also: kept songs with include:false are deleted from
  * tracks; tracks.artist_keys is filled from --artists (default catalog/artists.vpop.json) and merged.
  */
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { loadArtists } from '../../lib/catalog/artists';
 import { filterSongs } from '../../lib/catalog/filter';
 import { searchItunes, type ItunesSong } from '../../lib/catalog/itunes';
-import { importReviewed, writeReviewFile } from '../../lib/catalog/review';
+import { importReviewed, reclassifyReview, writeReviewFile, type ReviewFile } from '../../lib/catalog/review';
 import { createCatalogClient, parseTarget, resolveTarget } from '../../lib/catalog/target';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -41,8 +45,24 @@ async function main() {
       import: { type: 'string' },
       target: { type: 'string' },
       yes: { type: 'boolean', default: false },
+      reclassify: { type: 'boolean', default: false },
     },
   });
+
+  if (values.reclassify) {
+    const artists = loadArtists(values.artists!);
+    let files = 0;
+    for (const name of readdirSync(values.out!).filter((f) => f.endsWith('.json'))) {
+      const file = path.join(values.out!, name);
+      const review = JSON.parse(readFileSync(file, 'utf8')) as ReviewFile;
+      const next = reclassifyReview(review, artists);
+      if (next === review) continue; // collection file
+      writeFileSync(file, `${JSON.stringify(next, null, 2)}\n`, 'utf8');
+      files++;
+    }
+    console.log(`Re-filed the genre of ${files} review file(s) in ${values.out}.`);
+    return;
+  }
 
   if (values.import !== undefined) {
     // `npm run catalog:import -- <file>` puts the file right after --import; also accept a positional.
@@ -99,7 +119,7 @@ async function main() {
       continue;
     }
     const result = filterSongs([...byId.values()], artist);
-    const written = writeReviewFile(artist.key, result, values.out!);
+    const written = writeReviewFile(artist.key, result, values.out!, artists);
     const reasons = result.dropped.reduce<Record<string, number>>((acc, d) => {
       acc[d.reason] = (acc[d.reason] ?? 0) + 1;
       return acc;

@@ -11,6 +11,8 @@ export interface Artist {
   aliases?: string[];
   /** Extra iTunes search terms (besides `name`). */
   searchTerms?: string[];
+  /** Main genre (a GenreKey of lib/catalog/genre.ts), used to file the artist's songs. */
+  genre?: string;
 }
 
 export type DropReason = 'wrong-artist' | 'variant' | 'duplicate' | 'no-preview';
